@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* VARIAVEIS CORES e FONTES */
+
+:root {
+  --cor-roxo-claro: #9675ce;
+  --cor-roxo-escuro: #4a356d;
+  --cor-laranja: #ffb64d;
+  --cor-branca: #fafafa;
+  --cor-preta: #000000;
+  --cor-amarelo: #fff59c;
+  --font-titulo: "Karla", sans-serif;
+  --font-paragrafo: "Figtree";
+  --cor-roxo-claro-gradient: linear-gradient(
+  140deg,
+  rgba(191, 158, 245, 0.8) 0%,
+  rgba(111, 92, 143, 0.8) 100%
+);
+}
+
+/* config zeradas */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.margem-global {
+    margin: 0 60px 0 60px;
+}
+
+/* HEADER */
+.container-pai {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor-roxo-claro);
+  height: 95px;
+}
+
+/* deixando a logo com margem */
+.logo {
+  margin-left: 60px;
+}
+
+/* Menu principal */
+.nav-pai ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+  list-style: none;
+  font-size: 20px;
+}
+
+/* dropdawn */
+.nav-pai li{
+  position: relative;
+}
+
+/* navegação */
+.nav-pai li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+  color: var(--cor-branca);
+  padding: 10px 15px;
+  transition: background 0.3s;
+}
+
+p#selecionado{
+  font-family: "Karla", sans-serif;
+  color: var(--cor-branca);
+}
+
+/* cor background nas opções da navegação */
+.nav-pai li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* Seta do lado do texto */
+.seta-header {
+  width: 12px;
+  transition: transform 0.3s;
+}
+
+/* Efeito de girar seta ao passar o mouse */
+.nav-pai li:hover .seta-header {
+  transform: rotate(180deg);
+}
+
+/* Estilo do dropdown */
+ul.dropdown {
+  position: absolute;
+  top: 100%;
+  background: var(--cor-roxo-claro);
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  min-width: 160px;
+  z-index: 999;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.nav-pai li:hover ul.dropdown {
+  display: block;
+}
+
+/* Itens dentro do dropdown */
+ul.dropdown li a {
+  display: block;
+  padding: 15px 15px;
+  color: var(--cor-branca);
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  border-bottom: 2px solid var(--cor-branca);
+}
+
+/* cor background do dropdawn */
+ul.dropdown li a:hover {
+  background: var(--cor-laranja);
+}
+
+/* config botao */
+.button-header {
+  background-color: var(--cor-laranja);
+  color: #fafafa;
+  border-radius: 30px;
+  padding: 15px 24px;
+  margin-right: 60px;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+}
+
+.button-header:hover {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxo-claro);
+}
+/* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
+
+body {
+  background-image: url("/src/assets/img-register/background-cadastro.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+section.img-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 157px;
+  margin-top: 70px;
+}
+
+.login-solar {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-titulo);
+  background: var(--cor-roxo-claro-gradient);
+  padding: 59px 56px 86px 56px;
+  border-radius: 60px;
+  width: 645px;
+  height: 550px;
+}
+
+.title-login {
+  text-align: center;
+  font-family: var(--font-titulo);
+  color: var(--cor-branca);
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  font-size: 64px;
+  margin-bottom: 30px;
+}
+
+.input-user {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.input-email {
+  display: flex;
+  border: 1px solid var(--cor-branca);
+  border-radius: 30px;
+  gap: 10px;
+
+  input {
+    background-color: transparent;
+    border: none;
+    color: var(--cor-branca);
+    outline: none;
+  }
+}
+.input-password {
+  display: flex;
+  border: 1px solid var(--cor-branca);
+  border-radius: 30px;
+  gap: 10px;
+
+  input {
+    background-color: transparent;
+    border: none;
+    color: var(--cor-branca);
+    outline: none;
+  }
+}
+
+::placeholder {
+  color: var(--cor-branca);
+  font-family: var(--font-titulo);
+}
+.input-remember {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  color: #fafafa;
+  margin-left: 15px;
+  margin-right: 15px;
+  gap: 8px;
+  a {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    color: #fafafa;
+    margin-right: 20px;
+  }
+}
+
+.button-entrar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 40px 0;
+}
+
+.button-entrar button {
+  background-color: transparent;
+  background: var(--cor-laranja-gradient);
+  border-radius: 25px;
+  border: none;
+  font-size: 33px;
+  font-family: var(--font-titulo);
+  font-weight: bold;
+  width: 317px;
+  height: 68.34px;
+}
+
+.button-entrar button:hover {
+  background: var(--cor-amarelo);
+  color: var(--cor-roxo-claro);
+  cursor: pointer;
+}
+
+.create-account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  color: #fafafa;
+  margin-left: 15px;
+  margin-right: 15px;
+  gap: 8px;
+  a {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    color: #fafafa;
+    margin-right: 20px;
+  }
+}
+
+/* //////////////////////////////////////////// FOOTER ////////////////////////////////////////////// */

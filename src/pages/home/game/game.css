@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* VARIAVEIS CORES e FONTES */
+
+:root {
+  --cor-roxo-claro: #9675ce;
+  --cor-roxo-escuro: #4a356d;
+  --cor-laranja: #ffb64d;
+  --cor-branca: #fafafa;
+  --cor-preta: #000000;
+  --cor-amarelo: #fff59c;
+  --font-titulo: "Karla", sans-serif;
+  --font-paragrafo: "Figtree";
+}
+
+/* CONFIGURAÇÕES GLOBAIS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.margem-global {
+  margin: 0 92px 0 92px;
+}
+
+/* HEADER */
+
+/* HEADER */
+.container-pai {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor-roxo-claro);
+  height: 95px;
+}
+
+/* deixando a logo com margem */
+.logo {
+  margin-left: 60px;
+}
+
+/* Menu principal */
+.nav-pai ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+  list-style: none;
+  font-size: 20px;
+}
+
+/* dropdawn */
+.nav-pai li {
+  position: relative;
+}
+
+/* navegação */
+.nav-pai li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+  color: var(--cor-branca);
+  padding: 10px 15px;
+  transition: background 0.3s;
+}
+
+/* cor background nas opções da navegação */
+.nav-pai li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* Seta do lado do texto */
+.seta-header {
+  width: 12px;
+  transition: transform 0.3s;
+}
+
+/* Efeito de girar seta ao passar o mouse */
+.nav-pai li:hover .seta-header {
+  transform: rotate(180deg);
+}
+
+/* Estilo do dropdown */
+ul.dropdown {
+  position: absolute;
+  top: 100%;
+  background: var(--cor-roxo-claro);
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  min-width: 160px;
+  z-index: 999;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.nav-pai li:hover ul.dropdown {
+  display: block;
+}
+
+/* Itens dentro do dropdown */
+ul.dropdown li a {
+  display: block;
+  padding: 15px 15px;
+  color: var(--cor-branca);
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  border-bottom: 2px solid var(--cor-branca);
+}
+
+/* cor background do dropdawn */
+ul.dropdown li a:hover {
+  background: var(--cor-laranja);
+}
+
+/* config botao */
+.button-header {
+  background-color: var(--cor-laranja);
+  color: #fafafa;
+  border-radius: 30px;
+  padding: 15px 24px;
+  margin-right: 60px;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+}
+
+.button-header:hover {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxo-claro);
+}
+
+/* MAIN */
+
+/* SECTION imagem-fundo */
+
+section.image-fundo {
+  background-image: url(/src/assets/img-game/pexels-tima-miroshnichenko-7048537.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--cor-branca);
+}
+
+section.image-fundo .margem-global h1 {
+  font-family: var(--font-titulo);
+  font-size: 64px;
+  font-weight: 600;
+}
+
+section.image-fundo .margem-global p {
+  font-family: var(--font-titulo);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* SECTION ATENCAO */
+
+section.atencao {
+  background-image: url(/src/assets/img-game/Frame\ 77.png);
+  height: 304px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--cor-branca);
+  margin-top: 80px;
+}
+
+section.atencao .margem-global h2 {
+  font-family: var(--font-titulo);
+  font-size: 48px;
+  margin-bottom: 28px;
+}
+
+section.atencao .margem-global p {
+  font-family: var(--font-titulo);
+  font-size: 30px;
+}
+
+/* SECTION AMBIENTE INCLUSIVO */
+
+section.ambiente-inclusivo {
+  margin-top: 150px;
+}
+
+section.ambiente-inclusivo .card-jogos .margem-global {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--cor-amarelo);
+  border-radius: 30px;
+  height: 400px;
+}
+
+section.ambiente-inclusivo .card-jogos article img {
+  width: 611px;
+  height: 407px;
+}
+
+section.ambiente-inclusivo .card-jogos .margem-global aside {
+  padding: 120px 45px;
+  text-align: center;
+}
+
+section.ambiente-inclusivo .card-jogos .margem-global aside h3{
+  font-size: 40px;
+  font-family: var(--font-titulo);
+  color: var(--cor-roxo-escuro);
+}
+
+section.ambiente-inclusivo .card-jogos .margem-global aside p#maior{
+   font-size: 32px;
+  font-family: var(--font-paragrafo);
+  color: var(--cor-roxo-escuro);
+}
+
+section.ambiente-inclusivo .card-jogos .margem-global aside p{
+   font-size: 30px;
+  font-family: var(--font-paragrafo);
+  color: var(--cor-roxo-escuro);
+}
+
+section.ambiente-inclusivo .container-titulo-conteudo {
+  background-image:linear-gradient(to bottom, #FFFFFF 0%, #BF9EF5 30%), url(/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
+  height: 614px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.ambiente-inclusivo .container-titulo-conteudo h2 {
+  font-family: var(--font-titulo);
+  font-size: 64px;
+  color: var(--cor-roxo-escuro);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+section.ambiente-inclusivo .card-jogos.meio {
+  background: #BF9EF5;
+  height: 614px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.ambiente-inclusivo .card-jogos.meio .margem-global {
+  background: var(--cor-laranja);
+}
+
+section.ambiente-inclusivo .card-jogos.fim{
+  background-image: linear-gradient(to top, #FFFFFF 0%, #BF9EF5 10%), url(/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
+  background-position: bottom;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-bottom: 118px;
+  padding-bottom: 200px;
+  
+}
+
+/* SECTION ABERTO A TODAS */
+
+section.aberto-todas .margem-global{
+  display: flex;
+  justify-content: center;
+}
+
+section.aberto-todas .margem-global article{
+  background: var(--cor-roxo-escuro);
+  color: var(--cor-branca);
+  border: solid 4px var(--cor-laranja);
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 42px;
+  padding: 46px 38px;
+  width: 500px;
+  height: 500px;
+}
+
+section.aberto-todas .margem-global article h3{
+  font-family: var(--font-titulo);
+  font-size: 30px;
+}
+
+section.aberto-todas .margem-global article p{
+  font-family: var(--font-titulo);
+  font-size: 20px;
+}
+
+section.aberto-todas .margem-global article a{
+  width: 357px;
+  height: 50px;
+  color: var(--cor-preta);
+  font-family: var(--font-paragrafo);
+  font-size: 20px;
+  border-radius: 16.75px;
+  background-color: var(--cor-amarelo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+section.aberto-todas .margem-global aside img{
+  width: 400px;
+  height: 600px;
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: var(--cor-roxo-claro);
+  margin-top: 186px;
+}
+
+footer .container-informacoes {
+  display: flex;
+  justify-content: space-between;
+  padding: 86px 0 0 0;
+}
+
+footer .container-informacoes .logotipo-texto {
+  width: 443px;
+  height: 209.69px;
+}
+
+footer .container-informacoes .logotipo-texto .logotipo-nome {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 30%;
+  margin-bottom: 21px;
+  color: var(--cor-branca);
+  font-family: var(--font-titulo);
+  font-size: 40px;
+}
+
+footer .container-informacoes .logotipo-texto p {
+  font-size: 15px;
+  font-family: var(--font-paragrafo);
+  color: var(--cor-branca);
+  margin-left: 3%;
+}
+
+footer .container-informacoes .redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+footer .container-informacoes .redes-sociais h2 {
+  color: var(--cor-branca);
+  font-family: var(--font-titulo);
+  font-size: 33.73px;
+}
+
+footer .container-informacoes .redes-sociais .instagram,
+.linkedin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .container-informacoes .redes-sociais a {
+  color: var(--cor-amarelo);
+  font-family: var(--font-titulo);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer .container-informacoes .paginas {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  gap: 15px;
+  cursor: pointer;
+}
+
+footer .container-informacoes .paginas h2 {
+  color: var(--cor-branca);
+  font-family: var(--font-titulo);
+  font-size: 33.73px;
+}
+
+footer .container-informacoes .paginas p {
+  color: var(--cor-amarelo);
+  font-family: var(--font-paragrafo);
+  font-size: 25px;
+}
+
+footer .margem-global p {
+  color: var(--cor-branca);
+  text-align: center;
+  font-family: var(--font-titulo);
+  font-size: 18px;
+  margin-top: 20px;
+}

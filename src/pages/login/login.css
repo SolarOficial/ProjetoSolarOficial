@@ -49,13 +49,19 @@
   align-items: center;
   gap: 50px;
   margin-top: 20px;
+  padding-right: 70px;
   list-style: none;
   font-size: 20px;
 }
 
 /* dropdawn */
 .nav-pai li{
+  padding: 7px;
   position: relative;
+}
+
+.nav-pai li:hover{
+  border-radius: 30px;
 }
 
 /* navegação */
@@ -67,7 +73,6 @@
   font-family: "Karla", sans-serif;
   color: var(--cor-branca);
   padding: 10px 15px;
-  transition: background 0.3s;
 }
 
 p#selecionado{
@@ -78,7 +83,6 @@ p#selecionado{
 /* cor background nas opções da navegação */
 .nav-pai li a:hover {
   background: rgba(0, 0, 0, 0.1);
-  padding: 15px;
 }
 
 /* Seta do lado do texto */
@@ -242,7 +246,7 @@ section.img-login {
 
 .button-entrar button {
   background-color: transparent;
-  background: var(--cor-laranja-gradient);
+  background: var(--cor-amarelo);
   border-radius: 25px;
   border: none;
   font-size: 33px;
@@ -253,8 +257,9 @@ section.img-login {
 }
 
 .button-entrar button:hover {
-  background: var(--cor-amarelo);
+  background: var(--cor-laranja);
   color: var(--cor-roxo-claro);
+  transition: ease 0.3s;
   cursor: pointer;
 }
 

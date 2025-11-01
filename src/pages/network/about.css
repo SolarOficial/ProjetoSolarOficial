@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* VARIAVEIS CORES e FONTES */
+
+:root {
+  --cor-roxo-claro: #9675ce;
+  --cor-roxo-escuro: #4a356d;
+  --cor-laranja: #ffb64d;
+  --cor-branca: #fafafa;
+  --cor-preta: #000000;
+  --cor-amarelo: #fff59c;
+  --font-titulo: "Karla", sans-serif;
+  --font-paragrafo: "Figtree";
+}
+
+/* config zeradas */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.margem-global {
+    margin: 0 60px 0 60px;
+}
+
+/* HEADER */
+.container-pai {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  justify-content: space-between;
+  background-color: var(--cor-roxo-claro);
+  height: 95px;
+}
+
+/* deixando a logo com margem */
+.logo {
+  margin-left: 60px;
+}
+
+/* Menu principal */
+.nav-pai ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+  list-style: none;
+  font-size: 20px;
+}
+
+/* dropdawn */
+.nav-pai li{
+  position: relative;
+}
+
+/* navegação */
+.nav-pai li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+  color: var(--cor-branca);
+  padding: 10px 15px;
+  transition: background 0.3s;
+}
+
+p#selecionado{
+  font-family: "Karla", sans-serif;
+  color: var(--cor-branca);
+}
+
+/* cor background nas opções da navegação */
+.nav-pai li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* Seta do lado do texto */
+.seta-header {
+  width: 12px;
+  transition: transform 0.3s;
+}
+
+/* Efeito de girar seta ao passar o mouse */
+.nav-pai li:hover .seta-header {
+  transform: rotate(180deg);
+}
+
+/* Estilo do dropdown */
+ul.dropdown {
+  position: absolute;
+  top: 100%;
+  background: var(--cor-roxo-claro);
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  min-width: 160px;
+  z-index: 999;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.nav-pai li:hover ul.dropdown {
+  display: block;
+}
+
+/* Itens dentro do dropdown */
+ul.dropdown li a {
+  display: block;
+  padding: 15px 15px;
+  color: var(--cor-branca);
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  border-bottom: 2px solid var(--cor-branca);
+}
+
+/* cor background do dropdawn */
+ul.dropdown li a:hover {
+  background: var(--cor-laranja);
+}
+
+/* config botao */
+.button-header {
+  background-color: var(--cor-laranja);
+  color: #fafafa;
+  border-radius: 30px;
+  padding: 15px 24px;
+  margin-right: 60px;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+}
+
+.button-header:hover {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxo-claro);
+}
+
+/* SEÇÃO SOBRE */
+
+.conheca-solar {
+    background-image: url('/src/assets/img-about/background-inicio-sobre.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 620px;
+    margin-top: 95px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.conheca-solar h2 {
+    font-family: var(--font-titulo);
+    color: var(--cor-branca);
+    font-size: 98px;
+}
+
+.conheca-solar p {
+    font-family: var(--font-paragrafo);
+    color: var(--cor-laranja);
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.carrossel-sobre {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+/* QUEM SOMOS */
+
+.title-quem-somos {
+    font-family: var(--font-titulo);
+    color: #4A356D;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 60px
+}
+
+.container-quem-somos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.imagem-quem-somos img {
+    border-radius: 20px;
+}
+
+.texto-quem-somos p {
+    font-family: var(--font-paragrafo);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+/* MISSÃO VISÃO VALORES */
+
+.background-missao-visao-valores {
+    background-image: url('/src/assets/img-about/background-misao-visao-valores.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-missao-visao-valores {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 4rem;
+    width: 100%;
+}
+
+.container-missao-visao-valores img {
+    width: 85px;
+    height: auto;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.missao-visao-valores {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 300px;
+    border: 2px solid var(--cor-roxo-escuro);
+    border-radius: 20px;
+    padding: 50px 20px 20px 20px;
+}
+
+.missao-visao-valores h3 {
+    font-family: var(--font-titulo);
+    font-size: 28px;
+    color: var(--cor-roxo-escuro);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.missao-visao-valores p {
+    font-family: var(--font-paragrafo);
+    font-size: 18px;
+}
+
+/* SECTION BENEFÍCIOS SOLAR */
+
+.title-beneficios-solar {
+    margin: 70px 0px;
+    font-family: var(--font-titulo);
+    font-size: 45px;
+    color: var(--cor-roxo-escuro);
+    text-align: center;
+}
+
+.container-beneficios-solar {
+    margin: 70px 0px 100px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+.container-beneficios-solar i {
+    font-size: 30px;
+    color: var(--cor-roxo-escuro);
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container-beneficios-solar i:hover {
+    color: var(--cor-roxo-claro);
+}
+
+.beneficios-solar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid var(--cor-roxo-escuro);
+    border-radius: 20px;
+    padding: 40px 40px;
+    width: 400px;
+    height: 250px;
+
+}
+
+.beneficios-solar h3 {
+    font-family: var(--font-titulo);
+    font-size: 24px;
+    color: var(--cor-roxo-escuro);
+    text-align: center;
+}
+
+.beneficios-solar img {
+    width: 80px;
+    height: auto;
+}
+
+/* EQUIPE SOLAR */
+
+.title-equipe-solar {
+    font-family: var(--font-titulo);
+    font-size: 45px;
+    color: var(--cor-roxo-escuro);
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.equipe-solar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 10px;
+}
+
+.equipe-solar i {
+    font-size: 30px;
+    color: var(--cor-roxo-escuro);
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+}
+
+.equipe-solar i:hover {
+    color: var(--cor-laranja);
+    transition: 0.3s ease;
+}
+
+.equipe-solar img {
+    width: 100%;
+    border-radius: 30px 30px 0px 0px;
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.card-integrante-equipe-solar {
+    background-color: #fffad0;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+
+.descricao-equipe-solar {
+    padding: 10px 20px 20px 20px;
+    text-align: center;
+}
+
+.descricao-equipe-solar h3 {
+    font-family: var(--font-titulo);
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--cor-roxo-escuro);
+}
+
+.descricao-equipe-solar p {
+    font-family: var(--font-paragrafo);
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+/* APOIE A SOLAR */
+
+.background-apoie-solar {
+    background: url('/src/assets/img-about/background-image_section-apoie-a-solar.png');
+    background-size: cover;
+    padding-top: 250px;
+}
+
+.apoie-solar-title {
+    font-family: var(--font-titulo);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--cor-roxo-escuro);
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.apoie-solar-title span {
+    color: var(--cor-amarelo);
+}
+
+.container-apoie-solar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+.imagem-logo-solar {
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-logo-solar img {
+    width: 500px;
+    height: auto;
+    padding-bottom: 200px;
+}
+
+.apoie-solar-descricao {
+    font-family: var(--font-paragrafo);
+    font-size: 22px;
+    color: var(--cor-roxo-escuro);
+}
+
+.apoie-solar-descricao li {
+    margin-left: 80px;
+}
+
+.button-doar-agora button {
+    background-color: var(--cor-roxo-claro);
+    color: var(--cor-branca);
+    font-family: var(--font-paragrafo);
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 300px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-doar-agora button:hover{
+    background-color: #BF9EF5;
+    transition: 0.3s ease;
+}
+
+/* PERGUNTAS FREQUENTES  */
+
+.secao-perguntas-frequentes {
+    padding: 80px 0 100px 0;
+    background-color: var(--cor-branca);
+}
+
+.title-perguntas-frequentes {
+    font-family: var(--font-titulo);
+    font-size: 45px;
+    color: var(--cor-roxo-escuro);
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.container-perguntas {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pergunta-item {
+    background-color: #E8DCFA;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.pergunta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    cursor: pointer;
+}
+
+.pergunta-header:hover {
+    background-color: #dcc9f5;
+    border-radius: 15px;
+}
+
+.pergunta-titulo {
+    font-family: var(--font-paragrafo);
+    font-size: 20px;
+    color: var(--cor-roxo-escuro);
+    font-weight: 600;
+}
+
+.pergunta-icone {
+    font-size: 24px;
+    color: var(--cor-roxo-escuro);
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--cor-roxo-claro);
+  margin-top: 186px;
+}
+
+footer .container-informacoes {
+  display: flex;
+  justify-content: space-between;
+  padding: 86px 0 0 0;
+}
+
+footer .container-informacoes .logotipo-texto {
+  width: 443px;
+  height: 209.69px;
+}
+
+footer .container-informacoes .logotipo-texto .logotipo-nome {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 30%;
+  margin-bottom: 21px;
+  color: var(--cor-branca);
+  font-family: var(--font-titulo);
+  font-size: 40px;
+}
+
+footer .container-informacoes .logotipo-texto p {
+  font-size: 15px;
+  font-family: var(--font-paragrafo);
+  color: var(--cor-branca);
+  margin-left: 3%;
+}
+
+footer .container-informacoes .redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+footer .container-informacoes .redes-sociais h2 {
+  color: var(--cor-branca);
+  font-family: var(--font-titulo);
+  font-size: 33.73px;
+}
+
+footer .container-informacoes .redes-sociais .instagram,
+.linkedin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .container-informacoes .redes-sociais a {
+  color: var(--cor-amarelo);
+  font-family: var(--font-titulo);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer .container-informacoes .paginas {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  gap: 15px;
+  cursor: pointer;
+}
+
+footer .container-informacoes .paginas h2 {
+  color: var(--cor-branca);
+  font-family: var(--font-titulo);
+  font-size: 33.73px;
+}
+
+footer .container-informacoes .paginas p {
+  color: var(--cor-amarelo);
+  font-family: var(--font-paragrafo);
+  font-size: 25px;
+}
+
+footer .margem-global p {
+  color: var(--cor-branca);
+  text-align: center;
+  font-family: var(--font-titulo);
+  font-size: 18px;
+  margin-top: 20px;
+}

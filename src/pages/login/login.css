@@ -167,7 +167,7 @@ section.img-login {
   padding: 59px 56px 86px 56px;
   border-radius: 60px;
   width: 645px;
-  height: 550px;
+  height: 700px;
 }
 
 .title-login {
@@ -189,6 +189,7 @@ section.img-login {
   border: 1px solid var(--cor-branca);
   border-radius: 30px;
   gap: 10px;
+  margin: 0 41px;
 
   input {
     background-color: transparent;

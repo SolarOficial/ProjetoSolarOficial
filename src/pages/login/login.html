@@ -1,122 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Equipe Solar" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Página de cursos da plataforma Solar" />
-    <meta
-      name="keywords"
-      content="Monoparentalidade, Solar, Pai Solo, Mãe Solo "
-    />
-    <link rel="stylesheet" href="/src/pages/login/login.css" />
-    <link
-      rel="shortcut icon"
-      href="/src/assets/Logotipo-Solar.png"
-      type="image/x-icon"
-    />
-    <title>Login - Solar</title>
-  </head>
 
-  <!-- ////////////////////////////////////////////// HEADER///////////////////////////////////////////////////  -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Equipe Solar" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Página de cursos da plataforma Solar" />
+  <meta name="keywords" content="Monoparentalidade, Solar, Pai Solo, Mãe Solo " />
+  <link rel="stylesheet" href="/src/pages/login/login.css" />
+  <link rel="shortcut icon" href="/src/assets/Logotipo-Solar.png" type="image/x-icon" />
+  <title>Login - Solar</title>
+</head>
 
-  <body>
-    <header class="container-pai">
-      <div class="logo">
-        <img
-          height="70"
-          src="/src/assets/logo_nav2.png"
-          alt="Logo branca Solar"
-        />
+<!-- ////////////////////////////////////////////// HEADER///////////////////////////////////////////////////  -->
+
+<body>
+  <header class="container-pai">
+    <div class="logo">
+      <img height="70" src="/src/assets/logo_nav2.png" alt="Logo branca Solar" />
+    </div>
+
+    <nav class="nav-pai">
+      <ul>
+        <li><a href="/src/pages/home/home.html">HOME</a></li>
+        <li>
+          <a href="#">EXPLORAR
+            <img class="seta-header" src="/src/assets/seta.png" alt="seta ao lado de explorar" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="/src/pages/explore/eventss/index/index.html">EVENTOS</a></li>
+            <li><a href="/src/pages/explore/courses/index/index.html">CURSOS</a></li>
+            <li><a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">DOAÇÃO</a></li>
+        <li><a href="/src/pages/professionals/professionals.html">PROFISSIONAIS</a></li>
+        <li><a href="#">PLANOS</a></li>
+        <li>
+          <a href="#">REDES
+            <img class="seta-header" src="/src/assets/seta.png" alt="seta ao lado de rede" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#">SOBRE</a></li>
+            <li><a href="#">LOCALIZAR INSTITUIÇÕES</a></li>
+            <li><a href="#">FALE CONOSCO</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="img-login">
+      <img src="/src/assets/img-home/div_Lado-Esquerdo.png" alt="Logo solar com gradiente" />
+      <div class="login-solar">
+        <h2 class="title-login">Login</h2>
+        <form action="#" method="post" class="login-caixa">
+          <div class="input-user">
+            <div class="input-email">
+              <img src="/src/assets/img-login/arroba-login.png" alt="icone email" /><input type="text"
+                placeholder="Digite o seu email" />
+            </div>
+            <div class="input-password">
+              <img src="/src/assets/img-login/Password.png" alt="icone senha" /><input type="password"
+                placeholder="Digite sua senha" />
+            </div>
+          </div>
+          <div class="input-remember">
+            <div class="input-remember-checkbox">
+              <input type="checkbox" id="lembrar-de-mim" name="lembrar-de-mim" />
+              <label for="lembrar-de-mim">Lembrar de mim</label>
+            </div>
+            <a href="#">Esqueci a minha senha</a>
+          </div>
+          <div class="button-entrar">
+            <button type="submit">Entrar</button>
+          </div>
+          <div class="create-account">
+            <p>Não possui cadastro?</p>
+            <a href="/src/pages/register/register.html">Crie a sua conta</a>
+          </div>
+        </form>
       </div>
+    </section>
+  </main>
+</body>
 
-      <nav class="nav-pai">
-        <ul>
-          <li><a href="/src/pages/home/home.html">HOME</a></li>
-          <li>
-            <a href="#"
-              >EXPLORAR
-              <img
-                class="seta-header"
-                src="/src/assets/seta.png"
-                alt="seta ao lado de explorar"
-              />
-            </a>
-            <ul class="dropdown">
-              <li><a href="/src/pages/explore/eventss/index/index.html">EVENTOS</a></li>
-              <li><a href="/src/pages/explore/courses/index/index.html">CURSOS</a></li>
-              <li><a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#">DOAÇÃO</a></li>
-          <li><a href="/src/pages/professionals/professionals.html">PROFISSIONAIS</a></li>
-          <li><a href="#">PLANOS</a></li>
-          <li>
-            <a href="#"
-              >REDES
-              <img
-                class="seta-header"
-                src="/src/assets/seta.png"
-                alt="seta ao lado de rede"
-              />
-            </a>
-            <ul class="dropdown">
-              <li><a href="#">SOBRE</a></li>
-              <li><a href="#">LOCALIZAR INSTITUIÇÕES</a></li>
-              <li><a href="#">FALE CONOSCO</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="img-login">
-        <img
-          src="/src/assets/img-home/div_Lado-Esquerdo.png"
-          alt="Logo solar com gradiente"
-        />
-        <div class="login-solar">
-          <h2 class="title-login">Login</h2>
-          <form action="#" method="post" class="login-caixa">
-            <div class="input-user">
-              <div class="input-email">
-                <img
-                  src="/src/assets/img-login/arroba-login.png"
-                  alt="icone email"
-                /><input type="text" placeholder="Digite o seu email" />
-              </div>
-              <div class="input-password">
-                <img
-                  src="/src/assets/img-login/Password.png"
-                  alt="icone senha"
-                /><input type="password" placeholder="Digite sua senha" />
-              </div>
-            </div>
-            <div class="input-remember">
-              <div class="input-remember-checkbox">
-                <label for="lembrar-de-mim">Lembrar de mim</label>
-                <input
-                  type="checkbox"
-                  id="lembrar-de-mim"
-                  name="lembrar-de-mim"
-                />
-              </div>
-              <a href="#">Esqueci a minha senha</a>
-            </div>
-            <div class="button-entrar">
-              <button type="submit">Entrar</button>
-            </div>
-            <div class="create-account">
-              <p>Não possui cadastro?</p>
-              <a href="/src/pages/register/register.html">Crie a sua conta</a>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-  </body>
 </html>

@@ -28,6 +28,11 @@
 /* HEADER */
 .container-pai {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   justify-content: space-between;
   background-color: var(--cor-roxo-claro);
   height: 95px;
@@ -148,7 +153,8 @@ section.descricao {
   height: 985px;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 80px;
+  padding-top: 180px;
+
 }
 
 section.descricao .container-descricao {
@@ -514,7 +520,7 @@ section.conheca-comunidade .margem-global .container-conteudo aside p {
 section.cresca-solar {
   background: #bf9ef599;
   margin-top: 136px;
-  padding: 0 0 77.37px 0;
+  padding: 0 0 50px 0;
 }
 
 section.cresca-solar .margem-global h2 {
@@ -546,6 +552,7 @@ section.cresca-solar .margem-global .container-card p {
 
 section.cresca-solar .margem-global .container-card a {
   display: flex;
+  font-family: var(--font-titulo);
   align-items: center;
   cursor: pointer;
   text-decoration: none;
@@ -556,7 +563,16 @@ section.cresca-solar .margem-global .container-card a {
   background: var(--cor-roxo-escuro);
   color: var(--cor-branca);
   border: none;
+  font-weight: 600;
 }
+
+section.cresca-solar .margem-global .container-card a:hover{
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxo-escuro);
+  transition: 0.3s ease;
+}
+
+
 
 /* SECTION ACESSAR JOGOS */
 

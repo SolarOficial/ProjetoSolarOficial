@@ -12,11 +12,9 @@
   --cor-amarelo: #fff59c;
   --font-titulo: "Karla", sans-serif;
   --font-paragrafo: "Figtree";
-  --cor-roxo-claro-gradient: linear-gradient(
-  140deg,
-  rgba(191, 158, 245, 0.8) 0%,
-  rgba(111, 92, 143, 0.8) 100%
-);
+  --cor-roxo-claro-gradient: linear-gradient(140deg,
+      rgba(191, 158, 245, 0.8) 0%,
+      rgba(111, 92, 143, 0.8) 100%);
 }
 
 /* config zeradas */
@@ -27,7 +25,7 @@
 }
 
 .margem-global {
-    margin: 0 60px 0 60px;
+  margin: 0 60px 0 60px;
 }
 
 /* HEADER */
@@ -49,13 +47,19 @@
   align-items: center;
   gap: 50px;
   margin-top: 20px;
+  padding-right: 70px;
   list-style: none;
   font-size: 20px;
 }
 
 /* dropdawn */
-.nav-pai li{
+.nav-pai li {
+  padding: 7px;
   position: relative;
+}
+
+.nav-pai li:hover {
+  border-radius: 30px;
 }
 
 /* navegação */
@@ -67,10 +71,9 @@
   font-family: "Karla", sans-serif;
   color: var(--cor-branca);
   padding: 10px 15px;
-  transition: background 0.3s;
 }
 
-p#selecionado{
+p#selecionado {
   font-family: "Karla", sans-serif;
   color: var(--cor-branca);
 }
@@ -78,7 +81,6 @@ p#selecionado{
 /* cor background nas opções da navegação */
 .nav-pai li a:hover {
   background: rgba(0, 0, 0, 0.1);
-  padding: 15px;
 }
 
 /* Seta do lado do texto */
@@ -142,6 +144,7 @@ ul.dropdown li a:hover {
   background-color: var(--cor-amarelo);
   color: var(--cor-roxo-claro);
 }
+
 /* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
 
 body {
@@ -155,7 +158,7 @@ section.img-login {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 157px;
+  gap: 150px;
   margin-top: 70px;
 }
 
@@ -170,6 +173,17 @@ section.img-login {
   height: 700px;
 }
 
+.login-solar ::placeholder{
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.login-solar img{
+  width: 30px;
+  margin: 10px 0 10px 10px;
+}
+
 .title-login {
   text-align: center;
   font-family: var(--font-titulo);
@@ -180,13 +194,16 @@ section.img-login {
 }
 
 .input-user {
+  padding:16px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .input-email {
   display: flex;
-  border: 1px solid var(--cor-branca);
+  border: 4px solid var(--cor-branca);
   border-radius: 30px;
   gap: 10px;
   margin: 0 41px;
@@ -198,9 +215,10 @@ section.img-login {
     outline: none;
   }
 }
+
 .input-password {
   display: flex;
-  border: 1px solid var(--cor-branca);
+  border: 4px solid var(--cor-branca);
   border-radius: 30px;
   gap: 10px;
 
@@ -216,15 +234,20 @@ section.img-login {
   color: var(--cor-branca);
   font-family: var(--font-titulo);
 }
+
 .input-remember {
+  font-family: var(--font-paragrafo);
+  font-size: 18px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 30px;
   color: #fafafa;
+  margin-top: 10px;
   margin-left: 15px;
   margin-right: 15px;
-  gap: 8px;
+
   a {
     display: inline-block;
     flex-direction: column;
@@ -232,48 +255,55 @@ section.img-login {
     color: #fafafa;
     margin-right: 20px;
   }
+
+  a:hover{
+    color: #f7d850;
+  }
 }
 
 .button-entrar {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 40px 0 40px 0;
+  margin: 40px 0 20px 0;
 }
 
 .button-entrar button {
-  background-color: transparent;
-  background: var(--cor-laranja-gradient);
-  border-radius: 25px;
+  padding: 16px 100px;
   border: none;
-  font-size: 33px;
+  border-radius: 50px;
+  background-color: var(--cor-laranja);
+  color: var(--cor-preta);
   font-family: var(--font-titulo);
+  font-size: 25px;
+  text-decoration: none;
   font-weight: bold;
-  width: 317px;
-  height: 68.34px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button-entrar button:hover {
-  background: var(--cor-amarelo);
-  color: var(--cor-roxo-claro);
-  cursor: pointer;
+  background: #f7d850;
 }
 
 .create-account {
+  font-family: var(--font-paragrafo);
+  font-size: 20px;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-left: 30px;
+  justify-content: center;
   color: #fafafa;
-  margin-left: 15px;
-  margin-right: 15px;
   gap: 8px;
+
   a {
     display: inline-block;
-    flex-direction: column;
     justify-content: center;
     color: #fafafa;
-    margin-right: 20px;
+  }
+
+  a:hover{
+    color: #f7d850;
   }
 }
 

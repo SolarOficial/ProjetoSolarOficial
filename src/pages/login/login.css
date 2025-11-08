@@ -31,6 +31,11 @@
 /* HEADER */
 .container-pai {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   justify-content: space-between;
   background-color: var(--cor-roxo-claro);
   height: 95px;
@@ -47,19 +52,13 @@
   align-items: center;
   gap: 50px;
   margin-top: 20px;
-  padding-right: 70px;
   list-style: none;
   font-size: 20px;
 }
 
 /* dropdawn */
-.nav-pai li {
-  padding: 7px;
+.nav-pai li{
   position: relative;
-}
-
-.nav-pai li:hover {
-  border-radius: 30px;
 }
 
 /* navegação */
@@ -71,9 +70,10 @@
   font-family: "Karla", sans-serif;
   color: var(--cor-branca);
   padding: 10px 15px;
+  transition: background 0.3s;
 }
 
-p#selecionado {
+p#selecionado{
   font-family: "Karla", sans-serif;
   color: var(--cor-branca);
 }
@@ -81,6 +81,7 @@ p#selecionado {
 /* cor background nas opções da navegação */
 .nav-pai li a:hover {
   background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 
 /* Seta do lado do texto */
@@ -148,7 +149,7 @@ ul.dropdown li a:hover {
 /* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
 
 body {
-  background-image: url("/src/assets/img-register/background-cadastro.gif");
+  background-image: url("/ProjetoSolarOficial/src/assets/img-register/background-cadastro.gif");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -167,10 +168,11 @@ section.img-login {
   flex-direction: column;
   font-family: var(--font-titulo);
   background: var(--cor-roxo-claro-gradient);
+  margin-top: 67px;
   padding: 59px 56px 86px 56px;
   border-radius: 60px;
-  width: 645px;
-  height: 700px;
+  width: 545px;
+  height: 570px;
 }
 
 .login-solar ::placeholder{
@@ -198,6 +200,8 @@ section.img-login {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
@@ -207,6 +211,8 @@ section.img-login {
   border-radius: 30px;
   gap: 10px;
   margin: 0 41px;
+  width: 450px;
+  height: 60px;
 
   input {
     background-color: transparent;
@@ -221,6 +227,8 @@ section.img-login {
   border: 4px solid var(--cor-branca);
   border-radius: 30px;
   gap: 10px;
+  width: 450px;
+  height: 60px;
 
   input {
     background-color: transparent;

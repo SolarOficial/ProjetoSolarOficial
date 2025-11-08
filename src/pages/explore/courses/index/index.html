@@ -11,10 +11,10 @@
       name="keywords"
       content="Monoparentalidade, Solar, Pai Solo, Mãe Solo "
     />
-    <link rel="stylesheet" href="/src/pages/explore/courses/index/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="shortcut icon"
-      href="/src/assets/Logotipo-Solar.png"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
       type="image/x-icon"
     />
     <title>Explorar - Cursos</title>
@@ -27,49 +27,108 @@
       <div class="logo">
         <img
           height="90"
-          src="/src/assets/logo_nav2.png"
+          src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
           alt="Logo branca Solar"
         />
       </div>
 
       <nav class="nav-pai">
         <ul>
-          <li><a href="/src/pages/home/home.html">HOME</a></li>
+          <li><a href="">HOME</a></li>
           <li>
-            <a href="#"
-              >EXPLORAR
+            <a href="#">
+              EXPLORAR
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de explorar"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="../../eventss/index/index.html">EVENTOS</a></li>
-              <li><a href="">CURSOS</a></li>
-              <li><a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/eventss/index/index.html')"
+                  >EVENTOS</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="redirectUser('../home/game/game.html')"
+                  >JOGOS</a
+                >
+              </li>
             </ul>
           </li>
 
-          <li><a href="/src/pages/donation/donation.html">DOAÇÃO</a></li>
-          <li><a href="/src/pages/professionals/professionals.html">PROFISSIONAIS</a></li>
-          <li><a href="/src/pages/plans/plans.html">PLANOS</a></li>
           <li>
-            <a href="#"
-              >REDES
+            <a href="#" onclick="redirectUser('../donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('../professionals/professionals.html')"
+              >PROFISSIONAIS</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a>
+          </li>
+
+          <li>
+            <a href="#">
+              REDES
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
-                alt="seta ao lado de rede"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
+                alt="seta ao lado de redes"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="#">SOBRE</a></li>
-              <li><a href="/src/pages/home/location/location.html">LOCALIZAR INSTITUIÇÕES</a></li>
-              <li><a href="#">FALE CONOSCO</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <!-- //Arrumar o link para fale conosco -->
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
             </ul>
           </li>
-          <a href="/src/pages/login/login.html"><button class="button-header">ENTRAR</button></a>
+
+          <a href="#" onclick="redirectUser('../login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
         </ul>
       </nav>
     </header>
@@ -78,7 +137,7 @@
       <section class="imagem-container-father">
         <div class="imagem-container">
           <img
-            src="/src/assets/familia.png"
+            src="/ProjetoSolarOficial/src/assets/familia.png"
             alt="Foto de pessoas felizes no parque"
             height="400"
           />
@@ -100,7 +159,7 @@
           <div class="card">
             <img
               class="img-card1"
-              src="/src/assets/logo-bradesco.png"
+              src="/ProjetoSolarOficial/src/assets/logo-bradesco.png"
               alt="Logo Bradesco"
               height="230"
             />
@@ -108,14 +167,14 @@
               <h3>Atendimento ao Público</h3>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/banco.png"
+                  src="/ProjetoSolarOficial/src/assets/banco.png"
                   alt="icone de banco ao lado de 'Fundação Bradesco'"
                 />
                 <h4>Fundação Bradesco</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/tempo.png"
+                  src="/ProjetoSolarOficial/src/assets/tempo.png"
                   alt="icone de tempo ao lado de 'duração'"
                 />
                 <h4>Duração: 10 horas</h4>
@@ -143,7 +202,7 @@
           <div class="card">
             <img
               class="img-card2"
-              src="/src/assets/logo-bradesco.png"
+              src="/ProjetoSolarOficial/src/assets/logo-bradesco.png"
               alt="Logo Bradesco"
               height="230"
             />
@@ -151,14 +210,14 @@
               <h3>Educação Financeira</h3>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/banco.png"
+                  src="/ProjetoSolarOficial/src/assets/banco.png"
                   alt="icone de banco ao lado de Bradesco"
                 />
                 <h4>Fundação Bradesco</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/tempo.png"
+                  src="/ProjetoSolarOficial/src/assets/tempo.png"
                   alt="icone de tempo ao lado de 'duração'"
                 />
                 <h4>Duração: 4 horas</h4>
@@ -186,7 +245,7 @@
           <div class="card">
             <img
               class="img-card3"
-              src="/src/assets/logo-bradesco.png"
+              src="/ProjetoSolarOficial/src/assets/logo-bradesco.png"
               alt="Logo Bradesco"
               height="230"
             />
@@ -194,14 +253,14 @@
               <h3>Postura e imagem Profissional</h3>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/banco.png"
+                  src="/ProjetoSolarOficial/src/assets/banco.png"
                   alt="icone de banco ao lado de 'Fundação Bradesco'"
                 />
                 <h4>Fundação Bradesco</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/tempo.png"
+                  src="/ProjetoSolarOficial/src/assets/tempo.png"
                   alt="icone de tempo ao lado de 'duração'"
                 />
                 <h4>Duração: 8 horas</h4>
@@ -235,7 +294,7 @@
           <div class="card">
             <img
               class="img-card1"
-              src="/src/assets/logo-senac.png"
+              src="/ProjetoSolarOficial/src/assets/logo-senac.png"
               alt="Logo Senac"
               height="230"
             />
@@ -243,14 +302,14 @@
               <h3>Análise de Vendas</h3>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/banco.png"
+                  src="/ProjetoSolarOficial/src/assets/banco.png"
                   alt="icone de banco ao lado de 'senac'"
                 />
                 <h4>SENAC Lapa Tito</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/tempo.png"
+                  src="/ProjetoSolarOficial/src/assets/tempo.png"
                   alt="icone de tempo ao lado de 'duração'"
                 />
                 <h4>Duração: 10 horas</h4>
@@ -278,7 +337,7 @@
           <div class="card">
             <img
               class="img-card2"
-              src="/src/assets/logo-senac.png"
+              src="/ProjetoSolarOficial/src/assets/logo-senac.png"
               alt="Logo Bradesco"
               height="230"
             />
@@ -286,14 +345,14 @@
               <h3>Aromaterapia</h3>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/banco.png"
+                  src="/ProjetoSolarOficial/src/assets/banco.png"
                   alt="icone de banco ao lado de senac"
                 />
                 <h4>SENAC Lapa Tito</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/tempo.png"
+                  src="/ProjetoSolarOficial/src/assets/tempo.png"
                   alt="icone de tempo ao lado de 'duração'"
                 />
                 <h4>Duração: 36 horas</h4>
@@ -321,7 +380,7 @@
           <div class="card">
             <img
               class="img-card3"
-              src="/src/assets/logo-senac.png"
+              src="/ProjetoSolarOficial/src/assets/logo-senac.png"
               alt="Logo Bradesco"
               height="230"
             />
@@ -329,14 +388,14 @@
               <h3>Cabeleireiro</h3>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/banco.png"
+                  src="/ProjetoSolarOficial/src/assets/banco.png"
                   alt="icone de banco ao lado de 'Senac'"
                 />
                 <h4>SENAC Lapa Tito</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/tempo.png"
+                  src="/ProjetoSolarOficial/src/assets/tempo.png"
                   alt="icone de tempo ao lado de 'duração'"
                 />
                 <h4>Duração: 400 horas</h4>
@@ -372,7 +431,7 @@
           <div class="logotipo-texto">
             <div class="logotipo-nome">
               <img
-                src="/src/assets/logo-solar-branca-escrita-4K_1.png"
+                src="/ProjetoSolarOficial/src/assets/logo-solar-branca-escrita-4K_1.png"
                 alt="Logo Solar"
               />
             </div>
@@ -390,7 +449,7 @@
             <div class="instagram">
               <a href="https://www.instagram.com/solar.plataforma/"
                 ><img
-                  src="/src/assets/logo-instagram.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-instagram.png"
                   alt="Logo do instagram"
               /></a>
               <a href="https://www.instagram.com/solar.plataforma/"
@@ -402,7 +461,7 @@
             <div class="linkedin">
               <a href="https://www.linkedin.com/in/solar-instituto/"
                 ><img
-                  src="/src/assets/logo-linkedin.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-linkedin.png"
                   alt="logo do linkedin"
               /></a>
               <a href="https://www.linkedin.com/in/solar-instituto/">Solar</a>
@@ -433,5 +492,5 @@
       <!--margem-global -->
     </footer>
   </body>
-  <script src="/src/js/index.js"></script>
+  <script src="../../../../js/script.js"></script>
 </html>

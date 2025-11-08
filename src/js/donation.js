@@ -1,21 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Quando a página estiver 100% pronta, chame a função Credito()
-    Credito();
+document.addEventListener("DOMContentLoaded", function () {
+  // Quando a página estiver 100% pronta, chame a função Credito()
+  Credito();
 });
 
 function LimparCredito() {
-    document.getElementById("form-pagamento-credito").innerHTML = ""
+  document.getElementById("form-pagamento-credito").innerHTML = "";
 }
 
 function LimparPix() {
-    document.getElementById("form-pagamento-pix").innerHTML = ""
+  document.getElementById("form-pagamento-pix").innerHTML = "";
 }
 
 function Credito() {
+  LimparPix();
 
-    LimparPix()
-
-    document.getElementById("form-pagamento-credito").innerHTML = `
+  document.getElementById("form-pagamento-credito").innerHTML = `
     <form id="pagamento-credito">
 
         <div class="alinhar-campo">
@@ -86,11 +85,11 @@ function Credito() {
 }
 
 function Pix() {
+  LimparCredito();
 
-    LimparCredito()
-
-    document.getElementById("form-pagamento-pix").innerHTML =
-        `<form id="pagamento-pix">
+  document.getElementById(
+    "form-pagamento-pix"
+  ).innerHTML = `<form id="pagamento-pix">
 
             <p>CÓDIGO PIX</p>          
             
@@ -100,7 +99,7 @@ function Pix() {
                 <button>COPIAR CÓDIGO</button>
                 <div class="margin">
                     <span>QR CODE</span>
-                    <img src="/src/assets/img-donation/qrcode.png" alt="qr code">
+                    <img src="/ProjetoSolarOficial/src/assets/img-donation/qrcode.png" alt="qr code">
                 </div>
             </div>
 
@@ -117,28 +116,28 @@ function Pix() {
         
         </div>
             
-    </form>`
+    </form>`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const botoes = document.querySelectorAll('.metodo-opcao');
+document.addEventListener("DOMContentLoaded", () => {
+  const botoes = document.querySelectorAll(".metodo-opcao");
 
-    botoes.forEach(botao => {
-        botao.addEventListener('click', function () {
-            // 1. Remove a classe 'ativo' de todos
-            botoes.forEach(b => b.classList.remove('ativo'));
+  botoes.forEach((botao) => {
+    botao.addEventListener("click", function () {
+      // 1. Remove a classe 'ativo' de todos
+      botoes.forEach((b) => b.classList.remove("ativo"));
 
-            // 2. Adiciona a classe 'ativo' ao botão clicado
-            this.classList.add('ativo');
+      // 2. Adiciona a classe 'ativo' ao botão clicado
+      this.classList.add("ativo");
 
-            // 3. Atualiza o conteúdo (injetando o formulário correto)
-            if (this.id === 'opcao-cartao') {
-                // Aqui você chamaria a função para injetar o formulário de Crédito
-                Credito();
-            } else if (this.id === 'opcao-pix') {
-                // Aqui você injetaria o formulário/QR Code do PIX (ex: chamar uma função Pix())
-                Pix()
-            }
-        });
+      // 3. Atualiza o conteúdo (injetando o formulário correto)
+      if (this.id === "opcao-cartao") {
+        // Aqui você chamaria a função para injetar o formulário de Crédito
+        Credito();
+      } else if (this.id === "opcao-pix") {
+        // Aqui você injetaria o formulário/QR Code do PIX (ex: chamar uma função Pix())
+        Pix();
+      }
     });
+  });
 });

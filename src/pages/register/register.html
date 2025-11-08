@@ -11,10 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Solar" />
     <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
-    <link rel="stylesheet" href="/src/pages/register/register.css" />
+    <link rel="stylesheet" href="./register.css" />
     <link
       rel="shortcut icon"
-      href="/src/assets/Logotipo-Solar.png"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
       type="image/x-icon"
     />
     <title>Cadastro - SOLAR</title>
@@ -25,67 +25,109 @@
       <div class="logo">
         <img
           height="90"
-          src="/src/assets/logo_nav2.png"
+          src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
           alt="Logo branca Solar"
         />
       </div>
 
       <nav class="nav-pai">
         <ul>
-          <li><a href="#">HOME</a></li>
+          <li><a href="">HOME</a></li>
           <li>
             <a href="#">
               EXPLORAR
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de explorar"
               />
             </a>
             <ul class="dropdown">
               <li>
-                <a href="/src/pages/explore/eventss/index/index.html"
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/eventss/index/index.html')"
                   >EVENTOS</a
                 >
               </li>
+
               <li>
-                <a href="/src/pages/explore/courses/index/index.html">CURSOS</a>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
               </li>
               <li>
-                <a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="redirectUser('./game/game.html')">JOGOS</a>
               </li>
             </ul>
           </li>
 
-          <li><a href="/src/pages/donation/donation.html">DOAÇÃO</a></li>
           <li>
-            <a href="/src/pages/professionals/professionals.html"
+            <a href="#" onclick="redirectUser('../donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('../professionals/professionals.html')"
               >PROFISSIONAIS</a
             >
           </li>
-          <li><a href="/src/pages/plans/plans.html">PLANOS</a></li>
+          <li>
+            <a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a>
+          </li>
 
           <li>
             <a href="#">
               REDES
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de redes"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="#">SOBRE</a></li>
-              <li><a href="#">LOCALIZAR INSTITUIÇÕES</a></li>
-              <li><a href="#">FALE CONOSCO</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <!-- //Arrumar o link para fale conosco -->
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
             </ul>
           </li>
 
-          <button class="button-header">ENTRAR</button>
+          <a href="#" onclick="redirectUser('../login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
         </ul>
       </nav>
     </header>
-
     <main>
       <div class="margem-global">
         <div class="container-cadastro">
@@ -96,7 +138,7 @@
 
                 <div class="input-group">
                   <img
-                    src="/src/assets/img-register/mail.png"
+                    src="/ProjetoSolarOficial/src/assets/img-register/mail.png"
                     alt="icone de e-mail"
                   />
                   <input type="email" placeholder="Insira seu email" required />
@@ -104,7 +146,7 @@
 
                 <div class="input-group">
                   <img
-                    src="/src/assets/img-register/confirmMail.png"
+                    src="/ProjetoSolarOficial/src/assets/img-register/confirmMail.png"
                     alt="icone de confirme e-mail"
                   />
                   <input
@@ -116,7 +158,7 @@
 
                 <div class="input-group">
                   <img
-                    src="/src/assets/img-register/Password(1).png"
+                    src="/ProjetoSolarOficial/src/assets/img-register/Password(1).png"
                     alt="iconde de cadeado, simbolizando senha"
                   />
                   <input
@@ -128,7 +170,7 @@
 
                 <div class="input-group">
                   <img
-                    src="/src/assets/img-register/confirmPassword.png"
+                    src="/ProjetoSolarOficial/src/assets/img-register/confirmPassword.png"
                     alt="icone de confirme a senha"
                   />
                   <input
@@ -164,7 +206,7 @@
           </div>
           <div class="circulo-com-gradiente-e-imagem">
             <img
-              src="/src/assets/img-register/img_Logo(1).png"
+              src="/ProjetoSolarOficial/src/assets/img-register/img_Logo(1).png"
               alt="Logo solar com escrita"
             />
           </div>

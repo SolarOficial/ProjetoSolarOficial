@@ -11,10 +11,10 @@
       name="keywords"
       content="Monoparentalidade, Solar, Pai Solo, Mãe Solo "
     />
-    <link rel="stylesheet" href="/src/pages/explore/eventss/index/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="shortcut icon"
-      href="/src/assets/Logotipo-Solar.png"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
       type="image/x-icon"
     />
     <title>Explorar - Eventos</title>
@@ -27,49 +27,106 @@
       <div class="logo">
         <img
           height="90"
-          src="/src/assets/logo_nav2.png"
+          src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
           alt="Logo branca Solar"
         />
       </div>
 
       <nav class="nav-pai">
         <ul>
-          <li><a href="/src/pages/home/home.html">HOME</a></li>
+          <li><a href="">HOME</a></li>
           <li>
-            <a href="#"
-              >EXPLORAR
+            <a href="#">
+              EXPLORAR
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de explorar"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="/src/pages/explore/eventss/index/index.html">EVENTOS</a></li>
-              <li><a href="../../courses/index/index.html">CURSOS</a></li>
-              <li><a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/eventss/index/index.html')"
+                  >EVENTOS</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="redirectUser('./game/game.html')">JOGOS</a>
+              </li>
             </ul>
           </li>
 
-          <li><a href="/src/pages/donation/donation.html">DOAÇÃO</a></li>
-          <li><a href="/src/pages/professionals/professionals.html">PROFISSIONAIS</a></li>
-          <li><a href="/src/pages/plans/plans.html">PLANOS</a></li>
           <li>
-            <a href="#"
-              >REDES
+            <a href="#" onclick="redirectUser('../donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('../professionals/professionals.html')"
+              >PROFISSIONAIS</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a>
+          </li>
+
+          <li>
+            <a href="#">
+              REDES
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
-                alt="seta ao lado de rede"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
+                alt="seta ao lado de redes"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="#">SOBRE</a></li>
-              <li><a href="/src/pages/home/location/location.html">LOCALIZAR INSTITUIÇÕES</a></li>
-              <li><a href="#">FALE CONOSCO</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <!-- //Arrumar o link para fale conosco -->
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
             </ul>
           </li>
-          <a href="/src/pages/login/login.html"><button class="button-header">ENTRAR</button></a>
+
+          <a href="#" onclick="redirectUser('../login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
         </ul>
       </nav>
     </header>
@@ -79,7 +136,7 @@
       <section class="imagem-container-father">
         <div class="imagem-container">
           <img
-            src="/src/assets/imagem_fundo.png"
+            src="/ProjetoSolarOficial/src/assets/imagem_fundo.png"
             alt="Foto de pessoas felizes no parque"
             height="400"
           />
@@ -98,7 +155,7 @@
           <div class="card">
             <img
               class="img-card1"
-              src="/src/assets/img-card1-eventos.png"
+              src="/ProjetoSolarOficial/src/assets/img-card1-eventos.png"
               height="230"
               alt="Pessoas em roda de conversa"
             />
@@ -106,12 +163,15 @@
               <p class="data-event">10 FEV</p>
               <h3>Roda de acolhimento</h3>
               <div class="icone-texto">
-                <img src="/src/assets/local.png" alt="icone de local" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/local.png"
+                  alt="icone de local"
+                />
                 <h4>Centro de convenções</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/horario.png"
+                  src="/ProjetoSolarOficial/src/assets/horario.png"
                   width="20"
                   height="20"
                   alt="icone de tempo"
@@ -136,7 +196,7 @@
           <div class="card">
             <img
               class="img-card2"
-              src="/src/assets/img-card2-events.png"
+              src="/ProjetoSolarOficial/src/assets/img-card2-events.png"
               height="230"
               alt="Pessoas sentadas conversando"
             />
@@ -144,12 +204,15 @@
               <p class="data-event">05 Jun</p>
               <h3>Bem-estar materno</h3>
               <div class="icone-texto">
-                <img src="/src/assets/local.png" alt="icone de local" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/local.png"
+                  alt="icone de local"
+                />
                 <h4>Parque Vila Lobos - São Paulo/SP</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/horario.png"
+                  src="/ProjetoSolarOficial/src/assets/horario.png"
                   width="20"
                   height="20"
                   alt="icone de tempo"
@@ -174,7 +237,7 @@
           <div class="card">
             <img
               class="img-card3"
-              src="/src/assets/img-card3-eventos.png"
+              src="/ProjetoSolarOficial/src/assets/img-card3-eventos.png"
               alt="imagem card 3"
               height="230"
             />
@@ -182,12 +245,15 @@
               <p class="data-event">25 AGO</p>
               <h3>Evento Solar</h3>
               <div class="icone-texto">
-                <img src="/src/assets/local.png" alt="icone de local" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/local.png"
+                  alt="icone de local"
+                />
                 <h4>Brasilândia - São Paulo/SP</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/horario.png"
+                  src="/ProjetoSolarOficial/src/assets/horario.png"
                   width="20"
                   height="20"
                   alt="icone de horario"
@@ -217,7 +283,7 @@
           <div class="card">
             <img
               class="img-card1"
-              src="/src/assets/criancasBrincando.png"
+              src="/ProjetoSolarOficial/src/assets/criancasBrincando.png"
               alt="imagens crianças brincando"
               height="230"
             />
@@ -225,12 +291,15 @@
               <p class="data-event">12 OUT</p>
               <h3>Dia das crianças</h3>
               <div class="icone-texto">
-                <img src="/src/assets/local.png" alt="icone de local" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/local.png"
+                  alt="icone de local"
+                />
                 <h4>Parque Ibirapuera</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/horario.png"
+                  src="/ProjetoSolarOficial/src/assets/horario.png"
                   width="20"
                   height="20"
                   alt="icone de horario"
@@ -255,7 +324,7 @@
           <div class="card">
             <img
               class="img-card2"
-              src="/src/assets/paisParque.png"
+              src="/ProjetoSolarOficial/src/assets/paisParque.png"
               alt="imagens pais no parque"
               height="230"
             />
@@ -263,12 +332,15 @@
               <p class="data-event">03 NOV</p>
               <h3>Aventura partena</h3>
               <div class="icone-texto">
-                <img src="/src/assets/local.png" alt="icone de local" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/local.png"
+                  alt="icone de local"
+                />
                 <h4>Sesc Itaquera</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/horario.png"
+                  src="/ProjetoSolarOficial/src/assets/horario.png"
                   width="20"
                   height="20"
                   alt="icone de horario"
@@ -293,7 +365,7 @@
           <div class="card">
             <img
               class="img-card3"
-              src="/src/assets/festaSolar.png"
+              src="/ProjetoSolarOficial/src/assets/festaSolar.png"
               alt="Pessoas reunidas na festa solar"
               height="230"
             />
@@ -301,12 +373,15 @@
               <p class="data-event">16 Dez</p>
               <h3>Aniversário Solar</h3>
               <div class="icone-texto">
-                <img src="/src/assets/local.png" alt="icone de local" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/local.png"
+                  alt="icone de local"
+                />
                 <h4>Senac Lapa Tito</h4>
               </div>
               <div class="icone-texto">
                 <img
-                  src="/src/assets/horario.png"
+                  src="/ProjetoSolarOficial/src/assets/horario.png"
                   width="20"
                   height="20"
                   alt="icone de horario"
@@ -339,7 +414,7 @@
           <div class="logotipo-texto">
             <div class="logotipo-nome">
               <img
-                src="/src/assets/logo-solar-branca-escrita-4K_1.png"
+                src="/ProjetoSolarOficial/src/assets/logo-solar-branca-escrita-4K_1.png"
                 alt="Logo Solar"
               />
             </div>
@@ -357,7 +432,7 @@
             <div class="instagram">
               <a href="https://www.instagram.com/solar.plataforma/"
                 ><img
-                  src="/src/assets/logo-instagram.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-instagram.png"
                   alt="Logo do instagram"
               /></a>
               <a href="https://www.instagram.com/solar.plataforma/"
@@ -369,7 +444,7 @@
             <div class="linkedin">
               <a href="https://www.linkedin.com/in/solar-instituto/"
                 ><img
-                  src="/src/assets/logo-linkedin.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-linkedin.png"
                   alt="logo do linkedin"
               /></a>
               <a href="https://www.linkedin.com/in/solar-instituto/">Solar</a>
@@ -400,5 +475,5 @@
       <!--margem-global -->
     </footer>
   </body>
-  <script src="/src/js/index.js"></script>
+  <script src="../../../../js/script.js"></script>
 </html>

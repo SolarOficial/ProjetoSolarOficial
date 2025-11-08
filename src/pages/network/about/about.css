@@ -22,7 +22,7 @@
 }
 
 .margem-global {
-    margin: 0 60px 0 60px;
+  margin: 0 60px 0 60px;
 }
 
 /* HEADER */
@@ -54,7 +54,7 @@
 }
 
 /* dropdawn */
-.nav-pai li{
+.nav-pai li {
   position: relative;
 }
 
@@ -70,7 +70,7 @@
   transition: background 0.3s;
 }
 
-p#selecionado{
+p#selecionado {
   font-family: "Karla", sans-serif;
   color: var(--cor-branca);
 }
@@ -146,367 +146,365 @@ ul.dropdown li a:hover {
 /* SEÇÃO SOBRE */
 
 .conheca-solar {
-    background-image: url('/src/assets/img-about/background-inicio-sobre.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 620px;
-    margin-top: 95px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-inicio-sobre.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 620px;
+  margin-top: 95px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .conheca-solar h2 {
-    font-family: var(--font-titulo);
-    color: var(--cor-branca);
-    font-size: 98px;
+  font-family: var(--font-titulo);
+  color: var(--cor-branca);
+  font-size: 98px;
 }
 
 .conheca-solar p {
-    font-family: var(--font-paragrafo);
-    color: var(--cor-laranja);
-    font-size: 30px;
-    margin-top: 20px;
+  font-family: var(--font-paragrafo);
+  color: var(--cor-laranja);
+  font-size: 30px;
+  margin-top: 20px;
 }
 
 .carrossel-sobre {
-    margin-top: 40px;
-    display: flex;
-    gap: 20px;
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
 }
 
 /* QUEM SOMOS */
 
 .title-quem-somos {
-    font-family: var(--font-titulo);
-    color: #4A356D;
-    font-size: 45px;
-    text-align: center;
-    margin-top: 60px
+  font-family: var(--font-titulo);
+  color: #4a356d;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 60px;
 }
 
 .container-quem-somos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 80px;
-    margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .imagem-quem-somos img {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .texto-quem-somos p {
-    font-family: var(--font-paragrafo);
-    font-size: 20px;
-    padding-bottom: 25px;
+  font-family: var(--font-paragrafo);
+  font-size: 20px;
+  padding-bottom: 25px;
 }
 
 /* MISSÃO VISÃO VALORES */
 
 .background-missao-visao-valores {
-    background-image: url('/src/assets/img-about/background-misao-visao-valores.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    padding: 6rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-misao-visao-valores.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-missao-visao-valores {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 4rem;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: 100%;
 }
 
 .container-missao-visao-valores img {
-    width: 85px;
-    height: auto;
-    position: absolute;
-    top: -45px;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 85px;
+  height: auto;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .missao-visao-valores {
-    position: relative;
-    align-items: center;
-    text-align: center;
-    width: 350px;
-    height: 300px;
-    border: 2px solid var(--cor-roxo-escuro);
-    border-radius: 20px;
-    padding: 50px 20px 20px 20px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  width: 350px;
+  height: 300px;
+  border: 2px solid var(--cor-roxo-escuro);
+  border-radius: 20px;
+  padding: 50px 20px 20px 20px;
 }
 
 .missao-visao-valores h3 {
-    font-family: var(--font-titulo);
-    font-size: 28px;
-    color: var(--cor-roxo-escuro);
-    margin-bottom: 10px;
-    margin-top: 20px;
+  font-family: var(--font-titulo);
+  font-size: 28px;
+  color: var(--cor-roxo-escuro);
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .missao-visao-valores p {
-    font-family: var(--font-paragrafo);
-    font-size: 18px;
+  font-family: var(--font-paragrafo);
+  font-size: 18px;
 }
 
 /* SECTION BENEFÍCIOS SOLAR */
 
 .title-beneficios-solar {
-    margin: 70px 0px;
-    font-family: var(--font-titulo);
-    font-size: 45px;
-    color: var(--cor-roxo-escuro);
-    text-align: center;
+  margin: 70px 0px;
+  font-family: var(--font-titulo);
+  font-size: 45px;
+  color: var(--cor-roxo-escuro);
+  text-align: center;
 }
 
 .container-beneficios-solar {
-    margin: 70px 0px 100px 0px;
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    width: 100%;
+  margin: 70px 0px 100px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
 }
 
 .container-beneficios-solar i {
-    font-size: 30px;
-    color: var(--cor-roxo-escuro);
-    display: flex;
-    align-self: center;
-    cursor: pointer;
-    transition: 0.3s ease;
+  font-size: 30px;
+  color: var(--cor-roxo-escuro);
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .container-beneficios-solar i:hover {
-    color: var(--cor-roxo-claro);
+  color: var(--cor-roxo-claro);
 }
 
 .beneficios-solar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    border: 2px solid var(--cor-roxo-escuro);
-    border-radius: 20px;
-    padding: 40px 40px;
-    width: 400px;
-    height: 250px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 2px solid var(--cor-roxo-escuro);
+  border-radius: 20px;
+  padding: 40px 40px;
+  width: 400px;
+  height: 250px;
 }
 
 .beneficios-solar h3 {
-    font-family: var(--font-titulo);
-    font-size: 24px;
-    color: var(--cor-roxo-escuro);
-    text-align: center;
+  font-family: var(--font-titulo);
+  font-size: 24px;
+  color: var(--cor-roxo-escuro);
+  text-align: center;
 }
 
 .beneficios-solar img {
-    width: 80px;
-    height: auto;
+  width: 80px;
+  height: auto;
 }
 
 /* EQUIPE SOLAR */
 
 .title-equipe-solar {
-    font-family: var(--font-titulo);
-    font-size: 45px;
-    color: var(--cor-roxo-escuro);
-    text-align: center;
-    padding-bottom: 70px;
+  font-family: var(--font-titulo);
+  font-size: 45px;
+  color: var(--cor-roxo-escuro);
+  text-align: center;
+  padding-bottom: 70px;
 }
 
 .equipe-solar {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 10px;
 }
 
 .equipe-solar i {
-    font-size: 30px;
-    color: var(--cor-roxo-escuro);
-    display: flex;
-    align-self: center;
-    cursor: pointer;
+  font-size: 30px;
+  color: var(--cor-roxo-escuro);
+  display: flex;
+  align-self: center;
+  cursor: pointer;
 }
 
 .equipe-solar i:hover {
-    color: var(--cor-laranja);
-    transition: 0.3s ease;
+  color: var(--cor-laranja);
+  transition: 0.3s ease;
 }
 
 .equipe-solar img {
-    width: 100%;
-    border-radius: 30px 30px 0px 0px;
-    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  border-radius: 30px 30px 0px 0px;
+  box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.03);
 }
 
 .card-integrante-equipe-solar {
-    background-color: #fffad0;
-    border-radius: 30px;
-    margin-bottom: 30px;
+  background-color: #fffad0;
+  border-radius: 30px;
+  margin-bottom: 30px;
 }
 
-
 .descricao-equipe-solar {
-    padding: 10px 20px 20px 20px;
-    text-align: center;
+  padding: 10px 20px 20px 20px;
+  text-align: center;
 }
 
 .descricao-equipe-solar h3 {
-    font-family: var(--font-titulo);
-    font-size: 24px;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: var(--cor-roxo-escuro);
+  font-family: var(--font-titulo);
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--cor-roxo-escuro);
 }
 
 .descricao-equipe-solar p {
-    font-family: var(--font-paragrafo);
-    font-weight: 600;
-    font-size: 18px;
-    padding-bottom: 20px;
+  font-family: var(--font-paragrafo);
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 20px;
 }
 
 /* APOIE A SOLAR */
 
 .background-apoie-solar {
-    background: url('/src/assets/img-about/background-image_section-apoie-a-solar.png');
-    background-size: cover;
-    padding-top: 250px;
+  background: url("/ProjetoSolarOficial/src/assets/img-about/background-image_section-apoie-a-solar.png");
+  background-size: cover;
+  padding-top: 250px;
 }
 
 .apoie-solar-title {
-    font-family: var(--font-titulo);
-    font-size: 56px;
-    font-weight: 700;
-    color: var(--cor-roxo-escuro);
-    text-align: center;
-    margin-bottom: 30px;
-    position: relative;
+  font-family: var(--font-titulo);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--cor-roxo-escuro);
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .apoie-solar-title span {
-    color: var(--cor-amarelo);
+  color: var(--cor-amarelo);
 }
 
 .container-apoie-solar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
 }
 
 .imagem-logo-solar {
-    width: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .imagem-logo-solar img {
-    width: 500px;
-    height: auto;
-    padding-bottom: 200px;
+  width: 500px;
+  height: auto;
+  padding-bottom: 200px;
 }
 
 .apoie-solar-descricao {
-    font-family: var(--font-paragrafo);
-    font-size: 22px;
-    color: var(--cor-roxo-escuro);
+  font-family: var(--font-paragrafo);
+  font-size: 22px;
+  color: var(--cor-roxo-escuro);
 }
 
 .apoie-solar-descricao li {
-    margin-left: 80px;
+  margin-left: 80px;
 }
 
 .button-doar-agora button {
-    background-color: var(--cor-roxo-claro);
-    color: var(--cor-branca);
-    font-family: var(--font-paragrafo);
-    font-size: 20px;
-    padding: 20px;
-    border-radius: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 300px;
-    border: none;
-    cursor: pointer;
+  background-color: var(--cor-roxo-claro);
+  color: var(--cor-branca);
+  font-family: var(--font-paragrafo);
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 300px;
+  border: none;
+  cursor: pointer;
 }
 
-.button-doar-agora button:hover{
-    background-color: #BF9EF5;
-    transition: 0.3s ease;
+.button-doar-agora button:hover {
+  background-color: #bf9ef5;
+  transition: 0.3s ease;
 }
 
 /* PERGUNTAS FREQUENTES  */
 
 .secao-perguntas-frequentes {
-    padding: 80px 0 100px 0;
-    background-color: var(--cor-branca);
+  padding: 80px 0 100px 0;
+  background-color: var(--cor-branca);
 }
 
 .title-perguntas-frequentes {
-    font-family: var(--font-titulo);
-    font-size: 45px;
-    color: var(--cor-roxo-escuro);
-    text-align: center;
-    margin-bottom: 60px;
-    font-weight: 700;
+  font-family: var(--font-titulo);
+  font-size: 45px;
+  color: var(--cor-roxo-escuro);
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 700;
 }
 
 .container-perguntas {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .pergunta-item {
-    background-color: #E8DCFA;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
+  background-color: #e8dcfa;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
 .pergunta-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 30px;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  cursor: pointer;
 }
 
 .pergunta-header:hover {
-    background-color: #dcc9f5;
-    border-radius: 15px;
+  background-color: #dcc9f5;
+  border-radius: 15px;
 }
 
 .pergunta-titulo {
-    font-family: var(--font-paragrafo);
-    font-size: 20px;
-    color: var(--cor-roxo-escuro);
-    font-weight: 600;
+  font-family: var(--font-paragrafo);
+  font-size: 20px;
+  color: var(--cor-roxo-escuro);
+  font-weight: 600;
 }
 
 .pergunta-icone {
-    font-size: 24px;
-    color: var(--cor-roxo-escuro);
-    font-weight: bold;
+  font-size: 24px;
+  color: var(--cor-roxo-escuro);
+  font-weight: bold;
 }
 
 /* FOOTER */

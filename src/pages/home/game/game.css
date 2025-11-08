@@ -141,7 +141,7 @@ ul.dropdown li a:hover {
 /* SECTION imagem-fundo */
 
 section.image-fundo {
-  background-image: url(/src/assets/img-game/pexels-tima-miroshnichenko-7048537.png);
+  background-image: url(/ProjetoSolarOficial/src/assets/img-game/pexels-tima-miroshnichenko-7048537.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -168,7 +168,7 @@ section.image-fundo .margem-global p {
 /* SECTION ATENCAO */
 
 section.atencao {
-  background-image: url(/src/assets/img-game/Frame\ 77.png);
+  background-image: url(/ProjetoSolarOficial/src/assets/img-game/Frame\ 77.png);
   height: 304px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -217,26 +217,27 @@ section.ambiente-inclusivo .card-jogos .margem-global aside {
   text-align: center;
 }
 
-section.ambiente-inclusivo .card-jogos .margem-global aside h3{
+section.ambiente-inclusivo .card-jogos .margem-global aside h3 {
   font-size: 40px;
   font-family: var(--font-titulo);
   color: var(--cor-roxo-escuro);
 }
 
-section.ambiente-inclusivo .card-jogos .margem-global aside p#maior{
-   font-size: 32px;
+section.ambiente-inclusivo .card-jogos .margem-global aside p#maior {
+  font-size: 32px;
   font-family: var(--font-paragrafo);
   color: var(--cor-roxo-escuro);
 }
 
-section.ambiente-inclusivo .card-jogos .margem-global aside p{
-   font-size: 30px;
+section.ambiente-inclusivo .card-jogos .margem-global aside p {
+  font-size: 30px;
   font-family: var(--font-paragrafo);
   color: var(--cor-roxo-escuro);
 }
 
 section.ambiente-inclusivo .container-titulo-conteudo {
-  background-image:linear-gradient(to bottom, #FFFFFF 0%, #BF9EF5 30%), url(/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #bf9ef5 30%),
+    url(/ProjetoSolarOficial/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
   height: 614px;
   display: flex;
   justify-content: flex-end;
@@ -254,7 +255,7 @@ section.ambiente-inclusivo .container-titulo-conteudo h2 {
 }
 
 section.ambiente-inclusivo .card-jogos.meio {
-  background: #BF9EF5;
+  background: #bf9ef5;
   height: 614px;
   display: flex;
   justify-content: flex-end;
@@ -266,8 +267,9 @@ section.ambiente-inclusivo .card-jogos.meio .margem-global {
   background: var(--cor-laranja);
 }
 
-section.ambiente-inclusivo .card-jogos.fim{
-  background-image: linear-gradient(to top, #FFFFFF 0%, #BF9EF5 10%), url(/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
+section.ambiente-inclusivo .card-jogos.fim {
+  background-image: linear-gradient(to top, #ffffff 0%, #bf9ef5 10%),
+    url(/ProjetoSolarOficial/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
   background-position: bottom;
   height: 800px;
   display: flex;
@@ -276,17 +278,16 @@ section.ambiente-inclusivo .card-jogos.fim{
   flex-direction: column;
   margin-bottom: 118px;
   padding-bottom: 200px;
-  
 }
 
 /* SECTION ABERTO A TODAS */
 
-section.aberto-todas .margem-global{
+section.aberto-todas .margem-global {
   display: flex;
   justify-content: center;
 }
 
-section.aberto-todas .margem-global article{
+section.aberto-todas .margem-global article {
   background: var(--cor-roxo-escuro);
   color: var(--cor-branca);
   border: solid 4px var(--cor-laranja);
@@ -302,17 +303,17 @@ section.aberto-todas .margem-global article{
   height: 500px;
 }
 
-section.aberto-todas .margem-global article h3{
+section.aberto-todas .margem-global article h3 {
   font-family: var(--font-titulo);
   font-size: 30px;
 }
 
-section.aberto-todas .margem-global article p{
+section.aberto-todas .margem-global article p {
   font-family: var(--font-titulo);
   font-size: 20px;
 }
 
-section.aberto-todas .margem-global article a{
+section.aberto-todas .margem-global article a {
   width: 357px;
   height: 50px;
   color: var(--cor-preta);
@@ -326,12 +327,10 @@ section.aberto-todas .margem-global article a{
   text-decoration: none;
 }
 
-
-section.aberto-todas .margem-global aside img{
+section.aberto-todas .margem-global aside img {
   width: 400px;
   height: 600px;
 }
-
 
 /* FOOTER */
 

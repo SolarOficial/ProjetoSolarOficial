@@ -10,13 +10,10 @@
       name="keywords"
       content="Monoparentalidade, Solar, Pai Solo, Mãe Solo"
     />
-    <link
-      rel="stylesheet"
-      href="/src/pages/explore/eventss/paternalAdventure/style.css"
-    />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="shortcut icon"
-      href="/src/assets/Logotipo-Solar.png"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
       type="image/x-icon"
     />
     <title>Eventos - Solar</title>
@@ -28,55 +25,109 @@
       <div class="logo">
         <img
           height="90"
-          src="/src/assets/logo_nav2.png"
+          src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
           alt="Logo branca Solar"
         />
       </div>
 
       <nav class="nav-pai">
         <ul>
-          <li><a href="#">HOME</a></li>
+          <li><a href="">HOME</a></li>
           <li>
             <a href="#">
               EXPLORAR
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de explorar"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="#">EVENTOS</a></li>
-              <li><a href="#">CURSOS</a></li>
-              <li><a href="#">SOLMÍDIA</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/eventss/index/index.html')"
+                  >EVENTOS</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="redirectUser('./game/game.html')">JOGOS</a>
+              </li>
             </ul>
           </li>
 
-          <li><a href="#">DOAÇÃO</a></li>
-          <li><a href="#">PROFISSIONAIS</a></li>
-          <li><a href="#">PLANOS</a></li>
+          <li>
+            <a href="#" onclick="redirectUser('../donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('../professionals/professionals.html')"
+              >PROFISSIONAIS</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a>
+          </li>
 
           <li>
             <a href="#">
               REDES
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de redes"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="#">SOBRE</a></li>
-              <li><a href="#">LOCALIZAR INSTITUIÇÕES</a></li>
-              <li><a href="#">FALE CONOSCO</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <!-- //Arrumar o link para fale conosco -->
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
             </ul>
           </li>
 
-          <button class="button-header">ENTRAR</button>
+          <a href="#" onclick="redirectUser('../login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
         </ul>
       </nav>
     </header>
-
     <!-- ================================= MAIN ================================= -->
     <main class="container-principal">
       <section class="sessao-pai">
@@ -84,7 +135,7 @@
         <article class="topo-card">
           <img
             class="img-topo-card"
-            src="/src/assets/paisParque.png"
+            src="/ProjetoSolarOficial/src/assets/paisParque.png"
             width="140"
             alt="imagem dia das crianças"
           />
@@ -103,7 +154,10 @@
             <!-- Local -->
             <div class="bloco">
               <div class="icone-texto">
-                <img src="/src/assets/local.png" alt="ícone de local" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/local.png"
+                  alt="ícone de local"
+                />
                 <h3>Local</h3>
               </div>
               <div class="campo">
@@ -114,7 +168,10 @@
             <!-- Horário -->
             <div class="bloco">
               <div class="icone-texto">
-                <img src="/src/assets/horario.png" alt="ícone de horário" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/horario.png"
+                  alt="ícone de horário"
+                />
                 <h3>Horário</h3>
               </div>
               <div class="campo">
@@ -125,7 +182,10 @@
             <!-- Período -->
             <div class="bloco">
               <div class="icone-texto">
-                <img src="/src/assets/calendario.png" alt="ícone de período" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/calendario.png"
+                  alt="ícone de período"
+                />
                 <h3>Data</h3>
               </div>
               <div class="campo">
@@ -136,7 +196,10 @@
             <!-- Modalidade -->
             <div class="bloco">
               <div class="icone-texto">
-                <img src="/src/assets/Goal.png" alt="ícone de modalidade" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/Goal.png"
+                  alt="ícone de modalidade"
+                />
                 <h3>Entrada</h3>
               </div>
               <div class="campo">
@@ -147,7 +210,10 @@
             <!-- Descrição -->
             <div class="bloco descricao">
               <div class="icone-texto">
-                <img src="/src/assets/Task.png" alt="ícone de descrição" />
+                <img
+                  src="/ProjetoSolarOficial/src/assets/Task.png"
+                  alt="ícone de descrição"
+                />
                 <h3>Descrição do evento</h3>
               </div>
               <div class="campo campo-descricao">
@@ -184,7 +250,7 @@
           <div class="logotipo-texto">
             <div class="logotipo-nome">
               <img
-                src="/src/assets/logo-solar-branca-escrita-4K_1.png"
+                src="/ProjetoSolarOficial/src/assets/logo-solar-branca-escrita-4K_1.png"
                 alt="Logo Solar"
               />
             </div>
@@ -199,7 +265,7 @@
             <div class="instagram">
               <a href="https://www.instagram.com/solar.plataforma/">
                 <img
-                  src="/src/assets/logo-instagram.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-instagram.png"
                   alt="Logo do Instagram"
                 />
               </a>
@@ -211,7 +277,7 @@
             <div class="linkedin">
               <a href="https://www.linkedin.com/in/solar-instituto/">
                 <img
-                  src="/src/assets/logo-linkedin.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-linkedin.png"
                   alt="Logo do LinkedIn"
                 />
               </a>
@@ -238,5 +304,5 @@
       </div>
     </footer>
   </body>
-  <script src="/src/js/index.js"></script>
+  <script src="../../../../js/script.js"></script>
 </html>

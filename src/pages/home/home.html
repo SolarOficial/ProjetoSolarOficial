@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./home.css" />
     <link
       rel="shortcut icon"
-      href="/src/assets/Logotipo-Solar.png"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
       type="image/x-icon"
     />
     <title>Home - SOLAR</title>
@@ -25,7 +25,7 @@
       <div class="logo">
         <img
           height="90"
-          src="/src/assets/logo_nav2.png"
+          src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
           alt="Logo branca Solar"
         />
       </div>
@@ -38,51 +38,93 @@
               EXPLORAR
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de explorar"
               />
             </a>
             <ul class="dropdown">
               <li>
-                <a href="/src/pages/explore/eventss/index/index.html"
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/eventss/index/index.html')"
                   >EVENTOS</a
                 >
               </li>
-              
+
               <li>
-                <a href="/src/pages/explore/courses/index/index.html">CURSOS</a>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
               </li>
               <li>
-                <a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="redirectUser('./game/game.html')">JOGOS</a>
               </li>
             </ul>
           </li>
 
-          <li><a href="/src/pages/donation/donation.html">DOAÇÃO</a></li>
           <li>
-            <a href="/src/pages/professionals/professionals.html"
+            <a href="#" onclick="redirectUser('../donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('../professionals/professionals.html')"
               >PROFISSIONAIS</a
             >
           </li>
-          <li><a href="/src/pages/plans/plans.html">PLANOS</a></li>
+          <li>
+            <a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a>
+          </li>
 
           <li>
             <a href="#">
               REDES
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de redes"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="/src/pages/network/about/about.html">SOBRE</a></li>
-              <li><a href="/src/pages/network/location/location.html">LOCALIZAR INSTITUIÇÕES</a></li>
-              <li><a href="#">FALE CONOSCO</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <!-- //Arrumar o link para fale conosco -->
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
             </ul>
           </li>
 
-          <a href="/src/pages/login/login.html"><button class="button-header">ENTRAR</button></a>
+          <a href="#" onclick="redirectUser('../login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
         </ul>
       </nav>
     </header>
@@ -114,7 +156,7 @@
             <!--paragrafo02 -->
 
             <div class="botao">
-              <button>
+              <button onclick="redirectUser('../network/about/about.html')">
                 <p>SAIBA MAIS</p>
               </button>
             </div>
@@ -132,7 +174,7 @@
 
           <div class="container-img-texto">
             <img
-              src="../../assets/img-home/imagem_proposito.png"
+              src="/ProjetoSolarOficial/src/assets/img-home/imagem_proposito.png"
               alt="três imagens diferentes de pais com seus filhos"
             />
 
@@ -162,7 +204,7 @@
           <div class="container-cards">
             <div class="card">
               <img
-                src="/src/assets/img-home/img-card1-home.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/img-card1-home.png"
                 alt="Imagem de uma professora com um livro aberto sorrindo dando aula."
               />
 
@@ -185,7 +227,7 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/img-card2-home.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/img-card2-home.png"
                 alt="Imagem de pais e mães solos com seus filhos reunidos em uma mesa para discutir seus benefícios."
               />
 
@@ -208,7 +250,7 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/img-card3-home.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/img-card3-home.png"
                 alt="Imagem de uma mãe sorrindo com sua filha no colo"
               />
 
@@ -231,7 +273,9 @@
           <!--container-cards-->
 
           <div class="button-veja-mais">
-            <a href="/src/pages/explore/sunMidia/solmidia.html"
+            <a
+              href="#"
+              onclick="redirectUser('../explore/sunMidia/solmidia.html')"
               >VEJA MAIS CONTEÚDOS</a
             >
           </div>
@@ -248,7 +292,7 @@
           <div class="container-cards">
             <div class="card">
               <img
-                src="/src/assets/img-home/icones-home/icone-user.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/icones-home/icone-user.png"
                 alt="ícone de perfil"
               />
               <p><strong>Perfil Personalizado</strong></p>
@@ -258,7 +302,7 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/icones-home/icone-user-medalha.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/icones-home/icone-user-medalha.png"
                 alt="ìcone de perfil com uma medalha abaixo"
               />
               <p><strong>Profissionais Especializados</strong></p>
@@ -268,7 +312,7 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/icones-home/blog.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/icones-home/blog.png"
                 alt="Mini chat com um lápis sob ele"
               />
               <p><strong>SolMídia</strong></p>
@@ -280,7 +324,7 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/icones-home/mapa.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/icones-home/mapa.png"
                 alt="Mapa dobrado com um pin sob ele"
               />
               <p><strong>Mapa de Apoio</strong></p>
@@ -293,7 +337,7 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/icones-home/redes-sociais.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/icones-home/redes-sociais.png"
                 alt="Imagem com 3 chats colados, 1 perfil, 2 comentário e 3 amei"
               />
               <p><strong>Comunidade Ativa</strong></p>
@@ -305,7 +349,7 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/icones-home/lista-check.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/icones-home/lista-check.png"
                 alt="prancheta com checklists"
               />
               <p><strong>Planos Acessíveis</strong></p>
@@ -339,7 +383,7 @@
 
               <div class="opcoes">
                 <img
-                  src="/src/assets/img-home/seta.png"
+                  src="/ProjetoSolarOficial/src/assets/img-home/seta.png"
                   alt="Botão de play ONGs"
                 />
                 <p>ONGs</p>
@@ -348,7 +392,7 @@
 
               <div class="opcoes">
                 <img
-                  src="/src/assets/img-home/seta.png"
+                  src="/ProjetoSolarOficial/src/assets/img-home/seta.png"
                   alt="Botão de play CRAS"
                 />
                 <p>CRAS</p>
@@ -357,7 +401,7 @@
 
               <div class="opcoes">
                 <img
-                  src="/src/assets/img-home/seta.png"
+                  src="/ProjetoSolarOficial/src/assets/img-home/seta.png"
                   alt="Botão de play UBS"
                 />
                 <p>UBS</p>
@@ -365,7 +409,9 @@
               <!--opcoes-->
 
               <div class="botao-localizar">
-                <button>Localizar Instituições</button>
+                <button onclick="redirectUser('../login/login.html')">
+                  Localizar Instituições
+                </button>
               </div>
               <!--botao-localizar-->
             </div>
@@ -373,7 +419,7 @@
 
             <aside>
               <img
-                src="/src/assets/img-home/mapa-senac.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/mapa-senac.png"
                 alt="imagem do mapa da zona oeste de são paulo"
               />
             </aside>
@@ -405,7 +451,9 @@
               </p>
 
               <div class="botao-acessar">
-                <button>Acessar Comunidade</button>
+                <button onclick="redirectUser('../login/login.html')">
+                  Acessar Comunidade
+                </button>
               </div>
               <!--botao-acessar-->
             </div>
@@ -419,12 +467,12 @@
               </p>
 
               <img
-                src="/src/assets/img-home/mae_e_filho.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/mae_e_filho.png"
                 alt="Mãe e filho se abraçando"
               />
               <p>16/10/2025</p>
               <img
-                src="/src/assets/img-home/coracao.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/coracao.png"
                 alt="Coração abaixo da foto da mãe filho"
               />
             </aside>
@@ -442,21 +490,27 @@
           <div class="container-card">
             <div class="card">
               <img
-                src="/src/assets/img-home/pai_e_filha_no_pc.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/pai_e_filha_no_pc.png"
                 alt="Pai e filha no computador"
               />
               <p>Vagas de emprego</p>
-              <a href="/src/pages/register/register.html">ACESSAR VAGAS</a>
+              <a
+                href="#"
+                onclick="externalRedirect('https://cate.prefeitura.sp.gov.br/vagas-de-emprego/')"
+                >ACESSAR VAGAS</a
+              >
             </div>
             <!--card-->
 
             <div class="card">
               <img
-                src="/src/assets/img-home/manicure.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/manicure.png"
                 alt="Foto de curso de manicure"
               />
               <p>Cursos</p>
-              <a href="/src/pages/explore/courses/index/index.html"
+              <a
+                href="#"
+                onclick="redirectUser('../explore/courses/index/index.html')"
                 >ACESSAR CURSOS</a
               >
             </div>
@@ -464,11 +518,13 @@
 
             <div class="card">
               <img
-                src="/src/assets/img-home/evento.png"
+                src="/ProjetoSolarOficial/src/assets/img-home/evento.png"
                 alt="Evento no parque"
               />
               <p>Eventos</p>
-              <a href="/src/pages/explore/eventss/index/index.html"
+              <a
+                href="#"
+                onclick="redirectUser('../explore/eventss/index/index.html')"
                 >ACESSAR EVENTOS</a
               >
             </div>
@@ -481,8 +537,11 @@
       <!--cresca-solar-->
 
       <section class="acessar-jogos">
-          <a href="game/game.html">ACESSAR JOGOS INFANTIS EDUCATIVOS</a>
-      </section><!-- acessar-jogos-->
+        <a href="#" onclick="redirectUser('../home/game/game.html')"
+          >ACESSAR JOGOS INFANTIS EDUCATIVOS</a
+        >
+      </section>
+      <!-- acessar-jogos-->
 
       <section class="fale-conosco">
         <div class="margem-global">
@@ -559,7 +618,7 @@
           <div class="logotipo-texto">
             <div class="logotipo-nome">
               <img
-                src="/src/assets/logo-solar-branca-escrita-4K_1.png"
+                src="/ProjetoSolarOficial/src/assets/logo-solar-branca-escrita-4K_1.png"
                 alt="Logo Solar"
               />
             </div>
@@ -577,7 +636,7 @@
             <div class="instagram">
               <a href="https://www.instagram.com/solar.plataforma/"
                 ><img
-                  src="/src/assets/logo-instagram.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-instagram.png"
                   alt="Logo do instagram"
               /></a>
               <a href="https://www.instagram.com/solar.plataforma/"
@@ -589,7 +648,7 @@
             <div class="linkedin">
               <a href="https://www.linkedin.com/in/solar-instituto/"
                 ><img
-                  src="/src/assets/logo-linkedin.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-linkedin.png"
                   alt="logo do linkedin"
               /></a>
               <a href="https://www.linkedin.com/in/solar-instituto/">Solar</a>
@@ -620,5 +679,5 @@
       <!--margem-global -->
     </footer>
   </body>
-  <script src="/src/js/index.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/script.js"></script>
 </html>

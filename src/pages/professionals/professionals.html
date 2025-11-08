@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./professionals.css" />
     <link
       rel="shortcut icon"
-      href="/src/assets/Logotipo-Solar.png"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
       type="image/x-icon"
     />
     <title>Profissionais - SOLAR</title>
@@ -25,54 +25,110 @@
       <div class="logo">
         <img
           height="90"
-          src="/src/assets/logo_nav2.png"
+          src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
           alt="Logo branca Solar"
         />
       </div>
 
       <nav class="nav-pai">
         <ul>
-          <li><a href="/src/pages/home/home.html">HOME</a></li>
+          <li><a href="">HOME</a></li>
           <li>
             <a href="#">
               EXPLORAR
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de explorar"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="/src/pages/explore/eventss/index/index.html">EVENTOS</a></li>
-              <li><a href="/src/pages/explore/courses/index/index.html">CURSOS</a></li>
-              <li><a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/eventss/index/index.html')"
+                  >EVENTOS</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="redirectUser('./game/game.html')">JOGOS</a>
+              </li>
             </ul>
           </li>
 
-          <li><a href="/src/pages/donation/donation.html">DOAÇÃO</a></li>
-          <li><a href="">PROFISSIONAIS</a></li>
-          <li><a href="/src/pages/plans/plans.html">PLANOS</a></li>
+          <li>
+            <a href="#" onclick="redirectUser('../donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('../professionals/professionals.html')"
+              >PROFISSIONAIS</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a>
+          </li>
 
           <li>
             <a href="#">
               REDES
               <img
                 class="seta-header"
-                src="/src/assets/seta.png"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
                 alt="seta ao lado de redes"
               />
             </a>
             <ul class="dropdown">
-              <li><a href="#">SOBRE</a></li>
-              <li><a href="/src/pages/home/location/location.html">LOCALIZAR INSTITUIÇÕES</a></li>
-              <li><a href="#">FALE CONOSCO</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <!-- //Arrumar o link para fale conosco -->
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/about/about.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
             </ul>
           </li>
 
-          <button class="button-header">ENTRAR</button>
+          <a href="#" onclick="redirectUser('../login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="imagem-fundo">
         <div class="margem-global">
@@ -106,7 +162,7 @@
             <div class="card">
               <div class="imagem">
                 <img
-                  src="/src/assets/img-professionals/psicologo 1.png"
+                  src="/ProjetoSolarOficial/src/assets/img-professionals/psicologo 1.png"
                   alt="logo Psicologo"
                 />
               </div>
@@ -124,7 +180,7 @@
             <div class="card">
               <div class="imagem">
                 <img
-                  src="/src/assets/img-professionals/psiquiatra 1.png"
+                  src="/ProjetoSolarOficial/src/assets/img-professionals/psiquiatra 1.png"
                   alt="logo Psiquiatra"
                 />
               </div>
@@ -141,7 +197,7 @@
             <div class="card">
               <div class="imagem">
                 <img
-                  src="/src/assets/img-professionals/nutricionista 1.png"
+                  src="/ProjetoSolarOficial/src/assets/img-professionals/nutricionista 1.png"
                   alt="logo Nutricionista"
                 />
               </div>
@@ -170,12 +226,12 @@
               <div class="container-imagens">
                 <img
                   id="relativo"
-                  src="/src/assets/img-professionals/imagem_psicologo1.png"
+                  src="/ProjetoSolarOficial/src/assets/img-professionals/imagem_psicologo1.png"
                   alt=""
                 />
                 <img
                   id="absoluto"
-                  src="/src/assets/img-professionals/imagem_psicologo2.png"
+                  src="/ProjetoSolarOficial/src/assets/img-professionals/imagem_psicologo2.png"
                   alt=""
                 />
               </div>
@@ -232,7 +288,7 @@
             <div class="ajustar-seta" id="ajustar-seta">
               <div class="seta">
                 <img
-                  src="/src/assets/img-professionals/seta_esquerda.png"
+                  src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda.png"
                   alt="seta"
                 />
               </div>
@@ -242,7 +298,7 @@
                 <div class="container-conteudo-usuario">
                   <div class="usuario">
                     <img
-                      src="/src/assets/img-professionals/Ellipse 9.png"
+                      src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9.png"
                       alt="profissional 1"
                     />
                     <div class="texto">
@@ -255,7 +311,7 @@
                   <div class="container-textos">
                     <div class="icone-texto">
                       <img
-                        src="/src/assets/img-professionals/Vector.png"
+                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png"
                         alt="profissional 2"
                       />
                       <p>CRP: 05/12345</p>
@@ -264,7 +320,7 @@
 
                     <div class="icone-texto">
                       <img
-                        src="/src/assets/img-professionals/Vector (1).png"
+                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png"
                         alt="logo de local"
                       />
                       <p>São Paulo - SP</p>
@@ -293,7 +349,7 @@
             <div class="container-usuario">
               <div class="usuario">
                 <img
-                  src="/src/assets/img-professionals/Ellipse 9 (1).png"
+                  src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (1).png"
                   alt="profissional 2"
                 />
                 <div class="texto">
@@ -307,7 +363,7 @@
               <div class="container-textos">
                 <div class="icone-texto">
                   <img
-                    src="/src/assets/img-professionals/Vector.png"
+                    src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png"
                     alt="crm do profissional"
                   />
                   <p>CRM: 05/12345</p>
@@ -316,7 +372,7 @@
 
                 <div class="icone-texto">
                   <img
-                    src="/src/assets/img-professionals/Vector (1).png"
+                    src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png"
                     alt="logo local"
                   />
                   <p>São Paulo - SP</p>
@@ -342,7 +398,7 @@
                 <div class="container-conteudo-usuario">
                   <div class="usuario">
                     <img
-                      src="/src/assets/img-professionals/Ellipse 9 (2).png"
+                      src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (2).png"
                       alt="profissional 3"
                     />
                     <div class="texto">
@@ -356,7 +412,7 @@
                   <div class="container-textos">
                     <div class="icone-texto">
                       <img
-                        src="/src/assets/img-professionals/Vector.png"
+                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png"
                         alt="crm do profissional"
                       />
                       <p>CRN: 3 12567</p>
@@ -365,7 +421,7 @@
 
                     <div class="icone-texto">
                       <img
-                        src="/src/assets/img-professionals/Vector (1).png"
+                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png"
                         alt="logo do local"
                       />
                       <p>Rio de Janeiro - RJ</p>
@@ -389,7 +445,7 @@
 
                 <div class="seta">
                   <img
-                    src="/src/assets/img-professionals/seta_esquerda (1).png"
+                    src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda (1).png"
                     alt=""
                   />
                 </div>
@@ -435,7 +491,7 @@
 
             <div class="icone-cadeado">
               <img
-                src="/src/assets/img-professionals/simbolo-de-cadeado-para-interface-de-seguranca_1_1.png"
+                src="/ProjetoSolarOficial/src/assets/img-professionals/simbolo-de-cadeado-para-interface-de-seguranca_1_1.png"
                 alt="icone cadeado na cor roxa"
               />
             </div>
@@ -572,7 +628,7 @@
           <div class="card-pergunta">
             <p>Como funciona o agendamento das consultas?</p>
             <img
-              src="img/profissionais/resposta_perguntas-frequentes.png"
+              src="/ProjetoSolarOficial/img/profissionais/resposta_perguntas-frequentes.png"
               alt=""
             />
           </div>
@@ -581,7 +637,7 @@
           <div class="card-pergunta">
             <p>As consultas são gratuitas?</p>
             <img
-              src="img/profissionais/resposta_perguntas-frequentes.png"
+              src="/ProjetoSolarOficial/img/profissionais/resposta_perguntas-frequentes.png"
               alt=""
             />
           </div>
@@ -590,7 +646,7 @@
           <div class="card-pergunta">
             <p>Existe limite de atendimentos por pessoa?</p>
             <img
-              src="img/profissionais/resposta_perguntas-frequentes.png"
+              src="/ProjetoSolarOficial/img/profissionais/resposta_perguntas-frequentes.png"
               alt=""
             />
           </div>
@@ -599,7 +655,7 @@
           <div class="card-pergunta">
             <p>Posso ser atendido por um estudante da área da saúde?</p>
             <img
-              src="img/profissionais/resposta_perguntas-frequentes.png"
+              src="/ProjetoSolarOficial/img/profissionais/resposta_perguntas-frequentes.png"
               alt=""
             />
           </div>
@@ -608,7 +664,7 @@
           <div class="card-pergunta">
             <p>Meus dados e conversas ficam seguros?</p>
             <img
-              src="img/profissionais/resposta_perguntas-frequentes.png"
+              src="/ProjetoSolarOficial/img/profissionais/resposta_perguntas-frequentes.png"
               alt=""
             />
           </div>
@@ -625,7 +681,7 @@
           <div class="logotipo-texto">
             <div class="logotipo-nome">
               <img
-                src="/src/assets/logo-solar-branca-escrita-4K_1.png"
+                src="/ProjetoSolarOficial/src/assets/logo-solar-branca-escrita-4K_1.png"
                 alt="Logo Solar"
               />
             </div>
@@ -640,7 +696,7 @@
             <div class="instagram">
               <a href="https://www.instagram.com/solar.plataforma/">
                 <img
-                  src="/src/assets/logo-instagram.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-instagram.png"
                   alt="Logo do Instagram"
                 />
               </a>
@@ -652,7 +708,7 @@
             <div class="linkedin">
               <a href="https://www.linkedin.com/in/solar-instituto/">
                 <img
-                  src="/src/assets/logo-linkedin.png"
+                  src="/ProjetoSolarOficial/src/assets/logo-linkedin.png"
                   alt="Logo do LinkedIn"
                 />
               </a>
@@ -679,5 +735,5 @@
       </div>
     </footer>
   </body>
-  <script src="/src/js/index.js"></script>
+  <script src="../../js/script.js"></script>
 </html>

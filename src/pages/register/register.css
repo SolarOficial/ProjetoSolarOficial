@@ -25,7 +25,7 @@
 body {
   font-family: var(--font-paragrafo);
   background-color: var(--cor-branca);
-  background-image: url("/src/assets/img-register/background-cadastro.gif");
+  background-image: url("/ProjetoSolarOficial/src/assets/img-register/background-cadastro.gif");
   background-size: 100%;
   background-repeat: no-repeat;
 }

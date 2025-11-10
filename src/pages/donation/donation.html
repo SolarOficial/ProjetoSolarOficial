@@ -32,7 +32,7 @@
 
       <nav class="nav-pai">
         <ul>
-          <li><a href="/src/pages/home/home.html">HOME</a></li>
+          <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">HOME</a></li>
           <li>
             <a href="#">
               EXPLORAR
@@ -44,27 +44,32 @@
             </a>
             <ul class="dropdown">
               <li>
-                <a href="/src/pages/explore/eventss/index/index.html"
+                <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')"
                   >EVENTOS</a
                 >
               </li>
 
               <li>
-                <a href="/src/pages/explore/courses/index/index.html">CURSOS</a>
+                <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')">CURSOS</a>
               </li>
               <li>
-                <a href="/src/pages/explore/sunMidia/solmidia.html">SOLMÍDIA</a>
+                <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a>
               </li>
+
+              <li>
+                <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')">JOGOS</a>
+              </li>
+
             </ul>
           </li>
 
-          <li><a href="/src/pages/donation/donation.html">DOAÇÃO</a></li>
+          <li><a href="">DOAÇÃO</a></li>
           <li>
-            <a href="/src/pages/professionals/professionals.html"
+            <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')" 
               >PROFISSIONAIS</a
             >
           </li>
-          <li><a href="/src/pages/plans/plans.html">PLANOS</a></li>
+          <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')">PLANOS</a></li>
 
           <li>
             <a href="#">
@@ -76,17 +81,17 @@
               />
             </a>
             <ul class="dropdown">
-              <li><a href="#">SOBRE</a></li>
+              <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')">SOBRE</a></li>
               <li>
-                <a href="/src/pages/home/location/location.html"
+                <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')"
                   >LOCALIZAR INSTITUIÇÕES</a
                 >
               </li>
-              <li><a href="#">FALE CONOSCO</a></li>
+              <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')">FALE CONOSCO</a></li>
             </ul>
           </li>
 
-          <a href="/src/pages/login/login.html"
+          <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
             ><button class="button-header">ENTRAR</button></a
           >
         </ul>
@@ -331,6 +336,7 @@
       <!--margem-global -->
     </footer>
 
+    <script src="../../js/script.js"></script>
     <script src="../../js/donation.js"></script>
   </body>
 </html>

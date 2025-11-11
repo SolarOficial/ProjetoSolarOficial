@@ -20,6 +20,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 /* HEADER */
 .container-pai {
   display: flex;
@@ -252,11 +253,7 @@ section.importancia .margem-global .container-conteudo {
   gap: 131px;
 }
 
-section.importancia
-  .margem-global
-  .container-conteudo
-  article
-  .container-imagens {
+section.importancia .margem-global .container-conteudo article .container-imagens {
   width: 485px;
   height: 621px;
 }
@@ -286,33 +283,17 @@ section.importancia .margem-global .container-conteudo aside .container-aside {
   width: 610px;
 }
 
-section.importancia
-  .margem-global
-  .container-conteudo
-  aside
-  .container-aside
-  p {
+section.importancia .margem-global .container-conteudo aside .container-aside p {
   font-family: var(--font-paragrafo);
   font-size: 20px;
 }
 
-section.importancia
-  .margem-global
-  .container-conteudo
-  aside
-  .container-aside
-  .bolinha-texto {
+section.importancia .margem-global .container-conteudo aside .container-aside .bolinha-texto {
   display: flex;
   gap: 13px;
 }
 
-section.importancia
-  .margem-global
-  .container-conteudo
-  aside
-  .container-aside
-  .bolinha-texto
-  span {
+section.importancia .margem-global .container-conteudo aside .container-aside .bolinha-texto span {
   font-size: 25px;
   padding: 25px 32.5px;
   border-radius: 50%;
@@ -369,24 +350,14 @@ section.profissionais .margem-global .container-usuario .usuario {
   text-align: center;
 }
 
-section.profissionais
-  .margem-global
-  .container-usuario
-  .usuario
-  .texto
-  p:nth-last-child(2) {
+section.profissionais .margem-global .container-usuario .usuario .texto p:nth-last-child(2) {
   font-family: var(--font-paragrafo);
   font-size: 25px;
   font-weight: 600;
   color: var(--cor-roxo-escuro);
 }
 
-section.profissionais
-  .margem-global
-  .container-usuario
-  .usuario
-  .texto
-  p:nth-last-child(1) {
+section.profissionais .margem-global .container-usuario .usuario .texto p:nth-last-child(1) {
   font-family: var(--font-paragrafo);
   font-size: 20px;
   color: var(--cor-roxo-escuro);
@@ -402,11 +373,7 @@ section.profissionais .margem-global .container-usuario .container-textos {
   box-shadow: 0 8px 4.32px 0 var(--cor-preta);
 }
 
-section.profissionais
-  .margem-global
-  .container-usuario
-  .container-textos
-  .icone-texto {
+section.profissionais .margem-global .container-usuario .container-textos .icone-texto {
   display: flex;
   align-items: center;
   gap: 18px;
@@ -422,46 +389,27 @@ section.profissionais .margem-global .container-usuario .container-textos h3 {
   font-weight: 500;
 }
 
-section.profissionais
-  .margem-global
-  .container-usuario
-  .container-textos
-  .butaos {
+section.profissionais .margem-global .container-usuario .container-textos .butaos {
   width: 311px;
   height: 34.1px;
   display: flex;
   gap: 28px;
 }
 
-section.profissionais
-  .margem-global
-  .container-usuario
-  .container-textos
-  .butaos
-  button {
+section.profissionais .margem-global .container-usuario .container-textos .butaos button {
   width: 141.5px;
   height: 34.1px;
   border-radius: 4.72px;
 }
 
-section.profissionais
-  .margem-global
-  .container-usuario
-  .container-textos
-  .butaos
-  button:nth-last-child(2) {
+section.profissionais .margem-global .container-usuario .container-textos .butaos button:nth-last-child(2) {
   border: 1px solid var(--cor-roxo-claro);
   color: var(--cor-roxo-claro);
   font-family: var(--font-paragrafo);
   font-size: 13px;
 }
 
-section.profissionais
-  .margem-global
-  .container-usuario
-  .container-textos
-  .butaos
-  button:nth-last-child(1) {
+section.profissionais .margem-global .container-usuario .container-textos .butaos button:nth-last-child(1) {
   border: 1px solid var(--cor-roxo-claro);
   color: var(--cor-branca);
   font-family: var(--font-paragrafo);
@@ -480,6 +428,7 @@ section.seguranca {
   justify-content: center;
   align-items: center;
 }
+
 section.seguranca .margem-global h2 {
   font-size: 45px;
   font-family: var(--font-titulo);
@@ -488,10 +437,12 @@ section.seguranca .margem-global h2 {
   margin-bottom: 96px;
   padding-top: 166px;
 }
+
 section.seguranca .margem-global .container-texto-cadeado {
   display: flex;
   gap: 205px;
 }
+
 section.seguranca .margem-global .container-texto-cadeado .textos p {
   font-family: var(--font-paragrafo);
   font-size: 20px;
@@ -507,6 +458,7 @@ section.junte-se .margem-global h2 {
   text-align: center;
   margin-top: 104px;
 }
+
 section.junte-se .margem-global #texto {
   font-family: var(--font-paragrafo);
   font-size: 25px;
@@ -515,11 +467,13 @@ section.junte-se .margem-global #texto {
   margin-top: 37px;
   margin-bottom: 87px;
 }
+
 section.junte-se .margem-global .form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 section.junte-se .margem-global form {
   width: 976px;
   height: 1293px;
@@ -530,6 +484,7 @@ section.junte-se .margem-global form {
   flex-direction: column;
   padding: 0 106px 43px 106px;
 }
+
 section.junte-se .margem-global form h3 {
   font-family: var(--font-titulo);
   font-size: 30px;
@@ -538,11 +493,13 @@ section.junte-se .margem-global form h3 {
   margin: 59px 0 74px 0;
   text-align: center;
 }
+
 section.junte-se .margem-global form .labels-inputs {
   display: flex;
   flex-direction: column;
   gap: 45px;
 }
+
 section.junte-se .margem-global form .labels-inputs label,
 p {
   font-family: var(--font-paragrafo);
@@ -550,6 +507,7 @@ p {
   color: var(--cor-preta);
   font-weight: 600;
 }
+
 section.junte-se .margem-global form .labels-inputs input {
   width: 766px;
   height: 48px;
@@ -560,37 +518,46 @@ section.junte-se .margem-global form .labels-inputs input {
   padding: 10px;
   outline: none;
 }
+
 section.junte-se .margem-global form #espaco-profissionais {
   margin: 45px 0 39px 0;
 }
+
 section.junte-se .margem-global form #radio {
   width: 24px;
   height: 24px;
 }
+
 section.junte-se .margem-global form .escolha-profissionais {
   display: flex;
   justify-content: center;
   gap: 60px;
   margin-bottom: 61px;
 }
+
 section.junte-se .margem-global form .escolha-profissionais .opcao {
   display: flex;
   gap: 60px;
 }
+
 section.junte-se .margem-global form .status-profissional p#espaco-status {
   margin-bottom: 45px;
 }
+
 section.junte-se .margem-global form .status-profissional .texto-opcao {
   display: flex;
   gap: 14px;
 }
+
 section.junte-se .margem-global form .status-profissional .espaco {
   margin-top: 34px;
   margin-bottom: 61px;
 }
+
 section.junte-se .margem-global form #mensagem {
   margin-bottom: 25px;
 }
+
 section.junte-se .margem-global form textarea {
   width: 756px;
   height: 116px;
@@ -599,21 +566,25 @@ section.junte-se .margem-global form textarea {
   outline: none;
   padding: 10px 24px;
 }
+
 section.junte-se .margem-global form .termo {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 37px;
 }
+
 section.junte-se .margem-global form .termo input {
   width: 16px;
   height: 16px;
 }
+
 section.junte-se .margem-global form .termo span {
   font-size: 12px;
   font-family: var(--font-paragrafo);
   color: var(--cor-preta);
 }
+
 section.junte-se .margem-global form button {
   width: 756px;
   height: 70px;
@@ -634,6 +605,7 @@ section.perguntas .margem-global {
   align-items: center;
   gap: 56px;
 }
+
 section.perguntas .margem-global h2 {
   font-size: 45px;
   font-family: var(--font-titulo);
@@ -642,6 +614,7 @@ section.perguntas .margem-global h2 {
   text-align: center;
   margin: 105px 0 31px 0;
 }
+
 section.perguntas .margem-global .card-pergunta {
   width: 1057px;
   height: 80px;
@@ -655,89 +628,108 @@ section.perguntas .margem-global .card-pergunta {
 
 /* FOOTER */
 footer {
-  background-color: var(--cor-roxo-claro);
-  margin-top: 186px;
-}
-
-footer .container-informacoes {
-  display: flex;
-  justify-content: space-between;
-  padding: 86px 0 0 0;
-}
-
-footer .container-informacoes .logotipo-texto {
-  width: 443px;
-  height: 209.69px;
-}
-
-footer .container-informacoes .logotipo-texto .logotipo-nome {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-left: 30%;
-  margin-bottom: 21px;
+  margin-top: 100px;
+  background: var(--cor-roxo-claro);
+  padding: 60px 0 30px 0;
   color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 40px;
 }
 
-footer .container-informacoes .logotipo-texto p {
-  font-size: 15px;
+footer .margem-global {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.secao-footer h3 {
+  font-family: var(--font-titulo);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.secao-footer p {
   font-family: var(--font-paragrafo);
+  font-size: 16px;
   color: var(--cor-branca);
-  margin-left: 3%;
 }
 
-footer .container-informacoes .redes-sociais {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-}
-
-footer .container-informacoes .redes-sociais h2 {
-  color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 33.73px;
-}
-
-footer .container-informacoes .redes-sociais .instagram,
-.linkedin {
+.logo-footer {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-footer .container-informacoes .redes-sociais a {
-  color: var(--cor-amarelo);
-  font-family: var(--font-titulo);
-  font-size: 20px;
-  text-decoration: none;
-}
-
-footer .container-informacoes .paginas {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5%;
   gap: 15px;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-footer .container-informacoes .paginas h2 {
-  color: var(--cor-branca);
+.logo-footer img {
+  width: 70px;
+}
+
+.logo-footer span {
   font-family: var(--font-titulo);
-  font-size: 33.73px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
-footer .container-informacoes .paginas p {
-  color: var(--cor-amarelo);
-  font-family: var(--font-paragrafo);
-  font-size: 25px;
-}
-
-footer .margem-global p {
-  color: var(--cor-branca);
-  text-align: center;
-  font-family: var(--font-titulo);
-  font-size: 18px;
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin-top: 20px;
+}
+
+.link-rede-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.link-rede-social:hover {
+  color: var(--cor-laranja);
+  transform: translateX(5px);
+}
+
+.link-rede-social svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--cor-branca);
+}
+
+.link-rede-social:hover svg {
+  fill: var(--cor-laranja);
+}
+
+.lista-paginas {
+  list-style: none;
+}
+
+.lista-paginas li {
+  margin-bottom: 12px;
+}
+
+.lista-paginas a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.lista-paginas a:hover {
+  color: var(--cor-laranja);
+  padding-left: 5px;
+}
+
+.direitos-autorais {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-paragrafo);
+  font-size: 14px;
+  color: var(--cor-branca);
 }

@@ -196,22 +196,12 @@ section.planos-solar .margem-global .container-cards-planos .card .card-apoio {
   border-radius: 20px 20px 0 0;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .background-textos-apoio {
+section.planos-solar .margem-global .container-cards-planos .card .background-textos-apoio {
   background: #ffe7c6;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-apoio
-  button {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-apoio button {
   background: var(--cor-laranja);
 }
 
@@ -222,75 +212,42 @@ section.planos-solar .margem-global .container-cards-planos .card .card-amparo {
   border-radius: 20px 20px 0 0;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .texto-recomendado {
+section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado {
   display: flex;
   width: 401px;
   padding-right: 20px;
   justify-content: flex-end;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .texto-recomendado
-  p {
+section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado p {
   background: var(--cor-branca);
   padding: 10px;
   border-radius: 30px;
   color: var(--cor-roxo-claro);
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .background-textos-amparo {
+section.planos-solar .margem-global .container-cards-planos .card .background-textos-amparo {
   background: #fdebff;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-amparo
-  button {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-amparo button {
   background: var(--cor-roxo-claro);
 }
 
 /* CORES PLANO ALICERCE */
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .card-alicerce {
+section.planos-solar .margem-global .container-cards-planos .card .card-alicerce {
   background: var(--cor-amarelo);
   border-radius: 20px 20px 0 0;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .background-textos-alicerce {
+section.planos-solar .margem-global .container-cards-planos .card .background-textos-alicerce {
   background: #fff8be;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-alicerce
-  button {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-alicerce button {
   background: var(--cor-amarelo);
 }
 
@@ -349,57 +306,33 @@ section.planos-solar .margem-global .container-cards-planos .card .nome-plano {
   align-items: center;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .nome-plano
-  h3 {
+section.planos-solar .margem-global .container-cards-planos .card .nome-plano h3 {
   font-size: 35px;
   font-family: var(--font-paragrafo);
   color: var(--cor-branca);
   margin-bottom: 25px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .nome-plano
-  h2 {
+section.planos-solar .margem-global .container-cards-planos .card .nome-plano h2 {
   font-size: 32px;
   font-family: var(--font-titulo);
   color: var(--cor-branca);
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .nome-plano
-  span {
+section.planos-solar .margem-global .container-cards-planos .card .nome-plano span {
   font-size: 20px;
   font-family: var(--font-titulo);
   color: var(--cor-branca);
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  p {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos p {
   font-size: 20px;
   font-family: var(--font-titulo);
 }
@@ -465,91 +398,109 @@ section.perguntas-frequentes .margem-global .perguntas .etiquetas-perguntas p {
 }
 
 /* FOOTER */
-
 footer {
-  background-color: var(--cor-roxo-claro);
-  margin-top: 186px;
-}
-
-footer .container-informacoes {
-  display: flex;
-  justify-content: space-between;
-  padding: 86px 0 0 0;
-}
-
-footer .container-informacoes .logotipo-texto {
-  width: 443px;
-  height: 209.69px;
-}
-
-footer .container-informacoes .logotipo-texto .logotipo-nome {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-left: 30%;
-  margin-bottom: 21px;
+  margin-top: 100px;
+  background: var(--cor-roxo-claro);
+  padding: 60px 0 30px 0;
   color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 40px;
 }
 
-footer .container-informacoes .logotipo-texto p {
-  font-size: 15px;
+footer .margem-global {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.secao-footer h3 {
+  font-family: var(--font-titulo);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.secao-footer p {
   font-family: var(--font-paragrafo);
+  font-size: 16px;
   color: var(--cor-branca);
-  margin-left: 3%;
 }
 
-footer .container-informacoes .redes-sociais {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-}
-
-footer .container-informacoes .redes-sociais h2 {
-  color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 33.73px;
-}
-
-footer .container-informacoes .redes-sociais .instagram,
-.linkedin {
+.logo-footer {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-footer .container-informacoes .redes-sociais a {
-  color: var(--cor-amarelo);
-  font-family: var(--font-titulo);
-  font-size: 20px;
-  text-decoration: none;
-}
-
-footer .container-informacoes .paginas {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5%;
   gap: 15px;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-footer .container-informacoes .paginas h2 {
-  color: var(--cor-branca);
+.logo-footer img {
+  width: 70px;
+}
+
+.logo-footer span {
   font-family: var(--font-titulo);
-  font-size: 33.73px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
-footer .container-informacoes .paginas p {
-  color: var(--cor-amarelo);
-  font-family: var(--font-paragrafo);
-  font-size: 25px;
-}
-
-footer .margem-global p {
-  color: var(--cor-branca);
-  text-align: center;
-  font-family: var(--font-titulo);
-  font-size: 18px;
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin-top: 20px;
+}
+
+.link-rede-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.link-rede-social:hover {
+  color: var(--cor-laranja);
+  transform: translateX(5px);
+}
+
+.link-rede-social svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--cor-branca);
+}
+
+.link-rede-social:hover svg {
+  fill: var(--cor-laranja);
+}
+
+.lista-paginas {
+  list-style: none;
+}
+
+.lista-paginas li {
+  margin-bottom: 12px;
+}
+
+.lista-paginas a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.lista-paginas a:hover {
+  color: var(--cor-laranja);
+  padding-left: 5px;
+}
+
+.direitos-autorais {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-paragrafo);
+  font-size: 14px;
+  color: var(--cor-branca);
 }

@@ -152,23 +152,20 @@ ul.dropdown li a:hover {
   color: var(--cor-branca);
   text-align: center;
   width: 45%;
-}
-
-/* título */
-.texto-sobre-imagem h2 {
-  font-family: "Karla", sans-serif;
-  font-size: 64px;
-  font-weight: bold;
+  font-family: var(--font-titulo);
+  font-size: 32px;
+  color: var(--cor-branca);
 }
 
 /* parágrafo */
 .texto-sobre-imagem p {
   font-family: "Figtree";
-  font-size: medium;
+  font-size: 20px;
   line-height: 1.5;
 }
 
 /* seção fundação bradesco  */
+
 /* titulo bradesco */
 .subtituloh2-cards-bradesco {
   font-family: "Karla", sans-serif;
@@ -337,6 +334,7 @@ footer {
 }
 
 footer .margem-global {
+  margin-left: 55px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;

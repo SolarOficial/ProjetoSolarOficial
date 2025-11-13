@@ -152,13 +152,16 @@ ul.dropdown li a:hover {
   color: var(--cor-branca);
   text-align: center;
   width: 45%;
+  font-family: var(--font-titulo);
+  font-size: 45px;
+  color: var(--cor-branca);
 }
 
 /* título */
 .texto-sobre-imagem h2 {
-  font-family: "Karla", sans-serif;
-  font-size: 64px;
-  font-weight: bold;
+  font-family: var(--font-titulo);
+  color: var(--cor-branca);
+  font-size: 98px;
 }
 
 /* parágrafo */
@@ -269,6 +272,7 @@ footer {
 }
 
 footer .margem-global {
+  margin-left: 55px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;

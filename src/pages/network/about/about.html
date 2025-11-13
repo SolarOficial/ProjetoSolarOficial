@@ -1,413 +1,702 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Instituto Solar: rede de apoio a pais e mães solos com escuta psicológica, conteúdos educativos e divulgação de vagas inclusivas."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Solar" />
+    <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
+    <link rel="stylesheet" href="./about.css" />
+    <script
+      src="https://kit.fontawesome.com/cd3985d825.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
+      type="image/x-icon"
+    />
+    <title>Sobre - SOLAR</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=7" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description"
-    content="Instituto Solar: rede de apoio a pais e mães solos com escuta psicológica, conteúdos educativos e divulgação de vagas inclusivas." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Solar" />
-  <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
-  <link rel="stylesheet" href="./about.css" />
-  <script src="https://kit.fontawesome.com/cd3985d825.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png" type="image/x-icon" />
-  <title>Home - SOLAR</title>
-</head>
-
-<body>
-  <header class="container-pai">
-    <div class="logo">
-      <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"> <img height="90"
-          src="/ProjetoSolarOficial/src/assets/logo_nav2.png" alt="Logo branca Solar"/> </a>
-    </div>
-
-    <nav class="nav-pai">
-      <ul>
-        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">HOME</a></li>
-        <li>
-          <a href="#">
-            EXPLORAR
-            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta ao lado de explorar" />
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="#"
-                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')">EVENTOS</a>
-            </li>
-
-            <li>
-              <a href="#"
-                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')">CURSOS</a>
-            </li>
-            <li>
-              <a href="#"
-                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a>
-            </li>
-            <li>
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')">JOGOS</a>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')">DOAÇÃO</a>
-        </li>
-        <li>
-          <a href="#"
-            onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')">PROFISSIONAIS</a>
-        </li>
-        <li>
-          <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')">PLANOS</a>
-        </li>
-
-        <li>
-          <a href="#">
-            REDES
-            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta ao lado de redes" />
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')">SOBRE</a>
-            </li>
-            <li>
-              <a href="#"
-                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')">LOCALIZAR
-                INSTITUIÇÕES</a>
-            </li>
-            <li>
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
-                CONOSCO</a>
-            </li>
-          </ul>
-        </li>
-
-        <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"><button
-            class="button-header">ENTRAR</button></a>
-      </ul>
-    </nav>
-  </header>
-  <section class="conheca-solar">
-    <h2>Conheça a Solar</h2>
-    <p>Onde familias monoparentais encontram apoio</p>
-    <div class="carrossel-sobre">
-      <i class="fa-solid fa-circle" style="color: #cccccc"></i>
-      <i class="fa-regular fa-circle" style="color: #cccccc"></i>
-    </div>
-  </section>
-
-  <section>
-    <div class="title-quem-somos">
-      <h3>Quem somos</h3>
-    </div>
-    <div class="margem-global">
-      <div class="container-quem-somos">
-        <div class="imagem-quem-somos">
-          <img src="/ProjetoSolarOficial/src/assets/img-about/imagem-quem-somos.png"
-            alt="Imagem ilustrativa de famílias monoparentais felizes em um espaço." />
-        </div>
-        <div class="texto-quem-somos">
-          <p>
-            Na Solar, acreditamos que nenhuma mãe ou pai deveria enfrentar
-            tudo sozinho. Nossa razão de existir é ser um ponto de apoio e
-            acolhimento para quem carrega o peso e o amor de cuidar sozinho.
-          </p>
-
-          <p>
-            Criamos um espaço onde é possível encontrar escuta, informação e
-            conexões reais com pessoas, serviços e oportunidades que fazem
-            diferença no dia a dia.
-          </p>
-
-          <p>
-            Queremos iluminar caminhos, fortalecer laços e mostrar que, mesmo
-            nas fases mais difíceis, sempre há calor, esperança e força para
-            recomeçar.
-          </p>
-
-          <p>
-            Porque ninguém deve caminhar sozinho. E juntos, brilhamos mais
-            forte.
-          </p>
-        </div>
-        <!--texto-quem-somos -->
+  <body>
+    <header class="container-pai">
+      <div class="logo">
+        <a
+          href="#"
+          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
+        >
+          <img
+            height="90"
+            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
+            alt="Logo branca Solar"
+          />
+        </a>
       </div>
-      <!--container-quem-somos -->
-    </div>
-    <!-- margem-global -->
-  </section>
 
-  <section>
-    <div class="background-missao-visao-valores">
+      <nav class="nav-pai">
+        <ul>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              EXPLORAR
+              <img
+                class="seta-header"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
+                alt="seta ao lado de explorar"
+              />
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')"
+                  >EVENTOS</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')"
+                  >JOGOS</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')"
+              >PROFISSIONAIS</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')"
+              >PLANOS</a
+            >
+          </li>
+
+          <li>
+            <a href="#">
+              REDES
+              <img
+                class="seta-header"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
+                alt="seta ao lado de redes"
+              />
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <a
+            href="#"
+            onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
+        </ul>
+      </nav>
+    </header>
+    <section class="conheca-solar">
+      <h2>Conheça a Solar</h2>
+      <p>Onde familias monoparentais encontram apoio</p>
+      <div class="carrossel-sobre">
+        <i class="fa-solid fa-circle" style="color: #cccccc"></i>
+        <i class="fa-regular fa-circle" style="color: #cccccc"></i>
+      </div>
+    </section>
+
+    <section>
+      <div class="title-quem-somos">
+        <h3>Quem somos</h3>
+      </div>
       <div class="margem-global">
-        <div class="container-missao-visao-valores">
-          <div class="missao-visao-valores">
-            <img src="/ProjetoSolarOficial/src/assets/img-about/icone-missao.png"
-              alt="ícone de um alvo simbolizando a missão da solar" />
-            <h3>Missão</h3>
-            <p>
-              Oferecer apoio integral a mães e pais solos, promovendo
-              inclusão, empoderamento e acesso a oportunidades de educação,
-              trabalho e bem-estar.
-            </p>
+        <div class="container-quem-somos">
+          <div class="imagem-quem-somos">
+            <img
+              src="/ProjetoSolarOficial/src/assets/img-about/imagem-quem-somos.png"
+              alt="Imagem ilustrativa de famílias monoparentais felizes em um espaço."
+            />
           </div>
-
-          <div class="missao-visao-valores">
-            <img src="/ProjetoSolarOficial/src/assets/img-about/icone-visao.png"
-              alt="ícone de um olho simbolizando a visão da solar" />
-            <h3>Visão</h3>
-            <p>
-              Ser referência em São Paulo no apoio a famílias monoparentais,
-              criando uma rede de solidariedade, capacitação e fortalecimento
-              social.
-            </p>
-          </div>
-
-          <div class="missao-visao-valores">
-            <img src="/ProjetoSolarOficial/src/assets/img-about/icone-valores.png"
-              alt="ícone de uma mão segurando um coração simbolizando os valores da solar" />
-            <h3>Valores</h3>
+          <div class="texto-quem-somos">
             <p>
               Na Solar, acreditamos que nenhuma mãe ou pai deveria enfrentar
               tudo sozinho. Nossa razão de existir é ser um ponto de apoio e
               acolhimento para quem carrega o peso e o amor de cuidar sozinho.
             </p>
+
+            <p>
+              Criamos um espaço onde é possível encontrar escuta, informação e
+              conexões reais com pessoas, serviços e oportunidades que fazem
+              diferença no dia a dia.
+            </p>
+
+            <p>
+              Queremos iluminar caminhos, fortalecer laços e mostrar que, mesmo
+              nas fases mais difíceis, sempre há calor, esperança e força para
+              recomeçar.
+            </p>
+
+            <p>
+              Porque ninguém deve caminhar sozinho. E juntos, brilhamos mais
+              forte.
+            </p>
           </div>
+          <!--texto-quem-somos -->
         </div>
-        <!--container-missao-visao-valores -->
+        <!--container-quem-somos -->
       </div>
-    </div>
-    <!-- margem-global -->
-  </section>
+      <!-- margem-global -->
+    </section>
 
-  <section>
-    <div class="margem-global">
-      <div class="title-beneficios-solar">
-        <h3>Benefícios Solar</h3>
-      </div>
-      <div class="container-beneficios-solar">
-        <i class="fa-solid fa-chevron-left"></i>
-        <div class="beneficios-solar">
-          <img src="/ProjetoSolarOficial/src/assets/img-about/beneficio1.png" alt="" />
-          <h3>Apoio Emocional e Social</h3>
-        </div>
-        <div class="beneficios-solar">
-          <img src="/ProjetoSolarOficial/src/assets/img-about/beneficio2.png" alt="" />
-          <h3>Espaços de Escuta Ativa</h3>
-        </div>
-        <div class="beneficios-solar">
-          <img src="/ProjetoSolarOficial/src/assets/img-about/beneficio3.png" alt="" />
-          <h3>Suporte Psicológico</h3>
-        </div>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-      <!--container-beneficios-solar -->
-    </div>
-    <!--margem-global -->
-  </section>
+    <section>
+      <div class="background-missao-visao-valores">
+        <div class="margem-global">
+          <div class="container-missao-visao-valores">
+            <div class="missao-visao-valores">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/icone-missao.png"
+                alt="ícone de um alvo simbolizando a missão da solar"
+              />
+              <h3>Missão</h3>
+              <p>
+                Oferecer apoio integral a mães e pais solos, promovendo
+                inclusão, empoderamento e acesso a oportunidades de educação,
+                trabalho e bem-estar.
+              </p>
+            </div>
 
-  <section>
-    <div class="title-equipe-solar">
-      <h3>Equipe Solar</h3>
-    </div>
-    <div class="container-equipe-solar">
+            <div class="missao-visao-valores">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/icone-visao.png"
+                alt="ícone de um olho simbolizando a visão da solar"
+              />
+              <h3>Visão</h3>
+              <p>
+                Ser referência em São Paulo no apoio a famílias monoparentais,
+                criando uma rede de solidariedade, capacitação e fortalecimento
+                social.
+              </p>
+            </div>
+
+            <div class="missao-visao-valores">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/icone-valores.png"
+                alt="ícone de uma mão segurando um coração simbolizando os valores da solar"
+              />
+              <h3>Valores</h3>
+              <p>
+                Na Solar, acreditamos que nenhuma mãe ou pai deveria enfrentar
+                tudo sozinho. Nossa razão de existir é ser um ponto de apoio e
+                acolhimento para quem carrega o peso e o amor de cuidar sozinho.
+              </p>
+            </div>
+          </div>
+          <!--container-missao-visao-valores -->
+        </div>
+      </div>
+      <!-- margem-global -->
+    </section>
+
+    <section>
       <div class="margem-global">
-        <div class="equipe-solar">
+        <div class="title-beneficios-solar">
+          <h3>Benefícios Solar</h3>
+        </div>
+        <div class="container-beneficios-solar">
           <i class="fa-solid fa-chevron-left"></i>
-          <div class="card-integrante-equipe-solar">
-            <img src="/ProjetoSolarOficial/src/assets/img-about/foto_gabriel.png" alt="" />
-            <div class="descricao-equipe-solar">
-              <h3>Gabriel Batistela</h3>
-              <p>Desenvolvedor Front-End</p>
-            </div>
+          <div class="beneficios-solar">
+            <img
+              src="/ProjetoSolarOficial/src/assets/img-about/beneficio1.png"
+              alt=""
+            />
+            <h3>Apoio Emocional e Social</h3>
           </div>
-          <div class="card-integrante-equipe-solar">
-            <img src="/ProjetoSolarOficial/src/assets/img-about/foto_karina.png" alt="" />
-            <div class="descricao-equipe-solar">
-              <h3>Karina Ribeiro</h3>
-              <p>Desenvolvedora Full-Stack</p>
-            </div>
+          <div class="beneficios-solar">
+            <img
+              src="/ProjetoSolarOficial/src/assets/img-about/beneficio2.png"
+              alt=""
+            />
+            <h3>Espaços de Escuta Ativa</h3>
           </div>
-          <div class="card-integrante-equipe-solar">
-            <img src="/ProjetoSolarOficial/src/assets/img-about/foto_igor.png" alt="" />
-            <div class="descricao-equipe-solar">
-              <h3>Igor Silva</h3>
-              <p>Desenvolvedor Full-Stack</p>
-            </div>
-          </div>
-          <div class="card-integrante-equipe-solar">
-            <img src="/ProjetoSolarOficial/src/assets/img-about/foto_luiz.png" alt="" />
-            <div class="descricao-equipe-solar">
-              <h3>Luiz Fellipe</h3>
-              <p>Desenvolvedor Back-End</p>
-            </div>
+          <div class="beneficios-solar">
+            <img
+              src="/ProjetoSolarOficial/src/assets/img-about/beneficio3.png"
+              alt=""
+            />
+            <h3>Suporte Psicológico</h3>
           </div>
           <i class="fa-solid fa-chevron-right"></i>
         </div>
-        <!--equipe-solar -->
+        <!--container-beneficios-solar -->
       </div>
       <!--margem-global -->
-    </div>
-    <!--container-equipe-solar -->
+    </section>
 
     <section>
-      <div class="background-apoie-solar">
+      <div class="title-equipe-solar">
+        <h3>Equipe Solar</h3>
+      </div>
+      <div class="container-equipe-solar">
         <div class="margem-global">
-          <div class="container">
-            <div class="apoie-solar-title">Apoie a <span>Solar</span></div>
-            <div class="container-apoie-solar">
-              <div class="imagem-logo-solar">
-                <img src="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png" alt="" />
-              </div>
-              <div class="apoie-solar-descricao">
-                <p>
-                  Na Plataforma Solar, acreditamos que ninguém deve enfrentar
-                  a jornada de criar um filho sozinho sem apoio.
-                </p>
-                <br />
-                <p>
-                  Cada doação recebida é transformada em ações reais de
-                  acolhimento e fortalecimento para famílias monoparentais em
-                  São Paulo.
-                </p>
-                <br />
-                <p>Com sua contribuição conseguimos:</p>
-                <br />
-                <ul>
-                  <li>
-                    Oferecer oficinas de capacitação profissional para mães e
-                    pais solos;
-                  </li>
-                  <br />
-                  <li>
-                    Manter nossa plataforma de conexão com ONGs, CRAS e UBS;
-                  </li>
-                  <br />
-                  <li>
-                    Apoiar famílias com doações de alimentos, roupas e itens
-                    essenciais;
-                  </li>
-                  <br />
-                  <li>Criar espaços de escuta e apoio emocional.</li>
-                </ul>
+          <div class="equipe-solar">
+            <i class="fa-solid fa-chevron-left"></i>
 
-                <div class="button-doar-agora">
-                  <button>DOAR AGORA</button>
+            <!-- 🔹 Cards originais -->
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Camille.jpg"
+                width="281"
+                height="242"
+                alt="Foto Camille"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Camille Cordeiro</h3>
+                <p>Scrum-Master e Back-End</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Giovanni.jpg"
+                width="281"
+                height="242"
+                alt="Foto Giovanni"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Giovanni Carvalho</h3>
+                <p>Product Owner e FullStack</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_gabriel.png"
+                width="281"
+                height="242"
+                alt="Foto Gabriel"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Gabriel Batistela</h3>
+                <p>Desenvolvedor Front-End</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Larissa.jpg"
+                width="281"
+                height="242"
+                alt="Foto Larissa"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Larissa Santos</h3>
+                <p>Desenvolvedora FullStack</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Thallya.jpg"
+                width="281"
+                height="242"
+                alt="Foto Thallya"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Thallya Bianka</h3>
+                <p>UI/UX e Marketing</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_karina.png"
+                width="281"
+                height="242"
+                alt="Foto Karina"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Karina Ribeiro</h3>
+                <p>FullStack e Marketing</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_igor.png"
+                width="281"
+                height="242"
+                alt="Foto Igor"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Igor Lima</h3>
+                <p>Desenvolvedor FullStack</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_luiz.png"
+                width="281"
+                height="242"
+                alt="Foto Luiz"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Luiz Fellipe</h3>
+                <p>Desenvolvedor Back-End</p>
+              </div>
+            </div>
+
+            <!-- 🔁 Duplicação dos mesmos cards (necessário para o loop contínuo) -->
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Camille.jpg"
+                width="281"
+                height="242"
+                alt="Foto Camille"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Camille Cordeiro</h3>
+                <p>Scrum Master e Back-End</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Giovanni.jpg"
+                width="281"
+                height="242"
+                alt="Foto Giovanni"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Giovanni Carvalho</h3>
+                <p>Product Owner e FullStack</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_gabriel.png"
+                width="281"
+                height="242"
+                alt="Foto Gabriel"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Gabriel Batistela</h3>
+                <p>Desenvolvedor Front-End</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Larissa.jpg"
+                width="281"
+                height="242"
+                alt="Foto Larissa"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Larissa Santos</h3>
+                <p>Desenvolvedora FullStack</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/Thallya.jpg"
+                width="281"
+                height="242"
+                alt="Foto Thallya"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Thallya Bianka</h3>
+                <p>UI/UX e Marketing</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_karina.png"
+                width="281"
+                height="242"
+                alt="Foto Karina"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Karina Ribeiro</h3>
+                <p>Desenvolvedora FullStack e Marketing></p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_igor.png"
+                width="281"
+                height="242"
+                alt="Foto Igor"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Igor Silva</h3>
+                <p>Desenvolvedor Full-Stack</p>
+              </div>
+            </div>
+            <div class="card-integrante-equipe-solar">
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-about/foto_luiz.png"
+                width="281"
+                height="242"
+                alt="Foto Luiz"
+              />
+              <div class="descricao-equipe-solar">
+                <h3>Luiz Fellipe</h3>
+                <p>Desenvolvedor Back-End</p>
+              </div>
+            </div>
+
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!--container-equipe-solar -->
+
+      <section>
+        <div class="background-apoie-solar">
+          <div class="margem-global">
+            <div class="container">
+              <div class="apoie-solar-title">Apoie a <span>Solar</span></div>
+              <div class="container-apoie-solar">
+                <div class="imagem-logo-solar">
+                  <img
+                    src="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
+                    alt=""
+                  />
+                </div>
+                <div class="apoie-solar-descricao">
+                  <p>
+                    Na Plataforma Solar, acreditamos que ninguém deve enfrentar
+                    a jornada de criar um filho sozinho sem apoio.
+                  </p>
+                  <br />
+                  <p>
+                    Cada doação recebida é transformada em ações reais de
+                    acolhimento e fortalecimento para famílias monoparentais em
+                    São Paulo.
+                  </p>
+                  <br />
+                  <p>Com sua contribuição conseguimos:</p>
+                  <br />
+                  <ul>
+                    <li>
+                      Oferecer oficinas de capacitação profissional para mães e
+                      pais solos;
+                    </li>
+                    <br />
+                    <li>
+                      Manter nossa plataforma de conexão com ONGs, CRAS e UBS;
+                    </li>
+                    <br />
+                    <li>
+                      Apoiar famílias com doações de alimentos, roupas e itens
+                      essenciais;
+                    </li>
+                    <br />
+                    <li>Criar espaços de escuta e apoio emocional.</li>
+                  </ul>
+
+                  <div class="button-doar-agora">
+                    <button>DOAR AGORA</button>
+                  </div>
                 </div>
               </div>
+              <!--container-apoie-solar -->
             </div>
-            <!--container-apoie-solar -->
+            <!--container -->
           </div>
-          <!--container -->
+          <!--margem-global -->
         </div>
-        <!--margem-global -->
-      </div>
-      <!-- background-apoie-solar -->
+        <!-- background-apoie-solar -->
+      </section>
+
+      <section class="secao-perguntas-frequentes">
+        <div class="margem-global">
+          <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
+          <div class="container-perguntas">
+            <div class="pergunta-item">
+              <div class="pergunta-header">
+                <h3 class="pergunta-titulo">O que é a Plataforma Solar?</h3>
+                <span class="pergunta-icone">+</span>
+              </div>
+            </div>
+
+            <div class="pergunta-item">
+              <div class="pergunta-header">
+                <h3 class="pergunta-titulo">
+                  É gratuito participar da Plataforma Solar?
+                </h3>
+                <span class="pergunta-icone">+</span>
+              </div>
+            </div>
+
+            <div class="pergunta-item">
+              <div class="pergunta-header">
+                <h3 class="pergunta-titulo">
+                  Que tipo de ajuda a Plataforma Solar oferece?
+                </h3>
+                <span class="pergunta-icone">+</span>
+              </div>
+            </div>
+
+            <div class="pergunta-item">
+              <div class="pergunta-header">
+                <h3 class="pergunta-titulo">
+                  Existem profissionais disponíveis para atendimento?
+                </h3>
+                <span class="pergunta-icone">+</span>
+              </div>
+            </div>
+
+            <div class="pergunta-item">
+              <div class="pergunta-header">
+                <h3 class="pergunta-titulo">Meus dados são protegidos?</h3>
+                <span class="pergunta-icone">+</span>
+              </div>
+            </div>
+          </div>
+          <!-- container-perguntas -->
+        </div>
+        <!--margem-global-->
+      </section>
+      <!--secao-perguntas-frequentes -->
     </section>
 
-    <section class="secao-perguntas-frequentes">
+    <footer>
       <div class="margem-global">
-        <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
-        <div class="container-perguntas">
-          <div class="pergunta-item">
-            <div class="pergunta-header">
-              <h3 class="pergunta-titulo">O que é a Plataforma Solar?</h3>
-              <span class="pergunta-icone">+</span>
-            </div>
+        <div class="secao-footer">
+          <div class="logo-footer">
+            <a href="/ProjetoSolarOficial/src/pages/home/home.html">
+              <img
+                src="/ProjetoSolarOficial/src/assets/logo_nav.png"
+                alt="Logo Solar"
+              />
+            </a>
+            <span>Solar</span>
           </div>
+          <p>
+            Um espaço voltado para famílias monoparentais, oferecendo apoio
+            emocional, informações e recursos.
+          </p>
+        </div>
 
-          <div class="pergunta-item">
-            <div class="pergunta-header">
-              <h3 class="pergunta-titulo">
-                É gratuito participar da Plataforma Solar?
-              </h3>
-              <span class="pergunta-icone">+</span>
-            </div>
-          </div>
-
-          <div class="pergunta-item">
-            <div class="pergunta-header">
-              <h3 class="pergunta-titulo">
-                Que tipo de ajuda a Plataforma Solar oferece?
-              </h3>
-              <span class="pergunta-icone">+</span>
-            </div>
-          </div>
-
-          <div class="pergunta-item">
-            <div class="pergunta-header">
-              <h3 class="pergunta-titulo">
-                Existem profissionais disponíveis para atendimento?
-              </h3>
-              <span class="pergunta-icone">+</span>
-            </div>
-          </div>
-
-          <div class="pergunta-item">
-            <div class="pergunta-header">
-              <h3 class="pergunta-titulo">Meus dados são protegidos?</h3>
-              <span class="pergunta-icone">+</span>
-            </div>
+        <div class="secao-footer">
+          <h3>Redes Sociais</h3>
+          <div class="redes-sociais">
+            <a
+              href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              class="link-rede-social"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+                />
+              </svg>
+              SOLAR.PLATAFORMA
+            </a>
+            <a
+              href="https://www.linkedin.com/in/solaroficial/"
+              class="link-rede-social"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
+                />
+              </svg>
+              SOLAR OFICIAL
+            </a>
           </div>
         </div>
-        <!-- container-perguntas -->
-      </div>
-      <!--margem-global-->
-    </section>
-    <!--secao-perguntas-frequentes -->
-  </section>
 
- <footer>
-    <div class="margem-global">
-      <div class="secao-footer">
-        <div class="logo-footer">
-          <a href="/ProjetoSolarOficial/src/pages/home/home.html">
-            <img src="/ProjetoSolarOficial/src/assets/logo_nav.png" alt="Logo Solar">
-          </a>
-          <span>Solar</span>
-        </div>
-        <p>Um espaço voltado para famílias monoparentais, oferecendo apoio emocional, informações e
-          recursos.</p>
-      </div>
-
-      <div class="secao-footer">
-        <h3>Redes Sociais</h3>
-        <div class="redes-sociais">
-          <a href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="link-rede-social">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
-            </svg>
-            SOLAR.PLATAFORMA
-          </a>
-          <a href="https://www.linkedin.com/in/solaroficial/" class="link-rede-social">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-            </svg>
-            SOLAR OFICIAL
-          </a>
+        <div class="secao-footer">
+          <h3>Páginas</h3>
+          <ul class="lista-paginas">
+            <li>
+              <a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a>
+            </li>
+            <li>
+              <a href="/ProjetoSolarOficial/src/pages/network/about/about.html"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                href="/ProjetoSolarOficial/src/pages/professionals/professionals.html"
+                >Profissionais</a
+              >
+            </li>
+            <li>
+              <a
+                href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html"
+                >SolMídia</a
+              >
+            </li>
+            <li>
+              <a href="/ProjetoSolarOficial/src/pages/plans/plans.html"
+                >Planos</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="secao-footer">
-        <h3>Páginas</h3>
-        <ul class="lista-paginas">
-          <li><a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a></li>
-          <li><a href="/ProjetoSolarOficial/src/pages/network/about/about.html">Sobre</a></li>
-          <li><a href="/ProjetoSolarOficial/src/pages/professionals/professionals.html">Profissionais</a></li>
-          <li><a href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html">SolMídia</a></li>
-          <li><a href="/ProjetoSolarOficial/src/pages/plans/plans.html">Planos</a></li>
-        </ul>
+      <div class="direitos-autorais">
+        <p>
+          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
+          Política de Privacidade
+        </p>
       </div>
-    </div>
-
-    <div class="direitos-autorais">
-      <p>© 2025 Solar - Todos os Direitos Reservados | Termos e Condições | Política de Privacidade</p>
-    </div>
-  </footer>
-</body>
-<script src="../../../js/script.js"></script>
-
+    </footer>
+  </body>
+  <script src="../../../js/script.js"></script>
 </html>

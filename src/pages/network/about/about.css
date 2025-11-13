@@ -350,7 +350,7 @@ ul.dropdown li a:hover {
 }
 
 .equipe-solar img {
-  width: 100%;
+  width: 101%;
   border-radius: 30px 30px 0px 0px;
   box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.03);
 }
@@ -380,6 +380,38 @@ ul.dropdown li a:hover {
   font-weight: 600;
   font-size: 18px;
   padding-bottom: 20px;
+}
+
+/* --- Efeito de loop lateral --- */
+.container-equipe-solar {
+  overflow: hidden;
+  position: relative;
+}
+
+.margem-global {
+  overflow: hidden;
+  position: relative;
+}
+
+.equipe-solar {
+  display: flex;
+  gap: 1rem;
+  animation: moverEquipe 25s linear infinite;
+  width: max-content; /* permite rolagem contínua */
+}
+
+@keyframes moverEquipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Opcional: pausa o movimento ao passar o mouse */
+.container-equipe-solar:hover .equipe-solar {
+  animation-play-state: paused;
 }
 
 /* APOIE A SOLAR */

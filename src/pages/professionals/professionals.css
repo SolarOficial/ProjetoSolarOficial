@@ -253,7 +253,11 @@ section.importancia .margem-global .container-conteudo {
   gap: 131px;
 }
 
-section.importancia .margem-global .container-conteudo article .container-imagens {
+section.importancia
+  .margem-global
+  .container-conteudo
+  article
+  .container-imagens {
   width: 485px;
   height: 621px;
 }
@@ -283,17 +287,33 @@ section.importancia .margem-global .container-conteudo aside .container-aside {
   width: 610px;
 }
 
-section.importancia .margem-global .container-conteudo aside .container-aside p {
+section.importancia
+  .margem-global
+  .container-conteudo
+  aside
+  .container-aside
+  p {
   font-family: var(--font-paragrafo);
   font-size: 20px;
 }
 
-section.importancia .margem-global .container-conteudo aside .container-aside .bolinha-texto {
+section.importancia
+  .margem-global
+  .container-conteudo
+  aside
+  .container-aside
+  .bolinha-texto {
   display: flex;
   gap: 13px;
 }
 
-section.importancia .margem-global .container-conteudo aside .container-aside .bolinha-texto span {
+section.importancia
+  .margem-global
+  .container-conteudo
+  aside
+  .container-aside
+  .bolinha-texto
+  span {
   font-size: 25px;
   padding: 25px 32.5px;
   border-radius: 50%;
@@ -350,14 +370,24 @@ section.profissionais .margem-global .container-usuario .usuario {
   text-align: center;
 }
 
-section.profissionais .margem-global .container-usuario .usuario .texto p:nth-last-child(2) {
+section.profissionais
+  .margem-global
+  .container-usuario
+  .usuario
+  .texto
+  p:nth-last-child(2) {
   font-family: var(--font-paragrafo);
   font-size: 25px;
   font-weight: 600;
   color: var(--cor-roxo-escuro);
 }
 
-section.profissionais .margem-global .container-usuario .usuario .texto p:nth-last-child(1) {
+section.profissionais
+  .margem-global
+  .container-usuario
+  .usuario
+  .texto
+  p:nth-last-child(1) {
   font-family: var(--font-paragrafo);
   font-size: 20px;
   color: var(--cor-roxo-escuro);
@@ -373,7 +403,11 @@ section.profissionais .margem-global .container-usuario .container-textos {
   box-shadow: 0 8px 4.32px 0 var(--cor-preta);
 }
 
-section.profissionais .margem-global .container-usuario .container-textos .icone-texto {
+section.profissionais
+  .margem-global
+  .container-usuario
+  .container-textos
+  .icone-texto {
   display: flex;
   align-items: center;
   gap: 18px;
@@ -389,27 +423,46 @@ section.profissionais .margem-global .container-usuario .container-textos h3 {
   font-weight: 500;
 }
 
-section.profissionais .margem-global .container-usuario .container-textos .butaos {
+section.profissionais
+  .margem-global
+  .container-usuario
+  .container-textos
+  .butaos {
   width: 311px;
   height: 34.1px;
   display: flex;
   gap: 28px;
 }
 
-section.profissionais .margem-global .container-usuario .container-textos .butaos button {
+section.profissionais
+  .margem-global
+  .container-usuario
+  .container-textos
+  .butaos
+  button {
   width: 141.5px;
   height: 34.1px;
   border-radius: 4.72px;
 }
 
-section.profissionais .margem-global .container-usuario .container-textos .butaos button:nth-last-child(2) {
+section.profissionais
+  .margem-global
+  .container-usuario
+  .container-textos
+  .butaos
+  button:nth-last-child(2) {
   border: 1px solid var(--cor-roxo-claro);
   color: var(--cor-roxo-claro);
   font-family: var(--font-paragrafo);
   font-size: 13px;
 }
 
-section.profissionais .margem-global .container-usuario .container-textos .butaos button:nth-last-child(1) {
+section.profissionais
+  .margem-global
+  .container-usuario
+  .container-textos
+  .butaos
+  button:nth-last-child(1) {
   border: 1px solid var(--cor-roxo-claro);
   color: var(--cor-branca);
   font-family: var(--font-paragrafo);
@@ -635,6 +688,7 @@ footer {
 }
 
 footer .margem-global {
+  margin-left: 55px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;
@@ -730,6 +784,9 @@ footer .margem-global {
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-family: var(--font-paragrafo);
-  font-size: 14px;
-  color: var(--cor-branca);
+
+  .texto-paragrafo {
+    color: var(--cor-branca);
+    font-size: 14px;
+  }
 }

@@ -20,3 +20,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* animação de scroll */
+.animar-scroll {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: all 0.8s ease-out;
+}
+
+.animar-scroll.mostrar {
+  opacity: 1;
+  transform: translateY(0); 
+}
+

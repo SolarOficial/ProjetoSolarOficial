@@ -182,7 +182,6 @@ ul.dropdown li a:hover {
   gap: 20px;
 }
 
-
 /* QUEM SOMOS */
 
 .title-quem-somos {
@@ -235,24 +234,23 @@ ul.dropdown li a:hover {
 }
 
 .missao-visao-valores {
-  position: relative; 
+  position: relative;
   text-align: center;
   width: 350px;
-  padding: 60px 20px 20px 20px; 
+  padding: 60px 20px 20px 20px;
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 20px;
-  overflow: visible; 
+  overflow: visible;
 }
 
 .missao-visao-valores img {
   width: 90px;
   height: auto;
   position: absolute;
-  top: -50px; 
+  top: -50px;
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 .missao-visao-valores h3 {
   font-family: var(--font-titulo);
@@ -270,7 +268,6 @@ ul.dropdown li a:hover {
 .background-missao-visao-valores {
   overflow: visible;
 }
-
 
 /* SECTION BENEFÍCIOS SOLAR */
 
@@ -415,7 +412,7 @@ ul.dropdown li a:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50% + 2rem)); 
+    transform: translateX(calc(-50% + 2rem));
   }
 }
 
@@ -476,21 +473,26 @@ ul.dropdown li a:hover {
   margin-left: 80px;
 }
 
-.button-doar-agora button {
+.button-doar-agora {
   background-color: var(--cor-roxo-claro);
   color: var(--cor-branca);
   font-family: var(--font-paragrafo);
   font-size: 20px;
   padding: 20px;
   border-radius: 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width: 300px;
+  display: flex;
+  margin-top: 50px;
+  width: 186px;
   border: none;
   cursor: pointer;
+
+  .buttonDoar {
+    display: flex;
+    margin-left: 10px;
+  }
 }
 
-.button-doar-agora button:hover {
+.button-doar-agora:hover {
   background-color: #bf9ef5;
   transition: 0.3s ease;
 }
@@ -556,7 +558,6 @@ ul.dropdown li a:hover {
   font-size: 18px;
   color: var(--cor-roxo-escuro);
 }
-
 
 /* FOOTER */
 footer {
@@ -666,7 +667,5 @@ footer .margem-global {
 }
 
 .margem-global {
-  overflow: visible; 
+  overflow: visible;
 }
-
-

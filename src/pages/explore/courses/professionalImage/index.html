@@ -23,11 +23,16 @@
     <!-- ================================= HEADER ================================= -->
     <header class="container-pai">
       <div class="logo">
-        <img
-          height="90"
-          src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
-          alt="Logo branca Solar"
-        />
+        <a
+          href="#"
+          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
+        >
+          <img
+            height="90"
+            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
+            alt="Logo branca Solar"
+          />
+        </a>
       </div>
 
       <nav class="nav-pai">
@@ -66,7 +71,9 @@
                 >
               </li>
               <li>
-                <a href="#" onclick="redirectUser('./game/game.html')">JOGOS</a>
+                <a href="#" onclick="redirectUser('../explore/game/game.html')"
+                  >JOGOS</a
+                >
               </li>
             </ul>
           </li>
@@ -111,10 +118,20 @@
                   >LOCALIZAR INSTITUIÇÕES</a
                 >
               </li>
-             <li>
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
-                CONOSCO</a>
-            </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/community/comunidade.html')"
+                  >COMUNIDADE</a
+                >
+              </li>
             </ul>
           </li>
 
@@ -335,5 +352,5 @@
       </div>
     </footer>
   </body>
-  <script src="../../../../js/script.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/script.js"></script>
 </html>

@@ -146,22 +146,26 @@ ul.dropdown li a:hover {
 /* SEÇÃO SOBRE */
 
 .conheca-solar {
-  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-inicio-sobre.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 620px;
+  height: 500px;
   margin-top: 95px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  /* adicione */
+  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-inicio-sobre.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* para controles ou textos sobrepostos */
 }
 
 .conheca-solar h2 {
   font-family: var(--font-titulo);
   color: var(--cor-branca);
+  margin-top: 100px;
   font-size: 98px;
 }
 
@@ -173,10 +177,11 @@ ul.dropdown li a:hover {
 }
 
 .carrossel-sobre {
-  margin-top: 40px;
+  margin-top: 100px !important;
   display: flex;
   gap: 20px;
 }
+
 
 /* QUEM SOMOS */
 
@@ -229,25 +234,25 @@ ul.dropdown li a:hover {
   width: 100%;
 }
 
-.container-missao-visao-valores img {
-  width: 85px;
+.missao-visao-valores {
+  position: relative; 
+  text-align: center;
+  width: 350px;
+  padding: 60px 20px 20px 20px; 
+  border: 2px solid var(--cor-roxo-escuro);
+  border-radius: 20px;
+  overflow: visible; 
+}
+
+.missao-visao-valores img {
+  width: 90px;
   height: auto;
   position: absolute;
-  top: -45px;
+  top: -50px; 
   left: 50%;
   transform: translateX(-50%);
 }
 
-.missao-visao-valores {
-  position: relative;
-  align-items: center;
-  text-align: center;
-  width: 350px;
-  height: 300px;
-  border: 2px solid var(--cor-roxo-escuro);
-  border-radius: 20px;
-  padding: 50px 20px 20px 20px;
-}
 
 .missao-visao-valores h3 {
   font-family: var(--font-titulo);
@@ -261,6 +266,11 @@ ul.dropdown li a:hover {
   font-family: var(--font-paragrafo);
   font-size: 18px;
 }
+
+.background-missao-visao-valores {
+  overflow: visible;
+}
+
 
 /* SECTION BENEFÍCIOS SOLAR */
 
@@ -405,7 +415,7 @@ ul.dropdown li a:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% + 2rem)); 
   }
 }
 
@@ -539,6 +549,15 @@ ul.dropdown li a:hover {
   font-weight: bold;
 }
 
+.resposta-pergunta {
+  display: none;
+  padding: 15px 20px;
+  font-family: var(--font-paragrafo);
+  font-size: 18px;
+  color: var(--cor-roxo-escuro);
+}
+
+
 /* FOOTER */
 footer {
   background: var(--cor-roxo-claro);
@@ -645,3 +664,9 @@ footer .margem-global {
   font-size: 14px;
   color: var(--cor-branca);
 }
+
+.margem-global {
+  overflow: visible; 
+}
+
+

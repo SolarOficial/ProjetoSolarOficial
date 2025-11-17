@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Solar" />
     <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
+    <link rel="stylesheet" href="../../../global.css" />
     <link rel="stylesheet" href="./about.css" />
     <script
       src="https://kit.fontawesome.com/cd3985d825.js"
@@ -143,13 +144,6 @@
                   >FALE CONOSCO</a
                 >
               </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../network/community/comunidade.html')"
-                  >COMUNIDADE</a
-                >
-              </li>
             </ul>
           </li>
 
@@ -161,16 +155,19 @@
         </ul>
       </nav>
     </header>
-    <section class="conheca-solar">
-      <h2>Conheça a Solar</h2>
-      <p>Onde familias monoparentais encontram apoio</p>
-      <div class="carrossel-sobre">
-        <i class="fa-solid fa-circle" style="color: #cccccc"></i>
-        <i class="fa-regular fa-circle" style="color: #cccccc"></i>
-      </div>
-    </section>
+<section class="conheca-solar" id="conheca-solar">
+  <h2>Conheça a Solar</h2>
+  <p>Onde famílias monoparentais encontram apoio</p>
 
-    <section>
+  <div class="carrossel-sobre">
+    <i class="fa-solid fa-circle" style="color: #6a0dad; cursor:pointer;"></i>
+    <i class="fa-regular fa-circle" style="color: #cccccc; cursor:pointer;"></i>
+  </div>
+</section>
+
+
+
+    <section class="animar-scroll">
       <div class="title-quem-somos">
         <h3>Quem somos</h3>
       </div>
@@ -214,10 +211,10 @@
     </section>
 
     <section>
-      <div class="background-missao-visao-valores">
+      <div class="background-missao-visao-valores animar-scroll">
         <div class="margem-global">
           <div class="container-missao-visao-valores">
-            <div class="missao-visao-valores">
+            <div class="missao-visao-valores animar-scroll">
               <img
                 src="/ProjetoSolarOficial/src/assets/img-about/icone-missao.png"
                 alt="ícone de um alvo simbolizando a missão da solar"
@@ -230,7 +227,7 @@
               </p>
             </div>
 
-            <div class="missao-visao-valores">
+            <div class="missao-visao-valores animar-scroll">
               <img
                 src="/ProjetoSolarOficial/src/assets/img-about/icone-visao.png"
                 alt="ícone de um olho simbolizando a visão da solar"
@@ -243,7 +240,7 @@
               </p>
             </div>
 
-            <div class="missao-visao-valores">
+            <div class="missao-visao-valores animar-scroll">
               <img
                 src="/ProjetoSolarOficial/src/assets/img-about/icone-valores.png"
                 alt="ícone de uma mão segurando um coração simbolizando os valores da solar"
@@ -262,7 +259,7 @@
       <!-- margem-global -->
     </section>
 
-    <section>
+    <section class="animar-scroll">
       <div class="margem-global">
         <div class="title-beneficios-solar">
           <h3>Benefícios Solar</h3>
@@ -297,7 +294,7 @@
       <!--margem-global -->
     </section>
 
-    <section>
+    <section class="animar-scroll">
       <div class="title-equipe-solar">
         <h3>Equipe Solar</h3>
       </div>
@@ -509,7 +506,7 @@
 
       <!--container-equipe-solar -->
 
-      <section>
+      <section class="animar-scroll">
         <div class="background-apoie-solar">
           <div class="margem-global">
             <div class="container">
@@ -567,57 +564,69 @@
         <!-- background-apoie-solar -->
       </section>
 
-      <section class="secao-perguntas-frequentes">
-        <div class="margem-global">
-          <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
-          <div class="container-perguntas">
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">O que é a Plataforma Solar?</h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-            </div>
+ <section class="secao-perguntas-frequentes animar-scroll">
+  <div class="margem-global">
+    <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
 
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  É gratuito participar da Plataforma Solar?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-            </div>
+    <div class="container-perguntas">
 
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Que tipo de ajuda a Plataforma Solar oferece?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Existem profissionais disponíveis para atendimento?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">Meus dados são protegidos?</h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-            </div>
-          </div>
-          <!-- container-perguntas -->
+      <div class="pergunta-item">
+        <div class="pergunta-header">
+          <h3 class="pergunta-titulo">O que é a Plataforma Solar?</h3>
+          <span class="pergunta-icone">+</span>
         </div>
-        <!--margem-global-->
-      </section>
-      <!--secao-perguntas-frequentes -->
-    </section>
+        <div class="resposta-pergunta">
+          A Plataforma Solar é um espaço de apoio a mães e pais solos, oferecendo recursos, informações e oportunidades de capacitação, inclusão social e bem-estar.
+        </div>
+      </div>
+
+      <div class="pergunta-item">
+        <div class="pergunta-header">
+          <h3 class="pergunta-titulo">É gratuito participar da Plataforma Solar?</h3>
+          <span class="pergunta-icone">+</span>
+        </div>
+        <div class="resposta-pergunta">
+          Sim! O acesso básico à Plataforma Solar é gratuito. Também oferecemos planos pagos com funcionalidades extras para quem deseja mais recursos.
+        </div>
+      </div>
+
+      <div class="pergunta-item">
+        <div class="pergunta-header">
+          <h3 class="pergunta-titulo">Que tipo de ajuda a Plataforma Solar oferece?</h3>
+          <span class="pergunta-icone">+</span>
+        </div>
+        <div class="resposta-pergunta">
+          A plataforma oferece apoio emocional, educacional e profissional, além de conectar mães e pais solos a uma rede de voluntários, cursos e oportunidades de trabalho.
+        </div>
+      </div>
+
+      <div class="pergunta-item">
+        <div class="pergunta-header">
+          <h3 class="pergunta-titulo">Existem profissionais disponíveis para atendimento?</h3>
+          <span class="pergunta-icone">+</span>
+        </div>
+        <div class="resposta-pergunta">
+          Sim, contamos com profissionais especializados que podem orientar e oferecer suporte personalizado aos usuários da plataforma.
+        </div>
+      </div>
+
+      <div class="pergunta-item">
+        <div class="pergunta-header">
+          <h3 class="pergunta-titulo">Meus dados são protegidos?</h3>
+          <span class="pergunta-icone">+</span>
+        </div>
+        <div class="resposta-pergunta">
+          Sim! A Plataforma Solar garante total segurança e confidencialidade das informações pessoais dos usuários, seguindo práticas de proteção de dados.
+        </div>
+      </div>
+
+    </div>
+    <!-- container-perguntas -->
+  </div>
+  <!-- margem-global -->
+</section>
+<!-- secao-perguntas-frequentes -->
+
 
     <footer>
       <div class="margem-global">
@@ -704,6 +713,9 @@
         </p>
       </div>
     </footer>
+
+      <script src="../../../js/script.js"></script>
+      <script src="../../../js/about.js"></script>
   </body>
-  <script src="../../../js/script.js"></script>
+
 </html>

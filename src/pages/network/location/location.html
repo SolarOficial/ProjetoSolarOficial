@@ -167,10 +167,13 @@
 
           <!-- CARD EXPLICATIVO À DIREITA -->
           <div class="tutorial-card">
-            <h3>O que você encontra no mapa?</h3>
+            <h3>O que você encontrará no mapa?</h3>
 
             <div class="tutorial-item">
-              <img src="" alt="Ícone ONG" />
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-location/iconeOngs.png"
+                alt="Ícone ONG"
+              />
               <p>
                 <strong>ONGs:</strong> locais que oferecem serviços sociais e
                 comunitários.
@@ -178,21 +181,43 @@
             </div>
 
             <div class="tutorial-item">
-              <img src="" alt="Ícone UBS" />
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-location/iconeUBS.png"
+                alt="Ícone UBS"
+              />
               <p>
                 <strong>UBS:</strong> unidades de saúde para atendimento básico.
               </p>
             </div>
 
             <div class="tutorial-item">
-              <img src="" alt="Ícone CRAS" />
+              <img
+                src="/ProjetoSolarOficial/src/assets/img-location/iconeCras.png"
+                alt="Ícone CRAS"
+              />
               <p>
                 <strong>CRAS:</strong> centros públicos de assistência para
                 apoio familiar.
               </p>
             </div>
-            <div>
-              <a href="">Clique e veja o vídeo tutorial(AINDA EM CONSTRUÇÃO)</a>
+            <!-- BOTÃO PARA ABRIR O VÍDEO -->
+            <button class="btn-tutorial-video" id="openVideo">
+              Clique e veja o tutorial sobre o mapa!
+            </button>
+
+            <!-- MODAL DO VÍDEO -->
+            <div id="videoModal" class="modal-video">
+              <div class="modal-content-video">
+                <span id="closeModal" class="close-video">&times;</span>
+
+                <video id="tutorialVideo" controls>
+                  <source
+                    src="/ProjetoSolarOficial/src/assets/img-location/IMG_0467.mp4"
+                    type="video/mp4"
+                  />
+                  Seu navegador não suporta vídeo.
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -285,4 +310,5 @@
     </footer>
   </body>
   <script src="../../../js/script.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/videoTutorial.js"></script>
 </html>

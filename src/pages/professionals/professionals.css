@@ -172,7 +172,6 @@ section.imagem-fundo .margem-global .container-textos p {
   text-align: center;
 }
 
-
 /*SECTION CONHEÇA QUEM*/
 
 section.conheca-quem {
@@ -633,38 +632,72 @@ section.junte-se .margem-global form button {
   border-radius: 16.75px;
   background: var(--cor-laranja);
   color: var(--cor-preta);
+  cursor: pointer;
   border: none;
   font-size: 25px;
   font-family: var(--font-titulo);
 }
 
-/*SECTION PERGUNTAS*/
-section.perguntas .margem-global {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 56px;
+/* PERGUNTAS FREQUENTES  */
+
+.secao-perguntas-frequentes {
+  padding: 80px 0 100px 0;
+  background-color: var(--cor-branca);
 }
 
-section.perguntas .margem-global h2 {
-  font-size: 45px;
+.title-perguntas-frequentes {
   font-family: var(--font-titulo);
+  font-size: 45px;
   color: var(--cor-roxo-escuro);
-  font-weight: 600;
   text-align: center;
-  margin: 105px 0 31px 0;
+  margin-bottom: 60px;
+  font-weight: 700;
 }
 
-section.perguntas .margem-global .card-pergunta {
-  width: 1057px;
-  height: 80px;
-  background-color: #e8e0f5;
+.container-perguntas {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pergunta-item {
+  background-color: #e8dcfa;
   border-radius: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.pergunta-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: 25px 30px;
+  cursor: pointer;
+}
+
+.pergunta-header:hover {
+  background-color: #dcc9f5;
+  border-radius: 15px;
+}
+
+.pergunta-titulo {
+  font-family: var(--font-paragrafo);
+  font-size: 20px;
+  color: var(--cor-roxo-escuro);
+  font-weight: 600;
+}
+
+.pergunta-icone {
+  font-size: 24px;
+  color: var(--cor-roxo-escuro);
+  font-weight: bold;
+}
+
+.resposta-pergunta {
+  display: none;
+  padding: 15px 20px;
+  font-family: var(--font-paragrafo);
+  font-size: 18px;
+  color: var(--cor-roxo-escuro);
 }
 
 /* FOOTER */

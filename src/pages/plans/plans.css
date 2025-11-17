@@ -201,13 +201,56 @@ section.planos-solar .margem-global .container-cards-planos .card .card-apoio {
   border-radius: 20px 20px 0 0;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .background-textos-apoio {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .background-textos-apoio {
   background: #ffe7c6;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-apoio button {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  .plano-apoio
+  button {
   background: var(--cor-laranja);
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  width: 349px;
+  height: 60px;
+  font-size: 17px;
+  font-family: var(--font-paragrafo);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  .plano-apoio
+  button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+  background-color: var(--cor-laranja);
+}
+
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  .plano-apoio
+  button:active {
+  transform: scale(0.97);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* CORES PLANO AMPARO */
@@ -215,44 +258,141 @@ section.planos-solar .margem-global .container-cards-planos .card .container-ico
 section.planos-solar .margem-global .container-cards-planos .card .card-amparo {
   background: var(--cor-roxo-claro);
   border-radius: 20px 20px 0 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado {
+/* Efeito no card inteiro (igual aos outros) */
+section.planos-solar .margem-global .container-cards-planos .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+section.planos-solar .margem-global .container-cards-planos .card:active {
+  transform: scale(0.98);
+}
+
+/* TEXTO RECOMENDADO */
+/* Deixe o card como referência para posicionamento */
+section.planos-solar .margem-global .container-cards-planos .card {
+  position: relative;
+}
+
+/* Texto flutuando acima do card */
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .texto-recomendado {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  z-index: 10;
+
   display: flex;
-  width: 401px;
-  padding-right: 20px;
   justify-content: flex-end;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado p {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .texto-recomendado
+  p {
   background: var(--cor-branca);
-  padding: 10px;
+  padding: 8px 16px;
   border-radius: 30px;
   color: var(--cor-roxo-claro);
+  font-weight: 600;
+  /* margin-top: 10px; */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .background-textos-amparo {
+/* PARTE DE BAIXO DO CARD */
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .background-textos-amparo {
   background: #fdebff;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-amparo button {
+/* BOTÃO */
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  .plano-amparo
+  button {
   background: var(--cor-roxo-claro);
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  width: 349px;
+  height: 60px;
+  font-size: 17px;
+  font-family: var(--font-paragrafo);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* HOVER DO BOTÃO */
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  .plano-amparo
+  button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+  background-color: var(--cor-roxo-claro);
+}
+
+/* ACTIVE DO BOTÃO */
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  .plano-amparo
+  button:active {
+  transform: scale(0.97);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* CORES PLANO ALICERCE */
 
-section.planos-solar .margem-global .container-cards-planos .card .card-alicerce {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .card-alicerce {
   background: var(--cor-amarelo);
   border-radius: 20px 20px 0 0;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .background-textos-alicerce {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .background-textos-alicerce {
   background: #fff8be;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-alicerce button {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  .plano-alicerce
+  button {
   background: var(--cor-amarelo);
 }
 
@@ -298,6 +438,22 @@ section.planos-solar .margem-global .card .plano-alicerce button {
   font-size: 17px;
   font-family: var(--font-paragrafo);
   color: var(--cor-preta);
+  cursor: pointer;
+
+  /* Animação suave */
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+section.planos-solar .margem-global .card .plano-alicerce button:hover {
+  transform: translateY(-4px) scale(1.03); /* sobe + zoom leve */
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+  background-color: var(--cor-secundaria);
+}
+
+section.planos-solar .margem-global .card .plano-alicerce button:active {
+  transform: scale(0.97);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* ================================================================== */
@@ -311,33 +467,57 @@ section.planos-solar .margem-global .container-cards-planos .card .nome-plano {
   align-items: center;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .nome-plano h3 {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .nome-plano
+  h3 {
   font-size: 35px;
   font-family: var(--font-paragrafo);
   color: var(--cor-branca);
   margin-bottom: 25px;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .nome-plano h2 {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .nome-plano
+  h2 {
   font-size: 32px;
   font-family: var(--font-titulo);
   color: var(--cor-branca);
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .nome-plano span {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .nome-plano
+  span {
   font-size: 20px;
   font-family: var(--font-titulo);
   color: var(--cor-branca);
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
 }
 
-section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos p {
+section.planos-solar
+  .margem-global
+  .container-cards-planos
+  .card
+  .container-icones-textos
+  p {
   font-size: 20px;
   font-family: var(--font-titulo);
 }
@@ -365,41 +545,66 @@ section.planos-solar .margem-global .card .button button {
 
 /* ======================================================================= */
 
-/* SECTION perguntas-frequentes */
+/* PERGUNTAS FREQUENTES  */
 
-section.perguntas-frequentes {
-  margin-top: 190px;
+.secao-perguntas-frequentes {
+  padding: 80px 0 100px 0;
+  background-color: var(--cor-branca);
 }
 
-section.perguntas-frequentes .margem-global h2 {
-  font-size: 45px;
+.title-perguntas-frequentes {
   font-family: var(--font-titulo);
+  font-size: 45px;
   color: var(--cor-roxo-escuro);
   text-align: center;
-  margin-bottom: 76px;
+  margin-bottom: 60px;
+  font-weight: 700;
 }
 
-section.perguntas-frequentes .margem-global .perguntas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 56px;
+.container-perguntas {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-section.perguntas-frequentes .margem-global .perguntas .etiquetas-perguntas {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 1057px;
-  height: 80px;
-  background: #e8e0f5;
+.pergunta-item {
+  background-color: #e8dcfa;
   border-radius: 15px;
-  padding: 0 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
-section.perguntas-frequentes .margem-global .perguntas .etiquetas-perguntas p {
+.pergunta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  cursor: pointer;
+}
+
+.pergunta-header:hover {
+  background-color: #dcc9f5;
+  border-radius: 15px;
+}
+
+.pergunta-titulo {
+  font-family: var(--font-paragrafo);
   font-size: 20px;
-  font-family: var(--font-titulo);
+  color: var(--cor-roxo-escuro);
+  font-weight: 600;
+}
+
+.pergunta-icone {
+  font-size: 24px;
+  color: var(--cor-roxo-escuro);
+  font-weight: bold;
+}
+
+.resposta-pergunta {
+  display: none;
+  padding: 15px 20px;
+  font-family: var(--font-paragrafo);
+  font-size: 18px;
+  color: var(--cor-roxo-escuro);
 }
 
 /* FOOTER */

@@ -23,13 +23,27 @@
   <body>
     <header class="container-pai">
       <div class="logo">
-      <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"> <img height="90"
-          src="/ProjetoSolarOficial/src/assets/logo_nav2.png" alt="Logo branca Solar"/> </a>
-    </div>
+        <a
+          href="#"
+          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
+        >
+          <img
+            height="90"
+            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
+            alt="Logo branca Solar"
+          />
+        </a>
+      </div>
 
       <nav class="nav-pai">
         <ul>
-          <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">HOME</a></li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/index.html')"
+              >HOME</a
+            >
+          </li>
           <li>
             <a href="#">
               EXPLORAR
@@ -63,13 +77,19 @@
                 >
               </li>
               <li>
-                <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')">JOGOS</a>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')"
+                  >JOGOS</a
+                >
               </li>
             </ul>
           </li>
 
           <li>
-            <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')"
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')"
               >DOAÇÃO</a
             >
           </li>
@@ -81,7 +101,11 @@
             >
           </li>
           <li>
-            <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')">PLANOS</a>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')"
+              >PLANOS</a
+            >
           </li>
 
           <li>
@@ -109,13 +133,18 @@
                 >
               </li>
               <li>
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
-                CONOSCO</a>
-            </li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
             </ul>
           </li>
 
-          <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
+          <a
+            href="#"
+            onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
             ><button class="button-header">ENTRAR</button></a
           >
         </ul>
@@ -192,7 +221,11 @@
 
                 <p class="login-link">
                   Já possui cadastro?
-                  <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')">Faça Login</a>
+                  <a
+                    href="#"
+                    onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
+                    >Faça Login</a
+                  >
                 </p>
               </form>
             </div>
@@ -207,9 +240,14 @@
         </div>
         <!--container-cadastro -->
       </div>
+      <button id="botaoPlay">Tocar som do mar</button>
+      <audio
+        id="somDoMar"
+        src="/ProjetoSolarOficial/src/audio/musicaOceano.mp3"
+      ></audio>
       <!--margem-global -->
     </main>
     <script src="../../js/script.js"></script>
-
+    <script src="/ProjetoSolarOficial/src/js/sons.js"></script>
   </body>
 </html>

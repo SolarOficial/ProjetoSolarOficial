@@ -409,3 +409,204 @@ footer .margem-global {
   font-size: 14px;
   color: var(--cor-branca);
 }
+
+/* RESPONSIVIDADE */
+
+/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
+@media screen and (max-width: 1200px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 30px; /* Reduz a margem lateral para tablets */
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+
+  .nav-pai ul {
+    gap: 30px;
+    margin-top: 25px;
+  }
+
+  .button-header {
+    margin-right: 30px;
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  /* SEÇÃO LOCALIZAÇÕES */
+  .container-mapa-resultados {
+    flex-direction: column; /* Empilha os elementos */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mapa,
+  .tutorial-card {
+    width: 90%; /* Usa 90% da largura para o mapa e card */
+    max-width: none;
+  }
+
+  .mapa {
+    height: 400px; /* Altura ajustada */
+  }
+
+  /* FOOTER */
+  footer .margem-global {
+    grid-template-columns: 1fr 1fr; /* Muda de 3 para 2 colunas */
+    gap: 30px;
+  }
+}
+
+/* 2. TELAS PEQUENAS/MOBILE (Máximo 992px) */
+@media screen and (max-width: 992px) {
+  .logo {
+    margin: 0;
+  }
+
+  .button-header {
+    margin: 15px 0 0 0; /* Centraliza e remove margem lateral */
+  }
+
+  /* SEÇÃO LOCALIZAÇÕES */
+  .secao-localizacoes {
+    padding: 80px 0; /* Reduz o padding superior */
+  }
+
+  .busca-cep {
+    flex-direction: column; /* Empilha os elementos de busca */
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .title-localizacoes {
+    font-size: 36px;
+  }
+
+  .container-mapa-resultados {
+    flex-direction: column; /* Empilha o mapa e o card de tutorial */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mapa,
+  .tutorial-card {
+    width: 95%; /* Ocupa quase a largura total da tela */
+    max-width: none; /* Remove a limitação de largura (max-width) */
+  }
+
+  .mapa {
+    height: 350px; /* Altura reduzida para mobile */
+  }
+}
+
+/* 2. TELAS PEQUENAS/MOBILE (Máximo 992px) */
+@media screen and (max-width: 992px) {
+  /* SEÇÃO LOCALIZAÇÕES */
+  .secao-localizacoes {
+    padding: 80px 0; /* Reduz o padding superior/inferior */
+  }
+
+  .title-localizacoes {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .busca-cep {
+    flex-direction: column; /* Empilha os elementos de busca */
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .container-mapa-resultados {
+    flex-direction: column; /* Mapa e Card Tutorial empilhados */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mapa,
+  .tutorial-card {
+    width: 100%; /* Ocupa a largura total da margem global */
+    max-width: 500px; /* Limita o tamanho máximo para não ficar muito largo em telas maiores que mobile */
+  }
+
+  .mapa {
+    height: 350px; /* Altura reduzida para mobile */
+  }
+
+  /* FOOTER */
+  footer .margem-global {
+    grid-template-columns: 1fr; /* Transforma em uma única coluna vertical */
+    gap: 40px;
+  }
+
+  .direitos-autorais {
+    padding-top: 20px;
+    font-size: 13px;
+  }
+}
+
+/* 3. TELAS MUITO PEQUENAS (Máximo 576px) */
+@media screen and (max-width: 576px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 15px; /* Margem bem pequena para telas estreitas */
+  }
+
+  /* SEÇÃO LOCALIZAÇÕES */
+  .title-localizacoes {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .tutorial-card {
+    padding: 20px;
+  }
+
+  .tutorial-card h3 {
+    font-size: 22px;
+  }
+
+  .tutorial-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tutorial-item p {
+    font-size: 14px;
+  }
+
+  .btn-tutorial-video {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  /* MODAL */
+  .modal-content-video {
+    width: 95%;
+  }
+
+  .close-video {
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+  }
+
+  /* FOOTER */
+  .secao-footer h3 {
+    font-size: 24px;
+  }
+
+  .logo-footer img {
+    width: 60px;
+  }
+
+  .logo-footer span {
+    font-size: 30px;
+  }
+
+  .direitos-autorais {
+    font-size: 12px;
+    padding: 15px 5px 0 5px;
+  }
+}

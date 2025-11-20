@@ -138,7 +138,7 @@ ul.dropdown li a:hover {
 
 section.imagem-fundo {
   background-image: url(/ProjetoSolarOficial/src/assets/img-professionals/imagem-fundo.png);
-  height: 600px;
+  height: 458px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -643,6 +643,7 @@ section.junte-se .margem-global form button {
 .secao-perguntas-frequentes {
   padding: 80px 0 100px 0;
   background-color: var(--cor-branca);
+  margin-top: 70px;
 }
 
 .title-perguntas-frequentes {

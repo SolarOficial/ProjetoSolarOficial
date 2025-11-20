@@ -54,3 +54,20 @@ perguntas.forEach(item => {
     icone.textContent = icone.textContent === '+' ? '-' : '+';
   });
 });
+
+// carrossel benefícios 
+const wrapper = document.querySelector(".beneficios-wrapper");
+const btnNext = document.getElementById("btn-next");
+const btnPrev = document.getElementById("btn-prev");
+
+const cardWidth = 400 + 32; 
+
+btnNext.addEventListener("click", () => {
+  wrapper.scrollLeft += cardWidth;
+});
+
+btnPrev.addEventListener("click", () => {
+  wrapper.scrollLeft -= cardWidth;
+});
+
+

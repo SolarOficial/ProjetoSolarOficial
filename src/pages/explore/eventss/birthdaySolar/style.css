@@ -148,8 +148,9 @@ ul.dropdown li a:hover {
   width: 844px;
   height: 880px;
   flex-wrap: wrap;
+}
 
-  .topo-card {
+.topo-card {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -179,7 +180,7 @@ ul.dropdown li a:hover {
     font-family: "Figtree";
     font-size: 16px;
   }
-}
+
 
 .informacoes-curso {
   border-radius: 12px;

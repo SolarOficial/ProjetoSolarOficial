@@ -12,9 +12,11 @@
   --cor-amarelo: #fff59c;
   --font-titulo: "Karla", sans-serif;
   --font-paragrafo: "Figtree";
-  --cor-roxo-claro-gradient: linear-gradient(140deg,
-      rgba(191, 158, 245, 0.8) 0%,
-      rgba(111, 92, 143, 0.8) 100%);
+  --cor-roxo-claro-gradient: linear-gradient(
+    140deg,
+    rgba(191, 158, 245, 0.8) 0%,
+    rgba(111, 92, 143, 0.8) 100%
+  );
 }
 
 /* config zeradas */
@@ -57,7 +59,7 @@
 }
 
 /* dropdawn */
-.nav-pai li{
+.nav-pai li {
   position: relative;
 }
 
@@ -73,7 +75,7 @@
   transition: background 0.3s;
 }
 
-p#selecionado{
+p#selecionado {
   font-family: "Karla", sans-serif;
   color: var(--cor-branca);
 }
@@ -154,7 +156,6 @@ body {
   background-size: cover;
 }
 
-
 section.img-login {
   display: flex;
   align-items: center;
@@ -175,13 +176,13 @@ section.img-login {
   height: 570px;
 }
 
-.login-solar ::placeholder{
+.login-solar ::placeholder {
   width: 100%;
   font-size: 18px;
   font-weight: 600;
 }
 
-.login-solar img{
+.login-solar img {
   width: 30px;
   margin: 10px 0 10px 10px;
 }
@@ -196,7 +197,7 @@ section.img-login {
 }
 
 .input-user {
-  padding:16px;
+  padding: 16px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -264,7 +265,7 @@ section.img-login {
     margin-right: 20px;
   }
 
-  a:hover{
+  a:hover {
     color: #f7d850;
   }
 }
@@ -310,9 +311,148 @@ section.img-login {
     color: #fafafa;
   }
 
-  a:hover{
+  a:hover {
     color: #f7d850;
   }
 }
 
-/* //////////////////////////////////////////// FOOTER ////////////////////////////////////////////// */
+/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
+@media screen and (max-width: 1200px) {
+  /* CONTAINER DO LAYOUT (Imagem e Login) */
+  section.img-login {
+    flex-direction: column; /* Empilha a imagem e o bloco de login */
+    gap: 50px;
+    margin-top: 100px; /* Aumenta a margem superior para evitar o Header */
+  }
+
+  /* BLOCO DE LOGIN */
+  .login-solar {
+    margin-top: 0; /* Remove a margem original, já ajustada no container */
+    width: 90%; /* Ocupa 90% da largura em tablets */
+    max-width: 500px; /* Limita o tamanho máximo */
+    height: auto; /* Altura flexível */
+    padding: 50px 40px;
+    border-radius: 40px;
+  }
+
+  .title-login {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+
+  /* INPUTS */
+  .input-email,
+  .input-password {
+    width: 100%; /* Ocupa a largura total do container .login-solar */
+    margin: 0;
+    height: 55px;
+  }
+
+  /* Placeholder/Input Text */
+  .input-email input,
+  .input-password input {
+    font-size: 16px;
+  }
+
+  /* Checkbox e Link Esqueci Senha */
+  .input-remember {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+  }
+
+  .input-remember a {
+    margin-right: 0;
+  }
+
+  /* Botão Entrar */
+  .button-entrar {
+    margin: 35px 0 15px 0;
+  }
+
+  .button-entrar button {
+    padding: 14px 80px;
+    font-size: 22px;
+  }
+
+  /* Criar Conta */
+  .create-account {
+    font-size: 18px;
+  }
+}
+
+/* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
+@media screen and (max-width: 768px) {
+  /* CONTAINER DO LAYOUT */
+  section.img-login {
+    gap: 30px;
+    margin-top: 120px;
+  }
+
+  /* IMAGEM/MASCOTE */
+  /* Assumindo que há uma imagem (se não houver, ignore esta seção) */
+  section.img-login > img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* BLOCO DE LOGIN */
+  .login-solar {
+    width: 95%; /* Ocupa quase toda a largura da tela */
+    max-width: none;
+    padding: 30px 20px;
+  }
+
+  .title-login {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .login-solar img {
+    width: 25px;
+    margin: 5px 0 5px 10px;
+  }
+
+  /* INPUTS */
+  .input-user {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .input-email,
+  .input-password {
+    height: 50px;
+  }
+
+  /* Placeholder/Input Text */
+  .input-email input,
+  .input-password input {
+    font-size: 14px;
+  }
+
+  /* Checkbox e Link Esqueci Senha */
+  .input-remember {
+    flex-direction: column; /* Empilha checkbox e link */
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Botão Entrar */
+  .button-entrar {
+    margin: 30px 0 15px 0;
+  }
+
+  .button-entrar button {
+    padding: 12px 60px;
+    font-size: 20px;
+  }
+
+  /* Criar Conta */
+  .create-account {
+    flex-direction: column; /* Empilha o texto */
+    font-size: 16px;
+    text-align: center;
+    gap: 5px;
+  }
+}

@@ -714,3 +714,522 @@ footer .margem-global {
   font-size: 14px;
   color: var(--cor-branca);
 }
+
+/* --- RESPONSIVIDADE PARA A PÁGINA DE PLANOS --- */
+
+/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
+@media screen and (max-width: 1200px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 30px; /* Reduz a margem lateral para tablets */
+  }
+
+  /* HEADER (MANTIDO) */
+  /* Seu header é mantido conforme as regras anteriores para 1200px */
+
+  /* SECTION IMAGEM FUNDO */
+  section.imagem-fundo {
+    height: 450px; /* Reduz a altura do banner */
+  }
+
+  section.imagem-fundo .margem-global h1 {
+    font-size: 50px; /* Reduz o tamanho da fonte do título principal */
+  }
+
+  /* SECTION PLANOS SOLAR */
+  section.planos-solar .margem-global .textos h2 {
+    font-size: 40px;
+  }
+
+  section.planos-solar .margem-global .textos p {
+    font-size: 18px;
+  }
+
+  /* CARDS DE PLANOS */
+  section.planos-solar .margem-global .container-cards-planos {
+    justify-content: center; /* Centraliza os cards quando eles quebrarem a linha */
+    gap: 40px; /* Adiciona espaço entre os cards */
+    margin-top: 50px;
+  }
+
+  section.planos-solar .margem-global .container-cards-planos .card {
+    /* Permite que o card se ajuste um pouco em telas médias */
+    width: 45%;
+    height: auto; /* Altura automática */
+    min-width: 350px; /* Garante que não fique muito estreito */
+  }
+
+  /* Ajuste no texto "Recomendado" para o novo posicionamento */
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .texto-recomendado {
+    right: 50%; /* Centraliza o card flutuante */
+    transform: translateX(50%);
+  }
+
+  /* Ajuste de largura dos botões e contêineres internos */
+  section.planos-solar .margem-global .card .button button,
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .plano-apoio
+    button,
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .plano-amparo
+    button,
+  section.planos-solar .margem-global .card .plano-alicerce button {
+    width: 90%; /* Usa 90% da largura do card */
+  }
+
+  /* SECTION PERGUNTAS FREQUENTES */
+  .container-perguntas {
+    max-width: 750px; /* Limita um pouco menos a largura */
+  }
+
+  .pergunta-header {
+    padding: 20px 25px;
+  }
+
+  .pergunta-titulo {
+    font-size: 18px;
+  }
+
+  /* FOOTER */
+  footer .margem-global {
+    grid-template-columns: 1fr 1fr; /* Mantém 2 colunas */
+    gap: 40px;
+  }
+}
+
+/* 2. TELAS PEQUENAS/MOBILE (Máximo 768px - Novo Breakpoint) */
+@media screen and (max-width: 768px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 20px;
+  }
+
+  /* SECTION IMAGEM FUNDO */
+  section.imagem-fundo {
+    height: 350px;
+  }
+
+  section.imagem-fundo .margem-global h1 {
+    font-size: 38px;
+  }
+
+  /* SECTION PLANOS SOLAR */
+  section.planos-solar .margem-global .textos {
+    margin-top: 50px;
+  }
+
+  section.planos-solar .margem-global .textos h2 {
+    font-size: 30px;
+  }
+
+  section.planos-solar .margem-global .textos p {
+    font-size: 16px;
+  }
+
+  /* CARDS DE PLANOS: EMPILHAMENTO TOTAL */
+  section.planos-solar .margem-global .container-cards-planos {
+    flex-direction: column; /* Força empilhamento */
+    align-items: center;
+    gap: 50px;
+  }
+
+  section.planos-solar .margem-global .container-cards-planos .card {
+    width: 100%; /* Ocupa a largura total da margem (20px) */
+    max-width: 401px; /* Limita o tamanho máximo do card */
+  }
+
+  /* Reset dos tamanhos internos dos cards para mobile */
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .nome-plano {
+    width: 100%;
+    height: 150px;
+  }
+
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .nome-plano
+    h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  /* SECTION PERGUNTAS FREQUENTES */
+  .title-perguntas-frequentes {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .pergunta-header {
+    padding: 18px 20px;
+  }
+
+  .pergunta-titulo {
+    font-size: 16px;
+  }
+
+  .resposta-pergunta {
+    font-size: 16px;
+  }
+
+  /* FOOTER: EMPILHAMENTO TOTAL */
+  footer {
+    margin-top: 50px;
+    padding: 40px 0 20px 0;
+  }
+
+  footer .margem-global {
+    grid-template-columns: 1fr; /* Uma única coluna */
+    gap: 30px;
+  }
+}
+
+/* 3. TELAS MUITO PEQUENAS (Máximo 480px) */
+@media screen and (max-width: 480px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 15px; /* Margem mínima */
+  }
+
+  /* SECTION IMAGEM FUNDO */
+  section.imagem-fundo {
+    height: 250px;
+  }
+
+  section.imagem-fundo .margem-global h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  /* SECTION PLANOS SOLAR */
+  section.planos-solar .margem-global .textos h2 {
+    font-size: 26px;
+  }
+
+  /* CARDS DE PLANOS */
+  /* Reduz o padding interno dos cards */
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .container-icones-textos {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .container-icones-textos
+    p {
+    font-size: 16px;
+  }
+
+  /* PERGUNTAS FREQUENTES */
+  .title-perguntas-frequentes {
+    font-size: 26px;
+  }
+
+  .pergunta-header {
+    padding: 15px;
+  }
+
+  .pergunta-titulo {
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  .secao-footer h3 {
+    font-size: 22px;
+  }
+
+  .logo-footer img {
+    width: 50px;
+  }
+
+  .logo-footer span {
+    font-size: 28px;
+  }
+}
+
+/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
+@media screen and (max-width: 1200px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 30px; /* Reduz a margem lateral para tablets */
+  }
+
+  /* SECTION IMAGEM FUNDO */
+  section.imagem-fundo {
+    height: 400px;
+  }
+
+  section.imagem-fundo .margem-global h1 {
+    font-size: 48px;
+  }
+
+  /* SECTION PLANOS SOLAR */
+  section.planos-solar .margem-global .textos h2 {
+    font-size: 38px;
+  }
+
+  /* CARDS DE PLANOS */
+  section.planos-solar .margem-global .container-cards-planos {
+    justify-content: space-around; /* Distribui os cards no espaço */
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  section.planos-solar .margem-global .container-cards-planos .card {
+    width: 300px; /* Reduz a largura fixa do card */
+    height: auto;
+    min-width: 300px;
+  }
+
+  /* Ajuste para botões internos */
+  section.planos-solar .margem-global .card .button button,
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .plano-apoio
+    button,
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .plano-amparo
+    button,
+  section.planos-solar .margem-global .card .plano-alicerce button {
+    width: 90%;
+  }
+
+  /* Seções de título e preço nos cards */
+  section.planos-solar .margem-global .container-cards-planos .card .nome-plano,
+  section.planos-solar .margem-global .alicerce .card-alicerce {
+    width: 100%; /* Ocupa a largura total do card */
+  }
+
+  /* Ajuste do texto "Recomendado" */
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .texto-recomendado {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  /* SECTION PERGUNTAS FREQUENTES */
+  .container-perguntas {
+    max-width: 800px;
+  }
+
+  .pergunta-header {
+    padding: 20px 25px;
+  }
+
+  .pergunta-titulo {
+    font-size: 18px;
+  }
+
+  /* FOOTER */
+  footer .margem-global {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+/* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
+@media screen and (max-width: 768px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 20px;
+  }
+
+  /* SECTION IMAGEM FUNDO */
+  section.imagem-fundo {
+    height: 300px;
+  }
+
+  section.imagem-fundo .margem-global h1 {
+    font-size: 32px;
+  }
+
+  /* SECTION PLANOS SOLAR */
+  section.planos-solar .margem-global .textos {
+    margin-top: 50px;
+  }
+
+  section.planos-solar .margem-global .textos h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  section.planos-solar .margem-global .textos p {
+    font-size: 16px;
+  }
+
+  /* CARDS DE PLANOS: EMPILHAMENTO TOTAL */
+  section.planos-solar .margem-global .container-cards-planos {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  section.planos-solar .margem-global .container-cards-planos .card {
+    width: 100%;
+    max-width: 350px; /* Limita o tamanho do card para telas muito grandes na vertical */
+  }
+
+  /* Conteúdo interno do card */
+  section.planos-solar .margem-global .container-cards-planos .card .nome-plano,
+  section.planos-solar .margem-global .alicerce .card-alicerce {
+    width: 100%;
+    height: 140px; /* Altura reduzida */
+  }
+
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .nome-plano
+    h3 {
+    font-size: 26px; /* Ajuste no título do plano */
+    margin-bottom: 10px;
+  }
+
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .nome-plano
+    h2 {
+    font-size: 24px;
+  }
+
+  section.planos-solar .margem-global .card .icone-texto {
+    gap: 10px; /* Reduz o espaço entre o ícone e o texto */
+  }
+
+  /* BOTÕES (Ajusta o padding e tamanho) */
+  section.planos-solar .margem-global .card .button button,
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .plano-apoio
+    button,
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .plano-amparo
+    button,
+  section.planos-solar .margem-global .card .plano-alicerce button {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  /* SECTION PERGUNTAS FREQUENTES */
+  .title-perguntas-frequentes {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .pergunta-header {
+    padding: 15px 18px;
+  }
+
+  .pergunta-titulo {
+    font-size: 15px;
+  }
+
+  .resposta-pergunta {
+    font-size: 15px;
+  }
+
+  /* FOOTER: EMPILHAMENTO TOTAL */
+  footer {
+    margin-top: 50px;
+    padding: 40px 0 20px 0;
+  }
+
+  footer .margem-global {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+/* 3. TELAS MUITO PEQUENAS (Máximo 480px) */
+@media screen and (max-width: 480px) {
+  /* CONTAINER GLOBAL */
+  .margem-global {
+    margin: 0 10px; /* Margem mínima */
+  }
+
+  /* SECTION IMAGEM FUNDO */
+  section.imagem-fundo {
+    height: 200px;
+  }
+
+  section.imagem-fundo .margem-global h1 {
+    font-size: 24px;
+  }
+
+  /* SECTION PLANOS SOLAR */
+  section.planos-solar .margem-global .textos h2 {
+    font-size: 24px;
+  }
+
+  /* CARDS DE PLANOS */
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .container-icones-textos {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  section.planos-solar
+    .margem-global
+    .container-cards-planos
+    .card
+    .container-icones-textos
+    p {
+    font-size: 15px;
+  }
+
+  /* PERGUNTAS FREQUENTES */
+  .title-perguntas-frequentes {
+    font-size: 24px;
+  }
+
+  .pergunta-header {
+    padding: 12px;
+  }
+
+  .pergunta-titulo {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .direitos-autorais {
+    font-size: 11px;
+    padding: 15px 5px 0 5px;
+  }
+}

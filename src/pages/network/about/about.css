@@ -283,7 +283,8 @@ ul.dropdown li a:hover {
   margin: 70px 0px 100px 0px;
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  align-items: center;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -301,17 +302,17 @@ ul.dropdown li a:hover {
 }
 
 .beneficios-solar {
+  flex: 0 0 400px; 
+  height: 230px;
+  border: 2px solid var(--cor-roxo-escuro);
+  border-radius: 20px;
+  padding: 40px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  border: 2px solid var(--cor-roxo-escuro);
-  border-radius: 20px;
-  padding: 40px 40px;
-  width: 400px;
-  height: 250px;
 }
+
 
 .beneficios-solar h3 {
   font-family: var(--font-titulo);
@@ -324,6 +325,17 @@ ul.dropdown li a:hover {
   width: 80px;
   height: auto;
 }
+
+.beneficios-wrapper {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: calc(400px * 3 + 2rem * 2); /* 3 cards visíveis */
+  max-width: 100%;
+  flex-wrap: nowrap; /* IMPEDIR quebrar linha */
+}
+
 
 /* EQUIPE SOLAR */
 

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Instituto Solar: rede de apoio a pais e mães solos com escuta psicológica, conteúdos educativos e divulgação de vagas inclusivas."
+    />
+    <meta name="author" content="Solar" />
+    <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./agendamento.css" />
+    <link
+      rel="shortcut icon"
+      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome 6 Free -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Profissionais - SOLAR</title>
+  </head>
+
+  <body>
+    <header class="container-pai">
+      <div class="logo">
+        <a
+          href="#"
+          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
+        >
+          <img
+            height="90"
+            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
+            alt="Logo branca Solar"
+          />
+        </a>
+      </div>
+
+      <nav class="nav-pai">
+        <ul>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/index.html')"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              EXPLORAR
+              <img
+                class="seta-header"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
+                alt="seta ao lado de explorar"
+              />
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')"
+                  >EVENTOS</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')"
+                  >CURSOS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')"
+                  >SOLMÍDIA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')"
+                  >JOGOS</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')"
+              >DOAÇÃO</a
+            >
+          </li>
+          <li>
+            <a href="">PROFISSIONAIS</a>
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')"
+              >PLANOS</a
+            >
+          </li>
+
+          <li>
+            <a href="#">
+              REDES
+              <img
+                class="seta-header"
+                src="/ProjetoSolarOficial/src/assets/seta.png"
+                alt="seta ao lado de redes"
+              />
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')"
+                  >SOBRE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')"
+                  >LOCALIZAR INSTITUIÇÕES</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')"
+                  >FALE CONOSCO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="redirectUser('../network/community/comunidade.html')"
+                  >COMUNIDADE</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <a
+            href="#"
+            onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
+            ><button class="button-header">ENTRAR</button></a
+          >
+        </ul>
+      </nav>
+    </header>
+
+<main class="agendamento-container">
+
+
+<!-- CARD PROFISSIONAL -->
+<section class="card-profissional">
+<div class="foto-profissional"></div>
+<h2 class="nome">Ana Silva</h2>
+<p class="cargo">Psicóloga Estagiária</p>
+
+
+<h3 class="titulo">Sobre a Profissional</h3>
+<p class="sobre">Psicóloga clínica formada pela USP, com foco em saúde mental e apoio familiar. Na Solar, atua oferecendo acolhimento psicológico online, com empatia, escuta ativa e cuidado humano.</p>
+
+
+<h3 class="titulo">Informações do Atendimento</h3>
+<ul class="info">
+<li>Duração: 50 minutos</li>
+<li>Modalidade: Online</li>
+</ul>
+
+
+<div class="horarios">
+<h3>Horários</h3>
+<ul>
+<li>Segunda: 14h às 18h</li>
+<li>Quarta: 09h às 12h</li>
+<li>Sexta: 14h às 17h</li>
+</ul>
+</div>
+</section>
+
+
+<!-- FORMULÁRIO -->
+<section class="card-form">
+  <div class="infos">
+<h1>Agendar Consulta</h1>
+<p class="subtitulo">Preencha os dados para agendar sua consulta</p>
+</div>
+
+<div class="steps">
+  <div class="step-container">
+    <div class="step active">1</div>
+    <p>Dados Pessoais</p>
+  </div>
+  <div class="step-container">
+    <div class="step">2</div>
+    <p>Data e Horário</p>
+  </div>
+  <div class="step-container">
+    <div class="step">3</div>
+    <p>Confirmação</p>
+  </div>
+</div>
+
+
+
+<!-- ETAPA 1 — DADOS PESSOAIS -->
+<form class="form-content etapa etapa-1">
+  <label>Nome Completo</label>
+  <input type="text" placeholder="Digite seu nome completo" />
+
+  <label>E-mail</label>
+  <input type="email" placeholder="seu@email.com" />
+
+  <label>Telefone</label>
+  <input type="text" placeholder="(11) 99999-9999" />
+
+  <label>Motivo da Consulta</label>
+  <textarea placeholder="Descreva brevemente (opcional)"></textarea>
+
+  <button type="button" class="btn-proximo">Próximo →</button>
+</form>
+
+<!-- ETAPA DATA E HORÁRIO -->
+<form class="form-content etapa etapa-2" style="display:none;">
+
+  <label class="campo-label">Modalidade de Atendimento</label>
+  <div class="mod-atendimento">
+      <div class="opcao ativo">
+        <!-- <img src="../../../assets/img-professionals/modalidade.png" /> -->
+         <i class="fas fa-video"></i>
+        <span>Online</span>
+      </div>
+  </div>
+
+  <label class="campo-label">Datas Disponíveis</label>
+  <div class="datas-grid">
+      <div class="data-box">16 <span>out<br>Quinta</span></div>
+      <div class="data-box">17 <span>out<br>Sexta</span></div>
+      <div class="data-box">18 <span>out<br>Sábado</span></div>
+      <div class="data-box">20 <span>out<br>Segunda</span></div>
+  </div>
+
+  <label class="campo-label">Horários Disponíveis</label>
+  <div class="horarios-grid">
+      <div class="hora-box">10:30</div>
+      <div class="hora-box">13:45</div>
+      <div class="hora-box">14:30</div>
+      <div class="hora-box">15:50</div>
+  </div>
+
+  <div class="botoes-nav">
+    <button type="button" class="btn-voltar">← Voltar</button>
+    <button type="button" class="btn-proximo">Próximo →</button>
+  </div>
+</form>
+
+<!-- ETAPA 3 - CONFIRMAÇÃO -->
+<form class="form-content etapa etapa-3" style="display:none;">
+  <p class="confirm-text">Resumo do Atendimento</p>
+
+  <div class="confirm-box">
+    <p><strong>Seu Nome:</strong> <span id="conf-nome">Maria Santos</span></p>
+    <p><strong>Seu E-mail:</strong> <span id="conf-email">maria.santos@email.com</span></p>
+    <p><strong>Seu Telefone:</strong> <span id="conf-telefone">(11) 98765-4321</span></p>
+    <p><strong>Profissional:</strong> <span id="conf-profissional">Ana Silva</span></p>
+    <p><strong>Data:</strong> <span id="conf-data">20/out (Segunda)</span></p>
+    <p><strong>Horário:</strong> <span id="conf-hora">15:50</span></p>
+    <p><strong>Modalidade:</strong> <span>Online</span></p>
+  </div>
+
+  <div class="botoes-nav">
+    <button type="button" class="btn-voltar finalizar">
+      <i class="fas fa-arrow-left"></i>
+      Voltar
+    </button>
+    <button type="button" class="btn-proximo finalizar" id="btn-confirmar-agendamento">
+      <i class="fas fa-calendar-check"></i>
+      Confirmar 
+    </button>
+  </div>
+</form>
+
+<!-- Pop-up de Confirmação -->
+<div class="popup-overlay" id="popup-confirmacao">
+  <div class="popup-confirmacao">
+    <div class="popup-icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    
+    <h2 class="popup-titulo">Consulta confirmada!</h2>
+    
+    <p class="popup-mensagem">
+      Você receberá um e-mail com todos os detalhes e o link de acesso. Estaremos te esperando no dia e horário combinados.
+    </p>
+    
+    <div class="popup-botoes">
+      <button type="button" class="popup-btn popup-btn-inicio" id="btn-voltar-inicio">
+        <a href="../../../../index.html">Voltar para o início</a>
+      </button>
+      <button type="button" class="popup-btn popup-btn-agenda" id="btn-minha-agenda">
+        <a href="">Ir para minha agenda</a>
+      </button>
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <footer>
+      <div class="margem-global">
+        <div class="secao-footer">
+          <div class="logo-footer">
+            <a href="/ProjetoSolarOficial/src/pages/home/home.html">
+              <img
+                src="/ProjetoSolarOficial/src/assets/logo_nav.png"
+                alt="Logo Solar"
+              />
+            </a>
+            <span>Solar</span>
+          </div>
+          <p>
+            Um espaço voltado para famílias monoparentais, oferecendo apoio
+            emocional, informações e recursos.
+          </p>
+        </div>
+
+        <div class="secao-footer">
+          <h3>Redes Sociais</h3>
+          <div class="redes-sociais">
+            <a
+              href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              class="link-rede-social"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+                />
+              </svg>
+              SOLAR.PLATAFORMA
+            </a>
+            <a
+              href="https://www.linkedin.com/in/solaroficial/"
+              class="link-rede-social"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
+                />
+              </svg>
+              SOLAR OFICIAL
+            </a>
+          </div>
+        </div>
+
+        <div class="secao-footer">
+          <h3>Páginas</h3>
+          <ul class="lista-paginas">
+            <li>
+              <a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a>
+            </li>
+            <li>
+              <a href="/ProjetoSolarOficial/src/pages/network/about/about.html"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                href="/ProjetoSolarOficial/src/pages/professionals/professionals.html"
+                >Profissionais</a
+              >
+            </li>
+            <li>
+              <a
+                href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html"
+                >SolMídia</a
+              >
+            </li>
+            <li>
+              <a href="/ProjetoSolarOficial/src/pages/plans/plans.html"
+                >Planos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="direitos-autorais">
+        <p class="texto-paragrafo">
+          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
+          Política de Privacidade
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../../js/scheduleAppointment.js"></script>
+      <script src="../../js/script.js"></script>
+  </body>
+
+</html>

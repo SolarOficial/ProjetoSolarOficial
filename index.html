@@ -13,6 +13,7 @@
     <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
     <link rel="stylesheet" href="./src/pages/home/home.css" />
     <link rel="stylesheet" href="./src/global.css">
+    <link rel="stylesheet" href="/ProjetoSolarOficial/src/headerResponsivo.css">
     <link
       rel="shortcut icon"
       href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
@@ -23,114 +24,62 @@
   </head>
 
   <body>
+
     <header class="container-pai">
-      <div class="logo">
-      <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"> <img height="90"
-          src="/ProjetoSolarOficial/src/assets/logo_nav2.png" alt="Logo branca Solar"/> </a>
+    <div class="logo">
+      <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">
+        <img height="90" src="/ProjetoSolarOficial/src/assets/logo_nav2.png" alt="Logo branca Solar" />
+      </a>
     </div>
 
-     <nav class="nav-pai">
-  <ul>
-    <li><a href="index.html">HOME</a></li>
+    <button id="btn-mobile">
+      <span id="hamburger"></span>
+    </button>
 
-    <li>
-      <a href="#">
-        EXPLORAR
-        <img
-          class="seta-header"
-          src="src/assets/seta.png"
-          alt="seta ao lado de explorar"
-        />
-      </a>
-      <ul class="dropdown">
+    <nav class="nav-pai" id="nav">
+      <ul id="menu">
+        <li><a href="">HOME</a></li>
+
         <li>
-          <a href="#" onclick="redirectUser('src/pages/explore/eventss/index/index.html')">
-            EVENTOS
+          <a href="#">
+            EXPLORAR
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
           </a>
+          <ul class="dropdown">
+            <li><a href="#" onclick="redirectUser('../explore/eventss/index/index.html')">EVENTOS</a></li>
+            <li><a href="#" onclick="redirectUser('../explore/courses/index/index.html')">CURSOS</a></li>
+            <li><a href="#" onclick="redirectUser('../explore/sunMidia/solmidia.html')">SOLMÍDIA</a></li>
+            <li><a href="#" onclick="redirectUser('../explore/game/game.html')">JOGOS</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#" onclick="redirectUser('../donation/donation.html')">DOAÇÃO</a></li>
+        <li><a href="#" onclick="redirectUser('../professionals/professionals.html')">PROFISSIONAIS</a></li>
+        <li><a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a></li>
+
+        <li>
+          <a href="#">
+            REDES
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#" onclick="redirectUser('../network/about/about.html')">SOBRE</a></li>
+            <li><a href="#" onclick="redirectUser('../network/location/location.html')">LOCALIZAR INSTITUIÇÕES</a></li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
+                CONOSCO</a></li>
+            <li><a href="#" onclick="redirectUser('../network/community/comunidade.html')">COMUNIDADE</a></li>
+          </ul>
         </li>
 
         <li>
-          <a href="#" onclick="redirectUser('src/pages/explore/courses/index/index.html')">
-            CURSOS
-          </a>
-        </li>
-
-        <li>
-          <a href="#" onclick="redirectUser('src/pages/explore/sunMidia/solmidia.html')">
-            SOLMÍDIA
-          </a>
-        </li>
-
-        <li>
-          <a href="#" onclick="redirectUser('src/pages/explore/game/game.html')">
-            JOGOS
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#" onclick="redirectUser('src/pages/donation/donation.html')">
-        DOAÇÃO
-      </a>
-    </li>
-
-    <li>
-      <a href="#" onclick="redirectUser('src/pages/professionals/professionals.html')">
-        PROFISSIONAIS
-      </a>
-    </li>
-
-    <li>
-      <a href="#" onclick="redirectUser('src/pages/plans/plans.html')">
-        PLANOS
-      </a>
-    </li>
-
-    <li>
-      <a href="#">
-        REDES
-        <img
-          class="seta-header"
-          src="src/assets/seta.png"
-          alt="seta ao lado de redes"
-        />
-      </a>
-
-      <ul class="dropdown">
-        <li>
-          <a href="#" onclick="redirectUser('src/pages/network/about/about.html')">
-            SOBRE
-          </a>
-        </li>
-
-        <li>
-          <a href="#" onclick="redirectUser('src/pages/network/location/location.html')">
-            LOCALIZAR INSTITUIÇÕES
-          </a>
-        </li>
-
-        <li>
-          <a href="#" onclick="redirectUser('src/pages/network/contactus/contactus.html')">
-            FALE CONOSCO
-          </a>
-        </li>
-
-        <li>
-          <a href="#" onclick="redirectUser('src/pages/network/community/comunidade.html')">
-            COMUNIDADE
+          <a href="#" onclick="redirectUser('../login/login.html')">
+            <button class="button-header">ENTRAR</button>
           </a>
         </li>
       </ul>
-    </li>
-
-    <a href="#" onclick="redirectUser('src/pages/login/login.html')">
-      <button class="button-header">ENTRAR</button>
-    </a>
-  </ul>
-</nav>
-
-    </header>
+    </nav>
+  </header>
 
     <main>
       <section class="descricao">
@@ -665,5 +614,6 @@
     </div>
   </footer>
     <script src="src/js/script.js"></script>
+    <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
   </body>
 </html>

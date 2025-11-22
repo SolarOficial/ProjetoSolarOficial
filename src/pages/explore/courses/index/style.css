@@ -401,7 +401,6 @@ footer .margem-global {
 
   /* HEADER (Ajustes para empilhamento, se necessário) */
   .container-pai {
-    flex-direction: column;
     height: auto;
     position: static;
     padding: 15px 0;

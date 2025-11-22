@@ -1,530 +1,422 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Instituto Solar: rede de apoio a pais e mães solos com escuta psicológica, conteúdos educativos e divulgação de vagas inclusivas."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Solar" />
-    <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
-    <link rel="stylesheet" href="./plans.css" />
-    <link
-      rel="shortcut icon"
-      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
-      type="image/x-icon"
-    />
-    <title>Planos - SOLAR</title>
-  </head>
 
-  <body>
-    <header class="container-pai">
-      <div class="logo">
-        <a
-          href="#"
-          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
-        >
-          <img
-            height="90"
-            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
-            alt="Logo branca Solar"
-          />
-        </a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description"
+    content="Instituto Solar: rede de apoio a pais e mães solos com escuta psicológica, conteúdos educativos e divulgação de vagas inclusivas." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Solar" />
+  <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
+  <link rel="stylesheet" href="./plans.css" />
+  <link rel="stylesheet" href="/ProjetoSolarOficial/src/headerResponsivo.css">
+  <link rel="shortcut icon" href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png" type="image/x-icon" />
+  <title>Planos - SOLAR</title>
+</head>
 
-      <nav class="nav-pai">
-        <ul>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/index.html')"
-              >HOME</a
-            >
-          </li>
-          <li>
-            <a href="#">
-              EXPLORAR
-              <img
-                class="seta-header"
-                src="/ProjetoSolarOficial/src/assets/seta.png"
-                alt="seta ao lado de explorar"
-              />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')"
-                  >EVENTOS</a
-                >
-              </li>
+<body>
 
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')"
-                  >CURSOS</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')"
-                  >SOLMÍDIA</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')"
-                  >JOGOS</a
-                >
-              </li>
-            </ul>
-          </li>
+  <header class="container-pai">
+    <div class="logo">
+      <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">
+        <img height="90" src="/ProjetoSolarOficial/src/assets/logo_nav2.png" alt="Logo branca Solar" />
+      </a>
+    </div>
 
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')"
-              >DOAÇÃO</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')"
-              >PROFISSIONAIS</a
-            >
-          </li>
-          <li>
-            <a href="">PLANOS</a>
-          </li>
+    <button id="btn-mobile">
+      <span id="hamburger"></span>
+    </button>
 
-          <li>
-            <a href="#">
-              REDES
-              <img
-                class="seta-header"
-                src="/ProjetoSolarOficial/src/assets/seta.png"
-                alt="seta ao lado de redes"
-              />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')"
-                  >SOBRE</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')"
-                  >LOCALIZAR INSTITUIÇÕES</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')"
-                  >FALE CONOSCO</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../network/community/comunidade.html')"
-                  >COMUNIDADE</a
-                >
-              </li>
-            </ul>
-          </li>
+    <nav class="nav-pai" id="nav">
+      <ul id="menu">
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">HOME</a></li>
 
-          <a
-            href="#"
-            onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
-            ><button class="button-header">ENTRAR</button></a
-          >
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="imagem-fundo">
-        <div class="margem-global">
-          <h1>Cuidar de quem cuida também é nossa missão</h1>
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--imagem-fundo-->
-
-      <section class="planos-solar">
-        <div class="margem-global">
-          <div class="textos">
-            <h2>Planos Solar</h2>
-            <p>
-              Nossos planos foram criados para facilitar sua jornada como pai ou
-              mãe solo, oferecendo acesso a profissionais, materiais exclusivos
-              e ferramentas para organizar sua vida financeira e emocional.
-            </p>
-          </div>
-          <!--textos-->
-
-          <div class="container-cards-planos">
-            <div class="card apoio">
-              <div class="nome-plano card-apoio">
-                <h3>Apoio</h3>
-                <h2>Gratuito</h2>
-              </div>
-              <!--nome-plano-->
-
-              <div class="container-icones-textos background-textos-apoio">
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Localizar ONGs, UBS e CRAS</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Agendar Consultas - limite de 2 encontros mensais</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Acesso ao Blog e conteúdos educativos</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/Xvermelho.png"
-                    alt="Bolinha com o X na cor vermelha"
-                  />
-                  <p>Chat IA com busca em diversos assuntos</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/Xvermelho.png"
-                    alt="Bolinha com o X na cor vermelha"
-                  />
-                  <p>Simulação financeiro e criação de agenda semanal</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="button plano-apoio">
-                  <button>ASSINAR PLANO</button>
-                </div>
-                <!--button-->
-              </div>
-              <!--container-icones-textos-->
-            </div>
-            <!--card apoio-->
-
-            <div class="card amparo">
-              <div class="nome-plano card-amparo">
-                <div class="texto-recomendado">
-                  <p>Recomendado</p>
-                </div>
-                <!--texto-recomendado-->
-
-                <h3>Amparo</h3>
-                <h2>R$ 10.00/<span>mês</span></h2>
-              </div>
-              <!--nome-plano-->
-
-              <div class="container-icones-textos background-textos-amparo">
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Localizar ONGs, UBS e CRAS</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Agendar Consultas - limite de 2 encontros mensais</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Acesso ao Blog e conteúdos educativos</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Chat IA com busca em diversos assuntos</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/Xvermelho.png"
-                    alt="Bolinha com o X na cor vermelha"
-                  />
-                  <p>Simulação financeiro e criação de agenda semanal</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="button plano-amparo">
-                  <button>ASSINAR PLANO</button>
-                </div>
-                <!--button-->
-              </div>
-              <!--container-icones-textos-->
-            </div>
-            <!--card amparo-->
-
-            <div class="card alicerce">
-              <div class="card-alicerce">
-                <h3>Alicerce</h3>
-                <h2>R$ 19.90/<span>mês</span></h2>
-              </div>
-              <!--nome-plano-->
-              <div class="container-icones-textos background-textos-alicerce">
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Localizar ONGs, UBS e CRAS</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Agendar Consultas - limite de 2 encontros mensais</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Acesso ao Blog e conteúdos educativos</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Chat IA com busca em diversos assuntos</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
-                    alt="Bolinha com o simbolo de correto na cor verde"
-                  />
-                  <p>Simulação financeiro e criação de agenda semanal</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="plano-alicerce">
-                  <button>ASSINAR PLANO</button>
-                </div>
-                <!--button-->
-              </div>
-              <!--container-icones-textos-->
-            </div>
-            <!--card alicerce-->
-          </div>
-          <!--container-cards-planos-->
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--planos-solar-->
-
-      <section class="secao-perguntas-frequentes animar-scroll">
-        <div class="margem-global">
-          <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
-
-          <div class="container-perguntas">
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Posso usar os serviços sem ter plano ativo?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Sim! 💛
-Ao entrar na plataforma você já ganha acesso automaticamente ao nosso plano gratuito "Apoio", para explorar, testar e usar os principais recursos no seu tempo, sem pressa e sem compromisso..</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Posso mudar de plano depois de assinar?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Com certeza! ✨
-Se em algum momento sentir que outro plano combina mais com seu momento, você pode fazer a mudança diretamente pelo seu painel, de forma simples e rápida. Estamos aqui para acompanhar seu crescimento..</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Como faço o pagamento do meu plano?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">É bem fácil 💫
-Basta entrar no seu perfil e acessar a aba “Assinaturas”. Lá você consegue finalizar o pagamento com poucos cliques e tudo de forma segura.</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Quais formas de pagamento a Solar aceita?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Atualmente trabalhamos com cartão de crédito e Pix.
-Escolha a opção que for mais confortável para você. 😊</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Posso cancelar meu plano a qualquer momento?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Sim, sem burocracia 🧡
-Se decidir cancelar, você pode fazer isso direto pela sua área de cliente. E claro, você poderá continuar usando o plano até o final do período já pago. A gente quer que você se sinta livre e tranquila(o) sempre.</div>
-            </div>
-          </div>
-          <!-- container-perguntas -->
-        </div>
-        <!-- margem-global -->
-      </section>
-      <!-- secao-perguntas-frequentes -->
-    </main>
-
-    <footer>
-      <div class="margem-global">
-        <div class="secao-footer">
-          <div class="logo-footer">
-            <a href="/ProjetoSolarOficial/src/pages/home/home.html">
-              <img
-                src="/ProjetoSolarOficial/src/assets/logo_nav.png"
-                alt="Logo Solar"
-              />
-            </a>
-            <span>Solar</span>
-          </div>
-          <p>
-            Um espaço voltado para famílias monoparentais, oferecendo apoio
-            emocional, informações e recursos.
-          </p>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Redes Sociais</h3>
-          <div class="redes-sociais">
-            <a
-              href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
-                />
-              </svg>
-              SOLAR.PLATAFORMA
-            </a>
-            <a
-              href="https://www.linkedin.com/in/solaroficial/"
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
-                />
-              </svg>
-              SOLAR OFICIAL
-            </a>
-          </div>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Páginas</h3>
-          <ul class="lista-paginas">
-            <li>
-              <a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a>
+        <li>
+          <a href="#">
+            EXPLORAR
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')">EVENTOS</a>
             </li>
-            <li>
-              <a href="/ProjetoSolarOficial/src/pages/network/about/about.html"
-                >Sobre</a
-              >
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')">CURSOS</a>
             </li>
-            <li>
-              <a
-                href="/ProjetoSolarOficial/src/pages/professionals/professionals.html"
-                >Profissionais</a
-              >
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a>
             </li>
-            <li>
-              <a
-                href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html"
-                >SolMídia</a
-              >
-            </li>
-            <li>
-              <a href="/ProjetoSolarOficial/src/pages/plans/plans.html"
-                >Planos</a
-              >
+            <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')">JOGOS</a>
             </li>
           </ul>
+        </li>
+
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')">DOAÇÃO</a></li>
+        <li><a href="#"
+            onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')">PROFISSIONAIS</a>
+        </li>
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')">PLANOS</a></li>
+
+        <li>
+          <a href="#">
+            REDES
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')">SOBRE</a>
+            </li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')">LOCALIZAR
+                INSTITUIÇÕES</a></li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
+                CONOSCO</a></li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/community/comunidade.html')">COMUNIDADE</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')">
+            <button class="button-header">ENTRAR</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="imagem-fundo">
+      <div class="margem-global">
+        <h1>Cuidar de quem cuida também é nossa missão</h1>
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--imagem-fundo-->
+
+    <section class="planos-solar">
+      <div class="margem-global">
+        <div class="textos">
+          <h2>Planos Solar</h2>
+          <p>
+            Nossos planos foram criados para facilitar sua jornada como pai ou
+            mãe solo, oferecendo acesso a profissionais, materiais exclusivos
+            e ferramentas para organizar sua vida financeira e emocional.
+          </p>
+        </div>
+        <!--textos-->
+
+        <div class="container-cards-planos">
+          <div class="card apoio">
+            <div class="nome-plano card-apoio">
+              <h3>Apoio</h3>
+              <h2>Gratuito</h2>
+            </div>
+            <!--nome-plano-->
+
+            <div class="container-icones-textos background-textos-apoio">
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Localizar ONGs, UBS e CRAS</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Agendar Consultas - limite de 2 encontros mensais</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Acesso ao Blog e conteúdos educativos</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/Xvermelho.png"
+                  alt="Bolinha com o X na cor vermelha" />
+                <p>Chat IA com busca em diversos assuntos</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/Xvermelho.png"
+                  alt="Bolinha com o X na cor vermelha" />
+                <p>Simulação financeiro e criação de agenda semanal</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="button plano-apoio">
+                <button>ASSINAR PLANO</button>
+              </div>
+              <!--button-->
+            </div>
+            <!--container-icones-textos-->
+          </div>
+          <!--card apoio-->
+
+          <div class="card amparo">
+            <div class="nome-plano card-amparo">
+              <div class="texto-recomendado">
+                <p>Recomendado</p>
+              </div>
+              <!--texto-recomendado-->
+
+              <h3>Amparo</h3>
+              <h2>R$ 10.00/<span>mês</span></h2>
+            </div>
+            <!--nome-plano-->
+
+            <div class="container-icones-textos background-textos-amparo">
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Localizar ONGs, UBS e CRAS</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Agendar Consultas - limite de 2 encontros mensais</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Acesso ao Blog e conteúdos educativos</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Chat IA com busca em diversos assuntos</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/Xvermelho.png"
+                  alt="Bolinha com o X na cor vermelha" />
+                <p>Simulação financeiro e criação de agenda semanal</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="button plano-amparo">
+                <button>ASSINAR PLANO</button>
+              </div>
+              <!--button-->
+            </div>
+            <!--container-icones-textos-->
+          </div>
+          <!--card amparo-->
+
+          <div class="card alicerce">
+            <div class="card-alicerce">
+              <h3>Alicerce</h3>
+              <h2>R$ 19.90/<span>mês</span></h2>
+            </div>
+            <!--nome-plano-->
+            <div class="container-icones-textos background-textos-alicerce">
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Localizar ONGs, UBS e CRAS</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Agendar Consultas - limite de 2 encontros mensais</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Acesso ao Blog e conteúdos educativos</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Chat IA com busca em diversos assuntos</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-plans/CorretoVerde.png"
+                  alt="Bolinha com o simbolo de correto na cor verde" />
+                <p>Simulação financeiro e criação de agenda semanal</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="plano-alicerce">
+                <button>ASSINAR PLANO</button>
+              </div>
+              <!--button-->
+            </div>
+            <!--container-icones-textos-->
+          </div>
+          <!--card alicerce-->
+        </div>
+        <!--container-cards-planos-->
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--planos-solar-->
+
+    <section class="secao-perguntas-frequentes animar-scroll">
+      <div class="margem-global">
+        <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
+
+        <div class="container-perguntas">
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Posso usar os serviços sem ter plano ativo?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Sim! 💛
+              Ao entrar na plataforma você já ganha acesso automaticamente ao nosso plano gratuito "Apoio", para
+              explorar, testar e usar os principais recursos no seu tempo, sem pressa e sem compromisso..</div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Posso mudar de plano depois de assinar?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Com certeza! ✨
+              Se em algum momento sentir que outro plano combina mais com seu momento, você pode fazer a mudança
+              diretamente pelo seu painel, de forma simples e rápida. Estamos aqui para acompanhar seu crescimento..
+            </div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Como faço o pagamento do meu plano?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">É bem fácil 💫
+              Basta entrar no seu perfil e acessar a aba “Assinaturas”. Lá você consegue finalizar o pagamento com
+              poucos cliques e tudo de forma segura.</div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Quais formas de pagamento a Solar aceita?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Atualmente trabalhamos com cartão de crédito e Pix.
+              Escolha a opção que for mais confortável para você. 😊</div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Posso cancelar meu plano a qualquer momento?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Sim, sem burocracia 🧡
+              Se decidir cancelar, você pode fazer isso direto pela sua área de cliente. E claro, você poderá continuar
+              usando o plano até o final do período já pago. A gente quer que você se sinta livre e tranquila(o) sempre.
+            </div>
+          </div>
+        </div>
+        <!-- container-perguntas -->
+      </div>
+      <!-- margem-global -->
+    </section>
+    <!-- secao-perguntas-frequentes -->
+  </main>
+
+  <footer>
+    <div class="margem-global">
+      <div class="secao-footer">
+        <div class="logo-footer">
+          <a href="/ProjetoSolarOficial/src/pages/home/home.html">
+            <img src="/ProjetoSolarOficial/src/assets/logo_nav.png" alt="Logo Solar" />
+          </a>
+          <span>Solar</span>
+        </div>
+        <p>
+          Um espaço voltado para famílias monoparentais, oferecendo apoio
+          emocional, informações e recursos.
+        </p>
+      </div>
+
+      <div class="secao-footer">
+        <h3>Redes Sociais</h3>
+        <div class="redes-sociais">
+          <a href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+            </svg>
+            SOLAR.PLATAFORMA
+          </a>
+          <a href="https://www.linkedin.com/in/solaroficial/" class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            SOLAR OFICIAL
+          </a>
         </div>
       </div>
 
-      <div class="direitos-autorais">
-        <p>
-          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
-          Política de Privacidade
-        </p>
+      <div class="secao-footer">
+        <h3>Páginas</h3>
+        <ul class="lista-paginas">
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/network/about/about.html">Sobre</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/professionals/professionals.html">Profissionais</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html">SolMídia</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/plans/plans.html">Planos</a>
+          </li>
+        </ul>
       </div>
-    </footer>
-    <script src="../../js/script.js"></script>
-    <script src="../../js/plans.js"></script>
-  </body>
+    </div>
+
+    <div class="direitos-autorais">
+      <p>
+        © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
+        Política de Privacidade
+      </p>
+    </div>
+  </footer>
+  <script src="../../js/script.js"></script>
+  <script src="../../js/plans.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+</body>
+
 </html>

@@ -1,807 +1,660 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Instituto Solar: rede de apoio a pais e mães solos com escuta psicológica, conteúdos educativos e divulgação de vagas inclusivas."
-    />
-    <meta name="author" content="Solar" />
-    <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../global.css" />
-    <link rel="stylesheet" href="./professionals.css" />
-    <link
-      rel="shortcut icon"
-      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
-      type="image/x-icon"
-    />
-    <title>Profissionais - SOLAR</title>
-  </head>
 
-  <body>
-    <header class="container-pai">
-      <div class="logo">
-        <a
-          href="#"
-          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
-        >
-          <img
-            height="90"
-            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
-            alt="Logo branca Solar"
-          />
-        </a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description"
+    content="Instituto Solar: rede de apoio a pais e mães solos com escuta psicológica, conteúdos educativos e divulgação de vagas inclusivas." />
+  <meta name="author" content="Solar" />
+  <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../global.css" />
+  <link rel="stylesheet" href="./professionals.css" />
+  <link rel="stylesheet" href="/ProjetoSolarOficial/src/headerResponsivo.css">
+  <link rel="shortcut icon" href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png" type="image/x-icon" />
+  <title>Profissionais - SOLAR</title>
+</head>
 
-      <nav class="nav-pai">
-        <ul>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/index.html')"
-              >HOME</a
-            >
-          </li>
-          <li>
-            <a href="#">
-              EXPLORAR
-              <img
-                class="seta-header"
-                src="/ProjetoSolarOficial/src/assets/seta.png"
-                alt="seta ao lado de explorar"
-              />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')"
-                  >EVENTOS</a
-                >
-              </li>
+<body>
 
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')"
-                  >CURSOS</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')"
-                  >SOLMÍDIA</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')"
-                  >JOGOS</a
-                >
-              </li>
-            </ul>
-          </li>
+  <header class="container-pai">
+    <div class="logo">
+      <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">
+        <img height="90" src="/ProjetoSolarOficial/src/assets/logo_nav2.png" alt="Logo branca Solar" />
+      </a>
+    </div>
 
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')"
-              >DOAÇÃO</a
-            >
-          </li>
-          <li>
-            <a href="">PROFISSIONAIS</a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')"
-              >PLANOS</a
-            >
-          </li>
+    <button id="btn-mobile">
+      <span id="hamburger"></span>
+    </button>
 
-          <li>
-            <a href="#">
-              REDES
-              <img
-                class="seta-header"
-                src="/ProjetoSolarOficial/src/assets/seta.png"
-                alt="seta ao lado de redes"
-              />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')"
-                  >SOBRE</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')"
-                  >LOCALIZAR INSTITUIÇÕES</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')"
-                  >FALE CONOSCO</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../network/community/comunidade.html')"
-                  >COMUNIDADE</a
-                >
-              </li>
-            </ul>
-          </li>
+    <nav class="nav-pai" id="nav">
+      <ul id="menu">
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">HOME</a></li>
 
-          <a
-            href="#"
-            onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
-            ><button class="button-header">ENTRAR</button></a
-          >
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="imagem-fundo">
-        <div class="margem-global">
-          <div class="container-textos">
-            <h1>Profissionais que cuidam de você</h1>
-            <p>
-              Psicólogos, psiquiatras e nutricionistas disponíveis para
-              atendimentos acessíveis e com acolhimento.
-            </p>
-          </div>
-          <!--container-textos-->
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--imagem-fundo-->
-
-      <section class="conheca-quem animar-scroll">
-        <div class="margem-global">
-          <h2>Conheça quem vai cuidar de você</h2>
-
-          <div class="container-card">
-            <div class="card">
-              <div class="imagem">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/img-professionals/psicologo 1.png"
-                  alt="logo Psicologo"
-                />
-              </div>
-              <!--imagem-->
-
-              <h3>Psicólogo</h3>
-              <p>
-                O psicólogo ajuda você a entender e lidar com suas emoções,
-                oferecendo apoio em momentos de ansiedade, tristeza ou
-                sobrecarga.
-              </p>
-            </div>
-            <!--card-->
-
-            <div class="card">
-              <div class="imagem">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/img-professionals/psiquiatra 1.png"
-                  alt="logo Psiquiatra"
-                />
-              </div>
-              <!--imagem-->
-              <h3>Psiquiatra</h3>
-              <p>
-                O psiquiatra é um médico da saúde mental que avalia sintomas,
-                orienta tratamentos e, se necessário, prescreve medicamentos
-                para cuidar do seu bem-estar.
-              </p>
-            </div>
-            <!--card-->
-
-            <div class="card">
-              <div class="imagem">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/img-professionals/nutricionista 1.png"
-                  alt="logo Nutricionista"
-                />
-              </div>
-              <!--imagem-->
-              <h3>Nutricionista</h3>
-              <p>
-                O nutricionista te ajuda a cuidar da alimentação de forma
-                saudável e equilibrada — respeitando sua rotina, suas
-                preferências e suas necessidades.
-              </p>
-            </div>
-            <!--card-->
-          </div>
-          <!--container-card-->
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--conheca-quem-->
-
-      <section class="importancia animar-scroll">
-        <div class="margem-global">
-          <h2>A importância do apoio profissional</h2>
-
-          <div class="container-conteudo">
-            <article>
-              <div class="container-imagens">
-                <img
-                  id="relativo"
-                  src="/ProjetoSolarOficial/src/assets/img-professionals/imagem_psicologo1.png"
-                  alt=""
-                />
-                <img
-                  id="absoluto"
-                  src="/ProjetoSolarOficial/src/assets/img-professionals/imagem_psicologo2.png"
-                  alt=""
-                />
-              </div>
-              <!--container-imagens-->
-            </article>
-
-            <aside>
-              <div class="container-aside animar-scroll">
-                <p>
-                  Ter acesso a profissionais qualificados faz toda a diferença
-                  no bem-estar. Psicólogos, psiquiatras e nutricionistas ajudam
-                  você a lidar com emoções, manter a saúde mental e cuidar da
-                  alimentação de forma equilibrada.
-                </p>
-
-                <div class="bolinha-texto">
-                  <span>1</span>
-                  <p>
-                    <strong>Apoio especializado:</strong> Espaço seguro para
-                    falar, ser ouvido(a) e receber orientação profissional.
-                  </p>
-                </div>
-
-                <div class="bolinha-texto">
-                  <span>2</span>
-                  <p>
-                    <strong>Saúde acessível:</strong> Consultas humanizadas,
-                    adaptadas à sua rotina e necessidades.
-                  </p>
-                </div>
-
-                <div class="bolinha-texto">
-                  <span>3</span>
-                  <p>
-                    <strong>Bem-estar completo:</strong> Cuidado da mente e do
-                    corpo para viver com mais equilíbrio e qualidade de vida.
-                  </p>
-                </div>
-              </div>
-              <!--container-aside-->
-            </aside>
-          </div>
-          <!--container-conteudo-->
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--importancia-->
-
-      <section class="profissionais animar-scroll">
-        <div class="margem-global">
-          <h2>Profissionais</h2>
-
-          <div class="container">
-            <div class="ajustar-seta" id="ajustar-seta">
-              <div class="seta">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda.png"
-                  alt="seta"
-                />
-              </div>
-              <!--seta-->
-
-              <div class="container-usuario">
-                <div class="container-conteudo-usuario">
-                  <div class="usuario">
-                    <img
-                      src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9.png"
-                      alt="profissional 1"
-                    />
-                    <div class="texto">
-                      <p>Ana Silva</p>
-                      <p>Psicóloga Clínica</p>
-                    </div>
-                    <!--texto-->
-                  </div>
-                  <!--usuario-->
-                  <div class="container-textos">
-                    <div class="icone-texto">
-                      <img
-                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png"
-                        alt="profissional 2"
-                      />
-                      <p>CRP: 05/12345</p>
-                    </div>
-                    <!--icone-texto-->
-
-                    <div class="icone-texto">
-                      <img
-                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png"
-                        alt="logo de local"
-                      />
-                      <p>São Paulo - SP</p>
-                    </div>
-                    <!--icone-texto-->
-
-                    <h3>
-                      "Acredito que todo ser humano merece acesso à saúde mental
-                      de qualidade. Como voluntária, posso oferecer apoio a quem
-                      mais precisa."
-                    </h3>
-                    <div class="butaos">
-                      <button>Detalhes</button>
-                      <button>Agendar</button>
-                    </div>
-                    <!--butaos-->
-                  </div>
-                  <!--container-textos-->
-                </div>
-                <!--container-conteudo-usuario-->
-              </div>
-              <!--ajustar-seta-->
-            </div>
-            <!--container-usuario-->
-
-            <div class="container-usuario">
-              <div class="usuario">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (1).png"
-                  alt="profissional 2"
-                />
-                <div class="texto">
-                  <p>Guilherme Soares</p>
-                  <p>Psicóloga Clínica</p>
-                </div>
-                <!--texto-->
-              </div>
-              <!--usuario-->
-
-              <div class="container-textos">
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png"
-                    alt="crm do profissional"
-                  />
-                  <p>CRM: 05/12345</p>
-                </div>
-                <!--icone-texto-->
-
-                <div class="icone-texto">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png"
-                    alt="logo local"
-                  />
-                  <p>São Paulo - SP</p>
-                </div>
-                <!--icone-texto-->
-
-                <h3>
-                  A saúde mental é um direito, não um luxo. Estou aqui para
-                  tornar esse acesso mais humano e possível.
-                </h3>
-                <div class="butaos">
-                  <button>Detalhes</button>
-                  <button>Agendar</button>
-                </div>
-                <!--butaos-->
-              </div>
-              <!--container-textos-->
-            </div>
-            <!--container-usuario-->
-
-            <div class="container-usuario">
-              <div class="ajustar-seta">
-                <div class="container-conteudo-usuario">
-                  <div class="usuario">
-                    <img
-                      src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (2).png"
-                      alt="profissional 3"
-                    />
-                    <div class="texto">
-                      <p>Sofia Martins</p>
-                      <p>Nutricionista</p>
-                    </div>
-                    <!--texto-->
-                  </div>
-                  <!--usuario-->
-
-                  <div class="container-textos">
-                    <div class="icone-texto">
-                      <img
-                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png"
-                        alt="crm do profissional"
-                      />
-                      <p>CRN: 3 12567</p>
-                    </div>
-                    <!--icone-texto-->
-
-                    <div class="icone-texto">
-                      <img
-                        src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png"
-                        alt="logo do local"
-                      />
-                      <p>Rio de Janeiro - RJ</p>
-                    </div>
-                    <!--icone-texto-->
-
-                    <h3>
-                      Ser voluntária é retribuir o que aprendi: cuidar de
-                      pessoas é também cuidar do mundo.
-                    </h3>
-
-                    <div class="butaos">
-                      <button>Detalhes</button>
-                      <button>Agendar</button>
-                    </div>
-                    <!--butaos-->
-                  </div>
-                  <!--container-textos-->
-                </div>
-                <!--container-usuario-seta-->
-
-                <div class="seta">
-                  <img
-                    src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda (1).png"
-                    alt=""
-                  />
-                </div>
-                <!--seta -->
-              </div>
-              <!--ajustar-seta-->
-            </div>
-            <!--container-usuario-->
-          </div>
-          <!--container-->
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--profissionais-->
-
-      <section class="seguranca animar-scroll">
-        <div class="margem-global">
-          <h2>Segurança e Privacidade dos Dados</h2>
-
-          <div class="container-texto-cadeado animar-scroll">
-            <div class="textos">
-              <p>
-                Na Solar, cuidar das pessoas também é garantir que cada
-                informação esteja protegida.
-              </p>
-              <br />
-              <p>
-                Por isso, seguimos padrões rigorosos de segurança digital para
-                manter seus dados pessoais em sigilo e uso responsável. Nenhuma
-                informação é compartilhada com terceiros sem o seu
-                consentimento.
-              </p>
-              <br />
-              <p>
-                Nosso sistema conta com conexões seguras e criptografia para
-                proteger todo o processo de login, cadastro e comunicação com os
-                profissionais. Assim, você pode navegar, se conectar e buscar
-                apoio com tranquilidade, sabendo que sua privacidade está sempre
-                em primeiro lugar.
-              </p>
-            </div>
-            <!--textos-->
-
-            <div class="icone-cadeado">
-              <img
-                src="/ProjetoSolarOficial/src/assets/img-professionals/simbolo-de-cadeado-para-interface-de-seguranca_1_1.png"
-                alt="icone cadeado na cor roxa"
-              />
-            </div>
-            <!--icone-cadeado-->
-          </div>
-          <!--container-texto-cadeado-->
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--seguranca-->
-
-      <section class="junte-se animar-scroll">
-        <div class="margem-global">
-          <h2>Junte-se à nossa rede de profissionais solidários</h2>
-          <p id="texto">
-            Seja um voluntário na Solar e use seu conhecimento para transformar
-            vidas com empatia, escuta e acolhimento.
-          </p>
-
-          <div class="form">
-            <form action="">
-              <h3>Entre em contato</h3>
-
-              <div class="labels-inputs">
-                <div class="separacao">
-                  <label for="name">Nome completo</label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    placeholder="Digite seu nome completo: "
-                  />
-                </div>
-                <!--separacao-->
-                <div class="separacao">
-                  <label for="email">E-mail de contato</label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    placeholder="Digite seu e-mail: "
-                  />
-                </div>
-                <!--separacao-->
-                <div class="separacao">
-                  <label for="tel">Telefone/Whatsapp</label>
-                  <input
-                    type="tel"
-                    id="tel"
-                    required
-                    placeholder="Digite seu telefone: "
-                  />
-                </div>
-                <!--separacao-->
-              </div>
-              <!--labels-inputs-->
-
-              <p id="espaco-profissionais">Profissão / Especialidade</p>
-
-              <div class="escolha-profissionais">
-                <div class="opcao">
-                  <input type="radio" id="radio" />
-                  <p>Psicólogo</p>
-                </div>
-                <!--opcao-->
-
-                <div class="opcao">
-                  <input type="radio" id="radio" />
-                  <p>Nutricionista</p>
-                </div>
-                <!--opcao-->
-
-                <div class="opcao">
-                  <input type="radio" id="radio" />
-                  <p>Psiquiatra</p>
-                </div>
-                <!--opcao-->
-              </div>
-              <!--escolha-profissionais-->
-
-              <div class="status-profissional">
-                <p id="espaco-status">Status Profissional</p>
-
-                <div class="texto-opcao">
-                  <input type="radio" id="radio" />
-                  <p>Já sou profissional registrado</p>
-                </div>
-                <!--texto-opcao-->
-
-                <div class="texto-opcao espaco">
-                  <input type="radio" id="radio" />
-                  <p>Estou em formação / cursando faculdade</p>
-                </div>
-                <!--texto-opcao-->
-              </div>
-              <!--status-profissional-->
-
-              <label for="mensagem" id="mensagem">
-                <p>Mensagem:</p>
-              </label>
-              <textarea
-                name="mensagem"
-                id="mensagem"
-                placeholder="Digite sua mensagem: "
-              ></textarea>
-
-              <div class="termo">
-                <div id="tamanho">
-                  <input type="checkbox" />
-                </div>
-                <!--tamanho-->
-                <span
-                  >Estou ciente e concordo com o uso dos dados fornecidos neste
-                  formulário pela Plataforma Solar, em conformidade com a Lei
-                  Geral de Proteção de Dados Pessoais (Lei nº
-                  13.709/2018).</span
-                >
-              </div>
-              <!--termo-->
-
-              <button>Enviar</button>
-            </form>
-          </div>
-          <!--form-->
-        </div>
-        <!--margem-global-->
-      </section>
-      <!--junte-se-->
-
-      <section class="secao-perguntas-frequentes animar-scroll">
-        <div class="margem-global">
-          <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
-
-          <div class="container-perguntas">
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Como funciona o agendamento das consultas?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">O agendamento é feito dentro da plataforma, de forma simples e rápida.
-Você escolhe o melhor horário disponível, confirma com um clique e pronto 💛
-Assim você garante seu atendimento no momento que fizer mais sentido para você.</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">As consultas são gratuitas?</h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Sim!
-Todos os usuários da Solar têm direito a consultas gratuitas todo mês. O plano inicial tem um limite de atendimentos para garantir cuidado e qualidade.
-Se precisar de mais, os planos <b>Amparo</b> e <b>Alicerce</b> oferecem mais sessões.
-E, se ultrapassar o limite em algum mês, é só falar com a gente — vamos analisar com carinho e ver como podemos ajudar 💛✨</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Existe limite de atendimento por pessoa?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Sim!
-Todos os usuários têm direito a consultas gratuitas todos os meses, já inclusas no plano básico.
-
-No entanto, esse plano possui um limite mensal de atendimentos, para garantir organização, qualidade e acompanhamento humanizado.
-
-Se você quiser aumentar essa quantidade, é só assinar um dos nossos planos Amparo ou Alicerce, onde o número de consultas é maior e mais flexível.
-
-E caso você chegue ao limite e ainda sinta que precisa de mais suporte no mês, pode entrar em contato com nossa equipe.
-Teremos carinho em avaliar sua situação e ver o que podemos fazer para ajudar da melhor forma possível 💛✨</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Posso ser atendido por um estudante da área da saúde?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Sim 😊
-Algumas consultas podem ser realizadas por estudantes supervisionados, sempre acompanhados por profissionais devidamente formados.
-Isso garante apoio de qualidade e acolhimento profissional, promovendo aprendizado e atendimento humano ao mesmo tempo.</div>
-            </div>
-
-            <div class="pergunta-item">
-              <div class="pergunta-header">
-                <h3 class="pergunta-titulo">
-                  Meus dados e conversas ficam seguros?
-                </h3>
-                <span class="pergunta-icone">+</span>
-              </div>
-              <div class="resposta-pergunta">Com certeza ❤️
-Todas as informações são protegidas com rigor, sigilo e responsabilidade.
-Nada é compartilhado com terceiros sem sua autorização, garantindo um ambiente seguro, humano e respeitoso para você se expressar com tranquilidade.</div>
-            </div>
-          </div>
-          <!-- container-perguntas -->
-        </div>
-        <!-- margem-global -->
-      </section>
-      <!-- secao-perguntas-frequentes -->
-    </main>
-
-    <footer>
-      <div class="margem-global">
-        <div class="secao-footer">
-          <div class="logo-footer">
-            <a href="/ProjetoSolarOficial/src/pages/home/home.html">
-              <img
-                src="/ProjetoSolarOficial/src/assets/logo_nav.png"
-                alt="Logo Solar"
-              />
-            </a>
-            <span>Solar</span>
-          </div>
-          <p>
-            Um espaço voltado para famílias monoparentais, oferecendo apoio
-            emocional, informações e recursos.
-          </p>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Redes Sociais</h3>
-          <div class="redes-sociais">
-            <a
-              href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
-                />
-              </svg>
-              SOLAR.PLATAFORMA
-            </a>
-            <a
-              href="https://www.linkedin.com/in/solaroficial/"
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
-                />
-              </svg>
-              SOLAR OFICIAL
-            </a>
-          </div>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Páginas</h3>
-          <ul class="lista-paginas">
-            <li>
-              <a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a>
+        <li>
+          <a href="#">
+            EXPLORAR
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')">EVENTOS</a>
             </li>
-            <li>
-              <a href="/ProjetoSolarOficial/src/pages/network/about/about.html"
-                >Sobre</a
-              >
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')">CURSOS</a>
             </li>
-            <li>
-              <a
-                href="/ProjetoSolarOficial/src/pages/professionals/professionals.html"
-                >Profissionais</a
-              >
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a>
             </li>
-            <li>
-              <a
-                href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html"
-                >SolMídia</a
-              >
-            </li>
-            <li>
-              <a href="/ProjetoSolarOficial/src/pages/plans/plans.html"
-                >Planos</a
-              >
+            <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')">JOGOS</a>
             </li>
           </ul>
+        </li>
+
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')">DOAÇÃO</a></li>
+        <li><a href="#"
+            onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')">PROFISSIONAIS</a>
+        </li>
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')">PLANOS</a></li>
+
+        <li>
+          <a href="#">
+            REDES
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')">SOBRE</a>
+            </li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')">LOCALIZAR
+                INSTITUIÇÕES</a></li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
+                CONOSCO</a></li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/community/comunidade.html')">COMUNIDADE</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')">
+            <button class="button-header">ENTRAR</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="imagem-fundo">
+      <div class="margem-global">
+        <div class="container-textos">
+          <h1>Profissionais que cuidam de você</h1>
+          <p>
+            Psicólogos, psiquiatras e nutricionistas disponíveis para
+            atendimentos acessíveis e com acolhimento.
+          </p>
+        </div>
+        <!--container-textos-->
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--imagem-fundo-->
+
+    <section class="conheca-quem animar-scroll">
+      <div class="margem-global">
+        <h2>Conheça quem vai cuidar de você</h2>
+
+        <div class="container-card">
+          <div class="card">
+            <div class="imagem">
+              <img src="/ProjetoSolarOficial/src/assets/img-professionals/psicologo 1.png" alt="logo Psicologo" />
+            </div>
+            <!--imagem-->
+
+            <h3>Psicólogo</h3>
+            <p>
+              O psicólogo ajuda você a entender e lidar com suas emoções,
+              oferecendo apoio em momentos de ansiedade, tristeza ou
+              sobrecarga.
+            </p>
+          </div>
+          <!--card-->
+
+          <div class="card">
+            <div class="imagem">
+              <img src="/ProjetoSolarOficial/src/assets/img-professionals/psiquiatra 1.png" alt="logo Psiquiatra" />
+            </div>
+            <!--imagem-->
+            <h3>Psiquiatra</h3>
+            <p>
+              O psiquiatra é um médico da saúde mental que avalia sintomas,
+              orienta tratamentos e, se necessário, prescreve medicamentos
+              para cuidar do seu bem-estar.
+            </p>
+          </div>
+          <!--card-->
+
+          <div class="card">
+            <div class="imagem">
+              <img src="/ProjetoSolarOficial/src/assets/img-professionals/nutricionista 1.png"
+                alt="logo Nutricionista" />
+            </div>
+            <!--imagem-->
+            <h3>Nutricionista</h3>
+            <p>
+              O nutricionista te ajuda a cuidar da alimentação de forma
+              saudável e equilibrada — respeitando sua rotina, suas
+              preferências e suas necessidades.
+            </p>
+          </div>
+          <!--card-->
+        </div>
+        <!--container-card-->
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--conheca-quem-->
+
+    <section class="importancia animar-scroll">
+      <div class="margem-global">
+        <h2>A importância do apoio profissional</h2>
+
+        <div class="container-conteudo">
+          <article>
+            <div class="container-imagens">
+              <img id="relativo" src="/ProjetoSolarOficial/src/assets/img-professionals/imagem_psicologo1.png" alt="" />
+              <img id="absoluto" src="/ProjetoSolarOficial/src/assets/img-professionals/imagem_psicologo2.png" alt="" />
+            </div>
+            <!--container-imagens-->
+          </article>
+
+          <aside>
+            <div class="container-aside animar-scroll">
+              <p>
+                Ter acesso a profissionais qualificados faz toda a diferença
+                no bem-estar. Psicólogos, psiquiatras e nutricionistas ajudam
+                você a lidar com emoções, manter a saúde mental e cuidar da
+                alimentação de forma equilibrada.
+              </p>
+
+              <div class="bolinha-texto">
+                <span>1</span>
+                <p>
+                  <strong>Apoio especializado:</strong> Espaço seguro para
+                  falar, ser ouvido(a) e receber orientação profissional.
+                </p>
+              </div>
+
+              <div class="bolinha-texto">
+                <span>2</span>
+                <p>
+                  <strong>Saúde acessível:</strong> Consultas humanizadas,
+                  adaptadas à sua rotina e necessidades.
+                </p>
+              </div>
+
+              <div class="bolinha-texto">
+                <span>3</span>
+                <p>
+                  <strong>Bem-estar completo:</strong> Cuidado da mente e do
+                  corpo para viver com mais equilíbrio e qualidade de vida.
+                </p>
+              </div>
+            </div>
+            <!--container-aside-->
+          </aside>
+        </div>
+        <!--container-conteudo-->
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--importancia-->
+
+    <section class="profissionais animar-scroll">
+      <div class="margem-global">
+        <h2>Profissionais</h2>
+
+        <div class="container">
+          <div class="ajustar-seta" id="ajustar-seta">
+            <div class="seta">
+              <img src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda.png" alt="seta" />
+            </div>
+            <!--seta-->
+
+            <div class="container-usuario">
+              <div class="container-conteudo-usuario">
+                <div class="usuario">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9.png" alt="profissional 1" />
+                  <div class="texto">
+                    <p>Ana Silva</p>
+                    <p>Psicóloga Clínica</p>
+                  </div>
+                  <!--texto-->
+                </div>
+                <!--usuario-->
+                <div class="container-textos">
+                  <div class="icone-texto">
+                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="profissional 2" />
+                    <p>CRP: 05/12345</p>
+                  </div>
+                  <!--icone-texto-->
+
+                  <div class="icone-texto">
+                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="logo de local" />
+                    <p>São Paulo - SP</p>
+                  </div>
+                  <!--icone-texto-->
+
+                  <h3>
+                    "Acredito que todo ser humano merece acesso à saúde mental
+                    de qualidade. Como voluntária, posso oferecer apoio a quem
+                    mais precisa."
+                  </h3>
+                  <div class="butaos">
+                    <button>Detalhes</button>
+                    <button>Agendar</button>
+                  </div>
+                  <!--butaos-->
+                </div>
+                <!--container-textos-->
+              </div>
+              <!--container-conteudo-usuario-->
+            </div>
+            <!--ajustar-seta-->
+          </div>
+          <!--container-usuario-->
+
+          <div class="container-usuario">
+            <div class="usuario">
+              <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (1).png" alt="profissional 2" />
+              <div class="texto">
+                <p>Guilherme Soares</p>
+                <p>Psicóloga Clínica</p>
+              </div>
+              <!--texto-->
+            </div>
+            <!--usuario-->
+
+            <div class="container-textos">
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="crm do profissional" />
+                <p>CRM: 05/12345</p>
+              </div>
+              <!--icone-texto-->
+
+              <div class="icone-texto">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="logo local" />
+                <p>São Paulo - SP</p>
+              </div>
+              <!--icone-texto-->
+
+              <h3>
+                A saúde mental é um direito, não um luxo. Estou aqui para
+                tornar esse acesso mais humano e possível.
+              </h3>
+              <div class="butaos">
+                <button>Detalhes</button>
+                <button>Agendar</button>
+              </div>
+              <!--butaos-->
+            </div>
+            <!--container-textos-->
+          </div>
+          <!--container-usuario-->
+
+          <div class="container-usuario">
+            <div class="ajustar-seta">
+              <div class="container-conteudo-usuario">
+                <div class="usuario">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (2).png" alt="profissional 3" />
+                  <div class="texto">
+                    <p>Sofia Martins</p>
+                    <p>Nutricionista</p>
+                  </div>
+                  <!--texto-->
+                </div>
+                <!--usuario-->
+
+                <div class="container-textos">
+                  <div class="icone-texto">
+                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="crm do profissional" />
+                    <p>CRN: 3 12567</p>
+                  </div>
+                  <!--icone-texto-->
+
+                  <div class="icone-texto">
+                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="logo do local" />
+                    <p>Rio de Janeiro - RJ</p>
+                  </div>
+                  <!--icone-texto-->
+
+                  <h3>
+                    Ser voluntária é retribuir o que aprendi: cuidar de
+                    pessoas é também cuidar do mundo.
+                  </h3>
+
+                  <div class="butaos">
+                    <button>Detalhes</button>
+                    <button>Agendar</button>
+                  </div>
+                  <!--butaos-->
+                </div>
+                <!--container-textos-->
+              </div>
+              <!--container-usuario-seta-->
+
+              <div class="seta">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda (1).png" alt="" />
+              </div>
+              <!--seta -->
+            </div>
+            <!--ajustar-seta-->
+          </div>
+          <!--container-usuario-->
+        </div>
+        <!--container-->
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--profissionais-->
+
+    <section class="seguranca animar-scroll">
+      <div class="margem-global">
+        <h2>Segurança e Privacidade dos Dados</h2>
+
+        <div class="container-texto-cadeado animar-scroll">
+          <div class="textos">
+            <p>
+              Na Solar, cuidar das pessoas também é garantir que cada
+              informação esteja protegida.
+            </p>
+            <br />
+            <p>
+              Por isso, seguimos padrões rigorosos de segurança digital para
+              manter seus dados pessoais em sigilo e uso responsável. Nenhuma
+              informação é compartilhada com terceiros sem o seu
+              consentimento.
+            </p>
+            <br />
+            <p>
+              Nosso sistema conta com conexões seguras e criptografia para
+              proteger todo o processo de login, cadastro e comunicação com os
+              profissionais. Assim, você pode navegar, se conectar e buscar
+              apoio com tranquilidade, sabendo que sua privacidade está sempre
+              em primeiro lugar.
+            </p>
+          </div>
+          <!--textos-->
+
+          <div class="icone-cadeado">
+            <img
+              src="/ProjetoSolarOficial/src/assets/img-professionals/simbolo-de-cadeado-para-interface-de-seguranca_1_1.png"
+              alt="icone cadeado na cor roxa" />
+          </div>
+          <!--icone-cadeado-->
+        </div>
+        <!--container-texto-cadeado-->
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--seguranca-->
+
+    <section class="junte-se animar-scroll">
+      <div class="margem-global">
+        <h2>Junte-se à nossa rede de profissionais solidários</h2>
+        <p id="texto">
+          Seja um voluntário na Solar e use seu conhecimento para transformar
+          vidas com empatia, escuta e acolhimento.
+        </p>
+
+        <div class="form">
+          <form action="">
+            <h3>Entre em contato</h3>
+
+            <div class="labels-inputs">
+              <div class="separacao">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" required placeholder="Digite seu nome completo: " />
+              </div>
+              <!--separacao-->
+              <div class="separacao">
+                <label for="email">E-mail de contato</label>
+                <input type="email" id="email" required placeholder="Digite seu e-mail: " />
+              </div>
+              <!--separacao-->
+              <div class="separacao">
+                <label for="tel">Telefone/Whatsapp</label>
+                <input type="tel" id="tel" required placeholder="Digite seu telefone: " />
+              </div>
+              <!--separacao-->
+            </div>
+            <!--labels-inputs-->
+
+            <p id="espaco-profissionais">Profissão / Especialidade</p>
+
+            <div class="escolha-profissionais">
+              <div class="opcao">
+                <input type="radio" id="radio" />
+                <p>Psicólogo</p>
+              </div>
+              <!--opcao-->
+
+              <div class="opcao">
+                <input type="radio" id="radio" />
+                <p>Nutricionista</p>
+              </div>
+              <!--opcao-->
+
+              <div class="opcao">
+                <input type="radio" id="radio" />
+                <p>Psiquiatra</p>
+              </div>
+              <!--opcao-->
+            </div>
+            <!--escolha-profissionais-->
+
+            <div class="status-profissional">
+              <p id="espaco-status">Status Profissional</p>
+
+              <div class="texto-opcao">
+                <input type="radio" id="radio" />
+                <p>Já sou profissional registrado</p>
+              </div>
+              <!--texto-opcao-->
+
+              <div class="texto-opcao espaco">
+                <input type="radio" id="radio" />
+                <p>Estou em formação / cursando faculdade</p>
+              </div>
+              <!--texto-opcao-->
+            </div>
+            <!--status-profissional-->
+
+            <label for="mensagem" id="mensagem">
+              <p>Mensagem:</p>
+            </label>
+            <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem: "></textarea>
+
+            <div class="termo">
+              <div id="tamanho">
+                <input type="checkbox" />
+              </div>
+              <!--tamanho-->
+              <span>Estou ciente e concordo com o uso dos dados fornecidos neste
+                formulário pela Plataforma Solar, em conformidade com a Lei
+                Geral de Proteção de Dados Pessoais (Lei nº
+                13.709/2018).</span>
+            </div>
+            <!--termo-->
+
+            <button>Enviar</button>
+          </form>
+        </div>
+        <!--form-->
+      </div>
+      <!--margem-global-->
+    </section>
+    <!--junte-se-->
+
+    <section class="secao-perguntas-frequentes animar-scroll">
+      <div class="margem-global">
+        <h2 class="title-perguntas-frequentes">Perguntas Frequentes</h2>
+
+        <div class="container-perguntas">
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Como funciona o agendamento das consultas?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">O agendamento é feito dentro da plataforma, de forma simples e rápida.
+              Você escolhe o melhor horário disponível, confirma com um clique e pronto 💛
+              Assim você garante seu atendimento no momento que fizer mais sentido para você.</div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">As consultas são gratuitas?</h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Sim!
+              Todos os usuários da Solar têm direito a consultas gratuitas todo mês. O plano inicial tem um limite de
+              atendimentos para garantir cuidado e qualidade.
+              Se precisar de mais, os planos <b>Amparo</b> e <b>Alicerce</b> oferecem mais sessões.
+              E, se ultrapassar o limite em algum mês, é só falar com a gente — vamos analisar com carinho e ver como
+              podemos ajudar 💛✨</div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Existe limite de atendimento por pessoa?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Sim!
+              Todos os usuários têm direito a consultas gratuitas todos os meses, já inclusas no plano básico.
+
+              No entanto, esse plano possui um limite mensal de atendimentos, para garantir organização, qualidade e
+              acompanhamento humanizado.
+
+              Se você quiser aumentar essa quantidade, é só assinar um dos nossos planos Amparo ou Alicerce, onde o
+              número de consultas é maior e mais flexível.
+
+              E caso você chegue ao limite e ainda sinta que precisa de mais suporte no mês, pode entrar em contato com
+              nossa equipe.
+              Teremos carinho em avaliar sua situação e ver o que podemos fazer para ajudar da melhor forma possível 💛✨
+            </div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Posso ser atendido por um estudante da área da saúde?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Sim 😊
+              Algumas consultas podem ser realizadas por estudantes supervisionados, sempre acompanhados por
+              profissionais devidamente formados.
+              Isso garante apoio de qualidade e acolhimento profissional, promovendo aprendizado e atendimento humano ao
+              mesmo tempo.</div>
+          </div>
+
+          <div class="pergunta-item">
+            <div class="pergunta-header">
+              <h3 class="pergunta-titulo">
+                Meus dados e conversas ficam seguros?
+              </h3>
+              <span class="pergunta-icone">+</span>
+            </div>
+            <div class="resposta-pergunta">Com certeza ❤️
+              Todas as informações são protegidas com rigor, sigilo e responsabilidade.
+              Nada é compartilhado com terceiros sem sua autorização, garantindo um ambiente seguro, humano e respeitoso
+              para você se expressar com tranquilidade.</div>
+          </div>
+        </div>
+        <!-- container-perguntas -->
+      </div>
+      <!-- margem-global -->
+    </section>
+    <!-- secao-perguntas-frequentes -->
+  </main>
+
+  <footer>
+    <div class="margem-global">
+      <div class="secao-footer">
+        <div class="logo-footer">
+          <a href="/ProjetoSolarOficial/src/pages/home/home.html">
+            <img src="/ProjetoSolarOficial/src/assets/logo_nav.png" alt="Logo Solar" />
+          </a>
+          <span>Solar</span>
+        </div>
+        <p>
+          Um espaço voltado para famílias monoparentais, oferecendo apoio
+          emocional, informações e recursos.
+        </p>
+      </div>
+
+      <div class="secao-footer">
+        <h3>Redes Sociais</h3>
+        <div class="redes-sociais">
+          <a href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+            </svg>
+            SOLAR.PLATAFORMA
+          </a>
+          <a href="https://www.linkedin.com/in/solaroficial/" class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            SOLAR OFICIAL
+          </a>
         </div>
       </div>
 
-      <div class="direitos-autorais">
-        <p class="texto-paragrafo">
-          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
-          Política de Privacidade
-        </p>
+      <div class="secao-footer">
+        <h3>Páginas</h3>
+        <ul class="lista-paginas">
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/network/about/about.html">Sobre</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/professionals/professionals.html">Profissionais</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html">SolMídia</a>
+          </li>
+          <li>
+            <a href="/ProjetoSolarOficial/src/pages/plans/plans.html">Planos</a>
+          </li>
+        </ul>
       </div>
-    </footer>
-      <script src="../../js/script.js"></script>
-   <script src="../../js/professionals.js"></script>
-  </body>
+    </div>
+
+    <div class="direitos-autorais">
+      <p class="texto-paragrafo">
+        © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
+        Política de Privacidade
+      </p>
+    </div>
+  </footer>
+  <script src="../../js/script.js"></script>
+  <script src="../../js/professionals.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+</body>
 
 </html>

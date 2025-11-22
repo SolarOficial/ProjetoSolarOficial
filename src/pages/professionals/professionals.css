@@ -344,6 +344,15 @@ section.profissionais .margem-global .container-usuario {
   align-items: center;
 }
 
+.ajustar-seta .seta:first-child {
+  margin-right: 30px; 
+}
+
+.ajustar-seta .seta:last-child {
+  margin-left: 30px; 
+}
+
+
 section.profissionais .margem-global .container-usuario .usuario {
   background: #ede3ff;
   border-radius: 11px 11px 0 0;
@@ -455,6 +464,11 @@ section.profissionais
   font-family: var(--font-paragrafo);
   font-size: 13px;
   background-color: #9675ce;
+}
+
+.btn-agendar a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*SECTION SEGURANCA*/

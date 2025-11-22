@@ -1,190 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Equipe Solar" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Página de cursos da plataforma Solar" />
-    <meta
-      name="keywords"
-      content="Monoparentalidade, Solar, Pai Solo, Mãe Solo "
-    />
-    <link rel="stylesheet" href="login.css" />
-    <link
-      rel="shortcut icon"
-      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
-      type="image/x-icon"
-    />
-    <title>Login - Solar</title>
-  </head>
 
-  <!-- ////////////////////////////////////////////// HEADER///////////////////////////////////////////////////  -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Equipe Solar" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Página de cursos da plataforma Solar" />
+  <meta name="keywords" content="Monoparentalidade, Solar, Pai Solo, Mãe Solo " />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="/ProjetoSolarOficial/src/headerResponsivo.css">
+  <link rel="shortcut icon" href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png" type="image/x-icon" />
+  <title>Login - Solar</title>
+</head>
 
-  <body>
-    <header class="container-pai">
-      <div class="logo">
-        <a
-          href="#"
-          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
-        >
-          <img
-            height="90"
-            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
-            alt="Logo branca Solar"
-          />
-        </a>
-      </div>
+<!-- ////////////////////////////////////////////// HEADER///////////////////////////////////////////////////  -->
 
-      <nav class="nav-pai">
-        <ul>
-          <li><a href="">HOME</a></li>
-          <li>
-            <a href="#">
-              EXPLORAR
-              <img
-                class="seta-header"
-                src="/ProjetoSolarOficial/src/assets/seta.png"
-                alt="seta ao lado de explorar"
-              />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../explore/eventss/index/index.html')"
-                  >EVENTOS</a
-                >
-              </li>
+<body>
+  <header class="container-pai">
+    <div class="logo">
+      <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">
+        <img height="90" src="/ProjetoSolarOficial/src/assets/logo_nav2.png" alt="Logo branca Solar" />
+      </a>
+    </div>
 
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../explore/courses/index/index.html')"
-                  >CURSOS</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../explore/sunMidia/solmidia.html')"
-                  >SOLMÍDIA</a
-                >
-              </li>
-              <li>
-                <a href="#" onclick="redirectUser('../explore/game/game.html')"
-                  >JOGOS</a
-                >
-              </li>
-            </ul>
-          </li>
+    <button id="btn-mobile">
+      <span id="hamburger"></span>
+    </button>
 
-          <li>
-            <a href="#" onclick="redirectUser('../donation/donation.html')"
-              >DOAÇÃO</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('../professionals/professionals.html')"
-              >PROFISSIONAIS</a
-            >
-          </li>
-          <li>
-            <a href="#" onclick="redirectUser('../plans/plans.html')">PLANOS</a>
-          </li>
+    <nav class="nav-pai" id="nav">
+      <ul id="menu">
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">HOME</a></li>
+
+        <li>
+          <a href="#">
+            EXPLORAR
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')">EVENTOS</a>
+            </li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')">CURSOS</a>
+            </li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a>
+            </li>
+            <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')">JOGOS</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')">DOAÇÃO</a></li>
+        <li><a href="#"
+            onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')">PROFISSIONAIS</a>
+        </li>
+        <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')">PLANOS</a></li>
 
         <li>
           <a href="#">
             REDES
-            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta ao lado de redes" />
+            <img class="seta-header" src="/ProjetoSolarOficial/src/assets/seta.png" alt="seta" />
           </a>
           <ul class="dropdown">
-            <li>
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')">SOBRE</a>
+            <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')">SOBRE</a>
             </li>
-            <li>
-              <a href="#"
+            <li><a href="#"
                 onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')">LOCALIZAR
-                INSTITUIÇÕES</a>
+                INSTITUIÇÕES</a></li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
+                CONOSCO</a></li>
+            <li><a href="#"
+                onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/community/comunidade.html')">COMUNIDADE</a>
             </li>
-           <li>
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')">FALE
-                CONOSCO</a>
-            </li>
-            <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/community/comunidade.html')"
-                  >COMUNIDADE</a
-                >
-              </li>
           </ul>
         </li>
 
-          <a href="#" onclick="redirectUser('../login/login.html')"
-            ><button class="button-header">ENTRAR</button></a
-          >
-        </ul>
-      </nav>
-    </header>
+        <li>
+          <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/register.html')">
+            <button class="button-header">CADASTRAR-SE</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <section class="img-login">
-        <img
-          src="/ProjetoSolarOficial/src/assets/img-home/div_Lado-Esquerdo.png"
-          alt="Logo solar com gradiente"
-        />
-        <div class="login-solar">
-          <h2 class="title-login">Login</h2>
-          <form action="#" method="post" class="login-caixa">
-            <div class="input-user">
-              <div class="input-email">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/img-login/arroba-login.png"
-                  alt="icone email"
-                /><input type="text" placeholder="Digite o seu email" />
-              </div>
-              <div class="input-password">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/img-login/Password.png"
-                  alt="icone senha"
-                /><input type="password" placeholder="Digite sua senha" />
-              </div>
+  <main>
+    <section class="img-login">
+      <img src="/ProjetoSolarOficial/src/assets/img-home/div_Lado-Esquerdo.png" alt="Logo solar com gradiente" />
+      <div class="login-solar">
+        <h2 class="title-login">Login</h2>
+        <form action="#" method="post" class="login-caixa">
+          <div class="input-user">
+            <div class="input-email">
+              <img src="/ProjetoSolarOficial/src/assets/img-login/arroba-login.png" alt="icone email" /><input
+                type="text" placeholder="Digite o seu email" />
             </div>
-            <div class="input-remember">
-              <div class="input-remember-checkbox">
-                <input
-                  type="checkbox"
-                  id="lembrar-de-mim"
-                  name="lembrar-de-mim"
-                />
-                <label for="lembrar-de-mim">Lembrar de mim</label>
-              </div>
-              <a
-                href="#"
-                onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/recoverAccount/index.html')"
-                >Esqueci a minha senha</a
-              >
+            <div class="input-password">
+              <img src="/ProjetoSolarOficial/src/assets/img-login/Password.png" alt="icone senha" /><input
+                type="password" placeholder="Digite sua senha" />
             </div>
-            <div class="button-entrar">
-              <button type="submit">Entrar</button>
+          </div>
+          <div class="input-remember">
+            <div class="input-remember-checkbox">
+              <input type="checkbox" id="lembrar-de-mim" name="lembrar-de-mim" />
+              <label for="lembrar-de-mim">Lembrar de mim</label>
             </div>
-            <div class="create-account">
-              <p>Não possui cadastro?</p>
-              <a
-                href="#"
-                onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/register.html')"
-                >Crie a sua conta</a
-              >
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
+            <a href="#"
+              onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/recoverAccount/index.html')">Esqueci a
+              minha senha</a>
+          </div>
+          <div class="button-entrar">
+            <button type="submit">Entrar</button>
+          </div>
+          <div class="create-account">
+            <p>Não possui cadastro?</p>
+            <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/register.html')">Crie a sua
+              conta</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <script src=" ../../js/script.js"></script>
-  </body>
+  <script src=" ../../js/script.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+</body>
+
 </html>

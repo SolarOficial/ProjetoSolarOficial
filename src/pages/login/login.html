@@ -90,7 +90,9 @@
 
   <main>
     <section class="img-login">
-      <img src="/ProjetoSolarOficial/src/assets/img-home/div_Lado-Esquerdo.png" alt="Logo solar com gradiente" />
+      <div class="circulo-com-gradiente-e-imagem">
+        <img src="/ProjetoSolarOficial/src/assets/img-register/img_Logo(1).png" alt="Logo solar com escrita" />
+      </div>
       <div class="login-solar">
         <h2 class="title-login">Login</h2>
         <form action="#" method="post" class="login-caixa">
@@ -100,7 +102,7 @@
                 type="text" placeholder="Digite o seu email" />
             </div>
             <div class="input-password">
-              <img src="/ProjetoSolarOficial/src/assets/img-login/Password.png" alt="icone senha" /><input
+              <img src="/ProjetoSolarOficial/src/assets/img-login/Password.png" alt="icone senha"/><input
                 type="password" placeholder="Digite sua senha" />
             </div>
           </div>
@@ -114,7 +116,7 @@
               minha senha</a>
           </div>
           <div class="button-entrar">
-            <button type="submit">Entrar</button>
+           <button class="submit-btn" onclick="abrirPopup(event)">Entrar</button>
           </div>
           <div class="create-account">
             <p>Não possui cadastro?</p>
@@ -126,8 +128,31 @@
     </section>
   </main>
 
-  <script src=" ../../js/script.js"></script>
-  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+<div class="modal-overlay" id="modalSucesso">
+  <div class="modal-card">
+    <div class="icon-container">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="30" fill="white"/>
+        <path d="M18 30L26 38L42 22" stroke="#8A6DC5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    
+    <h2>Recuperação de conta<br>ativada!</h2>
+
+    <p>Enviamos um e-mail para você!🌻 <br> Por favor, acesse sua caixa de entrada e clique no link para continuar com a recuperação.</p>
+    
+    <button class="btn-modal" onclick="window.location.href='/ProjetoSolarOficial/src/pages/home/home.html'">
+      voltar para o ínicio
+    </button>
+    <button class="btn-modal" onclick="window.location.href='../login/login.html'">
+      voltar ao login
+    </button>
+  </div>
+</div>
+
 </body>
+<script src="../../js/popupRegister.js"></script>
+<script src=" ../../js/script.js"></script>
+<script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
 
 </html>

@@ -128,8 +128,7 @@
                 </label>
               </div>
 
-              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/accountCreate/index.html')"
-                type="submit" class="submit-btn">Criar Conta</a>
+             <button class="submit-btn" onclick="abrirPopup(event)">Criar Conta</button>
 
               <p class="login-link">
                 Já possui cadastro?
@@ -138,10 +137,12 @@
             </form>
           </div>
           <!--form-container-opacidade-->
+          
         </div>
         <div class="circulo-com-gradiente-e-imagem">
           <img src="/ProjetoSolarOficial/src/assets/img-register/img_Logo(1).png" alt="Logo solar com escrita" />
         </div>
+
       </div>
       <!--container-cadastro -->
     </div>
@@ -149,9 +150,28 @@
     <audio id="somDoMar" src="/ProjetoSolarOficial/src/audio/musicaOceano.mp3"></audio>
     <!--margem-global -->
   </main>
-  <script src="../../js/script.js"></script>
-  <script src="/ProjetoSolarOficial/src/js/sons.js"></script>
-  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+
+  <div class="modal-overlay" id="modalSucesso">
+  <div class="modal-card">
+    <div class="icon-container">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="30" fill="white"/>
+        <path d="M18 30L26 38L42 22" stroke="#8A6DC5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    
+    <h2>Cadastro Concluído<br>com sucesso!</h2>
+    
+    <button class="btn-modal" onclick="window.location.href='../login/login.html'">
+      Ir para a conta
+    </button>
+  </div>
+</div>
+
 </body>
+<script src="../../js/popupRegister.js"></script>
+<script src="../../js/script.js"></script>
+<script src="/ProjetoSolarOficial/src/js/sons.js"></script>
+<script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
 
 </html>

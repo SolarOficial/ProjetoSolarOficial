@@ -24,11 +24,27 @@
 
 body {
   font-family: var(--font-paragrafo);
-  background-color: var(--cor-branca);
-  background-image: url("/ProjetoSolarOficial/src/assets/img-register/background-cadastro.gif");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-color: #000;
+  position: relative;
+  min-height: 100vh;
 }
+
+
+body::before {
+  content: "";
+  background-image: url("/ProjetoSolarOficial/src/assets/img-register/background-cadastro.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
 
 .margem-global {
   margin: 0 92px 0 92px;
@@ -43,8 +59,8 @@ body {
 }
 
 .circulo-com-gradiente-e-imagem {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -52,17 +68,19 @@ body {
   align-items: center; /* Centraliza verticalmente */
   background-image: linear-gradient(
     to top,
-    #fff067,
-    #fff98db0,
-    #fff98d13,
+     #eed06c,
+    #ffe07bb9,
+    #ffe98483,
+    #ffed4f1e,
     #ffffff00
   );
   box-shadow: 2px 2px rgba(0, 0, 0, 0.144);
   margin-left: 100px;
+  margin-top: 100px;
 }
 
 .circulo-com-gradiente-e-imagem img {
-  max-width: 300px;
+  max-width: 500px;
   max-height: 500px;
   display: block;
 }
@@ -71,19 +89,19 @@ body {
   font-family: var(--font-titulo);
   color: var(--cor-branca);
   text-align: center;
+  padding-top: 160px;
 }
 
 .form-container-opacidade {
-  margin-top: 12px;
   background-image: linear-gradient(10deg, #6f5c8f 10%, #bf9ef5 100%);
   border-radius: 65px;
   padding: 0px 80px 0px;
-  width: 600px;
+  width: 630px;
   height: 620px;
   padding-top: 40px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   background: var(--cor-roxo-claro);
-  opacity: calc(0.88);
+  opacity: calc(0.86);
 }
 
 .form-container h2 {
@@ -198,4 +216,90 @@ body {
 #botaoPlay:active {
   transform: translateY(0px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* POPUP CADASTRO FEITO */
+
+/* Fundo escuro que cobre a tela inteira */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Escurece o fundo */
+    backdrop-filter: blur(3px); /* Desfoque leve no fundo */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que fique na frente de tudo */
+}
+
+.modal-overlay.ativo {
+    display: flex;
+}
+
+/* A caixa do popup */
+.modal-card {
+    /* Degradê Roxo estilo Solar */
+    background: linear-gradient(180deg, #a48cd1 0%, #7d5db8 100%);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif; /* Ou a fonte do seu projeto */
+    position: relative;
+    animation: slideUp 0.4s ease-out;
+}
+
+/* Ícone de check */
+.icon-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Título do Popup */
+.modal-card h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Botão Amarelo */
+.btn-modal {
+    background: linear-gradient(90deg, #ffe085 0%, #ffcd4f 100%);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Cor do texto do botão */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 280px;
+}
+
+.btn-modal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 205, 79, 0.4);
+}
+
+/* Animação de entrada */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

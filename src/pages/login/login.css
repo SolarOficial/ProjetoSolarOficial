@@ -12,11 +12,9 @@
   --cor-amarelo: #fff59c;
   --font-titulo: "Karla", sans-serif;
   --font-paragrafo: "Figtree";
-  --cor-roxo-claro-gradient: linear-gradient(
-    140deg,
-    rgba(191, 158, 245, 0.8) 0%,
-    rgba(111, 92, 143, 0.8) 100%
-  );
+  --cor-roxo-claro-gradient: linear-gradient(140deg,
+      rgba(191, 158, 245, 0.8) 0%,
+      rgba(111, 92, 143, 0.8) 100%);
 }
 
 /* config zeradas */
@@ -33,9 +31,26 @@
 /* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
 
 body {
+  font-family: var(--font-paragrafo);
+  background-color: #000;
+  position: relative;
+  min-height: 100vh;
+}
+
+
+body::before {
+  content: "";
   background-image: url("/ProjetoSolarOficial/src/assets/img-register/background-cadastro.gif");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: -1;
 }
 
 section.img-login {
@@ -43,7 +58,7 @@ section.img-login {
   align-items: center;
   justify-content: center;
   gap: 150px;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .login-solar {
@@ -54,8 +69,8 @@ section.img-login {
   margin-top: 67px;
   padding: 59px 56px 86px 56px;
   border-radius: 60px;
-  width: 545px;
-  height: 570px;
+  width: 645px;
+  height: 630px;
 }
 
 .login-solar ::placeholder {
@@ -64,9 +79,30 @@ section.img-login {
   font-weight: 600;
 }
 
-.login-solar img {
-  width: 30px;
-  margin: 10px 0 10px 10px;
+.circulo-com-gradiente-e-imagem {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  background-image: linear-gradient(to top,
+      #eed06c,
+      #ffe07bb9,
+      #ffe98483,
+      #ffed4f1e,
+      #ffffff00);
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.144);
+  margin-left: 100px;
+}
+
+.circulo-com-gradiente-e-imagem img {
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
 }
 
 .title-login {
@@ -93,7 +129,8 @@ section.img-login {
   border: 4px solid var(--cor-branca);
   border-radius: 30px;
   gap: 10px;
-  margin: 0 41px;
+  padding: 3px;
+  margin: 10px;
   width: 450px;
   height: 60px;
 
@@ -106,10 +143,12 @@ section.img-login {
 }
 
 .input-password {
+  padding: 4px;
   display: flex;
   border: 4px solid var(--cor-branca);
   border-radius: 30px;
   gap: 10px;
+  ;
   width: 450px;
   height: 60px;
 
@@ -198,21 +237,117 @@ section.img-login {
   }
 }
 
-/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
-@media screen and (max-width: 1200px) {
-  /* CONTAINER DO LAYOUT (Imagem e Login) */
-  section.img-login {
-    flex-direction: column; /* Empilha a imagem e o bloco de login */
-    gap: 50px;
-    margin-top: 100px; /* Aumenta a margem superior para evitar o Header */
+/* POPUP CADASTRO FEITO */
+
+/* Fundo escuro que cobre a tela inteira */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Escurece o fundo */
+  backdrop-filter: blur(3px);
+  /* Desfoque leve no fundo */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Garante que fique na frente de tudo */
+}
+
+.modal-overlay.ativo {
+  display: flex;
+}
+
+/* A caixa do popup */
+.modal-card {
+  /* Degradê Roxo estilo Solar */
+  background: linear-gradient(180deg, #a48cd1 0%, #7d5db8 100%);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  width: 100%;
+  max-width: 970px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+  /* Ou a fonte do seu projeto */
+  position: relative;
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Ícone de check */
+.icon-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Título do Popup */
+.modal-card h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-card p{
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Botão Amarelo */
+.btn-modal {
+  background: linear-gradient(90deg, #ffe085 0%, #ffcd4f 100%);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  margin: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 400px;
+  max-width: 380px;
+}
+
+.btn-modal:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(255, 205, 79, 0.4);
+}
+
+/* Animação de entrada */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  /* BLOCO DE LOGIN */
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
+@media screen and (max-width: 1200px) {
+  section.img-login {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;/
+  }
+
   .login-solar {
-    margin-top: 0; /* Remove a margem original, já ajustada no container */
-    width: 90%; /* Ocupa 90% da largura em tablets */
-    max-width: 500px; /* Limita o tamanho máximo */
-    height: auto; /* Altura flexível */
+    margin-top: 0;
+    max-width: 500px;
+    height: auto;
     padding: 50px 40px;
     border-radius: 40px;
   }
@@ -222,21 +357,18 @@ section.img-login {
     margin-bottom: 25px;
   }
 
-  /* INPUTS */
   .input-email,
   .input-password {
-    width: 100%; /* Ocupa a largura total do container .login-solar */
+    width: 100%;
     margin: 0;
     height: 55px;
   }
 
-  /* Placeholder/Input Text */
   .input-email input,
   .input-password input {
     font-size: 16px;
   }
 
-  /* Checkbox e Link Esqueci Senha */
   .input-remember {
     margin: 15px 0 0 0;
     font-size: 16px;
@@ -246,7 +378,6 @@ section.img-login {
     margin-right: 0;
   }
 
-  /* Botão Entrar */
   .button-entrar {
     margin: 35px 0 15px 0;
   }
@@ -256,7 +387,6 @@ section.img-login {
     font-size: 22px;
   }
 
-  /* Criar Conta */
   .create-account {
     font-size: 18px;
   }
@@ -264,22 +394,15 @@ section.img-login {
 
 /* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
 @media screen and (max-width: 768px) {
+
   /* CONTAINER DO LAYOUT */
   section.img-login {
     gap: 30px;
     margin-top: 120px;
   }
 
-  /* IMAGEM/MASCOTE */
-  /* Assumindo que há uma imagem (se não houver, ignore esta seção) */
-  section.img-login > img {
-    max-width: 80%;
-    height: auto;
-  }
-
-  /* BLOCO DE LOGIN */
   .login-solar {
-    width: 95%; /* Ocupa quase toda a largura da tela */
+    width: 95%;
     max-width: none;
     padding: 30px 20px;
   }
@@ -305,15 +428,13 @@ section.img-login {
     height: 50px;
   }
 
-  /* Placeholder/Input Text */
   .input-email input,
   .input-password input {
     font-size: 14px;
   }
 
-  /* Checkbox e Link Esqueci Senha */
   .input-remember {
-    flex-direction: column; /* Empilha checkbox e link */
+    flex-direction: column;
     align-items: flex-start;
     gap: 8px;
     font-size: 14px;
@@ -332,7 +453,7 @@ section.img-login {
 
   /* Criar Conta */
   .create-account {
-    flex-direction: column; /* Empilha o texto */
+    flex-direction: column;
     font-size: 16px;
     text-align: center;
     gap: 5px;

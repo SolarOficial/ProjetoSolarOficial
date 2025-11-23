@@ -1,3 +1,81 @@
+// BANCO DE DADOS DOS PROFISSIONAIS
+const profissionais = {
+    'ana': {
+        nome: 'Ana Silva',
+        cargo: 'Psicóloga Estagiária',
+        foto: '/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9.png',
+        sobre: 'Psicóloga clínica formada pela USP, com foco em saúde mental e apoio familiar. Na Solar, atua oferecendo acolhimento psicológico online, com empatia, escuta ativa e cuidado humano.'
+    },
+    'guilherme': {
+        nome: 'Guilherme Soares',
+        cargo: 'Psiquiatra Estagiário',
+        foto: '/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (1).png',
+        sobre: 'Estudante do 10º semestre de Medicina na UNIFESP. Acredita na psiquiatria humanizada, buscando desmistificar o tratamento medicamentoso e cuidar da saúde integral do paciente.'
+    },
+    'sofia': {
+        nome: 'Sofia Martins',
+        cargo: 'Nutricionista Estagiária',
+        foto: '/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (2).png',
+        sobre: 'Cursando Nutrição na UFRJ. Defende uma nutrição sem terrorismo, adaptando a alimentação à realidade financeira e à rotina corrida das mães solo.'
+    },
+    'lucas': {
+        nome: 'Lucas Pereira',
+        cargo: 'Psicólogo Estagiário',
+        foto: '/ProjetoSolarOficial/src/assets/img-professionals/foto-lucas.jpg',
+        sobre: 'Apaixonado pelo comportamento humano (UFMG). Meu foco é ajudar pais e mães a lidarem com a sobrecarga emocional e construírem caminhos mais leves.'
+    },
+    'beatriz': {
+        nome: 'Beatriz Costa',
+        cargo: 'Psiquiatra Estagiária',
+        foto: '/ProjetoSolarOficial/src/assets/img-professionals/foto-beatriz.jpg',
+        sobre: 'Futura médica pela UFPR. Trabalho com foco na escuta atenta do paciente para além dos sintomas, buscando sempre a saúde mental aliada ao bem-estar físico.'
+    },
+    'juliana': {
+        nome: 'Juliana Alves',
+        cargo: 'Nutricionista Estagiária',
+        foto: '/ProjetoSolarOficial/src/assets/img-professionals/foto-juliana.jpg',
+        sobre: 'Estudante da UFBA. Acredito na comida que nutre a alma. Vamos montar um cardápio que caiba no seu bolso e no seu paladar, sem restrições malucas.'
+    }
+};
+
+// FUNÇÃO QUE RODA AO CARREGAR A PÁGINA
+document.addEventListener('DOMContentLoaded', () => {
+    /* Pega a URL atual (Ex: agendamento.html?id=lucas) */
+    const params = new URLSearchParams(window.location.search);
+    const idProfissional = params.get('id');
+
+    /*  Verifica se tem um ID e se ele existe no nosso "banco de dados" */
+    if (idProfissional && profissionais[idProfissional]) {
+        const dados = profissionais[idProfissional];
+
+        /* Atualiza os elementos na tela */
+        
+        // Atualiza Nome
+        const elementoNome = document.querySelector('.card-profissional .nome');
+        if(elementoNome) elementoNome.textContent = dados.nome;
+
+        // Atualiza Cargo
+        const elementoCargo = document.querySelector('.card-profissional .cargo');
+        if(elementoCargo) elementoCargo.textContent = dados.cargo;
+
+        // Atualiza Sobre
+        const elementoSobre = document.querySelector('.card-profissional .sobre');
+        if(elementoSobre) elementoSobre.textContent = dados.sobre;
+
+        // Atualiza Foto
+        const elementoFoto = document.querySelector('.card-profissional .foto-profissional');
+        if(elementoFoto) {
+            elementoFoto.style.backgroundImage = `url('${dados.foto}')`;
+        }
+
+        // Atualiza também o nome na Etapa 3 (Confirmação) para já ficar certo
+        const confirmacaoProfissional = document.getElementById('conf-profissional');
+        if(confirmacaoProfissional) confirmacaoProfissional.textContent = dados.nome;
+    }
+});
+
+/* AGENDAR CONSULTA */
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const etapas = document.querySelectorAll(".etapa");

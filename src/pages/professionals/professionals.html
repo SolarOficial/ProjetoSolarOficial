@@ -215,153 +215,238 @@
     </section>
     <!--importancia-->
 
+    <!--profissionais-->
     <section class="profissionais animar-scroll">
       <div class="margem-global">
         <h2>Profissionais</h2>
 
-        <div class="container">
-          <div class="ajustar-seta" id="ajustar-seta">
-            <div class="seta">
-              <img src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda.png" alt="seta" />
-            </div>
-            <!--seta-->
+        <div class="layout-slider">
+
+          <div class="seta-nav esquerda">
+            <img src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda.png" alt="Seta Esquerda" />
+          </div>
+
+          <div class="lista-cards">
 
             <div class="container-usuario">
-              <div class="container-conteudo-usuario">
-                <div class="usuario">
-                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9.png" alt="profissional 1" />
-                  <div class="texto">
-                    <p>Ana Silva</p>
-                    <p>Psicóloga Clínica</p>
-                  </div>
-                  <!--texto-->
+              <div class="usuario">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9.png" alt="Ana Silva" />
+                <div class="texto">
+                  <p>Ana Silva</p>
+                  <p>Psicóloga Estagiária</p>
                 </div>
-                <!--usuario-->
-                <div class="container-textos">
-                  <div class="icone-texto">
-                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="profissional 2" />
-                    <p>CRP: 05/12345</p>
-                  </div>
-                  <!--icone-texto-->
-
-                  <div class="icone-texto">
-                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="logo de local" />
-                    <p>São Paulo - SP</p>
-                  </div>
-                  <!--icone-texto-->
-
-                  <h3>
-                    "Acredito que todo ser humano merece acesso à saúde mental
-                    de qualidade. Como voluntária, posso oferecer apoio a quem
-                    mais precisa."
-                  </h3>
-                  <div class="butaos">
-                    <button>Detalhes</button>
-                    <button>Agendar</button>
-                  </div>
-                  <!--butaos-->
-                </div>
-                <!--container-textos-->
               </div>
-              <!--container-conteudo-usuario-->
+              <div class="container-textos">
+                <div class="icone-texto">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="Formatura" />
+                  <p>8°Semestre em Psicologia</p>
+                </div>
+                <div class="icone-texto-local">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="Local" />
+                  <p>São Paulo - SP</p>
+                </div>
+                <h3>"Acredito que todo ser humano merece acesso à saúde mental. Como voluntária, vou oferecer apoio à
+                  quem mais precisa."</h3>
+                <div class="butaos">
+                  <button class="btn-detalhes" onclick="abrirModalDetalhes(this)" data-nome="Ana Silva"
+                    data-cargo="Psicóloga Estagiária"
+                    data-foto="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9.png"
+                    data-formacao="Cursando 8º Semestre de Psicologia na USP"
+                    data-supervisor="Dra. Roberta Martins (CRP 06/12345)"
+                    data-bio="Fui criada por uma mãe solo incrível e sei dos desafios. Meu objetivo é oferecer um espaço de escuta sem julgamentos."
+                    data-tags="Ansiedade, Maternidade Solo, Autoestima">
+                    Detalhes
+                  </button>
+                  <a
+                    href="/ProjetoSolarOficial/src/pages/professionals/scheduleAppointment/agendamento.html?id=ana">Agendar</a>
+                </div>
+              </div>
             </div>
-            <!--ajustar-seta-->
+
+            <div class="container-usuario">
+              <div class="usuario">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (1).png" alt="Guilherme Soares" />
+                <div class="texto">
+                  <p>Guilherme Soares</p>
+                  <p>Psiquiatra Estagiário</p>
+                </div>
+              </div>
+              <div class="container-textos">
+                <div class="icone-texto">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="Formatura" />
+                  <p>10°Semestre em Medicina</p>
+                </div>
+                <div class="icone-texto-local">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="Local" />
+                  <p>São Paulo - SP</p>
+                </div>
+                <h3>"A saúde mental é um direito, não um luxo. Estou aqui para tornar esse acesso mais humano e
+                  possível."</h3>
+                <div class="butaos">
+                  <button class="btn-detalhes" onclick="abrirModalDetalhes(this)" data-nome="Guilherme Soares"
+                    data-cargo="Psiquiatra Estagiário"
+                    data-foto="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (1).png"
+                    data-formacao="Cursando 10º Semestre de Medicina na UNIFESP"
+                    data-supervisor="Dr. Carlos Mendes (CRM 123456)"
+                    data-bio="Acredito na psiquiatria humanizada. Estou aqui para desmistificar o tratamento medicamentoso e cuidar da sua saúde integral."
+                    data-tags="Depressão, Burnout, Diagnóstico">
+                    Detalhes
+                  </button>
+                  <a
+                    href="/ProjetoSolarOficial/src/pages/professionals/scheduleAppointment/agendamento.html?id=guilherme">Agendar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-usuario">
+              <div class="usuario">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (2).png" alt="Sofia Martins" />
+                <div class="texto">
+                  <p>Sofia Martins</p>
+                  <p>Nutricionista Estagiária</p>
+                </div>
+              </div>
+              <div class="container-textos">
+                <div class="icone-texto">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="Formatura" />
+                  <p>6°Semestre em Nutrição</p>
+                </div>
+                <div class="icone-texto-local">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="Local" />
+                  <p>Rio de Janeiro - RJ</p>
+                </div>
+                <h3>"Ser voluntária é retribuir o que aprendi: cuidar de pessoas é também cuidar do mundo."</h3>
+                <div class="butaos">
+                  <button class="btn-detalhes" onclick="abrirModalDetalhes(this)" data-nome="Sofia Martins"
+                    data-cargo="Nutricionista Estagiária"
+                    data-foto="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (2).png"
+                    data-formacao="Cursando 6º Semestre de Nutrição na UFRJ"
+                    data-supervisor="Dra. Patrícia Lima (CRN 4321)"
+                    data-bio="Nutrição sem terrorismo. Vamos adaptar sua alimentação à sua realidade financeira e rotina corrida."
+                    data-tags="Introdução Alimentar, Nutrição Econômica, Reeducação">
+                    Detalhes
+                  </button>
+                  <a
+                    href="/ProjetoSolarOficial/src/pages/professionals/scheduleAppointment/agendamento.html?id=sofia">Agendar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-usuario">
+              <div class="usuario">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/foto-lucas.jpg" alt="Lucas Pereira" />
+                <div class="texto">
+                  <p>Lucas Pereira</p>
+                  <p>Psicólogo Estagiário</p>
+                </div>
+              </div>
+              <div class="container-textos">
+                <div class="icone-texto">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="Formatura" />
+                  <p>7°Semestre em Psicologia</p>
+                </div>
+                <div class="icone-texto-local">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="Local" />
+                  <p>Belo Horizonte - MG</p>
+                </div>
+                <h3>"O acolhimento é o primeiro passo para a transformação. Juntos, vamos construir novos caminhos."
+                </h3>
+                <div class="butaos">
+                  <button class="btn-detalhes" onclick="abrirModalDetalhes(this)" data-nome="Lucas Pereira"
+                    data-cargo="Psicólogo Estagiário"
+                    data-foto="/ProjetoSolarOficial/src/assets/img-professionals/foto-lucas.jpg"
+                    data-formacao="Cursando 7º Semestre de Psicologia na UFMG"
+                    data-supervisor="Dra. Roberta Martins (CRP 06/12345)"
+                    data-bio="Apaixonado pelo comportamento humano. Meu foco é ajudar pais e mães a lidarem com a sobrecarga emocional e construírem caminhos mais leves."
+                    data-tags="Luto, Relacionamentos, Autoconhecimento">
+                    Detalhes
+                  </button>
+                  <a
+                    href="/ProjetoSolarOficial/src/pages/professionals/scheduleAppointment/agendamento.html?id=lucas">Agendar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-usuario">
+              <div class="usuario">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/foto-beatriz.jpg" alt="Beatriz Costa" />
+                <div class="texto">
+                  <p>Beatriz Costa</p>
+                  <p>Psiquiatra Estagiário</p>
+                </div>
+              </div>
+              <div class="container-textos">
+                <div class="icone-texto">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="Formatura" />
+                  <p>9°Semestre em Medicina</p>
+                </div>
+                <div class="icone-texto-local">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="Local" />
+                  <p>Curitiba - PR</p>
+                </div>
+                <h3>"Saúde mental se faz com ciência e afeto. Estou aqui para oferecer o suporte médico que você
+                  precisa."
+                </h3>
+                <div class="butaos">
+                  <button class="btn-detalhes" onclick="abrirModalDetalhes(this)" data-nome="Beatriz Costa"
+                    data-cargo="Psiquiatra Estagiária"
+                    data-foto="/ProjetoSolarOficial/src/assets/img-professionals/foto-beatriz.jpg"
+                    data-formacao="Cursando 9º Semestre de Medicina na UFPR"
+                    data-supervisor="Dr. Carlos Mendes (CRM 123456)"
+                    data-bio="A medicina é minha ferramenta para trazer alívio. Trabalho com foco na escuta atenta do paciente para além dos sintomas, buscando saúde integral."
+                    data-tags="Ansiedade, Insônia, Transtornos de Humor">
+                    Detalhes
+                  </button>
+                  <a
+                    href="/ProjetoSolarOficial/src/pages/professionals/scheduleAppointment/agendamento.html?id=beatriz">Agendar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-usuario">
+              <div class="usuario">
+                <img src="/ProjetoSolarOficial/src/assets/img-professionals/foto-juliana.jpg" alt="Juliana Alves" />
+                <div class="texto">
+                  <p>Juliana Alves</p>
+                  <p>Nutricionista Estagiária</p>
+                </div>
+              </div>
+              <div class="container-textos">
+                <div class="icone-texto">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="Formatura" />
+                  <p>8°Semestre em Nutrição</p>
+                </div>
+                <div class="icone-texto-local">
+                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="Local" />
+                  <p>Salvador - BA</p>
+                </div>
+                <h3>"Alimentação é autocuidado. Vamos descomplicar sua rotina alimentar com respeito e saúde."</h3>
+                <div class="butaos">
+                  <button class="btn-detalhes" onclick="abrirModalDetalhes(this)" data-nome="Juliana Alves"
+                    data-cargo="Nutricionista Estagiária"
+                    data-foto="/ProjetoSolarOficial/src/assets/img-professionals/foto-juliana.jpg"
+                    data-formacao="Cursando 8º Semestre de Nutrição na UFBA"
+                    data-supervisor="Dra. Patrícia Lima (CRN 4321)"
+                    data-bio="Acredito na comida que nutre a alma. Vamos montar um cardápio que caiba no seu bolso e no seu paladar, sem restrições malucas."
+                    data-tags="Nutrição Infantil, Emagrecimento, Hábitos Saudáveis">
+                    Detalhes
+                  </button>
+                  <a
+                    href="/ProjetoSolarOficial/src/pages/professionals/scheduleAppointment/agendamento.html?id=juliana">Agendar</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <!--container-usuario-->
 
-          <div class="container-usuario">
-            <div class="usuario">
-              <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (1).png" alt="profissional 2" />
-              <div class="texto">
-                <p>Guilherme Soares</p>
-                <p>Psicóloga Clínica</p>
-              </div>
-              <!--texto-->
-            </div>
-            <!--usuario-->
-
-            <div class="container-textos">
-              <div class="icone-texto">
-                <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="crm do profissional" />
-                <p>CRM: 05/12345</p>
-              </div>
-              <!--icone-texto-->
-
-              <div class="icone-texto">
-                <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="logo local" />
-                <p>São Paulo - SP</p>
-              </div>
-              <!--icone-texto-->
-
-              <h3>
-                A saúde mental é um direito, não um luxo. Estou aqui para
-                tornar esse acesso mais humano e possível.
-              </h3>
-              <div class="butaos">
-                <button>Detalhes</button>
-                <button>Agendar</button>
-              </div>
-              <!--butaos-->
-            </div>
-            <!--container-textos-->
+          <div class="seta-nav direita">
+            <img src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda (1).png" alt="Seta Direita" />
           </div>
-          <!--container-usuario-->
-
-          <div class="container-usuario">
-            <div class="ajustar-seta">
-              <div class="container-conteudo-usuario">
-                <div class="usuario">
-                  <img src="/ProjetoSolarOficial/src/assets/img-professionals/Ellipse 9 (2).png" alt="profissional 3" />
-                  <div class="texto">
-                    <p>Sofia Martins</p>
-                    <p>Nutricionista</p>
-                  </div>
-                  <!--texto-->
-                </div>
-                <!--usuario-->
-
-                <div class="container-textos">
-                  <div class="icone-texto">
-                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector.png" alt="crm do profissional" />
-                    <p>CRN: 3 12567</p>
-                  </div>
-                  <!--icone-texto-->
-
-                  <div class="icone-texto">
-                    <img src="/ProjetoSolarOficial/src/assets/img-professionals/Vector (1).png" alt="logo do local" />
-                    <p>Rio de Janeiro - RJ</p>
-                  </div>
-                  <!--icone-texto-->
-
-                  <h3>
-                    Ser voluntária é retribuir o que aprendi: cuidar de
-                    pessoas é também cuidar do mundo.
-                  </h3>
-
-                  <div class="butaos">
-                    <button>Detalhes</button>
-                    <button>Agendar</button>
-                  </div>
-                  <!--butaos-->
-                </div>
-                <!--container-textos-->
-              </div>
-              <!--container-usuario-seta-->
-
-              <div class="seta">
-                <img src="/ProjetoSolarOficial/src/assets/img-professionals/seta_esquerda (1).png" alt="" />
-              </div>
-              <!--seta -->
-            </div>
-            <!--ajustar-seta-->
-          </div>
-          <!--container-usuario-->
         </div>
-        <!--container-->
+
       </div>
-      <!--margem-global-->
+      </div>
     </section>
-    <!--profissionais-->
+
 
     <section class="seguranca animar-scroll">
       <div class="margem-global">
@@ -652,9 +737,48 @@
       </p>
     </div>
   </footer>
-  <script src="../../js/script.js"></script>
-  <script src="../../js/professionals.js"></script>
-  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+
+  <div class="modal-detalhes-overlay" id="modalDetalhes">
+    <div class="modal-detalhes-card">
+      <button class="fechar-modal" onclick="fecharModalDetalhes()">&times;</button>
+
+      <div class="modal-header">
+        <img id="modal-foto" src="" alt="Foto Profissional">
+        <div>
+          <h3 id="modal-nome">Nome do Profissional</h3>
+          <p id="modal-cargo">Cargo</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="info-academica">
+          <h4>🎓 Formação & Supervisão</h4>
+          <p id="modal-formacao">Instituição</p>
+          <p class="supervisao"><strong>Supervisão:</strong> <span id="modal-supervisor">Nome do Supervisor</span></p>
+        </div>
+
+        <div class="sobre-mim">
+          <h4>💬 Sobre mim</h4>
+          <p id="modal-bio">Texto sobre o profissional...</p>
+        </div>
+
+        <div class="especialidades">
+          <h4>🏷️ Posso te ajudar com:</h4>
+          <div id="modal-tags" class="tags-container">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="/ProjetoSolarOficial/src/pages/professionals/scheduleAppointment/agendamento.html"
+          class="btn-agendar-modal">Agendar Consulta</a>
+      </div>
+    </div>
+  </div>
+
 </body>
+<script src="../../js/script.js"></script>
+<script src="../../js/professionals.js"></script>
+<script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
 
 </html>

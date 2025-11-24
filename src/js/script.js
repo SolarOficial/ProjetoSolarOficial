@@ -55,9 +55,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting) {
+      if (entry.isIntersecting) {
         entry.target.classList.add('mostrar');
-        observer.unobserve(entry.target); 
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
@@ -69,13 +69,13 @@ window.addEventListener('DOMContentLoaded', () => {
 // Solaria
 
 
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/691a0ba6ccfc7c195b6c429d/1ja6rr188';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+  var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+  s1.async = true;
+  s1.src = 'https://embed.tawk.to/691a0ba6ccfc7c195b6c429d/1ja6rr188';
+  s1.charset = 'UTF-8';
+  s1.setAttribute('crossorigin', '*');
+  s0.parentNode.insertBefore(s1, s0);
 })();
 

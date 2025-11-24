@@ -219,8 +219,6 @@ body::before {
 }
 
 /* POPUP CADASTRO FEITO */
-
-/* Fundo escuro que cobre a tela inteira */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -249,7 +247,7 @@ body::before {
     width: 90%;
     max-width: 450px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    font-family: sans-serif; /* Ou a fonte do seu projeto */
+    font-family: var(--font-paragrafo);
     position: relative;
     animation: slideUp 0.4s ease-out;
 }

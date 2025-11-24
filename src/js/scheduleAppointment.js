@@ -1,4 +1,5 @@
-// BANCO DE DADOS DOS PROFISSIONAIS
+/* "BANCO DE DADOS" DOS PROFISSIONAIS */
+
 const profissionais = {
     'ana': {
         nome: 'Ana Silva',
@@ -38,9 +39,9 @@ const profissionais = {
     }
 };
 
-// FUNÇÃO QUE RODA AO CARREGAR A PÁGINA
+/* FUNÇÃO QUE RODA AO CARREGAR A PÁGINA */
 document.addEventListener('DOMContentLoaded', () => {
-    /* Pega a URL atual (Ex: agendamento.html?id=lucas) */
+    /* Pega a URL atual (Ex: ...agendamento.html?id=lucas) */
     const params = new URLSearchParams(window.location.search);
     const idProfissional = params.get('id');
 

@@ -121,7 +121,6 @@ ul.dropdown li a:hover {
 /* RESPONSIVIDADE */
 
 @media (max-width: 1100px) {
-
   /* Ajuste do Container */
   .container-pai {
     padding: 0 20px;
@@ -148,7 +147,7 @@ ul.dropdown li a:hover {
 
   #hamburger::after,
   #hamburger::before {
-    content: '';
+    content: "";
     display: block;
     width: 25px;
     height: 2px;
@@ -227,15 +226,15 @@ ul.dropdown li a:hover {
   }
 
   /* Animação do X no botão */
-  .nav-pai.active~#btn-mobile #hamburger {
+  .nav-pai.active ~ #btn-mobile #hamburger {
     border-top-color: transparent;
   }
 
-  .nav-pai.active~#btn-mobile #hamburger::before {
+  .nav-pai.active ~ #btn-mobile #hamburger::before {
     transform: rotate(135deg);
   }
 
-  .nav-pai.active~#btn-mobile #hamburger::after {
+  .nav-pai.active ~ #btn-mobile #hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
   }

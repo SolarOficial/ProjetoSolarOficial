@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* VARIAVEIS CORES e FONTES */
-
+/* ======================================================= */
+/* --- VARIÁVEIS --- */
 :root {
   --cor-roxo-claro: #9675ce;
   --cor-roxo-escuro: #4a356d;
@@ -11,456 +11,181 @@
   --cor-preta: #000000;
   --cor-amarelo: #fff59c;
   --font-titulo: "Karla", sans-serif;
-  --font-paragrafo: "Figtree";
+  --font-paragrafo: "Figtree", sans-serif;
 }
 
-/* CONFIGURAÇÕES GLOBAIS */
-
+/* ======================================================= */
+/* --- GLOBAL --- */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .margem-global {
-  margin: 0 60px 0 60px;
+  margin: 0 60px;
 }
 
-/*SECTION SOLMIDIA*/
+/* Removida a margem superior de 150px para todas as sections */
+/* A margem será aplicada individualmente, exceto em .solmidia */
 
+section h2 {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: clamp(26px, 4vw, 45px);
+  background: linear-gradient(to right, #9675ce, #4c3b68);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: clamp(20px, 4vw, 62px);
+}
+
+section #descricao {
+  font-family: var(--font-titulo);
+  font-size: clamp(16px, 2vw, 30px);
+  color: var(--cor-preta);
+  text-align: center;
+  margin-bottom: clamp(20px, 3vw, 50px);
+}
+
+/* ======================================================= */
+/* --- SEÇÃO SOLMIDIA (COLADA NO TOPO/NAV) --- */
 .solmidia {
   background-image: url(/ProjetoSolarOficial/src/assets/img-sunMidia/img-mae-filha-lendo.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 651px;
+  background-position: center;
+  height: clamp(350px, 50vh, 651px);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 0; /* GARANTE QUE ESTEJA COLADO NO TOPO */
 }
 
 .solmidia h2 {
-  font-size: 100px;
-  font-family: var(--font-titulo);
-  background: linear-gradient(to right, #ffb64d, #cb913d, #996d2e);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-size: clamp(48px, 8vw, 100px);
 }
 
 .solmidia p {
-  font-size: 30px;
-  font-family: var(--font-titulo);
+  font-size: clamp(16px, 3vw, 30px);
 }
 
-/*SECTION EDUCAÇÃO*/
-
-section.educacao {
-  margin-top: 154px;
-}
-
-section.educacao .margem-global h2 {
-  font-family: var(--font-titulo);
-  font-size: 45px;
-  font-weight: 700;
-  background: linear-gradient(to right, #9675ce, #4c3b68);
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-  margin-bottom: 62px;
-}
-
-section.educacao .margem-global #descricao {
-  font-size: 30px;
-  font-family: var(--font-titulo);
-  color: var(--cor-preta);
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-section.educacao .margem-global .container-cards {
+/* ======================================================= */
+/* --- CARDS COMUNS --- */
+section .container-cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
-section.educacao .margem-global .card {
-  width: 388px;
-  height: 630px;
-  border-radius: 19.29px;
-  box-shadow: 0 4.82px 4.82px var(--cor-preta);
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section.educacao .margem-global .card .textos {
-  width: 355.63px;
-  height: 255.57px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-section.educacao .margem-global .card .textos h3 {
-  font-family: var(--font-titulo);
-  font-size: 24px;
-  color: var(--cor-preta);
-}
-
-section.educacao .margem-global .card .textos p {
-  font-family: var(--font-paragrafo);
-  font-size: 20px;
-  color: #5a5a5a;
-}
-
-section.educacao .margem-global .card .textos h4 {
-  color: var(--cor-roxo-claro);
-  font-family: var(--font-paragrafo);
-  font-size: 22px;
-}
-
-/*SECTION SAUDE*/
-
-section.saude {
-  margin-top: 154px;
-}
-
-section.saude .margem-global h2 {
-  font-family: var(--font-titulo);
-  font-size: 45px;
-  font-weight: 700;
-  background: linear-gradient(to right, #9675ce, #4c3b68);
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-  margin-bottom: 62px;
-}
-
-section.saude .margem-global #descricao {
-  font-size: 30px;
-  font-family: var(--font-titulo);
-  color: var(--cor-preta);
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-section.saude .margem-global .container-cards {
-  display: flex;
-  justify-content: space-between;
-}
-
-section.saude .margem-global .card {
-  width: 388px;
-  height: 630px;
-  border-radius: 19.29px;
-  box-shadow: 0 4.82px 4.82px var(--cor-preta);
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section.saude .margem-global .card .textos {
-  width: 355.63px;
-  height: 255.57px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-section.saude .margem-global .card .textos h3 {
-  font-family: var(--font-titulo);
-  font-size: 24px;
-  color: var(--cor-preta);
-}
-
-section.saude .margem-global .card .textos p {
-  font-family: var(--font-paragrafo);
-  font-size: 20px;
-  color: #5a5a5a;
-}
-
-section.saude .margem-global .card .textos h4 {
-  color: var(--cor-roxo-claro);
-  font-family: var(--font-paragrafo);
-  font-size: 22px;
-}
-
-/*SECTION HISTÓRIAS INSPIRADORAS*/
-
-section.historias-inspiradoras {
-  margin-top: 154px;
-}
-
-section.historias-inspiradoras .margem-global h2 {
-  font-family: var(--font-titulo);
-  font-size: 45px;
-  font-weight: 700;
-  background: linear-gradient(to right, #9675ce, #4c3b68);
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-  margin-bottom: 62px;
-}
-
-section.historias-inspiradoras .margem-global #descricao {
-  font-size: 30px;
-  font-family: var(--font-titulo);
-  color: var(--cor-preta);
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-section.historias-inspiradoras .margem-global .container-cards {
-  display: flex;
-  justify-content: space-between;
-}
-
-section.historias-inspiradoras .margem-global .card {
-  width: 388px;
-  height: 630px;
-  border-radius: 19.29px;
-  box-shadow: 0 4.82px 4.82px var(--cor-preta);
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section.historias-inspiradoras .margem-global .card img {
-  width: 100%;
-}
-
-section.historias-inspiradoras .margem-global .card .textos {
-  width: 355.63px;
-  height: 255.57px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-section.historias-inspiradoras .margem-global .card .textos h3 {
-  font-family: var(--font-titulo);
-  font-size: 24px;
-  color: var(--cor-preta);
-}
-
-section.historias-inspiradoras .margem-global .card .textos p {
-  font-family: var(--font-paragrafo);
-  font-size: 20px;
-  color: #5a5a5a;
-}
-
-section.historias-inspiradoras .margem-global .card .textos h4 {
-  color: var(--cor-roxo-claro);
-  font-family: var(--font-paragrafo);
-  font-size: 22px;
-}
-
-/*SECTION TRABALHO E CARREIRA*/
-
-section.trabalho-carreira {
-  margin-top: 154px;
-}
-
-section.trabalho-carreira .margem-global h2 {
-  font-family: var(--font-titulo);
-  font-size: 45px;
-  font-weight: 700;
-  background: linear-gradient(to right, #9675ce, #4c3b68);
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-  margin-bottom: 62px;
-}
-
-section.trabalho-carreira .margem-global #descricao {
-  font-size: 30px;
-  font-family: var(--font-titulo);
-  color: var(--cor-preta);
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-section.trabalho-carreira .margem-global .container-cards {
-  display: flex;
-  justify-content: space-between;
-}
-
-section.trabalho-carreira .margem-global .card {
-  width: 388px;
-  height: 630px;
-  border-radius: 19.29px;
-  box-shadow: 0 4.82px 4.82px var(--cor-preta);
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section.trabalho-carreira .margem-global .card img {
-  width: 100%;
-}
-
-section.trabalho-carreira .margem-global .card .textos {
-  width: 355.63px;
-  height: 255.57px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-section.trabalho-carreira .margem-global .card .textos h3 {
-  font-family: var(--font-titulo);
-  font-size: 24px;
-  color: var(--cor-preta);
-}
-
-section.trabalho-carreira .margem-global .card .textos p {
-  font-family: var(--font-paragrafo);
-  font-size: 20px;
-  color: #5a5a5a;
-}
-
-section.trabalho-carreira .margem-global .card .textos h4 {
-  color: var(--cor-roxo-claro);
-  font-family: var(--font-paragrafo);
-  font-size: 22px;
-}
-
-/*SECTION NOVIDADES*/
-
-section.novidades {
-  margin-top: 154px;
-}
-
-section.novidades .margem-global h2 {
-  font-family: var(--font-titulo);
-  font-size: 45px;
-  font-weight: 700;
-  background: linear-gradient(to right, #9675ce, #4c3b68);
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-  margin-bottom: 62px;
-}
-
-section.novidades .margem-global #descricao {
-  font-size: 30px;
-  font-family: var(--font-titulo);
-  color: var(--cor-preta);
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-section.novidades .margem-global .container-cards {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-section.novidades .margem-global .card {
-  width: 322px;
-  height: 546px;
+section .card {
+  width: clamp(280px, 25%, 388px);
   border-radius: 16px;
-  box-shadow: 0 4.82px 4.82px var(--cor-preta);
-  gap: 30px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
+  padding-bottom: 20px;
 }
 
-section.novidades .margem-global .card img {
-  width: 322px;
-  height: 216.59px;
+section .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px 16px 0 0;
 }
 
-section.novidades .margem-global .card .textos {
-  width: 295px;
-  height: 212px;
+section .card .textos {
+  width: 90%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
 }
 
-section.novidades .margem-global .card .textos h3 {
+section .card .textos h3 {
   font-family: var(--font-titulo);
-  font-size: 24px;
+  font-size: clamp(18px, 2vw, 24px);
   color: var(--cor-preta);
 }
 
-section.novidades .margem-global .card .textos p {
+section .card .textos p {
   font-family: var(--font-paragrafo);
-  font-size: 17px;
+  font-size: clamp(14px, 1.5vw, 20px);
   color: #5a5a5a;
 }
 
-section.novidades .margem-global .card .textos h4 {
-  color: var(--cor-roxo-claro);
+section .card .textos h4 {
   font-family: var(--font-paragrafo);
-  font-size: 18px;
+  font-size: clamp(16px, 1.5vw, 22px);
+  color: var(--cor-roxo-claro);
 }
 
-/*SECTION GOSTOU*/
+/* ======================================================= */
+/* --- SEÇÕES DE CONTEÚDO (APLICANDO MARGEM SUPERIOR INDIVIDUALMENTE) --- */
+section.educacao,
+section.saude,
+section.historias-inspiradoras,
+section.trabalho-carreira,
+section.novidades {
+  margin-top: 80px; /* Mantendo o espaçamento entre as seções */
+}
 
+/* ======================================================= */
+/* --- SEÇÃO GOSTOU --- */
 section.gostou {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 142px;
+  margin-top: 80px;
+  text-align: center;
 }
 
 section.gostou .margem-global {
-  width: 1077px;
+  width: 100%;
+  max-width: 1077px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-section.gostou .margem-global h2 {
-  font-family: var(--font-titulo);
-  font-size: 64px;
-}
-
-section.gostou .margem-global h3 {
-  font-family: var(--font-titulo);
-  font-size: 40px;
-}
-
-section.gostou .margem-global h3 span {
-  color: var(--cor-laranja);
-}
-
-section.gostou .margem-global p {
-  width: 1002px;
-  font-family: var(--font-paragrafo);
-  font-size: 20px;
-}
-
-section.gostou .margem-global .img-centro {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
 }
 
-section.gostou .margem-global button {
-  width: 315px;
-  height: 74px;
+section.gostou h2 {
+  font-size: clamp(32px, 5vw, 64px);
+}
+
+section.gostou h3 {
+  font-size: clamp(22px, 4vw, 40px);
+}
+
+section.gostou p {
+  width: 100%;
+  font-size: clamp(14px, 2vw, 20px);
+  padding: 0 10px;
+}
+
+section.gostou .img-centro img {
+  width: 80%;
+  max-width: 400px;
+}
+
+section.gostou button {
+  width: clamp(220px, 25%, 315px);
+  height: clamp(50px, 5vh, 74px);
+  font-size: clamp(20px, 2vw, 26px);
   border-radius: 30px;
   border: none;
   background: var(--cor-laranja);
   color: var(--cor-preta);
-  font-family: var(--font-titulo);
-  font-size: 26px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
-/* FOOTER */
-
-/* FOOTER */
+/* ======================================================= */
+/* --- FOOTER --- */
 footer {
   margin-top: 100px;
   background: var(--cor-roxo-claro);
@@ -470,11 +195,12 @@ footer {
 
 footer .margem-global {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
   margin-bottom: 40px;
 }
 
+/* Conteúdo do Footer */
 .secao-footer h3 {
   font-family: var(--font-titulo);
   font-size: 28px;
@@ -482,12 +208,7 @@ footer .margem-global {
   margin-bottom: 20px;
 }
 
-.secao-footer p {
-  font-family: var(--font-paragrafo);
-  font-size: 16px;
-  color: var(--cor-branca);
-}
-
+/* Logo */
 .logo-footer {
   display: flex;
   align-items: center;
@@ -505,6 +226,7 @@ footer .margem-global {
   font-weight: 700;
 }
 
+/* Redes Sociais */
 .redes-sociais {
   display: flex;
   flex-direction: column;
@@ -538,8 +260,10 @@ footer .margem-global {
   fill: var(--cor-laranja);
 }
 
+/* Lista de Páginas */
 .lista-paginas {
   list-style: none;
+  padding: 0;
 }
 
 .lista-paginas li {
@@ -559,6 +283,7 @@ footer .margem-global {
   padding-left: 5px;
 }
 
+/* Direitos Autorais */
 .direitos-autorais {
   text-align: center;
   padding-top: 30px;
@@ -566,4 +291,73 @@ footer .margem-global {
   font-family: var(--font-paragrafo);
   font-size: 14px;
   color: var(--cor-branca);
+}
+
+/* ======================================================= */
+/* --- MEDIA QUERIES --- */
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .margem-global {
+    margin: 0 20px;
+  }
+  section h2 {
+    font-size: clamp(26px, 6vw, 40px);
+    margin-bottom: 30px;
+  }
+  section #descricao {
+    font-size: clamp(14px, 2vw, 22px);
+    margin-bottom: 25px;
+  }
+  .solmidia {
+    height: 400px;
+    background-position: center;
+  }
+  .solmidia h2 {
+    font-size: clamp(36px, 6vw, 60px);
+  }
+  .solmidia p {
+    font-size: clamp(14px, 2vw, 20px);
+  }
+
+  /* Footer: Centraliza itens no mobile */
+  footer .margem-global {
+    grid-template-columns: 1fr;
+    text-align: start;
+  }
+  .logo-footer {
+    justify-content: start;
+  }
+  .redes-sociais {
+    align-items: start;
+  }
+}
+
+/* Celulares pequenos (<= 560px) */
+@media (max-width: 560px) {
+  .margem-global {
+    margin: 0 15px;
+  }
+  section h2 {
+    font-size: clamp(22px, 5vw, 32px);
+    margin-bottom: 20px;
+  }
+  section #descricao {
+    font-size: clamp(12px, 2vw, 18px);
+    margin-bottom: 15px;
+  }
+  .solmidia {
+    height: 350px;
+  }
+  .solmidia h2 {
+    font-size: clamp(28px, 5vw, 48px);
+  }
+  .solmidia p {
+    font-size: clamp(12px, 2vw, 16px);
+  }
+  .section .card {
+    width: 90%;
+    max-width: 300px;
+    padding-bottom: 15px;
+  }
 }

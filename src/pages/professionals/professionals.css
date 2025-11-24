@@ -127,7 +127,11 @@ section.importancia .margem-global .container-conteudo {
   gap: 131px;
 }
 
-section.importancia .margem-global .container-conteudo article .container-imagens {
+section.importancia
+  .margem-global
+  .container-conteudo
+  article
+  .container-imagens {
   width: 485px;
   height: 621px;
 }
@@ -157,17 +161,33 @@ section.importancia .margem-global .container-conteudo aside .container-aside {
   width: 610px;
 }
 
-section.importancia .margem-global .container-conteudo aside .container-aside p {
+section.importancia
+  .margem-global
+  .container-conteudo
+  aside
+  .container-aside
+  p {
   font-family: var(--font-paragrafo);
   font-size: 20px;
 }
 
-section.importancia .margem-global .container-conteudo aside .container-aside .bolinha-texto {
+section.importancia
+  .margem-global
+  .container-conteudo
+  aside
+  .container-aside
+  .bolinha-texto {
   display: flex;
   gap: 13px;
 }
 
-section.importancia .margem-global .container-conteudo aside .container-aside .bolinha-texto span {
+section.importancia
+  .margem-global
+  .container-conteudo
+  aside
+  .container-aside
+  .bolinha-texto
+  span {
   font-size: 25px;
   padding: 25px 32.5px;
   border-radius: 50%;
@@ -328,24 +348,24 @@ section.profissionais .margem-global h2 {
 }
 
 .btn-detalhes {
-    width: 130px;
-    height: 35px;
-    border-radius: 5px;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-family: var(--font-paragrafo);
-    font-size: 13px;
-    background: transparent;
-    border: 1px solid var(--cor-roxo-claro);
-    color: var(--cor-roxo-escuro);
-    transition: 0.3s;
+  width: 130px;
+  height: 35px;
+  border-radius: 5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-paragrafo);
+  font-size: 13px;
+  background: transparent;
+  border: 1px solid var(--cor-roxo-claro);
+  color: var(--cor-roxo-escuro);
+  transition: 0.3s;
 }
 
 .btn-detalhes:hover {
-    background-color: var(--cor-amarelo);
+  background-color: var(--cor-amarelo);
 }
 
 .container-usuario .container-textos .butaos {
@@ -566,12 +586,15 @@ section.junte-se .margem-global form .termo span {
 section.junte-se .margem-global form a {
   width: 756px;
   height: 70px;
-  text-align: center;
   border-radius: 16.75px;
   background: var(--cor-laranja);
   color: var(--cor-preta);
   cursor: pointer;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 25px;
   font-family: var(--font-titulo);
 }
@@ -753,145 +776,488 @@ footer .margem-global {
 
 /* Fundo escuro atrás do modal */
 .modal-detalhes-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    z-index: 9999;
-    display: none; /* Começa escondido */
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: none; /* Começa escondido */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 /* O cartão do modal */
 .modal-detalhes-card {
-    background: #fff;
-    width: 100%;
-    max-width: 500px;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    overflow: hidden;
-    animation: slideUp 0.3s ease-out;
-    font-family: var(--font-paragrafo);
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+  font-family: var(--font-paragrafo);
 }
 
 /* Botão de fechar (X) */
 .fechar-modal {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: var(--cor-roxo-escuro);
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 2;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: var(--cor-roxo-escuro);
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 2;
 }
 
 /* Cabeçalho com foto e nome */
 .modal-header {
-    background: #ede3ff;
-    padding: 30px 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  background: #ede3ff;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .modal-header img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
 }
 
 .modal-header h3 {
-    font-family: var(--font-titulo);
-    color: var(--cor-roxo-escuro);
-    margin: 0;
-    font-size: 24px;
+  font-family: var(--font-titulo);
+  color: var(--cor-roxo-escuro);
+  margin: 0;
+  font-size: 24px;
 }
 
 .modal-header p {
-    color: #666;
-    margin: 5px 0 0 0;
+  color: #666;
+  margin: 5px 0 0 0;
 }
 
 /* Corpo do modal */
 .modal-body {
-    padding: 25px;
-    color: #444;
+  padding: 25px;
+  color: #444;
 }
 
 .modal-body h4 {
-    color: var(--cor-roxo-escuro);
-    margin-bottom: 10px;
-    font-size: 16px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+  color: var(--cor-roxo-escuro);
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
 }
 
-.info-academica, .sobre-mim, .especialidades {
-    margin-bottom: 20px;
+.info-academica,
+.sobre-mim,
+.especialidades {
+  margin-bottom: 20px;
 }
 
 .supervisao {
-    font-size: 14px;
-    color: #666;
-    background: #f9f9f9;
-    padding: 8px;
-    border-radius: 5px;
-    margin-top: 5px;
-    border-left: 3px solid var(--cor-laranja);
+  font-size: 14px;
+  color: #666;
+  background: #f9f9f9;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  border-left: 3px solid var(--cor-laranja);
 }
 
 /* Tags de especialidades */
 .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .tag {
-    background: #ede3ff;
-    color: var(--cor-roxo-escuro);
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 13px;
-    font-weight: 600;
+  background: #ede3ff;
+  color: var(--cor-roxo-escuro);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* Rodapé */
 .modal-footer {
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
 }
 
 .btn-agendar-modal {
-    background: var(--cor-roxo-claro);
-    color: white;
-    padding: 12px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    transition: 0.3s;
+  background: var(--cor-roxo-claro);
+  color: white;
+  padding: 12px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
 .btn-agendar-modal:hover {
-    background: var(--cor-laranja);
-    color: var(--cor-roxo-escuro);
+  background: var(--cor-laranja);
+  color: var(--cor-roxo-escuro);
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* MARGEM GLOBAL (Ajuste para telas médias) */
+  .margem-global {
+    margin: 0 40px;
+  }
+
+  /* SECTION PROFISSIONAIS QUE CUIDAM DE VOCÊ */
+  section.imagem-fundo {
+    height: 450px;
+    padding: 100px 0;
+  }
+
+  section.imagem-fundo .margem-global .container-textos h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  section.imagem-fundo .margem-global .container-textos p {
+    font-size: 12px;
+    width: 100%; /* Ocupa a largura total */
+    padding: 0 20px;
+  }
+
+  /* SECTION CONHEÇA QUEM */
+  section.conheca-quem {
+    height: auto;
+    margin-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  section.conheca-quem .margem-global h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  section.conheca-quem .margem-global .container-card {
+    justify-content: center; /* Centraliza cards */
+    gap: 30px; /* Espaçamento entre cards */
+  }
+
+  section.conheca-quem .margem-global .container-card .card {
+    width: 45%; /* Dois cards por linha em telas médias */
+    max-width: 326px;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  section.conheca-quem .margem-global .container-card .card h3 {
+    font-size: 30px;
+  }
+
+  section.conheca-quem .margem-global .container-card .card p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* ... (Seu código existente) ... */
+
+  /* SECTION IMPORTANCIA */
+  section.importancia .margem-global {
+    margin-top: 80px;
+  }
+
+  section.importancia .margem-global h2 {
+    font-size: 40px;
+  }
+
+  section.importancia .margem-global .container-conteudo {
+    flex-direction: column; /* Empilha Imagem e Texto */
+    gap: 60px;
+    padding: 0 20px;
+  }
+
+  section.importancia
+    .margem-global
+    .container-conteudo
+    article
+    .container-imagens {
+    width: 100%; /* Ocupa a largura total do container */
+    height: auto; /* Altura flexível */
+    position: relative; /* Ajuste para o posicionamento interno */
+    display: flex; /* Flexbox para centralizar as imagens */
+    justify-content: center;
+  }
+
+  section.importancia .margem-global .container-conteudo article img {
+    width: 60%; /* Imagem principal com 60% */
+    height: auto;
+    max-width: 326px;
+  }
+
+  /* CORREÇÃO DAS POSIÇÕES RELATIVAS/ABSOLUTAS */
+  section.importancia .margem-global .container-conteudo article #relativo {
+    position: static; /* Desativa a posição fixa */
+  }
+
+  section.importancia .margem-global .container-conteudo article #absoluto {
+    position: absolute; /* Mantém a posição absoluta */
+    top: 25%; /* Ajusta verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(10%); /* Desloca ligeiramente para sobrepor */
+    width: 50%; /* Ajusta o tamanho da imagem menor */
+    max-width: 250px;
+    height: auto;
+  }
+
+  section.importancia
+    .margem-global
+    .container-conteudo
+    aside
+    .container-aside {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  section.importancia
+    .margem-global
+    .container-conteudo
+    aside
+    .container-aside
+    p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* ... (Seu código existente) ... */
+
+  /* SECTION PROFISSIONAIS */
+  section.profissionais {
+    padding-bottom: 60px;
+  }
+
+  section.profissionais .margem-global h2 {
+    font-size: 40px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .layout-slider {
+    gap: 20px; /* Reduz o gap entre setas e slider */
+  }
+
+  .lista-cards {
+    gap: 25px;
+    max-width: 90%; /* Ajusta o máximo */
+    padding: 10px 0;
+  }
+
+  .container-usuario {
+    width: 300px; /* Reduz a largura do cartão */
+  }
+
+  .container-usuario .usuario {
+    height: 180px;
+  }
+
+  .container-usuario .usuario .texto p:nth-last-child(2) {
+    font-size: 22px;
+  }
+
+  .container-usuario .usuario .texto p:nth-last-child(1) {
+    font-size: 18px;
+  }
+
+  .container-usuario .container-textos {
+    min-height: 280px; /* Mantém uma altura mínima */
+  }
+
+  .container-usuario .container-textos .icone-texto p,
+  .icone-texto-local p {
+    font-size: 16px !important;
+  }
+
+  .container-usuario .container-textos .butaos {
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .container-usuario .container-textos .butaos a {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* ... (Seu código existente) ... */
+
+  /* SECTION SEGURANCA */
+  section.seguranca {
+    height: auto; /* Altura flexível */
+    padding: 80px 0;
+  }
+
+  section.seguranca .margem-global h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    padding-top: 0;
+  }
+
+  section.seguranca .margem-global .container-texto-cadeado {
+    flex-direction: column; /* Empilha */
+    gap: 30px;
+    align-items: center;
+  }
+
+  section.seguranca .margem-global .container-texto-cadeado .textos p {
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* SECTION JUNTE-SE (Formulário) */
+  section.junte-se .margem-global h2 {
+    font-size: 30px;
+    margin-top: 60px;
+  }
+
+  section.junte-se .margem-global #texto {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  section.junte-se .margem-global form {
+    width: 100%; /* Largura total */
+    height: auto;
+    padding: 30px 20px; /* Padding menor */
+  }
+
+  section.junte-se .margem-global form h3 {
+    font-size: 24px;
+    margin: 30px 0 40px 0;
+  }
+
+  section.junte-se .margem-global form .labels-inputs {
+    gap: 30px;
+  }
+
+  section.junte-se .margem-global form .labels-inputs label,
+  p {
+    font-size: 18px;
+  }
+
+  section.junte-se .margem-global form .labels-inputs input {
+    width: 100%; /* Largura total */
+    height: 40px;
+  }
+
+  section.junte-se .margem-global form #espaco-profissionais {
+    margin: 30px 0 30px 0;
+  }
+
+  section.junte-se .margem-global form .escolha-profissionais {
+    flex-direction: column; /* Empilha as opções de rádio */
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  section.junte-se .margem-global form .escolha-profissionais .opcao {
+    gap: 30px;
+    justify-content: flex-start;
+  }
+
+  section.junte-se .margem-global form .status-profissional .espaco {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  section.junte-se .margem-global form textarea {
+    width: 100%; /* Largura total */
+    height: 100px;
+  }
+
+  section.junte-se .margem-global form a {
+    width: 100%; /* Largura total do botão */
+    height: 60px;
+    font-size: 22px;
+  }
+  footer {
+    margin-top: 50px;
+    padding: 40px 0 20px 0;
+  }
+
+  footer .margem-global {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  /* MARGEM GLOBAL (Apertando ainda mais) */
+  .margem-global {
+    margin: 0 10px;
+  }
+
+  /* SECTION IMAGEM FUNDO */
+  section.imagem-fundo .margem-global .container-textos h1 {
+    font-size: 36px;
+  }
+
+  section.imagem-fundo .margem-global .container-textos p {
+    font-size: 18px;
+  }
+
+  /* SECTION CONHEÇA QUEM */
+  section.conheca-quem .margem-global .container-card .card {
+    width: 100%; /* Um card por linha */
+  }
+
+  /* SECTION IMPORTANCIA */
+  section.importancia .margem-global .container-conteudo article #absoluto {
+    /* Ajusta o posicionamento da imagem menor no mobile */
+    top: 20%;
+    transform: translateX(20%);
+  }
+
+  /* SECTION PROFISSIONAIS (Reduz o gap do slider para telas menores) */
+  .layout-slider {
+    gap: 10px;
+  }
+
+  .seta-nav {
+    width: 40px;
+  }
+
+  .container-usuario {
+    width: 250px;
+  }
+
+  .direitos-autorais {
+    font-size: 11px;
+    padding: 15px 5px 0 5px;
+  }
 }

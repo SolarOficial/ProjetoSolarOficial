@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800;1,400..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* VARIAVEIS CORES e FONTES */
 
@@ -23,7 +23,7 @@
 }
 
 .margem-global {
-  margin: 0 92px 0 92px;
+  margin: 0 92px;
 }
 
 /* MAIN */
@@ -41,6 +41,7 @@ section.image-fundo {
   justify-content: center;
   text-align: center;
   color: var(--cor-branca);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 section.image-fundo .margem-global h1 {
@@ -85,26 +86,57 @@ section.atencao .margem-global p {
 /* SECTION AMBIENTE INCLUSIVO */
 
 section.ambiente-inclusivo {
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-bottom: 118px;
+}
+
+section.ambiente-inclusivo > h2 {
+  font-family: var(--font-titulo);
+  font-size: 64px;
+  color: var(--cor-roxo-escuro);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+section.ambiente-inclusivo .card-jogos {
+  margin-bottom: 40px;
+}
+
+section.ambiente-inclusivo .card-jogos:last-of-type {
+  margin-bottom: 0;
 }
 
 section.ambiente-inclusivo .card-jogos .margem-global {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   background: var(--cor-amarelo);
   border-radius: 30px;
   height: 400px;
+  overflow: hidden;
+  padding: 0;
+}
+
+section.ambiente-inclusivo .card-jogos article {
+  flex: 0 0 55%;
 }
 
 section.ambiente-inclusivo .card-jogos article img {
-  width: 611px;
-  height: 407px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px 0 0 30px;
 }
 
 section.ambiente-inclusivo .card-jogos .margem-global aside {
-  padding: 120px 45px;
+  padding: 40px;
   text-align: center;
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section.ambiente-inclusivo .card-jogos .margem-global aside h3 {
@@ -125,56 +157,27 @@ section.ambiente-inclusivo .card-jogos .margem-global aside p {
   color: var(--cor-roxo-escuro);
 }
 
-section.ambiente-inclusivo .container-titulo-conteudo {
-  background-image: linear-gradient(to bottom, #ffffff 0%, #bf9ef5 30%),
-    url(/ProjetoSolarOficial/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
-  height: 614px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-}
-
-section.ambiente-inclusivo .container-titulo-conteudo h2 {
-  font-family: var(--font-titulo);
-  font-size: 64px;
-  color: var(--cor-roxo-escuro);
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 49px;
-}
-
-section.ambiente-inclusivo .card-jogos.meio {
-  background: #bf9ef5;
-  height: 614px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-}
-
+/* Estilo para Inversão (Segundo Card - .meio) */
 section.ambiente-inclusivo .card-jogos.meio .margem-global {
+  flex-direction: row-reverse;
   background: var(--cor-laranja);
 }
 
-section.ambiente-inclusivo .card-jogos.fim {
-  background-image: linear-gradient(to top, #ffffff 0%, #bf9ef5 10%),
-    url(/ProjetoSolarOficial/src/assets/img-game/Section-Cresca-com-a-Solar-Meio.png);
-  background-position: bottom;
-  height: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  margin-bottom: 118px;
-  padding-bottom: 200px;
+section.ambiente-inclusivo .card-jogos.meio article img {
+  border-radius: 0 30px 30px 0;
 }
 
 /* SECTION ABERTO A TODAS */
 
+section.aberto-todas {
+  margin-bottom: 100px;
+}
+
 section.aberto-todas .margem-global {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 section.aberto-todas .margem-global article {
@@ -189,7 +192,8 @@ section.aberto-todas .margem-global article {
   flex-direction: column;
   gap: 42px;
   padding: 46px 38px;
-  width: 500px;
+  flex: 1;
+  max-width: 500px;
   height: 500px;
 }
 
@@ -217,14 +221,22 @@ section.aberto-todas .margem-global article a {
   text-decoration: none;
 }
 
-section.aberto-todas .margem-global aside img {
-  width: 400px;
-  height: 600px;
+section.aberto-todas .margem-global aside {
+  flex: 1;
+  max-width: 400px;
 }
 
-/* FOOTER */
+section.aberto-todas .margem-global aside img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
+}
 
-/* FOOTER */
+/* ----------------------------------------------------------------------- */
+/* FOOTER - BLOCO PRINCIPAL (DESKTOP) */
+/* ----------------------------------------------------------------------- */
+
 footer {
   margin-top: 100px;
   background: var(--cor-roxo-claro);
@@ -330,4 +342,211 @@ footer .margem-global {
   font-family: var(--font-paragrafo);
   font-size: 14px;
   color: var(--cor-branca);
+}
+
+/* ======================================================================= */
+/* --- RESPONSIVIDADE --- */
+/* ======================================================================= */
+/* ======================================================================= */
+/* --- RESPONSIVIDADE OTIMIZADA --- */
+/* ======================================================================= */
+
+/* 1. TELAS MÉDIAS / TABLETS (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .margem-global {
+    margin: 0 40px;
+  }
+
+  section.image-fundo {
+    height: 400px;
+  }
+  section.image-fundo .margem-global h1 {
+    font-size: 40px;
+  }
+  section.image-fundo .margem-global p {
+    font-size: 20px;
+  }
+
+  section.atencao {
+    height: 250px;
+  }
+  section.atencao .margem-global h2 {
+    font-size: 32px;
+  }
+
+  section.ambiente-inclusivo > h2 {
+    font-size: 50px;
+  }
+
+  /* Footer */
+  footer .margem-global {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* 2. TELAS PEQUENAS / CELULAR (até 768px) */
+@media screen and (max-width: 768px) {
+  .margem-global {
+    margin: 0;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  section.image-fundo {
+    height: 250px;
+  }
+  section.image-fundo .margem-global h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  section.image-fundo .margem-global p {
+    font-size: 14px;
+  }
+
+  section.atencao {
+    height: 150px;
+    margin-top: 30px;
+  }
+  section.atencao .margem-global h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  section.atencao .margem-global p {
+    font-size: 12px;
+  }
+
+  section.ambiente-inclusivo > h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  /* Cards: empilhamento vertical */
+  section.ambiente-inclusivo .card-jogos .margem-global {
+    flex-direction: column;
+    height: auto;
+  }
+  section.ambiente-inclusivo .card-jogos article img {
+    height: 180px;
+    border-radius: 30px 30px 0 0;
+  }
+  section.ambiente-inclusivo .card-jogos .margem-global aside {
+    padding: 25px 15px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  /* Section Aberto a Todas */
+  section.aberto-todas .margem-global {
+    flex-direction: column;
+    gap: 20px;
+  }
+  section.aberto-todas .margem-global article {
+    max-width: 100%;
+    height: auto;
+  }
+  section.aberto-todas .margem-global aside img {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 50px;
+    padding: 40px 0 20px 0;
+  }
+  footer .margem-global {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .direitos-autorais {
+    font-size: 12px;
+    padding: 15px 5px 0 5px;
+  }
+}
+
+/* 3. TELAS MUITO PEQUENAS / CELULARES FINOS (até 568px) */
+@media screen and (max-width: 568px) {
+  .margem-global {
+    padding: 0 5px;
+  }
+
+  section.image-fundo {
+    height: 200px;
+  }
+  section.image-fundo .margem-global h1 {
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  section.image-fundo .margem-global p {
+    font-size: 10px;
+  }
+
+  section.atencao {
+    height: 100px;
+    margin-top: 20px;
+  }
+  section.atencao .margem-global h2 {
+    font-size: 16px;
+  }
+  section.atencao .margem-global p {
+    font-size: 10px;
+  }
+
+  section.ambiente-inclusivo > h2 {
+    font-size: 20px;
+  }
+
+  section.ambiente-inclusivo .card-jogos article img {
+    height: 120px;
+    margin-bottom: 15px;
+  }
+  section.ambiente-inclusivo .card-jogos .margem-global aside {
+    padding: 10px 10px;
+  }
+  section.ambiente-inclusivo .card-jogos .margem-global aside h3 {
+    font-size: 18px;
+  }
+  section.ambiente-inclusivo .card-jogos .margem-global aside p#maior {
+    font-size: 14px;
+  }
+  section.ambiente-inclusivo .card-jogos .margem-global aside p {
+    font-size: 12px;
+  }
+
+  /* Section Aberto a Todas */
+  section.aberto-todas .margem-global article a {
+    width: 100%;
+    font-size: 14px;
+  }
+  section.aberto-todas .margem-global article h3 {
+    font-size: 18px;
+  }
+  section.aberto-todas .margem-global aside img {
+    height: 120px;
+  }
+
+  /* Footer */
+  .secao-footer h3 {
+    font-size: 18px;
+  }
+  .logo-footer span {
+    font-size: 24px;
+  }
+}
+
+/* Separar o segundo card do primeiro */
+section.ambiente-inclusivo .card-jogos.meio {
+  margin-top: 60px; /* espaço extra entre o primeiro e o segundo card */
+}
+
+/* Mantendo o estilo de empilhamento para mobile */
+@media screen and (max-width: 768px) {
+  section.ambiente-inclusivo .card-jogos.meio {
+    margin-top: 40px; /* espaço menor em telas pequenas */
+  }
+}
+@media screen and (max-width: 568px) {
+  section.ambiente-inclusivo .card-jogos.meio {
+    margin-top: 30px; /* ainda menor em telas muito pequenas */
+  }
 }

@@ -20,48 +20,6 @@
   box-sizing: border-box;
 }
 
-/* ----------------- HEADER ----------------- */
-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: var(--cor-branca);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-header .logo {
-  font-family: var(--font-titulo);
-  font-size: 24px;
-  font-weight: 700;
-}
-
-header .menu {
-  display: flex;
-  gap: 20px;
-}
-
-header .menu a {
-  text-decoration: none;
-  color: var(--cor-preta);
-  font-family: var(--font-paragrafo);
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-header .menu a:hover {
-  color: var(--cor-roxo-claro);
-}
-
 /* ----------------- IMAGEM TOPO ----------------- */
 .imagem-container {
   position: relative;

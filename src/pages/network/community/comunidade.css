@@ -40,7 +40,7 @@
    background: 
     linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
     url("/ProjetoSolarOficial/src/assets/img-community/background_inicio_comunidade.png") center/cover no-repeat;
-  height: 350px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;

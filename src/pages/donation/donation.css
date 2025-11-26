@@ -31,7 +31,8 @@
 
 section.imagem-fundo-texto {
   background-image: url(/ProjetoSolarOficial/src/assets/img-donation/Rectangle\ 674.png);
-  height: 458px;
+  height: 600px;
+  object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

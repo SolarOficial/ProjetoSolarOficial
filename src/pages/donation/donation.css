@@ -22,7 +22,8 @@
 }
 
 .margem-global {
-  margin: 0 60px 0 60px;
+  margin: 0 60px; /* Simplificado */
+  max-width: 1300px; /* Limite opcional para telas muito grandes */
 }
 
 /* MAIN */
@@ -34,10 +35,18 @@ section.imagem-fundo-texto {
   height: 458px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; /* Centraliza a imagem */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+section.imagem-fundo-texto .margem-global {
+  /* Garante que o texto se adapte à margem global */
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
 section.imagem-fundo-texto .margem-global h1 {
@@ -52,13 +61,16 @@ section.imagem-fundo-texto .margem-global p {
   font-family: var(--font-titulo);
   color: var(--cor-branca);
   text-align: center;
-  width: 1099px;
+  width: 100%; /* Ocupa a largura total do container */
+  max-width: 1099px;
+  margin: 0 auto;
 }
 
 /* SECTION IMPORTÂNCIA */
 
 section.importancia-doacao {
   margin-top: 108px;
+  padding: 0 20px; /* Padding para respiro nas laterais */
 }
 
 section.importancia-doacao .margem-global h2 {
@@ -75,6 +87,11 @@ section.importancia-doacao .margem-global .imagem-texto {
   justify-content: center;
   flex-wrap: wrap;
   gap: 86px;
+}
+
+section.importancia-doacao .margem-global .imagem-texto img {
+  max-width: 100%;
+  height: auto;
 }
 
 section.importancia-doacao .margem-global .imagem-texto aside {
@@ -96,6 +113,7 @@ section.importancia-doacao
   aside
   .numero-texto
   span {
+  flex-shrink: 0; /* Impede que o círculo encolha */
   width: 65px;
   height: 65px;
   background: var(--cor-amarelo);
@@ -104,12 +122,13 @@ section.importancia-doacao
   align-items: center;
   display: flex;
   justify-content: center;
-  border-radius: 32.5px;
+  border-radius: 50%; /* Usar 50% para garantir o círculo */
   font-family: var(--font-paragrafo);
 }
 
 section.importancia-doacao .margem-global .imagem-texto aside .numero-texto p {
-  width: 500px;
+  width: 100%; /* Ocupa o restante do espaço */
+  max-width: 500px;
   font-size: 20px;
   font-family: var(--font-paragrafo);
 }
@@ -125,12 +144,14 @@ section.valor-doacao .margem-global .valor-formulario {
   justify-content: center;
   gap: 62px;
   flex-wrap: wrap;
+  max-width: 100%; /* Garante que o container interno não estoure */
 }
 
 section.valor-doacao .margem-global .valor-formulario .escolha-valor {
   border: solid 1px var(--cor-roxo-escuro);
-  width: 524px;
-  height: 566px;
+  width: 100%;
+  max-width: 524px;
+  height: auto; /* Ajusta a altura ao conteúdo */
   border-radius: 10px;
   padding: 40px;
 }
@@ -144,7 +165,8 @@ section.valor-doacao .margem-global .valor-formulario .escolha-valor p {
 
 section.valor-doacao .margem-global .valor-formulario .escolha-valor .valor {
   display: flex;
-  gap: 72px;
+  justify-content: space-between; /* Melhor para distribuir os inputs */
+  gap: 20px; /* Reduzido o gap para melhor adaptação */
 }
 
 section.valor-doacao
@@ -161,7 +183,7 @@ section.valor-doacao
   .escolha-valor
   .valor
   input {
-  width: 185px;
+  width: 48%; /* Ocupa quase metade da linha */
   height: 59px;
   border-radius: 16.75px;
   font-size: 22px;
@@ -169,6 +191,7 @@ section.valor-doacao
   color: var(--cor-roxo-escuro);
   border: solid 1px var(--cor-roxo-escuro);
   cursor: pointer;
+  text-align: center;
 }
 .valores.selecionado {
   background-color: #fdebff;
@@ -179,11 +202,12 @@ section.valor-doacao
   .valor-formulario
   .escolha-valor
   .digite-valor {
-  width: 434px;
+  width: 100%;
+  max-width: 434px;
   height: 63px;
   border-radius: 16.75px;
   background-color: #fdebff;
-  margin: 52px 0 45px 0;
+  margin: 52px auto 45px auto; /* Centraliza */
   display: flex;
   align-items: center;
   color: #7b7979;
@@ -197,13 +221,15 @@ section.valor-doacao
   .digite-valor
   input {
   border: none;
-  width: 380px;
+  width: 100%;
   height: 63px;
   outline: none;
   background-color: #fdebff;
   border-radius: 16.75px;
-  font-size: 15px;
+  font-size: 18px; /* Aumentado um pouco */
   font-family: var(--font-paragrafo);
+  color: var(--cor-roxo-escuro);
+  text-align: left;
 }
 
 section.valor-doacao .margem-global .valor-formulario .escolha-valor h3 {
@@ -215,7 +241,8 @@ section.valor-doacao .margem-global .valor-formulario .escolha-valor h3 {
 /* ASIDE */
 
 section.valor-doacao .margem-global .valor-formulario .form-pagamento {
-  width: 727px;
+  width: 100%;
+  max-width: 727px;
   padding: 45px;
   border: 1px var(--cor-roxo-escuro) solid;
   border-radius: 10px;
@@ -234,7 +261,7 @@ section.valor-doacao
   .form-pessoal {
   display: flex;
   flex-direction: column;
-  gap: 59px;
+  gap: 40px; /* Reduzido o gap para otimizar espaço */
   margin-top: 42px;
 }
 
@@ -255,7 +282,7 @@ section.valor-doacao
   .form-pessoal
   .separacao
   label {
-  font-size: 25px;
+  font-size: 20px; /* Reduzido levemente */
   font-family: var(--font-paragrafo);
   color: var(--cor-preta);
   margin-bottom: 11px;
@@ -279,6 +306,7 @@ section.valor-doacao
   .form-pessoal
   .separacao
   input {
+  width: 100%;
   height: 48px;
   border-radius: 16.75px;
   border: 1px var(--cor-roxo-escuro) solid;
@@ -305,6 +333,7 @@ section.valor-doacao
   font-family: var(--font-titulo);
   color: var(--cor-preta);
   margin-bottom: 58px;
+  text-align: center;
 }
 
 section.valor-doacao
@@ -330,7 +359,7 @@ section.valor-doacao
   #form-pagamento-credito {
   display: flex;
   flex-direction: column;
-  gap: 53px;
+  gap: 40px; /* Reduzido o gap */
 }
 
 section.valor-doacao
@@ -356,7 +385,7 @@ section.valor-doacao
   font-family: var(--font-paragrafo);
   font-size: 16px;
   color: var(--cor-preta);
-  margin-bottom: 20px;
+  margin-bottom: 8px; /* Reduzido o margin-bottom */
 }
 
 section.valor-doacao
@@ -367,6 +396,7 @@ section.valor-doacao
   form
   #form-pagamento-credito
   input {
+  width: 100%;
   height: 43px;
   border-radius: 10px;
   border: solid 1px var(--cor-roxo-escuro);
@@ -384,6 +414,7 @@ section.valor-doacao
   .alinhar-botoes {
   display: flex;
   gap: 55px;
+  justify-content: space-between; /* Ajustado para melhor distribuição */
 }
 
 section.valor-doacao
@@ -395,9 +426,10 @@ section.valor-doacao
   #form-pagamento-credito
   .alinhar-botoes
   input {
-  width: 286px;
+  width: 45%; /* Ajustado para caberem lado a lado */
   margin-top: 20px;
   outline: none;
+  cursor: pointer;
 }
 
 section.valor-doacao
@@ -409,6 +441,7 @@ section.valor-doacao
   #form-pagamento-credito
   .confirmacao {
   display: flex;
+  align-items: flex-start; /* Alinha o checkbox no topo */
   gap: 11px;
 }
 
@@ -420,9 +453,12 @@ section.valor-doacao
   form
   #form-pagamento-credito
   .confirmacao
-  input {
+  input[type="checkbox"] {
+  flex-shrink: 0;
   width: 17px;
   height: 17px;
+  border: 1px solid var(--cor-roxo-escuro);
+  margin-top: 3px;
 }
 
 section.valor-doacao
@@ -437,7 +473,8 @@ section.valor-doacao
   font-family: var(--font-paragrafo);
   color: var(--cor-preta);
   font-size: 14px;
-  flex-wrap: wrap;
+  line-height: 1.5; /* Melhor legibilidade */
+  margin: 0; /* Remove a margem desnecessária */
 }
 
 section.valor-doacao
@@ -450,6 +487,7 @@ section.valor-doacao
   .centralizar-button {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 section.valor-doacao
@@ -514,6 +552,7 @@ section.valor-doacao
   padding: 10.5px 18px;
   border: 2px solid var(--cor-preta);
   color: #766e6e;
+  font-size: 16px; /* Ajustado */
 }
 
 section.valor-doacao
@@ -531,7 +570,7 @@ section.valor-doacao
   background: var(--cor-roxo-claro);
   border: none;
   color: var(--cor-branca);
-  font-size: 12px;
+  font-size: 14px; /* Aumentado */
   font-family: var(--font-paragrafo);
   cursor: pointer;
 }
@@ -565,6 +604,7 @@ section.valor-doacao
   display: flex;
   gap: 11px;
   margin-top: 26px;
+  align-items: flex-start;
 }
 
 section.valor-doacao
@@ -575,9 +615,11 @@ section.valor-doacao
   form
   #form-pagamento-pix
   .confirmacao
-  input {
+  input[type="checkbox"] {
+  flex-shrink: 0;
   width: 17px;
   height: 17px;
+  margin-top: 3px;
 }
 
 section.valor-doacao
@@ -593,6 +635,8 @@ section.valor-doacao
   color: var(--cor-preta);
   font-size: 14px;
   flex-wrap: wrap;
+  margin: 0;
+  line-height: 1.5;
 }
 
 section.valor-doacao
@@ -772,17 +816,9 @@ footer .margem-global {
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
 @media screen and (max-width: 1200px) {
   /* CONTAINER GLOBAL */
-  /* Redefine a margem global para ser menor, alinhando-se com o Header */
   .margem-global {
     margin: 0 40px;
-  }
-
-  /* AJUSTE DO HEADER FIXO */
-  .logo {
-    margin-left: 40px;
-  }
-  .button-header {
-    margin-right: 40px;
+    max-width: none;
   }
 
   /* SECTION IMAGEM DE FUNDO COM TEXTO */
@@ -791,26 +827,42 @@ footer .margem-global {
   }
 
   section.imagem-fundo-texto .margem-global h1 {
+    margin-top: 40px;
     font-size: 44px;
   }
 
   section.imagem-fundo-texto .margem-global p {
     font-size: 22px;
-    max-width: 800px; /* Limita o texto para não ficar muito longo */
+    max-width: 800px;
+    width: 100%;
   }
 
   /* SECTION IMPORTÂNCIA */
   section.importancia-doacao .margem-global .imagem-texto {
-    /* Mantém imagem e texto lado a lado se couber */
-    justify-content: space-between;
+    gap: 40px;
+  }
+
+  section.importancia-doacao
+    .margem-global
+    .imagem-texto
+    aside
+    .numero-texto
+    p {
+    font-size: 18px;
   }
 
   /* SECTION VALOR DOAÇÃO */
-  /* Ajusta os formulários para ocuparem a largura total da margem global */
+  /* Altera o layout principal para empilhar se a tela estiver muito apertada (transição para 768px) */
+  section.valor-doacao .margem-global .valor-formulario {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
   section.valor-doacao .margem-global .valor-formulario .escolha-valor,
   section.valor-doacao .margem-global .valor-formulario .form-pagamento {
     width: 100%;
-    max-width: 850px;
+    max-width: 800px; /* Limita o tamanho em tablets */
   }
 
   section.valor-doacao
@@ -819,28 +871,30 @@ footer .margem-global {
     .escolha-valor
     .valor
     input {
-    width: 150px; /* Garante que os valores caibam melhor */
+    width: 48%;
+  }
+
+  section.valor-doacao
+    .margem-global
+    .valor-formulario
+    .escolha-valor
+    .digite-valor {
+    max-width: 100%;
   }
 
   /* FOOTER */
   footer .margem-global {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    padding: 0;
   }
 }
+
 /* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
 @media screen and (max-width: 768px) {
   /* CONTAINER GLOBAL */
   .margem-global {
     margin: 0 15px;
-  }
-
-  /* AJUSTE DO HEADER FIXO (Garantindo que a margem do logo/botão mude) */
-  .logo {
-    margin-left: 15px;
-  }
-  .button-header {
-    margin-right: 15px;
   }
 
   /* SECTION IMAGEM DE FUNDO COM TEXTO */
@@ -849,6 +903,7 @@ footer .margem-global {
   }
 
   section.imagem-fundo-texto .margem-global h1 {
+    margin-top: 50px;
     font-size: 30px;
   }
 
@@ -859,6 +914,7 @@ footer .margem-global {
   /* SECTION IMPORTÂNCIA */
   section.importancia-doacao {
     margin-top: 40px;
+    padding: 0;
   }
 
   section.importancia-doacao .margem-global h2 {
@@ -868,11 +924,21 @@ footer .margem-global {
 
   section.importancia-doacao .margem-global .imagem-texto {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
 
-  section.importancia-doacao .margem-global .imagem-texto img {
-    max-width: 100%;
+  section.importancia-doacao .margem-global .imagem-texto aside {
+    gap: 20px;
+    width: 100%;
+  }
+
+  section.importancia-doacao
+    .margem-global
+    .imagem-texto
+    aside
+    .numero-texto
+    p {
+    font-size: 16px;
   }
 
   /* SECTION VALOR DOAÇÃO */
@@ -880,37 +946,53 @@ footer .margem-global {
     margin-top: 60px;
   }
 
-  /* Ajuste dos valores de doação para 2 por linha */
-  section.valor-doacao .margem-global .valor-formulario .escolha-valor .valor {
-    justify-content: space-between;
-    gap: 10px;
+  section.valor-doacao .margem-global .valor-formulario {
+    gap: 30px;
+  }
+
+  /* Escolha Valor */
+  section.valor-doacao .margem-global .valor-formulario .escolha-valor {
+    padding: 20px;
+  }
+
+  section.valor-doacao .margem-global .valor-formulario .escolha-valor p {
+    margin-bottom: 30px;
+  }
+
+  /* Form Pagamento */
+  section.valor-doacao .margem-global .valor-formulario .form-pagamento {
+    padding: 20px;
+  }
+
+  section.valor-doacao .margem-global .valor-formulario .form-pagamento h2 {
+    font-size: 24px;
   }
 
   section.valor-doacao
     .margem-global
     .valor-formulario
-    .escolha-valor
-    .valor
-    input {
-    width: 48%; /* Garante 2 por linha com espaçamento */
+    .form-pagamento
+    .form-pessoal
+    .separacao
+    label {
+    font-size: 16px;
   }
 
-  /* Form Pagamento */
   section.valor-doacao
     .margem-global
     .valor-formulario
     .form-pagamento
     .pagamento-forma-conteudo
     .forma {
-    /* Garante que os botões PIX/Crédito ocupem o espaço total */
-    flex-direction: row;
     justify-content: space-around;
-    gap: 0;
+    margin-bottom: 30px;
   }
 
   .metodo-opcao {
-    width: 45%; /* Garante que fiquem lado a lado */
-    padding: 12px 15px;
+    width: 45%;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 0;
   }
 
   /* Botões de submissão (Doar / Salvar) - Empilha novamente */
@@ -940,6 +1022,17 @@ footer .margem-global {
     max-width: 200px;
   }
 
+  section.valor-doacao
+    .margem-global
+    .valor-formulario
+    .form-pagamento
+    .pagamento-forma-conteudo
+    form
+    #form-pagamento-credito
+    .centralizar-button {
+    margin-top: 15px;
+  }
+
   /* FOOTER: EMPILHAMENTO TOTAL */
   footer .margem-global {
     grid-template-columns: 1fr;
@@ -948,14 +1041,6 @@ footer .margem-global {
 }
 
 @media screen and (max-width: 500px) {
-  /* Garante que NENHUM elemento ultrapasse a tela */
-  * {
-    max-width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
   /* Imagens nunca estouram a tela */
   img {
     max-width: 100%;
@@ -963,24 +1048,56 @@ footer .margem-global {
     display: block;
   }
 
+  /* SECTION IMAGEM DE FUNDO */
+  section.imagem-fundo-texto {
+    height: 180px;
+  }
+
+  section.imagem-fundo-texto .margem-global h1 {
+    margin-top: 90px;
+    font-size: 24px;
+  }
+
+  section.imagem-fundo-texto .margem-global p {
+    font-size: 14px;
+  }
+
+  /* SECTION IMPORTÂNCIA */
+  section.importancia-doacao
+    .margem-global
+    .imagem-texto
+    aside
+    .numero-texto
+    span {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  section.importancia-doacao
+    .margem-global
+    .imagem-texto
+    aside
+    .numero-texto
+    p {
+    font-size: 14px;
+  }
+
   /* SECTION VALOR DOAÇÃO */
-  section.valor-doacao .margem-global {
-    padding: 10px;
+  section.valor-doacao .margem-global .valor-formulario .escolha-valor {
+    padding: 15px;
   }
 
   /* Texto da escolha de valor */
   section.valor-doacao .margem-global .valor-formulario .escolha-valor p {
-    font-size: 14px;
-    line-height: 1.3;
-    text-align: center;
-    padding: 0 5px; /* evita colar na borda */
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 
-  /* Inputs de valor */
+  /* Inputs de valor - Mantido 2 por linha */
   section.valor-doacao .margem-global .valor-formulario .escolha-valor .valor {
-    display: flex;
-    flex-direction: column; /* Empilha tudo */
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap; /* Garante quebras se necessário */
   }
 
   section.valor-doacao
@@ -989,50 +1106,48 @@ footer .margem-global {
     .escolha-valor
     .valor
     input {
-    width: 90%;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .input-valor-custom {
-    width: 100%;
-    min-width: 0;
-  }
-
-  /* Títulos */
-  section.valor-doacao .margem-global .valor-formulario .form-pagamento h2 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  /* Texto principal do topo */
-  .frase-impacto {
-    display: none;
+    width: 48%;
+    height: 45px;
+    font-size: 16px;
   }
 
   section.valor-doacao
     .margem-global
     .valor-formulario
-    .form-pagamento
-    .form-pessoal
-    .separacao
-    label {
-    font-size: 14px;
+    .escolha-valor
+    .digite-valor {
+    margin: 25px auto;
+    padding-left: 15px;
   }
 
   section.valor-doacao
     .margem-global
     .valor-formulario
-    .form-pagamento
-    .form-pessoal
-    .separacao
+    .escolha-valor
+    .digite-valor
     input {
-    width: 100%;
-    height: 40px;
-    font-size: 14px;
+    font-size: 16px;
+    height: 50px;
   }
 
-  /* Botões PIX / Cartão */
+  /* Form Pagamento */
+  section.valor-doacao .margem-global .valor-formulario .form-pagamento {
+    padding: 15px;
+  }
+
+  section.valor-doacao .margem-global .valor-formulario .form-pagamento h2 {
+    font-size: 20px;
+  }
+
+  section.valor-doacao
+    .margem-global
+    .valor-formulario
+    .form-pagamento
+    .pagamento-forma-conteudo
+    h3 {
+    font-size: 20px;
+  }
+
   section.valor-doacao
     .margem-global
     .valor-formulario
@@ -1047,7 +1162,70 @@ footer .margem-global {
   .metodo-opcao {
     width: 100%;
     max-width: 260px;
-    padding: 12px;
+    padding: 10px;
     font-size: 14px;
+  }
+
+  section.valor-doacao
+    .margem-global
+    .valor-formulario
+    .form-pagamento
+    .pagamento-forma-conteudo
+    form
+    #form-pagamento-credito
+    .alinhar-botoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  section.valor-doacao
+    .margem-global
+    .valor-formulario
+    .form-pagamento
+    .pagamento-forma-conteudo
+    form
+    #form-pagamento-credito
+    .alinhar-botoes
+    input {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  section.valor-doacao
+    .margem-global
+    .valor-formulario
+    .form-pagamento
+    .pagamento-forma-conteudo
+    form
+    #form-pagamento-credito
+    .centralizar-button
+    button,
+  section.valor-doacao
+    .margem-global
+    .valor-formulario
+    .form-pagamento
+    .pagamento-forma-conteudo
+    form
+    #form-pagamento-pix
+    .centralizar-button
+    button {
+    width: 90%;
+    max-width: 220px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  footer .secao-footer h3 {
+    font-size: 22px;
+  }
+
+  .logo-footer span {
+    font-size: 28px;
+  }
+
+  .logo-footer img {
+    width: 50px;
   }
 }

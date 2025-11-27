@@ -29,7 +29,6 @@ body {
   min-height: 100vh;
 }
 
-
 body::before {
   content: "";
   background-image: url("/ProjetoSolarOficial/src/assets/img-register/background-cadastro.gif");
@@ -45,7 +44,6 @@ body::before {
   z-index: -1;
 }
 
-
 .margem-global {
   margin: 0 92px 0 92px;
 }
@@ -56,6 +54,8 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* Adicionado para permitir que os elementos quebrem a linha */
+  padding: 0 10px; /* Adicionado padding para evitar quebras de layout */
 }
 
 .circulo-com-gradiente-e-imagem {
@@ -68,7 +68,7 @@ body::before {
   align-items: center; /* Centraliza verticalmente */
   background-image: linear-gradient(
     to top,
-     #eed06c,
+    #eed06c,
     #ffe07bb9,
     #ffe98483,
     #ffed4f1e,
@@ -222,84 +222,223 @@ body::before {
 
 /* Fundo escuro que cobre a tela inteira */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Escurece o fundo */
-    backdrop-filter: blur(3px); /* Desfoque leve no fundo */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Garante que fique na frente de tudo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Escurece o fundo */
+  backdrop-filter: blur(3px); /* Desfoque leve no fundo */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Garante que fique na frente de tudo */
 }
 
 .modal-overlay.ativo {
-    display: flex;
+  display: flex;
 }
 
 /* A caixa do popup */
 .modal-card {
-    /* Degradê Roxo estilo Solar */
-    background: linear-gradient(180deg, #a48cd1 0%, #7d5db8 100%);
-    padding: 40px;
-    border-radius: 25px;
-    text-align: center;
-    width: 90%;
-    max-width: 450px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    font-family: sans-serif; /* Ou a fonte do seu projeto */
-    position: relative;
-    animation: slideUp 0.4s ease-out;
+  /* Degradê Roxo estilo Solar */
+  background: linear-gradient(180deg, #a48cd1 0%, #7d5db8 100%);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif; /* Ou a fonte do seu projeto */
+  position: relative;
+  animation: slideUp 0.4s ease-out;
 }
 
 /* Ícone de check */
 .icon-container {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Título do Popup */
 .modal-card h2 {
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Botão Amarelo */
 .btn-modal {
-    background: linear-gradient(90deg, #ffe085 0%, #ffcd4f 100%);
-    border: none;
-    padding: 15px 40px;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333; /* Cor do texto do botão */
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    width: 100%;
-    max-width: 280px;
+  background: linear-gradient(90deg, #ffe085 0%, #ffcd4f 100%);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Cor do texto do botão */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 280px;
 }
 
 .btn-modal:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 205, 79, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 205, 79, 0.4);
 }
 
 /* Animação de entrada */
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================================================= */
+/* --- MEDIA QUERIES (RESPONSIVIDADE ADICIONAL) --- */
+/* ======================================================= */
+
+/* Tablets e Telas Menores (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container-cadastro {
+    flex-direction: column; /* Empilha os elementos */
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .circulo-com-gradiente-e-imagem {
+    margin: 50px auto 0 auto; /* Centraliza acima do formulário */
+    width: 400px;
+    height: 400px;
+    display: none;
+  }
+
+  .circulo-com-gradiente-e-imagem img {
+    max-width: 400px;
+    max-height: 400px;
+    display: none;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 50px; /* Reduz o padding superior */
+  }
+
+  .form-container-opacidade {
+    width: 90%; /* Ocupa a maioria da tela */
+    max-width: 550px; /* Limite máximo */
+    height: auto; /* Altura adapta-se ao conteúdo */
+    padding: 40px 40px 40px 40px;
+  }
+
+  .margem-global {
+    margin: 0 20px; /* Reduz margem global para tablets */
+  }
+}
+
+/* Celulares (max-width: 768px) */
+@media (max-width: 768px) {
+  .form-container h2 {
+    font-size: 40px;
+  }
+
+  .form-container-opacidade {
+    margin-top: 30px;
+    border-radius: 40px;
+    padding: 30px 20px; /* Mais compacto */
+  }
+
+  .circulo-com-gradiente-e-imagem {
+    width: 300px;
+    height: 300px;
+    display: none;
+  }
+
+  .circulo-com-gradiente-e-imagem img {
+    max-width: 300px;
+    max-height: 300px;
+    display: none;
+  }
+
+  .submit-btn {
+    padding: 16px 50px; /* Ajusta o padding do botão */
+    font-size: 20px;
+  }
+
+  .input-group input {
+    font-size: 18px;
+    padding: 14px 14px 14px 45px;
+  }
+
+  .input-group img {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+}
+
+/* Celulares Pequenos (max-width: 480px) */
+@media (max-width: 480px) {
+  .container-cadastro {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .circulo-com-gradiente-e-imagem {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    display: none;
+  }
+
+  .circulo-com-gradiente-e-imagem img {
+    max-width: 200px;
+    max-height: 200px;
+    display: none;
+  }
+
+  .form-container {
+    padding-top: 30px;
+  }
+
+  .form-container-opacidade {
+    border-radius: 30px;
+    padding: 25px 15px;
+  }
+
+  .form-container h2 {
+    font-size: 32px;
+  }
+
+  .submit-btn {
+    width: 100%; /* Ocupa 100% da largura do container (para ser mais fácil de clicar) */
+    padding: 14px 0;
+    font-size: 18px;
+  }
+
+  .input-group input {
+    font-size: 16px;
+    padding: 12px 12px 12px 40px;
+  }
+
+  .input-group img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 12px;
+  }
 }

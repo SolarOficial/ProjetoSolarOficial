@@ -1224,6 +1224,7 @@ footer .margem-global {
 
   /* SECTION IMAGEM FUNDO */
   section.imagem-fundo .margem-global .container-textos h1 {
+    margin-top: 40px;
     font-size: 36px;
   }
 

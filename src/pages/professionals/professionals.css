@@ -25,7 +25,7 @@
 
 section.imagem-fundo {
   background-image: url(/ProjetoSolarOficial/src/assets/img-professionals/imagem-fundo.png);
-  height: 458px;
+  height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

@@ -242,7 +242,8 @@ section.funcionalidades .margem-global h2 {
 section.funcionalidades .margem-global .container-cards {
   margin-top: 83px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
   height: 548.82px;
 }

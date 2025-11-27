@@ -32,7 +32,6 @@
     <nav class="nav-pai" id="nav">
       <ul id="menu">
         <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')">HOME</a></li>
-
         <li>
           <a href="#">
             EXPLORAR
@@ -52,13 +51,11 @@
             </li>
           </ul>
         </li>
-
         <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')">DOAÇÃO</a></li>
         <li><a href="#"
             onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')">PROFISSIONAIS</a>
         </li>
         <li><a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')">PLANOS</a></li>
-
         <li>
           <a href="#">
             REDES
@@ -78,7 +75,6 @@
             </li>
           </ul>
         </li>
-
         <li>
           <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/register.html')">
             <button class="button-header">CADASTRAR-SE</button>
@@ -90,65 +86,117 @@
 
   <main>
     <section class="img-login">
-      <div class="circulo-com-gradiente-e-imagem">
-        <img src="/ProjetoSolarOficial/src/assets/img-register/img_Logo(1).png" alt="Logo solar com escrita" />
-      </div>
-      <div class="login-solar">
-        <h2 class="title-login">Login</h2>
-        <form action="#" method="post" class="login-caixa">
-          <div class="input-user">
-            <div class="input-email">
-              <img src="/ProjetoSolarOficial/src/assets/img-login/arroba-login.png" alt="icone email" /><input
-                type="text" placeholder="Digite o seu email" />
+      <div class="margem-global">
+        <div class="circulo-com-gradiente-e-imagem">
+          <img src="/ProjetoSolarOficial/src/assets/img-register/img_Logo(1).png" alt="Logo solar com escrita" />
+        </div>
+        <div class="login-solar">
+          <h2 class="title-login">Login</h2>
+          <form action="#" method="post" class="login-caixa">
+            <div class="input-user">
+              <div class="input-email">
+                <img src="/ProjetoSolarOficial/src/assets/img-login/arroba-login.png" alt="icone email" />
+                <input type="email" placeholder="Digite o seu email" required />
+              </div>
+              <div class="input-password">
+                <img src="/ProjetoSolarOficial/src/assets/img-login/Password.png" alt="icone senha" />
+                <input type="password" placeholder="Digite sua senha" required />
+              </div>
             </div>
-            <div class="input-password">
-              <img src="/ProjetoSolarOficial/src/assets/img-login/Password.png" alt="icone senha"/><input
-                type="password" placeholder="Digite sua senha" />
+            <div class="input-remember">
+              <div class="input-remember-checkbox">
+                <input type="checkbox" id="lembrar-de-mim" name="lembrar-de-mim" />
+                <label for="lembrar-de-mim">Lembrar de mim</label>
+              </div>
+              <a href="#" onclick="abrirPopupRecuperacao(event)">Esqueci a minha senha</a>
             </div>
-          </div>
-          <div class="input-remember">
-            <div class="input-remember-checkbox">
-              <input type="checkbox" id="lembrar-de-mim" name="lembrar-de-mim" />
-              <label for="lembrar-de-mim">Lembrar de mim</label>
+            <div class="button-entrar">
+              <button class="submit-btn" onclick="abrirPopup(event)">Entrar</button>
             </div>
-            <a href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/recoverAccount/index.html')">Esqueci a
-              minha senha</a>
-          </div>
-          <div class="button-entrar">
-           <button class="submit-btn" onclick="abrirPopup(event)">Entrar</button>
-          </div>
-          <div class="create-account">
-            <p>Não possui cadastro?</p>
-            <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/register.html')">Crie a sua
-              conta</a>
-          </div>
-        </form>
-      </div>
+            <div class="create-account">
+              <p>Não possui cadastro?</p>
+              <a href="#" onclick="redirectUser('/ProjetoSolarOficial/src/pages/register/register.html')">Crie a sua
+                conta</a>
+            </div>
+          </form>
+        </div>
+      </div><!--margem-global-->
     </section>
   </main>
 
-<div class="modal-overlay" id="modalSucesso">
-  <div class="modal-card">
-    <div class="icon-container">
-      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="30" fill="white"/>
-        <path d="M18 30L26 38L42 22" stroke="#8A6DC5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    
-    <h2>Recuperação de conta<br>ativada!</h2>
+  <div class="modal-overlay" id="modalLoginSucesso">
+    <div class="modal-card">
+      <div class="icon-container">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="30" fill="white" />
+          <path d="M18 30L26 38L42 22" stroke="#8A6DC5" stroke-width="5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
 
-    <p>Enviamos um e-mail para você!🌻 <br> Por favor, acesse sua caixa de entrada e clique no link para continuar com a recuperação.</p>
-    
-    <button class="btn-modal" onclick="window.location.href='/ProjetoSolarOficial/src/pages/home/home.html'">
-      voltar para o ínicio
-    </button>
-    <button class="btn-modal" onclick="window.location.href='../login/login.html'">
-      voltar ao login
-    </button>
+      <h2>Bem-vindo(a) de volta!</h2>
+      <p>Login efetuado com sucesso!🌻 <br>Você será redirecionado para a Home.</p>
+
+      <button class="btn-modal" onclick="window.location.href='/ProjetoSolarOficial/src/pages/home/home.html'">
+        Ir para a Home
+      </button>
+    </div>
   </div>
-</div>
+
+  <div class="modal-overlay" id="modalRecuperacao">
+    <div class="modal-card">
+      <div class="icon-container">
+        <svg width="80" height="80" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="30" fill="white" />
+          <path d="M30 15V35" stroke="#8A6DC5" stroke-width="5" stroke-linecap="round" />
+          <circle cx="30" cy="45" r="3" fill="#8A6DC5" />
+        </svg>
+      </div>
+
+      <h2>Recuperação de conta!</h2>
+      <p>Por favor, insira o email da conta a ser recuperada:</p>
+
+      <div class="modal-input-wrapper">
+        <div class="input-email input-modal-style">
+          <img src="/ProjetoSolarOficial/src/assets/img-login/arroba-login.png" alt="icone email" />
+          <input type="email" placeholder="Insira o email da conta" required />
+        </div>
+      </div>
+
+      <div class="btns-row">
+        <button class="btn-modal btn-outline" onclick="fecharPopupRecuperacao()">
+          Voltar ao Login
+        </button>
+        <button class="btn-modal" onclick="prosseguirRecuperacao()">
+          Prosseguir
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalSucesso">
+    <div class="modal-card">
+      <div class="icon-container">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="30" fill="white" />
+          <path d="M18 30L26 38L42 22" stroke="#8A6DC5" stroke-width="5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <h2>Recuperação de conta<br>ativada!</h2>
+
+      <p>Enviamos um e-mail para você!🌻 <br> Por favor, acesse sua caixa de entrada e clique no link para continuar com
+        a recuperação.</p>
+
+      <button class="btn-modal" onclick="window.location.href='/ProjetoSolarOficial/src/pages/home/home.html'">
+        voltar para o início
+      </button>
+      <button class="btn-modal" onclick="window.location.href='../login/login.html'">
+        voltar ao login
+      </button>
+    </div>
+  </div>
 
 </body>
 <script src="../../js/popupRegister.js"></script>

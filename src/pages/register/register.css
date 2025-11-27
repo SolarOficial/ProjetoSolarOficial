@@ -219,8 +219,6 @@ body::before {
 }
 
 /* POPUP CADASTRO FEITO */
-
-/* Fundo escuro que cobre a tela inteira */
 .modal-overlay {
   position: fixed;
   top: 0;

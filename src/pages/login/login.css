@@ -53,7 +53,7 @@ body::before {
   z-index: -1;
 }
 
-section.img-login {
+section.img-login .margem-global {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,10 +66,9 @@ section.img-login {
   flex-direction: column;
   font-family: var(--font-titulo);
   background: var(--cor-roxo-claro-gradient);
-  margin-top: 67px;
   padding: 59px 56px 86px 56px;
   border-radius: 60px;
-  width: 645px;
+  width: 500px;
   height: 630px;
 }
 
@@ -96,7 +95,6 @@ section.img-login {
       #ffed4f1e,
       #ffffff00);
   box-shadow: 2px 2px rgba(0, 0, 0, 0.144);
-  margin-left: 100px;
 }
 
 .circulo-com-gradiente-e-imagem img {
@@ -294,7 +292,7 @@ section.img-login {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.modal-card p{
+.modal-card p {
   color: white;
   font-size: 18px;
   margin-bottom: 10px;
@@ -323,6 +321,35 @@ section.img-login {
   box-shadow: 0 6px 20px rgba(255, 205, 79, 0.4);
 }
 
+.modal-input-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.input-modal-style {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-color: #fff;
+}
+
+.btns-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btns-row .btn-modal {
+  margin: 0;
+  width: auto;
+  min-width: 200px;
+  padding: 12px 30px;
+}
+
+
 /* Animação de entrada */
 @keyframes slideUp {
   from {
@@ -337,14 +364,19 @@ section.img-login {
 }
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
-@media screen and (max-width: 1200px) {
-  section.img-login {
+@media screen and (max-width: 1300px) {
+  section.img-login .margem-global {
     flex-direction: column;
     gap: 50px;
-    margin-top: 100px;/
+  }
+
+  section.img-login .margem-global .circulo-com-gradiente-e-imagem {
+    display: none;
   }
 
   .login-solar {
+    display: flex;
+    justify-content: center;
     margin-top: 0;
     max-width: 500px;
     height: auto;
@@ -396,15 +428,15 @@ section.img-login {
 @media screen and (max-width: 768px) {
 
   /* CONTAINER DO LAYOUT */
-  section.img-login {
+  section.img-login .margem-global {
     gap: 30px;
     margin-top: 120px;
   }
 
   .login-solar {
-    width: 95%;
+    width: 100%;
     max-width: none;
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
 
   .title-login {
@@ -428,8 +460,8 @@ section.img-login {
     height: 50px;
   }
 
-  .input-email input,
-  .input-password input {
+  .input-email input::placeholder,
+  .input-password input::placeholder {
     font-size: 14px;
   }
 
@@ -457,5 +489,15 @@ section.img-login {
     font-size: 16px;
     text-align: center;
     gap: 5px;
+  }
+
+  .input-modal-style {
+    width: 100%;
+  }
+
+  .btns-row {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
   }
 }

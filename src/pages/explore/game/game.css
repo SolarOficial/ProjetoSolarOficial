@@ -399,7 +399,8 @@ footer .margem-global {
   }
   section.image-fundo .margem-global h1 {
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-top: 80px;
+    /* margin-bottom: 5px; */
   }
   section.image-fundo .margem-global p {
     font-size: 14px;
@@ -475,7 +476,7 @@ footer .margem-global {
   }
   section.image-fundo .margem-global h1 {
     font-size: 18px;
-    margin-top: 50px;
+    margin-top: 80px;
   }
   section.image-fundo .margem-global p {
     font-size: 10px;

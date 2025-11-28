@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* ===================== */
+/* IMPORTAÇÃO DE FONTES  */
+/* ===================== */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Karla:wght@200..800&family=Open+Sans:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:wght@100..900&display=swap");
 
-/* VARIAVEIS CORES e FONTES */
+/* ===================== */
+/* VARIÁVEIS GERAIS      */
+/* ===================== */
 :root {
   --cor-roxo-claro: #9675ce;
   --cor-roxo-escuro: #4a356d;
@@ -9,62 +14,76 @@
   --cor-branca: #fafafa;
   --cor-preta: #000000;
   --cor-amarelo: #fff59c;
+
   --font-titulo: "Karla", sans-serif;
-  --font-paragrafo: "Figtree";
+  --font-paragrafo: "Figtree", sans-serif;
+
+  --radius: 10px;
+  --transition: 0.3s ease;
 }
 
-/* RESET */
+/* ===================== */
+/* RESET                 */
+/* ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ======================================= */
-/* --- MAIN CONTENT (CARD) --- */
-/* ======================================= */
+/* ===================== */
+/* CONTAINERS            */
+/* ===================== */
+
+.margem-global {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
 
 .container-principal {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 105px;
-  padding: 0 10px;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
+  margin-top: 50px;
+  padding: 0 15px;
 }
+
+/* ===================== */
+/* CARD PRINCIPAL        */
+/* ===================== */
 
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
-  border-radius: 10px;
-  width: 844px;
-  max-width: 100%;
-  height: auto;
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 880px;
   padding: 40px 20px;
-  box-sizing: border-box;
 }
 
 .topo-card {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 50px 20px;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
   flex-wrap: wrap;
 }
 
 .img-topo-card {
   width: 250px;
   height: 220px;
+  object-fit: cover;
   border-radius: 20px;
-  max-width: 100%;
 }
 
 .titulo-subtitulo {
   font-family: var(--font-titulo);
   display: flex;
   flex-direction: column;
-  gap: 11px;
-  text-align: center;
+  gap: 8px;
+  flex: 1 1 300px;
 }
 
 .subtitulo-topo {
@@ -76,15 +95,19 @@
   font-size: 16px;
 }
 
+/* ===================== */
+/* INFORMAÇÕES DO CURSO  */
+/* ===================== */
+
 .informacoes-curso {
+  padding: 40px 50px;
   border-radius: 12px;
-  padding: 20px;
 }
 
 .informacoes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px 20px;
   font-family: var(--font-paragrafo);
 }
 
@@ -113,14 +136,15 @@
 
 .campo {
   border: 1.5px solid var(--cor-roxo-escuro);
-  border-radius: 10px;
+  border-radius: var(--radius);
   padding: 12px 18px;
   font-size: 16px;
   color: var(--cor-roxo-escuro);
 }
 
-.descricao {
-  grid-column: span 2;
+.descricao,
+.obs-card {
+  grid-column: 1 / -1;
 }
 
 .campo-descricao {
@@ -128,107 +152,158 @@
   line-height: 1.5;
 }
 
-.obs-card {
-  grid-column: span 2;
-}
+/* ===================== */
+/* BOTÕES                */
+/* ===================== */
 
 .botoes {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 20px;
+  padding: 0 50px;
+  margin-top: 30px;
 }
 
-.botao-1 {
-  border: 1px solid var(--cor-laranja);
-  background-color: transparent;
+.botao-1,
+.botao-2 {
   font-family: var(--font-paragrafo);
-  color: var(--cor-laranja);
+  width: 170px;
+  padding: 12px 20px;
   border-radius: 8px;
   font-size: 16px;
-  width: 160px;
-  padding: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition);
+}
+
+/* Botão 1 */
+.botao-1 {
+  border: 1px solid var(--cor-laranja);
+  background: transparent;
+  color: var(--cor-laranja);
 }
 
 .botao-1:hover {
+  background: var(--cor-laranja);
+  color: var(--cor-branca);
   transform: scale(1.05);
 }
 
+/* Botão 2 */
 .botao-2 {
-  background-color: var(--cor-roxo-escuro);
+  background: var(--cor-roxo-escuro);
   color: var(--cor-branca);
   border: none;
-  font-size: 18px;
-  padding: 12px;
-  width: 160px;
-  font-family: var(--font-paragrafo);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .botao-2:hover {
-  background-color: transparent;
+  background: transparent;
   color: var(--cor-roxo-escuro);
   border: 2px solid var(--cor-roxo-escuro);
   transform: scale(1.05);
 }
 
-/* ======================================================= */
-/* ⚙️ PADRONIZAÇÃO DO FOOTER (Layout 2fr 1fr 1fr) */
-/* ======================================================= */
+/* ===================== */
+/* MEDIA QUERIES MAIN    */
+/* ===================== */
+
+@media (max-width: 992px) {
+  .informacoes-curso {
+    padding: 30px;
+  }
+  .botoes {
+    justify-content: center;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sessao-pai {
+    padding: 20px 10px;
+  }
+
+  .topo-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .titulo-subtitulo {
+    text-align: center;
+    gap: 5px;
+  }
+
+  .img-topo-card {
+    width: 200px;
+    height: auto;
+    max-width: 90%;
+  }
+
+  .informacoes-curso {
+    padding: 15px;
+  }
+
+  .informacoes {
+    gap: 20px;
+  }
+
+  .botoes {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .botao-1,
+  .botao-2 {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* ===================== */
+/* FOOTER                */
+/* ===================== */
 
 footer {
-  margin-top: 100px; /* Espaçamento de 'start' */
+  margin-top: 100px;
   background: var(--cor-roxo-claro);
-  padding: 60px 0 30px 0;
-  color: var(--cor-branca); /* Cor base do texto em branco */
-}
-
-/* Usamos a classe .container-informacoes como margem global do footer */
-footer .container-informacoes {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* Layout de 3 colunas, primeira maior */
-  gap: 60px;
-  margin-bottom: 40px; /* Separar do copyright */
-}
-
-/* Ajustes de nomes de classes para PADRONIZAÇÃO */
-
-.logotipo-texto h2 {
-  /* Título que estava na coluna 2 (páginas) */
-  font-family: var(--font-titulo);
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.logotipo-texto p,
-.redes-sociais p,
-.paginas p {
-  font-family: var(--font-paragrafo);
-  font-size: 16px;
+  padding-top: 60px;
   color: var(--cor-branca);
 }
 
-.logotipo-nome {
+footer .margem-global {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+}
+
+.secao-footer h3 {
+  font-family: var(--font-titulo);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.secao-footer p,
+.lista-paginas a,
+.link-rede-social {
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--cor-branca);
+}
+
+.logo-footer {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
 }
 
-.logotipo-nome img {
+.logo-footer img {
   width: 70px;
 }
 
-.logotipo-nome span {
+.logo-footer span {
   font-family: var(--font-titulo);
   font-size: 36px;
   font-weight: 700;
@@ -241,137 +316,83 @@ footer .container-informacoes {
   margin-top: 20px;
 }
 
-.redes-sociais a {
+.link-rede-social {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--cor-branca);
   text-decoration: none;
-  font-family: var(--font-paragrafo);
-  font-size: 16px;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
-.redes-sociais a:hover {
+.link-rede-social:hover {
   color: var(--cor-laranja);
   transform: translateX(5px);
 }
 
-.redes-sociais svg {
+.link-rede-social svg {
   width: 24px;
   height: 24px;
   fill: var(--cor-branca);
 }
 
-.redes-sociais a:hover svg {
+.link-rede-social:hover svg {
   fill: var(--cor-laranja);
 }
 
-.paginas {
-  list-style: none; /* Mantém a estrutura de lista, se usada no HTML */
+.lista-paginas {
+  list-style: none;
 }
 
-.paginas p {
-  margin-bottom: 12px;
-  cursor: pointer;
+.lista-paginas a {
+  text-decoration: none;
+  transition: var(--transition);
 }
 
-.paginas p:hover {
+.lista-paginas a:hover {
   color: var(--cor-laranja);
   padding-left: 5px;
 }
 
 .direitos-autorais {
   text-align: center;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-family: var(--font-paragrafo);
+  padding: 30px 0;
   font-size: 14px;
-  color: var(--cor-branca);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
 }
 
-/* ======================================= */
-/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
-/* ======================================= */
+/* ============================= */
+/* FOOTER RESPONSIVO            */
+/* ============================= */
 
-@media (max-width: 1024px) {
-  .sessao-pai {
-    width: 90%;
+@media (max-width: 992px) {
+  footer .margem-global {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+    justify-content: space-around;
   }
 
-  .topo-card {
-    flex-direction: column;
-    align-items: center;
+  footer .secao-footer:first-child {
+    flex: 1 1 100%;
   }
 
-  .informacoes {
-    grid-template-columns: 1fr;
-  }
-
-  /* FOOTER: Força o empilhamento vertical (1fr) para telas menores */
-  footer .container-informacoes {
-    grid-template-columns: 1fr;
-    text-align: start;
-  }
-
-  .logotipo-nome {
-    justify-content: start;
-  }
-
-  .redes-sociais {
-    align-items: start;
-  }
-
-  .paginas {
-    text-align: start;
+  footer .secao-footer:nth-child(2),
+  footer .secao-footer:nth-child(3) {
+    flex: 1 1 45%;
   }
 }
 
 @media (max-width: 768px) {
-  .titulo-subtitulo,
-  .subtitulo-topo,
-  .paragrafo-topo {
-    text-align: start;
-  }
-
-  .botoes {
+  footer .margem-global {
     flex-direction: column;
-    gap: 15px;
-    width: 100%;
+    gap: 30px;
+    align-items: flex-start;
   }
 
-  .logotipo-nome {
-    font-size: 28px;
-    justify-content: start;
-  }
-
-  .redes-sociais a,
-  .paginas p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sessao-pai {
-    width: 95%;
-    margin-top: 50px;
-  }
-
-  .img-topo-card {
-    width: 100%;
-    height: auto;
-  }
-
-  .titulo-subtitulo {
-    font-size: 16px;
-  }
-
-  .botoes {
-    width: 100%;
-    justify-content: start;
-  }
-
-  .logotipo-nome {
-    font-size: 24px;
+  .lista-paginas,
+  .redes-sociais {
+    padding-left: 0;
+    align-items: flex-start;
   }
 }

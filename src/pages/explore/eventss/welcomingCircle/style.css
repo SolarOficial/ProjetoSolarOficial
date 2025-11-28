@@ -21,6 +21,13 @@
   box-sizing: border-box;
 }
 
+/* CONTAINER GLOBAL DE CONTEÚDO (Para controle de margens externas) */
+.margem-global {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
 /* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
 
 /* MAIN */
@@ -30,28 +37,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 105px;
+  margin-top: 50px; /* Ajuste para melhor espaçamento */
+  padding: 0 15px; /* Adiciona padding lateral */
 }
+
 /* definindo configurações do card */
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
-  width: 844px;
-  height: 880px;
+  width: 100%; /* CORREÇÃO: Largura fluida */
+  max-width: 880px; /* Limite máximo */
+  height: auto; /* CORREÇÃO: Altura adaptável */
   flex-wrap: wrap;
 
   .topo-card {
     display: flex;
+    flex-wrap: wrap; /* Adiciona quebra de linha para mobile */
     justify-content: center;
     gap: 30px;
-    margin: 50px 42px 50px 42px;
+    margin: 30px; /* CORREÇÃO: Margem unificada para todos os lados */
   }
 
   /* estilizando imagem */
   .img-topo-card {
-    width: 250px;
-    height: 220px;
+    width: 100%; /* Permite ocupar a largura total do espaço */
+    max-width: 250px; /* Limita o tamanho máximo */
+    height: auto; /* Altura adaptável */
     border-radius: 20px;
+    object-fit: cover; /* Garante que a imagem preencha a área */
   }
 
   /* estilizando titulo e texto no topo do card */
@@ -60,6 +73,7 @@
     display: flex;
     flex-direction: column;
     gap: 11px;
+    flex: 1 1 300px; /* Permite que o bloco de texto cresça */
   }
 
   .subtitulo-topo {
@@ -71,6 +85,15 @@
     font-size: 16px;
   }
 }
+/* Alinhamento de texto centralizado para o topo do card em mobile */
+@media (max-width: 600px) {
+  .sessao-pai .topo-card {
+    text-align: center;
+  }
+  .sessao-pai .topo-card .titulo-subtitulo {
+    text-align: center;
+  }
+}
 
 .informacoes-curso {
   border-radius: 12px;
@@ -79,7 +102,10 @@
 
 .informacoes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* CORREÇÃO: Grid responsivo, de 2 colunas para 1 em telas pequenas */
   gap: 35px 70px;
   font-family: "Figtree";
 }
@@ -119,7 +145,7 @@
 
 /* descrição ocupa as duas colunas */
 .descricao {
-  grid-column: span 2;
+  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
 }
 
 .campo-descricao {
@@ -128,45 +154,48 @@
 }
 
 .obs-card {
-  grid-column: span 2;
+  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
 }
 
 .botoes {
   display: flex;
-  gap: 50px;
-  margin-top: 4%;
-  width: 420px;
-  margin-left: 355px;
+  justify-content: flex-end; /* Alinha à direita de forma fluida */
+  gap: 20px; /* Ajuste o gap */
+  margin-top: 40px; /* Ajuste a margem */
+  width: 100%; /* Ocupa a largura total */
+  margin-left: 0; /* CORREÇÃO: Remove margem fixa */
+  padding: 0 50px; /* Adiciona padding lateral */
+  flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+
+  .botao-1,
+  .botao-2 {
+    padding: 10px 20px; /* Padding ajustado */
+    font-family: "Figtree";
+    font-size: 18px; /* Ajustado para consistência */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex: 1 1 auto; /* Permite que os botões cresçam um pouco */
+    max-width: 200px; /* Limita o tamanho em desktop */
+  }
 
   .botao-1 {
     border: 1px solid var(--cor-laranja);
     background-color: transparent;
-    padding: 15px;
-    font-family: "Figtree";
     color: var(--cor-laranja);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-size: 18px;
-    width: 170px;
-    padding: 10px;
-    cursor: pointer;
   }
 
   .botao-1:hover {
     transform: scale(1.05);
+    background-color: var(--cor-laranja);
+    color: var(--cor-branca);
   }
 
   .botao-2 {
     background-color: var(--cor-roxo-escuro);
     color: var(--cor-branca);
     border: none;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    padding: 15px;
-    width: 170px;
-    font-family: "Figtree";
-    border-radius: 8px;
-    cursor: pointer;
+    font-size: 18px; /* Ajustado para consistência */
   }
 }
 
@@ -177,92 +206,183 @@
   transform: scale(1.05);
 }
 
+/* Estilos específicos para mobile */
+@media (max-width: 768px) {
+  .informacoes-curso {
+    padding: 20px; /* Reduz padding no interior do card */
+  }
+
+  .botoes {
+    justify-content: center; /* Centraliza botões em mobile */
+    padding: 0 20px;
+  }
+
+  .botoes .botao-1,
+  .botoes .botao-2 {
+    flex: 1 1 100%; /* Faz os botões ocuparem a largura total */
+    max-width: 350px;
+  }
+}
+
 /* //////////////////////////////////////////// FOOTER ////////////////////////////////////////////// */
 
+/* FOOTER */
 footer {
-  background-color: var(--cor-roxo-claro);
-  margin-top: 186px;
-}
-
-footer .container-informacoes {
-  display: flex;
-  justify-content: space-between;
-  padding: 86px 0 0 0;
-}
-
-footer .container-informacoes .logotipo-texto {
-  width: 443px;
-  height: 209.69px;
-}
-
-footer .container-informacoes .logotipo-texto .logotipo-nome {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-left: 30%;
-  margin-bottom: 21px;
+  margin-top: 100px;
+  background: var(--cor-roxo-claro);
+  padding: 60px 0 0 0; /* Ajuste padding inferior */
   color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 40px;
 }
 
-footer .container-informacoes .logotipo-texto p {
-  font-size: 15px;
+/* Container que usa Grid para as colunas */
+footer .margem-global {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 0; /* Remove margem fixa, padding é controlado pelo .direitos-autorais */
+}
+
+.secao-footer h3 {
+  font-family: var(--font-titulo);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.secao-footer p {
   font-family: var(--font-paragrafo);
+  font-size: 16px;
   color: var(--cor-branca);
-  margin-left: 3%;
+  line-height: 1.5;
 }
 
-footer .container-informacoes .redes-sociais {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-}
-
-footer .container-informacoes .redes-sociais h2 {
-  color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 33.73px;
-}
-
-footer .container-informacoes .redes-sociais .instagram,
-.linkedin {
+.logo-footer {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-footer .container-informacoes .redes-sociais a {
-  color: var(--cor-amarelo);
-  font-family: var(--font-titulo);
-  font-size: 20px;
-  text-decoration: none;
-}
-
-footer .container-informacoes .paginas {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5%;
   gap: 15px;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-footer .container-informacoes .paginas h2 {
-  color: var(--cor-branca);
+.logo-footer img {
+  width: 70px;
+}
+
+.logo-footer span {
   font-family: var(--font-titulo);
-  font-size: 33.73px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
-footer .container-informacoes .paginas p {
-  color: var(--cor-amarelo);
-  font-family: var(--font-paragrafo);
-  font-size: 25px;
-}
-
-footer .margem-global p {
-  color: var(--cor-branca);
-  text-align: center;
-  font-family: var(--font-titulo);
-  font-size: 18px;
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin-top: 20px;
+}
+
+.link-rede-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.link-rede-social:hover {
+  color: var(--cor-laranja);
+  transform: translateX(5px);
+}
+
+.link-rede-social svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--cor-branca);
+}
+
+.link-rede-social:hover svg {
+  fill: var(--cor-laranja);
+}
+
+.lista-paginas {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-paginas li {
+  margin-bottom: 12px;
+}
+
+.lista-paginas a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.lista-paginas a:hover {
+  color: var(--cor-laranja);
+  padding-left: 5px;
+}
+
+.direitos-autorais {
+  text-align: center;
+  padding: 30px 0; /* Garante padding superior e inferior */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-paragrafo);
+  font-size: 14px;
+  color: var(--cor-branca);
+  margin-top: 40px;
+}
+
+/* ========================================================================= */
+/* MEDIA QUERIES PARA FOOTER RESPONSIVO */
+/* ========================================================================= */
+
+/* Telas Médias/Tablets (Máximo 992px) */
+@media screen and (max-width: 992px) {
+  footer .margem-global {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px 20px;
+  }
+
+  footer .margem-global > .secao-footer:first-child {
+    flex: 1 1 100%;
+    text-align: start;
+    align-items: start;
+  }
+
+  footer .margem-global > .secao-footer:nth-child(2),
+  footer .margem-global > .secao-footer:nth-child(3) {
+    flex: 1 1 45%;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+/* Telas Pequenas/Mobile (Máximo 768px) */
+@media screen and (max-width: 768px) {
+  footer .margem-global {
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+  }
+
+  footer .margem-global > .secao-footer {
+    flex: none;
+    width: 90%;
+    text-align: start;
+    align-items: start;
+  }
+
+  footer .margem-global .redes-sociais,
+  footer .margem-global .lista-paginas {
+    align-items: start;
+    padding-left: 0;
+  }
 }

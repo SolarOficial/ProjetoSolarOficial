@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* VARIAVEIS CORES e FONTES */
@@ -21,9 +21,16 @@
   box-sizing: border-box;
 }
 
+/* CONTAINER GLOBAL DE CONTEÚDO (Ajuda na responsividade) */
+.margem-global {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
 /* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
 
-/* MAIN */
+/* MAIN - CORREÇÕES DE RESPONSIVIDADE */
 
 /* card sobre a descrição do curso */
 .container-principal {
@@ -31,50 +38,65 @@
   align-items: center;
   justify-content: center;
   margin-top: 105px;
+  padding: 0 15px;
 }
+
 /* definindo configurações do card */
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
-  width: 844px;
-  height: 1008px;
+  width: 100%; /* CORREÇÃO: Deixa a largura fluida */
+  max-width: 844px; /* Limite máximo */
+  height: auto; /* CORREÇÃO: Altura adapta-se ao conteúdo */
   flex-wrap: wrap;
+  padding-bottom: 40px;
+}
 
-  .topo-card {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 50px 42px 50px 42px;
-  }
+.sessao-pai .topo-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 42px; /* Margem limpa */
+}
 
-  /* estilizando imagem */
-  .img-topo-card {
-    border: 1px solid var(--cor-laranja);
-    border-radius: 10px;
-    padding: 20px;
-  }
+/* estilizando imagem */
+.sessao-pai .img-topo-card {
+  width: 250px;
+  height: 220px;
+  border: 1px solid var(--cor-laranja);
+  border-radius: 10px;
+  padding: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
-  /* estilizando titulo e texto no topo do card */
-  .titulo-subtitulo {
-    font-family: "Karla", sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
-  }
+/* estilizando titulo e texto no topo do card */
+.sessao-pai .titulo-subtitulo {
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
 
-  .subtitulo-topo {
-    font-size: 20px;
-  }
+.sessao-pai .titulo-topo {
+  font-size: 32px;
+  color: var(--cor-roxo-escuro);
+}
 
-  .paragrafo-topo {
-    font-family: "Figtree";
-    font-size: 16px;
-  }
+.sessao-pai .subtitulo-topo {
+  font-size: 20px;
+}
+
+.sessao-pai .paragrafo-topo {
+  font-family: "Figtree";
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .informacoes-curso {
   border-radius: 12px;
-  padding: 40px 50px;
+  padding: 0 50px; /* Removido padding vertical, usa padding horizontal */
 }
 
 .informacoes {
@@ -133,26 +155,28 @@
 
 .botoes {
   display: flex;
-  gap: 50px;
-  margin-top: 4%;
-  width: 420px;
-  margin-left: 380px;
+  justify-content: flex-end; /* Alinha à direita para desktop */
+  gap: 30px; /* Ajustado para um valor limpo */
+  margin-top: 40px;
+  width: auto; /* CORREÇÃO: Tira a largura fixa */
+  margin-left: auto; /* CORREÇÃO: Remove margem fixa */
+  margin-right: 50px; /* Alinha com o padding do .informacoes-curso */
 
   .botao-1 {
     background-color: var(--cor-laranja);
     border: none;
-    padding: 15px;
+    padding: 10px 15px; /* Padding unificado e limpo */
     font-family: "Figtree";
     color: var(--cor-branca);
     border-radius: 8px;
     transition: all 0.3s ease;
     font-size: 18px;
-    padding: 10px;
+    width: 170px;
     cursor: pointer;
   }
 
   .botao-1:hover {
-    background-color: #ffb347; /* tom mais claro do laranja */
+    background-color: #ffb347;
     transform: scale(1.05);
   }
 
@@ -162,7 +186,8 @@
     border: none;
     font-size: 20px;
     transition: all 0.3s ease;
-    padding: 15px;
+    padding: 10px 15px; /* Padding unificado e limpo */
+    width: 170px;
     font-family: "Figtree";
     border-radius: 8px;
     cursor: pointer;
@@ -178,90 +203,292 @@
 
 /* //////////////////////////////////////////// FOOTER ////////////////////////////////////////////// */
 
+/* FOOTER */
 footer {
-  background-color: var(--cor-roxo-claro);
-  margin-top: 186px;
-}
-
-footer .container-informacoes {
-  display: flex;
-  justify-content: space-between;
-  padding: 86px 0 0 0;
-}
-
-footer .container-informacoes .logotipo-texto {
-  width: 443px;
-  height: 209.69px;
-}
-
-footer .container-informacoes .logotipo-texto .logotipo-nome {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-left: 30%;
-  margin-bottom: 21px;
+  margin-top: 100px;
+  background: var(--cor-roxo-claro);
+  padding: 60px 0 0 0; /* CORREÇÃO: Ajuste o padding para o .direitos-autorais controlar o espaço inferior */
   color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 40px;
 }
 
-footer .container-informacoes .logotipo-texto p {
-  font-size: 15px;
+/* Container que usa Grid para as colunas */
+footer .margem-global {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* 3 colunas, com a primeira maior */
+  gap: 60px;
+  margin-bottom: 0; /* CORREÇÃO: Remove margem fixa */
+}
+
+/* Colunas (seção) do rodapé */
+.secao-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.secao-footer h3 {
+  font-family: var(--font-titulo);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.secao-footer p {
   font-family: var(--font-paragrafo);
+  font-size: 16px;
   color: var(--cor-branca);
-  margin-left: 3%;
+  line-height: 1.5;
 }
 
-footer .container-informacoes .redes-sociais {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-}
-
-footer .container-informacoes .redes-sociais h2 {
-  color: var(--cor-branca);
-  font-family: var(--font-titulo);
-  font-size: 33.73px;
-}
-
-footer .container-informacoes .redes-sociais .instagram,
-.linkedin {
+/* Logo e Nome da Marca (Primeira Seção) */
+.logo-footer {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-footer .container-informacoes .redes-sociais a {
-  color: var(--cor-amarelo);
-  font-family: var(--font-titulo);
-  font-size: 20px;
-  text-decoration: none;
-}
-
-footer .container-informacoes .paginas {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5%;
   gap: 15px;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-footer .container-informacoes .paginas h2 {
-  color: var(--cor-branca);
+.logo-footer img {
+  width: 70px;
+}
+
+.logo-footer span {
   font-family: var(--font-titulo);
-  font-size: 33.73px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
-footer .container-informacoes .paginas p {
-  color: var(--cor-amarelo);
-  font-family: var(--font-paragrafo);
-  font-size: 25px;
-}
-
-footer .margem-global p {
-  color: var(--cor-branca);
-  text-align: center;
-  font-family: var(--font-titulo);
-  font-size: 18px;
+/* Redes Sociais */
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin-top: 20px;
+}
+
+.link-rede-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.link-rede-social:hover {
+  color: var(--cor-laranja);
+  transform: translateX(5px);
+}
+
+.link-rede-social svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--cor-branca);
+}
+
+.link-rede-social:hover svg {
+  fill: var(--cor-laranja);
+}
+
+/* Páginas */
+.lista-paginas {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-paginas li {
+  margin-bottom: 12px;
+}
+
+.lista-paginas a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.lista-paginas a:hover {
+  color: var(--cor-laranja);
+  padding-left: 5px;
+}
+
+/* Direitos Autorais (Barra Inferior) */
+.direitos-autorais {
+  text-align: center;
+  padding: 30px 0; /* CORREÇÃO: Garante padding superior e inferior */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-paragrafo);
+  font-size: 14px;
+  color: var(--cor-branca);
+  margin-top: 40px;
+}
+
+/* ========================================================================= */
+/* MEDIA QUERIES PARA RESPONSIVIDADE TOTAL */
+/* ========================================================================= */
+
+/* 1. TELAS MÉDIAS/TABLETS (Máximo 992px) */
+@media screen and (max-width: 992px) {
+  /* --- MAIN --- */
+  .sessao-pai {
+    max-width: 90%;
+  }
+
+  .topo-card {
+    flex-direction: column; /* Empilha a imagem e o texto */
+    text-align: center;
+    align-items: center;
+    margin: 30px 20px;
+  }
+
+  .sessao-pai .img-topo-card {
+    width: 100%;
+    max-width: 300px; /* Limita a largura em telas menores */
+    height: auto;
+  }
+
+  .informacoes-curso {
+    padding: 0 30px;
+  }
+
+  .informacoes {
+    grid-template-columns: 1fr; /* Empilha todas as informações */
+    gap: 20px;
+  }
+
+  .descricao,
+  .obs-card {
+    grid-column: span 1;
+  }
+
+  .botoes {
+    justify-content: center; /* Centraliza os botões */
+    margin: 30px auto 0 auto;
+    width: 100%;
+    margin-right: auto;
+    gap: 20px;
+  }
+
+  /* --- FOOTER CORREÇÕES DE RESPONSIVIDADE --- */
+  footer .margem-global {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px 20px;
+  }
+
+  /* Coluna Principal */
+  footer .margem-global > .secao-footer:first-child {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer .margem-global .logo-footer {
+    justify-content: center;
+  }
+
+  footer .margem-global .secao-footer p {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Outras Colunas */
+  footer .margem-global > .secao-footer:nth-child(2),
+  footer .margem-global > .secao-footer:nth-child(3) {
+    flex: 1 1 45%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  footer .margem-global .redes-sociais,
+  footer .margem-global .lista-paginas {
+    align-items: flex-start;
+  }
+}
+
+/* 2. TELAS PEQUENAS/MOBILE (Máximo 576px) */
+@media screen and (max-width: 576px) {
+  /* --- MAIN --- */
+  .sessao-pai {
+    border: none;
+  }
+
+  .informacoes-curso {
+    padding: 0 15px;
+  }
+
+  .topo-card {
+    margin: 20px 10px;
+  }
+
+  .sessao-pai .img-topo-card {
+    max-width: 180px;
+    width: 100%;
+  }
+
+  .botoes {
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  .botoes .botao-1,
+  .botoes .botao-2 {
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* --- FOOTER CORREÇÕES DE RESPONSIVIDADE --- */
+  footer .margem-global {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  footer .margem-global > .secao-footer {
+    flex: none;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer .margem-global .logo-footer {
+    justify-content: center;
+  }
+
+  footer .margem-global .secao-footer h3 {
+    font-size: 24px;
+  }
+
+  footer .margem-global .secao-footer p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  footer .margem-global .redes-sociais,
+  footer .margem-global .lista-paginas {
+    align-items: center; /* Centraliza as listas em mobile */
+    padding-left: 0;
+  }
+
+  footer .margem-global .link-rede-social {
+    font-size: 14px;
+  }
+
+  footer .margem-global .lista-paginas a {
+    font-size: 14px;
+  }
+
+  footer .margem-global .direitos-autorais {
+    font-size: 12px;
+  }
 }

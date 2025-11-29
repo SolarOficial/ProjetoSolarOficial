@@ -1,0 +1,92 @@
+/* Grid para os cards ficarem lado a lado */
+.grid-inscricoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo */
+    gap: 20px;
+}
+
+/* O Card Individual */
+.card-inscricao {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card-inscricao:hover {
+    transform: translateY(-5px);
+}
+
+.card-inscricao img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tag-tipo {
+    background-color: #f0ebfa;
+    color: #4a356d;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.card-info h3 {
+    font-family: 'Karla', sans-serif;
+    color: #333;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.card-info p {
+    font-family: 'Figtree', sans-serif;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Botão de Cancelar */
+.btn-cancelar {
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+/* Mensagem de Vazio */
+.sem-inscricoes {
+    text-align: center;
+    grid-column: 1 / -1; /* Ocupa toda a largura */
+    padding: 40px;
+    color: #888;
+}
+
+.sem-inscricoes button {
+    margin-top: 15px;
+    background-color: #9675ce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}

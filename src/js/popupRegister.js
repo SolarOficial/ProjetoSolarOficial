@@ -2,7 +2,7 @@ function abrirPopup(event) {
     const form = document.querySelector('form');
     if (form.checkValidity()) {
         event.preventDefault();
-        document.getElementById('modalLoginSucesso').style.display = 'flex';
+        document.getElementById('modalSucesso').style.display = 'flex';
     } else {
         form.reportValidity();
     }

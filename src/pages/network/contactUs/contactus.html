@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -10,16 +9,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Solar" />
   <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
-  <link rel="stylesheet" href="./contactus.css" />
+  <link rel="stylesheet" href="./location.css" />
   <link rel="stylesheet" href="../../../headerResponsivo.css">
-  <script src="https://kit.fontawesome.com/cd3985d825.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="../../../assets/Logotipo-Solar.png" type="image/x-icon" />
-  <title>Fale conosco - SOLAR</title>
+  <title>Localizações - SOLAR</title>
 </head>
 
 <body>
 
-  <header class="container-pai">
+   <header class="container-pai">
     <div class="logo">
       <a href="#" onclick="redirectUser('../../../../index.html')">
         <img height="90" src="../../../assets/logo_nav2.png" alt="Logo branca Solar" />
@@ -40,8 +38,8 @@
             <img class="seta-header" src="../../../assets/seta.png" alt="seta" />
           </a>
           <ul class="dropdown">
-            <li><a href="../../explore/eventss/index/index.html"
-                onclick="redirectUser('../../pages/explore/eventss/index/index.html')">EVENTOS</a>
+            <li><a href="#"
+                onclick="redirectUser('../../explore/eventss/index/index.html')">EVENTOS</a>
             </li>
             <li><a href="#"
                 onclick="redirectUser('../../../pages/explore/courses/index/index.html')">CURSOS</a>
@@ -75,7 +73,7 @@
                 onclick="redirectUser('../../../pages/network/contactus/contactus.html')">FALE
                 CONOSCO</a></li>
             <li><a href="#"
-                onclick="redirectUser('../../../pages/network/community/comunidade.html')">COMUNIDADE</a>
+                onclick="redirectUser('../../network/community/comunidade.html')">COMUNIDADE</a>
             </li>
           </ul>
         </li>
@@ -89,63 +87,64 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="secao-hero">
-    <h1>Fale Conosco</h1>
-    <p>Nos conte sua dúvida, sugestão ou experiência! Queremos ouvir você.</p>
-  </section>
-
-  <!-- SECTION FORMULÁRIO -->
-  <section class="secao-formulario">
+  <section class="secao-localizacoes">
     <div class="margem-global">
-      <div class="container-mascote">
-        <img src="../../../assets/img-contactus/solaria-fale-conosco.png" alt="Mascote Solaria com c" />
-      </div>
+      <h2 class="title-localizacoes">Encontre apoio perto de você!</h2>
 
-      <div class="container-formulario">
-        <div class="titulo-formulario">
-          <h2>Estamos aqui pra te ouvir <span class="emoji">🌻</span></h2>
+      <div class="container-mapa-resultados">
+        <!-- MAPA À ESQUERDA -->
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/d/u/0/embed?mid=1maZxqYa5l703uIWPvxr0WVrhnVb5a1c&ehbc=2E312F&noprof=1"></iframe>
         </div>
 
-        <form class="formulario-contato">
-          <div class="grupo-formulario">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+        <!-- CARD EXPLICATIVO À DIREITA -->
+        <div class="tutorial-card">
+          <h3>O que você encontrará no mapa?</h3>
+
+          <div class="tutorial-item">
+            <img src="../../../assets/img-location/iconeOngs.png" alt="Ícone ONG" />
+            <p>
+              <strong>ONGs:</strong> locais que oferecem serviços sociais e
+              comunitários.
+            </p>
           </div>
 
-          <div class="grupo-formulario">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          <div class="tutorial-item">
+            <img src="../../../assets/img-location/iconeUBS.png" alt="Ícone UBS" />
+            <p>
+              <strong>UBS:</strong> unidades de saúde para atendimento básico.
+            </p>
           </div>
 
-          <div class="grupo-formulario">
-            <label for="assunto">Assunto</label>
-            <select id="assunto" name="assunto" required>
-              <option value="">Selecione o assunto</option>
-              <option value="duvida">Dúvida</option>
-              <option value="sugestao">Sugestão</option>
-              <option value="elogio">Elogio</option>
-              <option value="reclamacao">Reclamação</option>
-              <option value="parceria">Parceria</option>
-              <option value="outro">Outro</option>
-            </select>
+          <div class="tutorial-item">
+            <img src="../../../assets/img-location/iconeCras.png" alt="Ícone CRAS" />
+            <p>
+              <strong>CRAS:</strong> centros públicos de assistência para
+              apoio familiar.
+            </p>
           </div>
+          <!-- BOTÃO PARA ABRIR O VÍDEO -->
+          <button class="btn-tutorial-video" id="openVideo">
+            Clique e veja o tutorial sobre o mapa!
+          </button>
 
-          <div class="grupo-formulario">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Conte pra gente como podemos ajudar você"
-              required></textarea>
-          </div>
+          <!-- MODAL DO VÍDEO -->
+          <div id="videoModal" class="modal-video">
+            <div class="modal-content-video">
+              <span id="closeModal" class="close-video">&times;</span>
 
-          <div class="botao-enviar-form">
-            <button type="submit">Enviar</button>
+              <video id="tutorialVideo" controls>
+                <source src="../../../assets/img-location/IMG_0467.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeo.
+              </video>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="margem-global">
       <div class="secao-footer">
@@ -160,7 +159,6 @@
           emocional, informações e recursos.
         </p>
       </div>
-
       <div class="secao-footer">
         <h3>Redes Sociais</h3>
         <div class="redes-sociais">
@@ -211,27 +209,9 @@
       </p>
     </div>
   </footer>
-
-  <!-- POPUP FORMULÁRIO ENVIADO -->
-
-  <div id="popup-overlay" class="popup-overlay">
-    <div id="popup-sucesso" class="popup-sucesso">
-      <div class="popup-icon-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-          <circle cx="26" cy="26" r="26" fill="#9675CE" />
-          <path stroke="#FFFFFF" stroke-width="4" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-        </svg>
-      </div>
-
-      <h2>Mensagem enviada com sucesso!</h2>
-
-      <button id="fechar-popup" class="popup-botao-fechar">Fechar</button>
-    </div>
-  </div>
-
-  <script src="../../../js/contactus.js"></script>
-  <script src="../../../js/script.js"></script>
-  <script src="../../../js/headerResponsivo.js"></script>
 </body>
+<script src="../../../js/script.js"></script>
+<script src="../../../js/videoTutorial.js"></script>
+<script src="../../../js/headerResponsivo.js"></script>
 
 </html>

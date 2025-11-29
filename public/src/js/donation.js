@@ -41,32 +41,33 @@ function Credito() {
         </div>
 
         <div class="alinhar-botoes">
-            <div class="alinhar">
-                <label for="vencimento">Vencimento (mês/ano)</label>
-                <input 
-                    type="text" 
-                    id="vencimento" 
-                    required 
-                    placeholder="MM/AA"
-                    pattern="[0-9]{2}/[0-9]{2}"
-                    maxlength="5"
-                    autocomplete="cc-exp"
-                >
-            </div>
-            
-            <div class="alinhar">
-                <label for="cvv">CVV</label>
-                <input 
-                    type="text" 
-                    id="cvv" 
-                    required 
-                    placeholder="123"
-                    inputmode="numeric"
-                    maxlength="4"
-                    autocomplete="cc-csc"
-                >
-            </div>
-        </div>
+    <div class="alinhar">
+        <label for="vencimento">Vencimento (mês/ano)</label>
+        <input 
+            type="text" 
+            id="vencimento" 
+            required 
+            placeholder="MM/AA"
+            pattern="[0-9]{2}/[0-9]{2}"
+            maxlength="5"
+            autocomplete="cc-exp"
+        >
+    </div>
+
+    <div class="alinhar">
+        <label for="cvv">CVV</label>
+        <input 
+            type="text" 
+            id="cvv" 
+            required 
+            placeholder="123"
+            inputmode="numeric"
+            maxlength="4"
+            autocomplete="cc-csc"
+        >
+    </div>
+</div>
+
 
         <div class="confirmacao">
             <input type="checkbox" id="aceite-termos" required>

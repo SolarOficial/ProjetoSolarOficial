@@ -510,6 +510,18 @@ section.valor-doacao
   cursor: pointer;
 }
 
+#form-pagamento-credito .alinhar-botoes {
+    display: flex;
+    gap: 20px; 
+    align-items: flex-start; 
+}
+
+#form-pagamento-credito .alinhar-botoes .alinhar {
+    display: flex;
+    flex-direction: column; 
+}
+
+
 /* CONTEUDO DE PAGAMENTO COM CARTÃO DE PIX */
 
 section.valor-doacao

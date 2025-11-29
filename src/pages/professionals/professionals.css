@@ -24,7 +24,7 @@
 /*SECTION Profissionais que cuidam de você*/
 
 section.imagem-fundo {
-  background-image: url(/ProjetoSolarOficial/src/assets/img-professionals/imagem-fundo.png);
+  background-image: url(../../assets/img-professionals/imagem-fundo.png);
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;

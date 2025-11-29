@@ -31,7 +31,7 @@
 /* SECTION IMAGEM DE FUNDO COM TEXTO */
 
 section.imagem-fundo-texto {
-  background-image: url(/ProjetoSolarOficial/src/assets/img-donation/Rectangle\ 674.png);
+  background-image: url(../../assets/img-donation/Rectangle\ 674.png);
   height: 600px;
   object-fit: cover;
   background-repeat: no-repeat;
@@ -706,6 +706,19 @@ section.valor-doacao
   border: none;
 }
 
+section.valor-doacao .margem-global .valor-formulario {
+  display: flex;
+  gap: 40px; 
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+section.valor-doacao .margem-global .valor-formulario .escolha-valor,
+section.valor-doacao .margem-global .valor-formulario .form-pagamento {
+  width: 48%; 
+  box-sizing: border-box;
+}
+
 /* FOOTER */
 footer {
   margin-top: 100px;
@@ -1131,6 +1144,38 @@ footer .margem-global {
     height: 50px;
   }
 
+section.valor-doacao .digite-valor {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 434px;
+  height: 63px;
+  border-radius: 16.75px;
+  background-color: #fdebff;
+  margin: 52px auto 45px auto;
+  padding: 0 20px;
+  gap: 15px; 
+}
+
+
+section.valor-doacao .digite-valor span {
+  flex-shrink: 0; 
+  font-size: 18px;
+  color: #7b7979;
+}
+
+section.valor-doacao .digite-valor input {
+  flex: 1; 
+  border: none;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: var(--cor-roxo-escuro);
+  text-align: left;
+}
+
+
   /* Form Pagamento */
   section.valor-doacao .margem-global .valor-formulario .form-pagamento {
     padding: 15px;
@@ -1228,5 +1273,13 @@ footer .margem-global {
 
   .logo-footer img {
     width: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  section.valor-doacao .margem-global .valor-formulario .escolha-valor,
+  section.valor-doacao .margem-global .valor-formulario .form-pagamento {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }

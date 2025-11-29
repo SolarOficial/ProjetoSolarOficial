@@ -3,8 +3,8 @@ const indicadores = document.querySelectorAll(".carrossel-sobre i");
 const section = document.querySelector(".conheca-solar");
 
 const imagens = [
-  "/ProjetoSolarOficial/src/assets/img-about/background-inicio-sobre.png",
-  "/ProjetoSolarOficial/src/assets/img-about/img-about2.png"
+  "../../../assets/img-about/background-inicio-sobre.png",
+  "../../../assets/img-about/img-about2.png"
 ];
 
 let indexAtual = 0;

@@ -35,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-inicio-sobre.png");
+  background-image: url("../../../assets/img-about/background-inicio-sobre.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -94,7 +94,7 @@
 /* MISSÃO VISÃO VALORES */
 
 .background-missao-visao-valores {
-  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-misao-visao-valores.png");
+  background-image: url("../../../assets/img-about/background-misao-visao-valores.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -316,7 +316,7 @@
 /* APOIE A SOLAR */
 
 .background-apoie-solar {
-  background: url("/ProjetoSolarOficial/src/assets/img-about/background-image_section-apoie-a-solar.png");
+  background: url("../../../assets/img-about/background-image_section-apoie-a-solar.png");
   background-size: cover;
   padding-top: 250px;
 }

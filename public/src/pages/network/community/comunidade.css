@@ -41,8 +41,8 @@
 .hero {
    background: 
     linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
-    url("/ProjetoSolarOficial/src/assets/img-community/background_inicio_comunidade.png") center/cover no-repeat;
-  height: 600px;
+    url("../../../assets/img-community/background_inicio_comunidade.png") center/cover no-repeat;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;

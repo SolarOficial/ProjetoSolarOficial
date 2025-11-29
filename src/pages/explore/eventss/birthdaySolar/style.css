@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700;1,300..800&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* VARIAVEIS CORES e FONTES */
-
 :root {
   --cor-roxo-claro: #9675ce;
   --cor-roxo-escuro: #4a356d;
@@ -28,34 +27,37 @@
   padding: 0 20px;
 }
 
-/* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
-
-/* MAIN - AJUSTADO PARA RESPONSIVIDADE (Mantido o código anterior) */
+/* ======================================= */
+/* --- MAIN CONTENT (CARD) --- */
+/* ======================================= */
 
 /* card sobre a descrição do curso */
 .container-principal {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 50px; /* Ajuste de espaçamento */
   padding: 0 15px;
 }
+
 /* definindo configurações do card */
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
   width: 100%;
-  max-width: 844px;
-  height: auto;
+  max-width: 880px; /* Limite máximo */
+  height: auto; /* Altura adaptável */
   padding-bottom: 40px;
 }
 
+/* CORREÇÃO DE SINTAXE E AJUSTE DE ESPAÇAMENTO */
 .topo-card {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 50px 42px;
+  gap: 20px; /* Espaçamento reduzido */
+  margin: 25px 20px; /* Espaçamento reduzido */
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 /* estilizando imagem */
@@ -65,6 +67,7 @@
   border-radius: 20px;
   object-fit: cover;
   flex-shrink: 0;
+  max-width: 100%;
 }
 
 /* estilizando titulo e texto no topo do card */
@@ -72,7 +75,8 @@
   font-family: var(--font-titulo);
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 8px; /* Espaçamento reduzido */
+  flex: 1 1 300px;
 }
 .titulo-topo {
   font-size: 32px;
@@ -89,13 +93,16 @@
 
 .informacoes-curso {
   border-radius: 12px;
-  padding: 0 50px;
+  padding: 0 50px; /* Padding padrão desktop */
 }
 
 .informacoes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px 70px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* CORREÇÃO: Grid responsivo */
+  gap: 30px 20px; /* Espaçamento ajustado */
   font-family: var(--font-paragrafo);
 }
 
@@ -134,54 +141,58 @@
 
 /* descrição ocupa as duas colunas */
 .descricao {
-  grid-column: span 2;
+  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
 }
 .campo-descricao {
   min-height: 100px;
   line-height: 1.5;
 }
 .obs-card {
-  grid-column: span 2;
+  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
 }
 
+/* CORREÇÃO DE SINTAXE E AJUSTE DE ESPAÇAMENTO */
 .botoes {
   display: flex;
   justify-content: flex-end;
-  gap: 30px;
-  margin-top: 40px;
-  margin-right: 50px;
-  width: auto;
-
-  .botao-1 {
-    border: 1px solid var(--cor-laranja);
-    background-color: transparent;
-    padding: 10px 15px;
-    font-family: var(--font-paragrafo);
-    color: var(--cor-laranja);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-size: 18px;
-    width: 170px;
-    cursor: pointer;
-  }
-
-  .botao-1:hover {
-    transform: scale(1.05);
-  }
-
-  .botao-2 {
-    background-color: var(--cor-roxo-escuro);
-    color: var(--cor-branca);
-    border: none;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    padding: 10px 15px;
-    width: 170px;
-    font-family: var(--font-paragrafo);
-    border-radius: 8px;
-    cursor: pointer;
-  }
+  gap: 20px; /* Espaçamento reduzido */
+  margin-top: 30px; /* Espaçamento reduzido */
+  padding: 0 50px; /* Padding para alinhar com o .informacoes */
+  flex-wrap: wrap;
 }
+
+.botoes .botao-1 {
+  border: 1px solid var(--cor-laranja);
+  background-color: transparent;
+  padding: 10px 15px;
+  font-family: var(--font-paragrafo);
+  color: var(--cor-laranja);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  width: 170px;
+  cursor: pointer;
+}
+
+.botoes .botao-1:hover {
+  transform: scale(1.05);
+  background-color: var(--cor-laranja);
+  color: var(--cor-branca);
+}
+
+.botoes .botao-2 {
+  background-color: var(--cor-roxo-escuro);
+  color: var(--cor-branca);
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  width: 170px;
+  font-family: var(--font-paragrafo);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .botao-2:hover {
   background-color: transparent;
   color: var(--cor-roxo-escuro);
@@ -193,23 +204,22 @@
 
 /* FOOTER */
 footer {
-  margin-top: 100px; /* Ajustado para um valor mais limpo */
+  margin-top: 100px;
   background: var(--cor-roxo-claro);
-  padding: 60px 0 0 0; /* Ajustado o padding para controlar o espaço final no .direitos-autorais */
+  padding: 60px 0 0 0;
   color: var(--cor-branca);
 }
 
 /* Container que usa Grid para as colunas */
 footer .margem-global {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* 3 colunas, com a primeira maior */
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;
-  margin-bottom: 0; /* Removido margem inferior, será controlado pelo padding */
+  margin-bottom: 0;
 }
 
 /* Colunas (seção) do rodapé */
 .secao-footer {
-  /* Flexbox adicionado para ajudar no empilhamento de conteúdo em mobile */
   display: flex;
   flex-direction: column;
 }
@@ -225,7 +235,7 @@ footer .margem-global {
   font-family: var(--font-paragrafo);
   font-size: 16px;
   color: var(--cor-branca);
-  line-height: 1.5; /* Adicionado para melhor legibilidade */
+  line-height: 1.5;
 }
 
 /* Logo e Nome da Marca (Primeira Seção) */
@@ -283,7 +293,7 @@ footer .margem-global {
 /* Páginas */
 .lista-paginas {
   list-style: none;
-  padding: 0; /* Garantir que a lista não tenha padding */
+  padding: 0;
 }
 
 .lista-paginas li {
@@ -306,12 +316,12 @@ footer .margem-global {
 /* Direitos Autorais (Barra Inferior) */
 .direitos-autorais {
   text-align: center;
-  padding: 30px 0; /* Padding superior e inferior */
+  padding: 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-family: var(--font-paragrafo);
   font-size: 14px;
   color: var(--cor-branca);
-  margin-top: 40px; /* Adiciona espaçamento entre o conteúdo do grid e a barra */
+  margin-top: 40px;
 }
 
 /* ========================================================================= */
@@ -324,18 +334,61 @@ footer .margem-global {
   .sessao-pai {
     max-width: 90%;
   }
-
-  .topo-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin: 30px 20px;
+  .informacoes-curso {
+    padding: 0 30px;
+  }
+  .botoes {
+    justify-content: center;
+    margin: 30px auto 0 auto;
+    padding: 0 30px;
+    gap: 20px;
   }
 
-  .img-topo-card {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  /* --- FOOTER --- */
+  footer .margem-global {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px 20px;
+  }
+
+  footer .margem-global > .secao-footer:first-child {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer .margem-global .logo-footer {
+    justify-content: center;
+  }
+
+  footer .margem-global > .secao-footer:nth-child(2),
+  footer .margem-global > .secao-footer:nth-child(3) {
+    flex: 1 1 45%;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+/* 2. TELAS PEQUENAS/MOBILE (Máximo 650px) */
+@media screen and (max-width: 650px) {
+  /* --- MAIN --- */
+  .topo-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .titulo-subtitulo {
+    gap: 5px;
+    text-align: center;
+  }
+
+  .informacoes-curso {
+    padding: 0 15px;
   }
 
   .informacoes {
@@ -344,70 +397,22 @@ footer .margem-global {
   }
 
   .botoes {
-    justify-content: center;
-    margin: 30px auto 0 auto;
-    width: 100%;
-    margin-right: auto;
-    gap: 20px;
-  }
-
-  /* --- FOOTER CORREÇÕES DE RESPONSIVIDADE --- */
-  footer .margem-global {
-    display: flex; /* Muda de Grid para Flexbox para melhor controle de quebra */
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px 20px;
-  }
-
-  /* Coluna Principal */
-  footer .margem-global > .secao-footer:first-child {
-    flex: 1 1 100%; /* Ocupa a linha inteira */
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-
-  footer .margem-global .logo-footer {
-    justify-content: center; /* Centraliza a logo no tablet */
-  }
-
-  /* Outras Colunas */
-  footer .margem-global > .secao-footer:nth-child(2),
-  footer .margem-global > .secao-footer:nth-child(3) {
-    flex: 1 1 45%; /* Garante 2 colunas */
-    text-align: left; /* Mantém as listas alinhadas à esquerda */
-    align-items: flex-start;
-  }
-
-  footer .margem-global .secao-footer p {
-    text-align: center;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-}
-
-/* 2. TELAS PEQUENAS/MOBILE (Máximo 576px) */
-@media screen and (max-width: 576px) {
-  /* --- MAIN --- */
-  .sessao-pai {
-    border: none;
-  }
-
-  .informacoes-curso {
-    padding: 0 15px;
-  }
-
-  .botoes {
     flex-direction: column;
-    align-items: start;
-    margin-right: auto;
-    margin-left: auto;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 15px;
     gap: 10px;
   }
 
-  /* --- FOOTER CORREÇÕES DE RESPONSIVIDADE --- */
+  .botoes .botao-1,
+  .botoes .botao-2 {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  /* --- FOOTER --- */
   footer .margem-global {
-    flex-direction: column; /* Empilha tudo em coluna única */
+    flex-direction: column;
     align-items: start;
     gap: 30px;
   }
@@ -423,33 +428,8 @@ footer .margem-global {
     justify-content: start;
   }
 
-  footer .margem-global .secao-footer h3 {
-    font-size: 24px;
-  }
-
-  footer .margem-global .secao-footer p {
-    font-size: 14px;
-    text-align: start;
-  }
-
-  footer .margem-global .redes-sociais {
-    align-items: start;
-  }
-
-  footer .margem-global .link-rede-social {
-    font-size: 14px;
-  }
-
+  footer .margem-global .redes-sociais,
   footer .margem-global .lista-paginas {
-    text-align: start;
     align-items: start;
-  }
-
-  footer .margem-global .lista-paginas a {
-    font-size: 14px;
-  }
-
-  footer .margem-global .direitos-autorais {
-    font-size: 12px;
   }
 }

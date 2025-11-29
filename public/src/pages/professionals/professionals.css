@@ -162,7 +162,7 @@ section.importancia .margem-global .container-conteudo aside .container-aside {
 }
 
 textarea {
-  resize: none;
+  resize: vertical;
 }
 
 section.importancia

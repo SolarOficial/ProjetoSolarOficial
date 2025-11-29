@@ -257,21 +257,17 @@
               </div>
             </div>
           </div>
-          <div class="botoes">
-            <button
-              class="botao-1"
-              onclick="externalRedirect('../index/index.html')"
-            >
-              Fechar
-            </button>
-            <button
-              class="botao-2"
-              onclick="redirectUser('../confirmRegistration/index.html')"
-            >
-              Inscreva-se
-            </button>
-          </div>
-        </section>
+        </div>
+        <div class="botoes">
+          <button class="botao-1" onclick="externalRedirect('../index/index.html')">
+            Fechar
+          </button>
+
+          <button class="botao-2" onclick="inscreverNoEvento('evt-001')">
+            Inscreva-se
+          </button>
+        </div>
+        </div>
       </section>
     </main>
 
@@ -353,23 +349,25 @@
         </div>
       </div>
 
-      <div class="direitos-autorais">
-        <p>
-          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
-          Política de Privacidade
-        </p>
-      </div>
-    </footer>
+      <p>
+        <small>&copy; 2025 Solar – Todos os Direitos Reservados | Termos e
+          Condições | Política de Privacidade</small>
+      </p>
+    </div>
+  </footer>
 
-    <script>
-      function redirectUser(url) {
-        window.location.href = url;
-      }
+  <script>
+    function redirectUser(url) {
+      window.location.href = url;
+    }
+  </script>
 
-      function externalRedirect(url) {
-        window.location.href = url;
-      }
-    </script>
+  <script src="/ProjetoSolarOficial/src/js/script.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/bancoDeEventos.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/registrations.js"></script>
+
+</body>
 
     <script src="/ProjetoSolarOficial/src/js/script.js"></script>
     <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>

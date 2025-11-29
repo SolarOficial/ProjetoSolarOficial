@@ -83,22 +83,12 @@ section.planos-solar .margem-global .container-cards-planos .card .card-apoio {
   border-radius: 20px 20px 0 0;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .background-textos-apoio {
+section.planos-solar .margem-global .container-cards-planos .card .background-textos-apoio {
   background: #ffe7c6;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-apoio
-  button {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-apoio button {
   background: var(--cor-laranja);
   cursor: pointer;
   border: none;
@@ -112,25 +102,13 @@ section.planos-solar
     background-color 0.25s ease;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-apoio
-  button:hover {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-apoio button:hover {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
   background-color: var(--cor-laranja);
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-apoio
-  button:active {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-apoio button:active {
   transform: scale(0.97);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -160,11 +138,7 @@ section.planos-solar .margem-global .container-cards-planos .card {
 }
 
 /* Texto flutuando acima do card */
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .texto-recomendado {
+section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado {
   position: absolute;
   top: -20px;
   right: 20px;
@@ -177,12 +151,7 @@ section.planos-solar
   padding: 0;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .texto-recomendado
-  p {
+section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado p {
   background: var(--cor-branca);
   padding: 8px 16px;
   border-radius: 30px;
@@ -193,23 +162,13 @@ section.planos-solar
 }
 
 /* PARTE DE BAIXO DO CARD */
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .background-textos-amparo {
+section.planos-solar .margem-global .container-cards-planos .card .background-textos-amparo {
   background: #fdebff;
   border-radius: 0 0 20px 20px;
 }
 
 /* BOTÃO */
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-amparo
-  button {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-amparo button {
   background: var(--cor-roxo-claro);
   cursor: pointer;
   border: none;
@@ -224,57 +183,31 @@ section.planos-solar
 }
 
 /* HOVER DO BOTÃO */
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-amparo
-  button:hover {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-amparo button:hover {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
   background-color: var(--cor-roxo-claro);
 }
 
 /* ACTIVE DO BOTÃO */
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-amparo
-  button:active {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-amparo button:active {
   transform: scale(0.97);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* CORES PLANO ALICERCE */
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .card-alicerce {
+section.planos-solar .margem-global .container-cards-planos .card .card-alicerce {
   background: var(--cor-amarelo);
   border-radius: 20px 20px 0 0;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .background-textos-alicerce {
+section.planos-solar .margem-global .container-cards-planos .card .background-textos-alicerce {
   background: #fff8be;
   border-radius: 0 0 20px 20px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  .plano-alicerce
-  button {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos .plano-alicerce button {
   background: var(--cor-amarelo);
 }
 
@@ -328,7 +261,8 @@ section.planos-solar .margem-global .card .plano-alicerce button {
 }
 
 section.planos-solar .margem-global .card .plano-alicerce button:hover {
-  transform: translateY(-4px) scale(1.03); /* sobe + zoom leve */
+  transform: translateY(-4px) scale(1.03);
+  /* sobe + zoom leve */
   box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
   background-color: var(--cor-secundaria);
 }
@@ -349,57 +283,33 @@ section.planos-solar .margem-global .container-cards-planos .card .nome-plano {
   align-items: center;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .nome-plano
-  h3 {
+section.planos-solar .margem-global .container-cards-planos .card .nome-plano h3 {
   font-size: 35px;
   font-family: var(--font-paragrafo);
   color: var(--cor-branca);
   margin-bottom: 25px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .nome-plano
-  h2 {
+section.planos-solar .margem-global .container-cards-planos .card .nome-plano h2 {
   font-size: 32px;
   font-family: var(--font-titulo);
   color: var(--cor-branca);
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .nome-plano
-  span {
+section.planos-solar .margem-global .container-cards-planos .card .nome-plano span {
   font-size: 20px;
   font-family: var(--font-titulo);
   color: var(--cor-branca);
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
 }
 
-section.planos-solar
-  .margem-global
-  .container-cards-planos
-  .card
-  .container-icones-textos
-  p {
+section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos p {
   font-size: 20px;
   font-family: var(--font-titulo);
 }
@@ -599,23 +509,20 @@ footer .margem-global {
 
 /* --- RESPONSIVIDADE PARA A PÁGINA DE PLANOS --- */
 
-/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
-@media screen and (max-width: 1200px) {
-  /* CONTAINER GLOBAL */
-  .margem-global {
-    margin: 0 30px; /* Reduz a margem lateral para tablets */
-  }
 
-  /* HEADER (MANTIDO) */
-  /* Seu header é mantido conforme as regras anteriores para 1200px */
+@media screen and (max-width: 1200px) {
+  .margem-global {
+    margin: 0 30px;
+  }
 
   /* SECTION IMAGEM FUNDO */
   section.imagem-fundo {
-    height: 450px; /* Reduz a altura do banner */
+    height: 450px;
+    /* Reduz a altura do banner */
   }
 
   section.imagem-fundo .margem-global h1 {
-    font-size: 50px; /* Reduz o tamanho da fonte do título principal */
+    font-size: 50px;
   }
 
   /* SECTION PLANOS SOLAR */
@@ -629,49 +536,42 @@ footer .margem-global {
 
   /* CARDS DE PLANOS */
   section.planos-solar .margem-global .container-cards-planos {
-    justify-content: center; /* Centraliza os cards quando eles quebrarem a linha */
-    gap: 40px; /* Adiciona espaço entre os cards */
+    justify-content: center;
+    /* Centraliza os cards quando eles quebrarem a linha */
+    gap: 40px;
+    /* Adiciona espaço entre os cards */
     margin-top: 50px;
   }
 
   section.planos-solar .margem-global .container-cards-planos .card {
     /* Permite que o card se ajuste um pouco em telas médias */
     width: 45%;
-    height: auto; /* Altura automática */
-    min-width: 350px; /* Garante que não fique muito estreito */
+    height: auto;
+    /* Altura automática */
+    min-width: 350px;
+    /* Garante que não fique muito estreito */
   }
 
   /* Ajuste no texto "Recomendado" para o novo posicionamento */
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .texto-recomendado {
-    right: 50%; /* Centraliza o card flutuante */
+  section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado {
+    right: 50%;
+    /* Centraliza o card flutuante */
     transform: translateX(50%);
   }
 
   /* Ajuste de largura dos botões e contêineres internos */
   section.planos-solar .margem-global .card .button button,
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .plano-apoio
-    button,
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .plano-amparo
-    button,
+  section.planos-solar .margem-global .container-cards-planos .card .plano-apoio button,
+  section.planos-solar .margem-global .container-cards-planos .card .plano-amparo button,
   section.planos-solar .margem-global .card .plano-alicerce button {
-    width: 90%; /* Usa 90% da largura do card */
+    width: 90%;
+    /* Usa 90% da largura do card */
   }
 
   /* SECTION PERGUNTAS FREQUENTES */
   .container-perguntas {
-    max-width: 750px; /* Limita um pouco menos a largura */
+    max-width: 750px;
+    /* Limita um pouco menos a largura */
   }
 
   .pergunta-header {
@@ -684,13 +584,15 @@ footer .margem-global {
 
   /* FOOTER */
   footer .margem-global {
-    grid-template-columns: 1fr 1fr; /* Mantém 2 colunas */
+    grid-template-columns: 1fr 1fr;
+    /* Mantém 2 colunas */
     gap: 40px;
   }
 }
 
 /* 2. TELAS PEQUENAS/MOBILE (Máximo 768px - Novo Breakpoint) */
 @media screen and (max-width: 768px) {
+
   /* CONTAINER GLOBAL */
   .margem-global {
     margin: 0 20px;
@@ -720,32 +622,26 @@ footer .margem-global {
 
   /* CARDS DE PLANOS: EMPILHAMENTO TOTAL */
   section.planos-solar .margem-global .container-cards-planos {
-    flex-direction: column; /* Força empilhamento */
+    flex-direction: column;
+    /* Força empilhamento */
     align-items: center;
     gap: 50px;
   }
 
   section.planos-solar .margem-global .container-cards-planos .card {
-    width: 100%; /* Ocupa a largura total da margem (20px) */
-    max-width: 401px; /* Limita o tamanho máximo do card */
+    width: 100%;
+    /* Ocupa a largura total da margem (20px) */
+    max-width: 401px;
+    /* Limita o tamanho máximo do card */
   }
 
   /* Reset dos tamanhos internos dos cards para mobile */
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .nome-plano {
+  section.planos-solar .margem-global .container-cards-planos .card .nome-plano {
     width: 100%;
     height: 150px;
   }
 
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .nome-plano
-    h3 {
+  section.planos-solar .margem-global .container-cards-planos .card .nome-plano h3 {
     font-size: 30px;
     margin-bottom: 15px;
   }
@@ -775,16 +671,19 @@ footer .margem-global {
   }
 
   footer .margem-global {
-    grid-template-columns: 1fr; /* Uma única coluna */
+    grid-template-columns: 1fr;
+    /* Uma única coluna */
     gap: 30px;
   }
 }
 
 /* 3. TELAS MUITO PEQUENAS (Máximo 480px) */
 @media screen and (max-width: 480px) {
+
   /* CONTAINER GLOBAL */
   .margem-global {
-    margin: 0 15px; /* Margem mínima */
+    margin: 0 15px;
+    /* Margem mínima */
   }
 
   /* SECTION IMAGEM FUNDO */
@@ -804,21 +703,12 @@ footer .margem-global {
 
   /* CARDS DE PLANOS */
   /* Reduz o padding interno dos cards */
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .container-icones-textos {
+  section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos {
     padding: 15px;
     gap: 20px;
   }
 
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .container-icones-textos
-    p {
+  section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos p {
     font-size: 16px;
   }
 
@@ -851,9 +741,11 @@ footer .margem-global {
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
 @media screen and (max-width: 1200px) {
+
   /* CONTAINER GLOBAL */
   .margem-global {
-    margin: 0 30px; /* Reduz a margem lateral para tablets */
+    margin: 0 30px;
+    /* Reduz a margem lateral para tablets */
   }
 
   /* SECTION IMAGEM FUNDO */
@@ -872,31 +764,23 @@ footer .margem-global {
 
   /* CARDS DE PLANOS */
   section.planos-solar .margem-global .container-cards-planos {
-    justify-content: space-around; /* Distribui os cards no espaço */
+    justify-content: space-around;
+    /* Distribui os cards no espaço */
     gap: 30px;
     margin-top: 50px;
   }
 
   section.planos-solar .margem-global .container-cards-planos .card {
-    width: 300px; /* Reduz a largura fixa do card */
+    width: 300px;
+    /* Reduz a largura fixa do card */
     height: auto;
     min-width: 300px;
   }
 
   /* Ajuste para botões internos */
   section.planos-solar .margem-global .card .button button,
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .plano-apoio
-    button,
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .plano-amparo
-    button,
+  section.planos-solar .margem-global .container-cards-planos .card .plano-apoio button,
+  section.planos-solar .margem-global .container-cards-planos .card .plano-amparo button,
   section.planos-solar .margem-global .card .plano-alicerce button {
     width: 90%;
   }
@@ -904,15 +788,12 @@ footer .margem-global {
   /* Seções de título e preço nos cards */
   section.planos-solar .margem-global .container-cards-planos .card .nome-plano,
   section.planos-solar .margem-global .alicerce .card-alicerce {
-    width: 100%; /* Ocupa a largura total do card */
+    width: 100%;
+    /* Ocupa a largura total do card */
   }
 
   /* Ajuste do texto "Recomendado" */
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .texto-recomendado {
+  section.planos-solar .margem-global .container-cards-planos .card .texto-recomendado {
     right: 50%;
     transform: translateX(50%);
   }
@@ -936,8 +817,10 @@ footer .margem-global {
     gap: 30px;
   }
 }
+
 /* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
 @media screen and (max-width: 768px) {
+
   /* CONTAINER GLOBAL */
   .margem-global {
     margin: 0 20px;
@@ -975,53 +858,37 @@ footer .margem-global {
 
   section.planos-solar .margem-global .container-cards-planos .card {
     width: 100%;
-    max-width: 350px; /* Limita o tamanho do card para telas muito grandes na vertical */
+    max-width: 350px;
+    /* Limita o tamanho do card para telas muito grandes na vertical */
   }
 
   /* Conteúdo interno do card */
   section.planos-solar .margem-global .container-cards-planos .card .nome-plano,
   section.planos-solar .margem-global .alicerce .card-alicerce {
     width: 100%;
-    height: 140px; /* Altura reduzida */
+    height: 140px;
+    /* Altura reduzida */
   }
 
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .nome-plano
-    h3 {
-    font-size: 26px; /* Ajuste no título do plano */
+  section.planos-solar .margem-global .container-cards-planos .card .nome-plano h3 {
+    font-size: 26px;
+    /* Ajuste no título do plano */
     margin-bottom: 10px;
   }
 
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .nome-plano
-    h2 {
+  section.planos-solar .margem-global .container-cards-planos .card .nome-plano h2 {
     font-size: 24px;
   }
 
   section.planos-solar .margem-global .card .icone-texto {
-    gap: 10px; /* Reduz o espaço entre o ícone e o texto */
+    gap: 10px;
+    /* Reduz o espaço entre o ícone e o texto */
   }
 
   /* BOTÕES (Ajusta o padding e tamanho) */
   section.planos-solar .margem-global .card .button button,
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .plano-apoio
-    button,
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .plano-amparo
-    button,
+  section.planos-solar .margem-global .container-cards-planos .card .plano-apoio button,
+  section.planos-solar .margem-global .container-cards-planos .card .plano-amparo button,
   section.planos-solar .margem-global .card .plano-alicerce button {
     height: 50px;
     font-size: 16px;
@@ -1056,11 +923,14 @@ footer .margem-global {
     gap: 30px;
   }
 }
+
 /* 3. TELAS MUITO PEQUENAS (Máximo 480px) */
 @media screen and (max-width: 480px) {
+
   /* CONTAINER GLOBAL */
   .margem-global {
-    margin: 0 10px; /* Margem mínima */
+    margin: 0 10px;
+    /* Margem mínima */
   }
 
   /* SECTION IMAGEM FUNDO */
@@ -1079,21 +949,12 @@ footer .margem-global {
   }
 
   /* CARDS DE PLANOS */
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .container-icones-textos {
+  section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos {
     padding: 10px;
     gap: 15px;
   }
 
-  section.planos-solar
-    .margem-global
-    .container-cards-planos
-    .card
-    .container-icones-textos
-    p {
+  section.planos-solar .margem-global .container-cards-planos .card .container-icones-textos p {
     font-size: 15px;
   }
 

@@ -267,21 +267,16 @@
               </div>
             </div>
           </div>
-          <div class="botoes">
-            <button
-              class="botao-1"
-              onclick="redirectUser('../index/index.html')"
-            >
-              Fechar
-            </button>
-            <button
-              class="botao-2"
-              onclick="redirectUser('../confirmRegistration/index.html')"
-            >
-              Inscreva-se
-            </button>
-          </div>
-        </section>
+        </div>
+        <div class="botoes">
+          <button class="botao-1" onclick="externalRedirect('../index/index.html')">
+            Fechar
+          </button>
+
+          <button class="botao-2" onclick="inscreverNoEvento('evt-004')">
+            Inscreva-se
+          </button>
+        </div>
       </section>
     </main>
 
@@ -364,14 +359,16 @@
         </div>
       </div>
 
-      <div class="direitos-autorais">
-        <p>
-          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
-          Política de Privacidade
-        </p>
-      </div>
-    </footer>
-  </body>
+      <p>
+        <small>&copy; 2025 Solar – Todos os Direitos Reservados | Termos e
+          Condições | Política de Privacidade</small>
+      </p>
+    </div>
+  </footer>
   <script src="/ProjetoSolarOficial/src/js/script.js"></script>
   <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/bancoDeEventos.js"></script>
+  <script src="/ProjetoSolarOficial/src/js/registrations.js"></script>
+</body>
+
 </html>

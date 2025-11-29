@@ -70,6 +70,10 @@
   gap: 80px;
 }
 
+textarea {
+  resize: vertical;
+}
+
 /* MASCOTE */
 .container-mascote {
   flex: 1;

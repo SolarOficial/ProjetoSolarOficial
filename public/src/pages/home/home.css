@@ -228,7 +228,6 @@ section.funcionalidades {
   margin-top: 132px;
   height: 665px;
   flex-wrap: wrap;
-  margin-bottom: 135px;
 }
 
 section.funcionalidades .margem-global h2 {
@@ -598,6 +597,10 @@ section.fale-conosco
   .botao-enviar
   #botao-enviar:hover {
   background: #9675ce;
+}
+
+textarea {
+  resize: vertical;
 }
 
 /* FOOTER */

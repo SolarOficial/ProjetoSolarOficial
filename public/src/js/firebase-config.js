@@ -1,10 +1,6 @@
 // Arquivo: firebase-config.js
-
-// 1. Usamos a MESMA versão para tudo (10.13.0)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-
-// 2. ADICIONEI ESSA LINHA QUE FALTAVA:
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"; 
+import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"; 
 
 const firebaseConfig = {
     apiKey: "AIzaSyCa0Tik1SCuLJTb8pi7WjEynlvvbxVjOW0",
@@ -18,8 +14,10 @@ const firebaseConfig = {
 // Inicializa o App
 const app = initializeApp(firebaseConfig);
 
-// Inicializa a Autenticação (Agora funciona porque importamos lá em cima)
+// Inicializa a Autenticação
 const auth = getAuth(app);
 
+const provider = new GoogleAuthProvider();
+
 // Exporta para os outros arquivos
-export { app, auth };
+export { app, auth, provider };

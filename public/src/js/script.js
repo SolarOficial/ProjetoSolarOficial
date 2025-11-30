@@ -1,10 +1,28 @@
-function redirectUser(path) {
+import { auth } from './firebase-config.js';
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+
+window.redirectUser = function(path) {
   window.location.href = path;
 }
 
-function externalRedirect(url) {
+window.externalRedirect = function(url) {
   window.location.href = url;
 }
+
+onAuthStateChanged(auth, (user) => {
+    const authBtn = document.getElementById('auth-btn');
+    const authLink = document.getElementById('auth-link');
+
+    if (authBtn && authLink) {
+        if (user) {
+            authBtn.innerText = "MEU PERFIL";
+            authLink.setAttribute('onclick', "redirectUser('/src/pages/profile/profile.html')");
+        } else {
+            authBtn.innerText = "ENTRAR";
+            authLink.setAttribute('onclick', "redirectUser('/login.html')");
+        }
+    }
+});
 
 // API Sienna
 if (!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"]')) {
@@ -66,8 +84,9 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Solaria
+/* 
 
+Solaria
 
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 (function () {
@@ -77,5 +96,7 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
   s1.charset = 'UTF-8';
   s1.setAttribute('crossorigin', '*');
   s0.parentNode.insertBefore(s1, s0);
-})();
+})(); 
+
+*/
 

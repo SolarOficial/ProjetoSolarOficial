@@ -28,18 +28,18 @@
 /* SEÇÃO SOBRE */
 
 .conheca-solar {
-  height: 600px;
+  height: 450px;
   margin-top: 95px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-inicio-sobre.png");
+  background-image: url("../../../assets/img-about/background-inicio-sobre.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative; 
+  position: relative;
 }
 
 .conheca-solar h2 {
@@ -83,6 +83,7 @@
 
 .imagem-quem-somos img {
   border-radius: 20px;
+  width: 600px;
 }
 
 .texto-quem-somos p {
@@ -94,7 +95,7 @@
 /* MISSÃO VISÃO VALORES */
 
 .background-missao-visao-valores {
-  background-image: url("/ProjetoSolarOficial/src/assets/img-about/background-misao-visao-valores.png");
+  background-image: url("../../../assets/img-about/background-misao-visao-valores.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -182,7 +183,7 @@
 }
 
 .beneficios-solar {
-  flex: 0 0 400px; 
+  flex: 0 0 400px;
   height: 230px;
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 20px;
@@ -192,7 +193,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .beneficios-solar h3 {
   font-family: var(--font-titulo);
@@ -209,13 +209,37 @@
 .beneficios-wrapper {
   display: flex;
   gap: 2rem;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
-  width: calc(400px * 3 + 2rem * 2); /* 3 cards visíveis */
-  max-width: 100%;
-  flex-wrap: nowrap; /* IMPEDIR quebrar linha */
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
+.beneficios-solar {
+  flex: 0 0 calc((100% - 4rem) / 3);
+  box-sizing: border-box;
+  height: 230px;
+  border: 2px solid var(--cor-roxo-escuro);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: start;
+}
+
+.beneficios-wrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.beneficios-wrapper::-webkit-scrollbar {
+  display: none;
+}
 
 /* EQUIPE SOLAR */
 
@@ -316,7 +340,7 @@
 /* APOIE A SOLAR */
 
 .background-apoie-solar {
-  background: url("/ProjetoSolarOficial/src/assets/img-about/background-image_section-apoie-a-solar.png");
+  background: url("../../../assets/img-about/background-image_section-apoie-a-solar.png");
   background-size: cover;
   padding-top: 250px;
 }

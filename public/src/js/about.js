@@ -3,8 +3,8 @@ const indicadores = document.querySelectorAll(".carrossel-sobre i");
 const section = document.querySelector(".conheca-solar");
 
 const imagens = [
-  "/ProjetoSolarOficial/src/assets/img-about/background-inicio-sobre.png",
-  "/ProjetoSolarOficial/src/assets/img-about/img-about2.png"
+  "../../../assets/img-about/background-inicio-sobre.png",
+  "../../../assets/img-about/img-about2.png"
 ];
 
 let indexAtual = 0;
@@ -60,14 +60,59 @@ const wrapper = document.querySelector(".beneficios-wrapper");
 const btnNext = document.getElementById("btn-next");
 const btnPrev = document.getElementById("btn-prev");
 
-const cardWidth = 400 + 32; 
+function parseCssSizeToPx(value) {
+  if (!value) return 0;
+  value = value.trim();
+
+  if (value.endsWith('px')) return parseFloat(value);
+
+  if (value.endsWith('rem')) {
+    const rem = parseFloat(value);
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    return rem * rootFontSize;
+  }
+
+  const n = parseFloat(value);
+  return isNaN(n) ? 0 : n;
+}
+
+function getStep() {
+  const card = document.querySelector(".beneficios-solar");
+  if (!card) return 0;
+  const cardWidth = card.getBoundingClientRect().width;
+
+  const gapValue = getComputedStyle(wrapper).gap || getComputedStyle(wrapper).getPropertyValue('gap');
+  const gapPx = parseCssSizeToPx(gapValue);
+
+  return Math.round(cardWidth + gapPx);
+}
+
+function updateButtons() {
+  const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+  btnPrev.style.opacity = wrapper.scrollLeft <= 0 ? '0.4' : '1';
+  btnPrev.style.pointerEvents = wrapper.scrollLeft <= 0 ? 'none' : 'auto';
+
+  btnNext.style.opacity = wrapper.scrollLeft >= maxScroll - 1 ? '0.4' : '1';
+  btnNext.style.pointerEvents = wrapper.scrollLeft >= maxScroll - 1 ? 'none' : 'auto';
+}
 
 btnNext.addEventListener("click", () => {
-  wrapper.scrollLeft += cardWidth;
+  const step = getStep();
+  wrapper.scrollBy({ left: step, behavior: 'smooth' });
 });
 
 btnPrev.addEventListener("click", () => {
-  wrapper.scrollLeft -= cardWidth;
+  const step = getStep();
+  wrapper.scrollBy({ left: -step, behavior: 'smooth' });
 });
 
+wrapper.addEventListener('scroll', () => {
+  window.requestAnimationFrame(updateButtons);
+});
 
+window.addEventListener('resize', () => {
+  setTimeout(updateButtons, 120);
+});
+
+// inicializa estado
+updateButtons();

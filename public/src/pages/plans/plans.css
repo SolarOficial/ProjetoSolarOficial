@@ -28,10 +28,10 @@
 /* SECTION image-fundo */
 
 section.imagem-fundo {
-  background-image: url(/ProjetoSolarOficial/src/assets/img-plans/foto.png);
+  background-image: url(../../assets/img-plans/foto.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,6 +340,7 @@ section.planos-solar .margem-global .card .button button {
 /* PERGUNTAS FREQUENTES  */
 
 .secao-perguntas-frequentes {
+  margin-top: 50px;
   padding: 80px 0 100px 0;
   background-color: var(--cor-branca);
 }

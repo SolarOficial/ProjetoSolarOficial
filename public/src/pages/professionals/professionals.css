@@ -161,6 +161,10 @@ section.importancia .margem-global .container-conteudo aside .container-aside {
   width: 610px;
 }
 
+textarea {
+  resize: vertical;
+}
+
 section.importancia
   .margem-global
   .container-conteudo

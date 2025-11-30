@@ -228,7 +228,6 @@ section.funcionalidades {
   margin-top: 132px;
   height: 665px;
   flex-wrap: wrap;
-  margin-bottom: 135px;
 }
 
 section.funcionalidades .margem-global h2 {
@@ -600,7 +599,9 @@ section.fale-conosco
   background: #9675ce;
 }
 
-/* FOOTER */
+textarea {
+  resize: vertical;
+}
 
 /* FOOTER */
 footer {

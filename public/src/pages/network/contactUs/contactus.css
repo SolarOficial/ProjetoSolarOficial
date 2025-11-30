@@ -32,10 +32,10 @@
 /* SECTION HERO */
 .secao-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-    url("/ProjetoSolarOficial/src/assets/img-contactus/imagem_fundo-fale-conosco.png");
+    url("../../../assets/img-contactus/background-faleConosco.png");
   background-size: cover;
   background-position: center;
-  height: 600px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,6 +68,10 @@
   justify-content: center;
   align-items: center;
   gap: 80px;
+}
+
+textarea {
+  resize: vertical;
 }
 
 /* MASCOTE */

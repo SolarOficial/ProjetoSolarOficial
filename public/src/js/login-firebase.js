@@ -1,7 +1,5 @@
-import { auth } from './firebase-config.js';
-
-// Usando a mesma versão 10.13.0 do outro arquivo
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { auth, provider } from './firebase-config.js';
+import { signInWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
 const formLogin = document.getElementById('form-login');
 
@@ -39,6 +37,32 @@ if (formLogin) {
                 if (error.code === 'auth/wrong-password') mensagem = "Senha incorreta.";
 
                 alert(mensagem);
+            });
+    });
+}
+
+const btnGoogle = document.getElementById('btn-google');
+
+if (btnGoogle) {
+    btnGoogle.addEventListener('click', () => {
+        //signInWithPopup abre a janelinha do Google
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // SUCESSO! O usuário logou.
+                const user = result.user;
+                console.log("Logado com Google:", user);
+
+                // Mostra o modal de sucesso (Reaproveitando o que já existe)
+                const modalSucesso = document.getElementById('modalLoginSucesso');
+                if (modalSucesso) {
+                    modalSucesso.style.display = 'flex';
+                } else {
+                    window.location.href = 'src/pages/home/home.html';
+                }
+            })
+            .catch((error) => {
+                console.error("Erro Google:", error);
+                alert("Erro ao entrar com Google: " + error.message);
             });
     });
 }

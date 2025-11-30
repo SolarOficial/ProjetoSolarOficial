@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Instituto Solar: Cadastro" />
+  <title>Cadastro - SOLAR</title>
+
+  <link rel="stylesheet" href="src/pages/register/register.css" />
+  <link rel="stylesheet" href="src/headerResponsivo.css">
+  <link rel="shortcut icon" href="src/assets/Logotipo-Solar.png" type="image/x-icon" />
+</head>
+
+<body>
+
+  <header class="container-pai">
+    <div class="logo">
+      <a href="#" onclick="redirectUser('src/pages/home/home.html')">
+        <img height="90" src="src/assets/logo_nav2.png" alt="Logo branca Solar" />
+      </a>
+    </div>
+
+    <button id="btn-mobile">
+      <span id="hamburger"></span>
+    </button>
+
+    <nav class="nav-pai" id="nav">
+      <ul id="menu">
+        <li><a href="#" onclick="redirectUser('src/pages/home/home.html')">HOME</a></li>
+        <li>
+          <a href="#">
+            EXPLORAR
+            <img class="seta-header" src="src/assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li><a href="#">EVENTOS</a></li>
+            <li><a href="#">CURSOS</a></li>
+            <li><a href="#">SOLMÍDIA</a></li>
+            <li><a href="#">JOGOS</a></li>
+          </ul>
+        </li>
+        <li><a href="#">DOAÇÃO</a></li>
+        <li><a href="#">PROFISSIONAIS</a></li>
+        <li><a href="#">PLANOS</a></li>
+        <li>
+          <a href="#">
+            REDES
+            <img class="seta-header" src="src/assets/seta.png" alt="seta" />
+          </a>
+           <ul class="dropdown">
+            <li><a href="#">SOBRE</a></li>
+            <li><a href="#">LOCALIZAR</a></li>
+            <li><a href="#">FALE CONOSCO</a></li>
+            <li><a href="#">COMUNIDADE</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onclick="redirectUser('src/pages/register/register.html')">
+            <button class="button-header">CADASTRAR-SE</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="margem-global">
+      <div class="container-cadastro">
+        <div class="form-container">
+          <div class="form-container-opacidade">
+            
+            <form id="form-cadastro">
+              <h2>Cadastro</h2>
+
+              <div class="input-group">
+                <img src="src/assets/img-register/mail.png" alt="icone de e-mail" />
+                <input type="email" id="email" placeholder="Insira seu email" required />
+              </div>
+
+              <div class="input-group">
+                <img src="src/assets/img-register/confirmMail.png" alt="icone de confirme e-mail" />
+                <input type="email" id="confirma-email" placeholder="Confirme seu email" required />
+              </div>
+
+              <div class="input-group">
+                <img src="src/assets/img-register/Password(1).png" alt="iconde de cadeado" />
+                <input type="password" id="senha" placeholder="Insira sua senha (mín. 6 caracteres)" required />
+              </div>
+
+              <div class="input-group">
+                <img src="src/assets/img-register/confirmPassword.png" alt="icone de confirme a senha" />
+                <input type="password" id="confirma-senha" placeholder="Confirme sua senha" required />
+              </div>
+
+              <div class="termos">
+                <input type="checkbox" id="terms-check" required />
+                <label for="terms-check">
+                  Ao continuar, você concorda com nosso <a href="#">Contrato de Usuário</a>...
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn" id="btn-cadastrar">Criar Conta</button>
+
+              <p class="login-link">
+                Já possui cadastro?
+                <a href="#" onclick="redirectUser('login.html')">Faça Login</a>
+              </p>
+            </form>
+          </div>
+        </div>
+        
+        <div class="circulo-com-gradiente-e-imagem">
+          <img src="src/assets/img-register/img_Logo(1).png" alt="Logo solar com escrita" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalSucesso">
+    <div class="modal-card">
+      <div class="icon-container">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="30" fill="white"/>
+            <path d="M18 30L26 38L42 22" stroke="#8A6DC5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </div>
+      <h2>Cadastro Concluído<br>com sucesso!</h2>
+      <button class="btn-modal" onclick="window.location.href='src/pages/home/home.html'">
+        Ir para a Home
+      </button>
+    </div>
+  </div>
+
+  <script src="src/js/popupRegister.js"></script>
+  <script src="src/js/script.js"></script>
+  
+  <script type="module" src="src/js/firebase-config.js"></script>
+  <script type="module" src="src/js/cadastro-firebase.js"></script>
+
+</body>
+</html>

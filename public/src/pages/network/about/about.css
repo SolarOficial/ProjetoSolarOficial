@@ -39,7 +39,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative; 
+  position: relative;
 }
 
 .conheca-solar h2 {
@@ -183,7 +183,7 @@
 }
 
 .beneficios-solar {
-  flex: 0 0 400px; 
+  flex: 0 0 400px;
   height: 230px;
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 20px;
@@ -193,7 +193,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .beneficios-solar h3 {
   font-family: var(--font-titulo);
@@ -210,7 +209,7 @@
 .beneficios-wrapper {
   display: flex;
   gap: 2rem;
-  overflow-x: auto; 
+  overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   width: 100%;
@@ -219,7 +218,7 @@
 }
 
 .beneficios-solar {
-  flex: 0 0 calc((100% - 4rem) / 3); 
+  flex: 0 0 calc((100% - 4rem) / 3);
   box-sizing: border-box;
   height: 230px;
   border: 2px solid var(--cor-roxo-escuro);
@@ -234,15 +233,13 @@
 }
 
 .beneficios-wrapper {
-  scrollbar-width: none;       
-  -ms-overflow-style: none;     
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .beneficios-wrapper::-webkit-scrollbar {
-  display: none;  
+  display: none;
 }
-
-
 
 /* EQUIPE SOLAR */
 

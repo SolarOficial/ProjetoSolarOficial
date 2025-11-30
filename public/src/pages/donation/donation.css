@@ -22,13 +22,11 @@
 }
 
 .margem-global {
-  margin: 0 60px; /* Simplificado */
-  max-width: 1300px; /* Limite opcional para telas muito grandes */
+  margin: 0 60px;
+  max-width: 1300px;
 }
 
 /* MAIN */
-
-/* SECTION IMAGEM DE FUNDO COM TEXTO */
 
 section.imagem-fundo-texto {
   background-image: url(../../assets/img-donation/background-doacao.png);
@@ -36,7 +34,7 @@ section.imagem-fundo-texto {
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; /* Centraliza a imagem */
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +42,6 @@ section.imagem-fundo-texto {
 }
 
 section.imagem-fundo-texto .margem-global {
-  /* Garante que o texto se adapte à margem global */
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
@@ -62,7 +59,7 @@ section.imagem-fundo-texto .margem-global p {
   font-family: var(--font-titulo);
   color: var(--cor-branca);
   text-align: center;
-  width: 100%; /* Ocupa a largura total do container */
+  width: 100%;
   max-width: 1099px;
   margin: 0 auto;
 }
@@ -71,7 +68,7 @@ section.imagem-fundo-texto .margem-global p {
 
 section.importancia-doacao {
   margin-top: 108px;
-  padding: 0 20px; /* Padding para respiro nas laterais */
+  padding: 0 20px;
 }
 
 section.importancia-doacao .margem-global h2 {
@@ -114,7 +111,7 @@ section.importancia-doacao
   aside
   .numero-texto
   span {
-  flex-shrink: 0; /* Impede que o círculo encolha */
+  flex-shrink: 0;
   width: 65px;
   height: 65px;
   background: var(--cor-amarelo);
@@ -123,12 +120,12 @@ section.importancia-doacao
   align-items: center;
   display: flex;
   justify-content: center;
-  border-radius: 50%; /* Usar 50% para garantir o círculo */
+  border-radius: 50%;
   font-family: var(--font-paragrafo);
 }
 
 section.importancia-doacao .margem-global .imagem-texto aside .numero-texto p {
-  width: 100%; /* Ocupa o restante do espaço */
+  width: 100%;
   max-width: 500px;
   font-size: 20px;
   font-family: var(--font-paragrafo);
@@ -145,14 +142,14 @@ section.valor-doacao .margem-global .valor-formulario {
   justify-content: center;
   gap: 62px;
   flex-wrap: wrap;
-  max-width: 100%; /* Garante que o container interno não estoure */
+  max-width: 100%;
 }
 
 section.valor-doacao .margem-global .valor-formulario .escolha-valor {
   border: solid 1px var(--cor-roxo-escuro);
   width: 100%;
   max-width: 524px;
-  height: auto; /* Ajusta a altura ao conteúdo */
+  height: auto;
   border-radius: 10px;
   padding: 40px;
 }
@@ -166,8 +163,8 @@ section.valor-doacao .margem-global .valor-formulario .escolha-valor p {
 
 section.valor-doacao .margem-global .valor-formulario .escolha-valor .valor {
   display: flex;
-  justify-content: space-between; /* Melhor para distribuir os inputs */
-  gap: 20px; /* Reduzido o gap para melhor adaptação */
+  justify-content: space-between;
+  gap: 20px;
 }
 
 section.valor-doacao
@@ -184,7 +181,7 @@ section.valor-doacao
   .escolha-valor
   .valor
   input {
-  width: 48%; /* Ocupa quase metade da linha */
+  width: 48%;
   height: 59px;
   border-radius: 16.75px;
   font-size: 22px;
@@ -208,7 +205,7 @@ section.valor-doacao
   height: 63px;
   border-radius: 16.75px;
   background-color: #fdebff;
-  margin: 52px auto 45px auto; /* Centraliza */
+  margin: 52px auto 45px auto;
   display: flex;
   align-items: center;
   color: #7b7979;
@@ -227,7 +224,7 @@ section.valor-doacao
   outline: none;
   background-color: #fdebff;
   border-radius: 16.75px;
-  font-size: 18px; /* Aumentado um pouco */
+  font-size: 18px;
   font-family: var(--font-paragrafo);
   color: var(--cor-roxo-escuro);
   text-align: left;
@@ -240,7 +237,6 @@ section.valor-doacao .margem-global .valor-formulario .escolha-valor h3 {
 }
 
 /* ASIDE */
-
 section.valor-doacao .margem-global .valor-formulario .form-pagamento {
   width: 100%;
   max-width: 727px;
@@ -262,7 +258,7 @@ section.valor-doacao
   .form-pessoal {
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Reduzido o gap para otimizar espaço */
+  gap: 40px;
   margin-top: 42px;
 }
 
@@ -283,7 +279,7 @@ section.valor-doacao
   .form-pessoal
   .separacao
   label {
-  font-size: 20px; /* Reduzido levemente */
+  font-size: 20px;
   font-family: var(--font-paragrafo);
   color: var(--cor-preta);
   margin-bottom: 11px;
@@ -356,11 +352,10 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-credito {
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Reduzido o gap */
+  gap: 40px;
 }
 
 section.valor-doacao
@@ -368,35 +363,20 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-credito
   .alinhar-campo {
   display: flex;
   flex-direction: column;
 }
 
-section.valor-doacao
-  .margem-global
-  .valor-formulario
-  .form-pagamento
-  .pagamento-forma-conteudo
-  form
-  #form-pagamento-credito
-  label {
+#form-pagamento-credito label {
   font-family: var(--font-paragrafo);
   font-size: 16px;
   color: var(--cor-preta);
-  margin-bottom: 8px; /* Reduzido o margin-bottom */
+  margin-bottom: 8px;
 }
 
-section.valor-doacao
-  .margem-global
-  .valor-formulario
-  .form-pagamento
-  .pagamento-forma-conteudo
-  form
-  #form-pagamento-credito
-  input {
+#form-pagamento-credito input {
   width: 100%;
   height: 43px;
   border-radius: 10px;
@@ -405,44 +385,35 @@ section.valor-doacao
   outline: none;
 }
 
-section.valor-doacao
-  .margem-global
-  .valor-formulario
-  .form-pagamento
-  .pagamento-forma-conteudo
-  form
-  #form-pagamento-credito
-  .alinhar-botoes {
+#form-pagamento-credito .alinhar-botoes {
   display: flex;
-  gap: 55px;
-  justify-content: space-between; /* Ajustado para melhor distribuição */
+  gap: 20px;
+  align-items: flex-start;
 }
 
+#form-pagamento-credito .alinhar-botoes .alinhar {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+/* Inputs de vencimento/cvv */
+#form-pagamento-credito .alinhar-botoes .alinhar input {
+  width: 100%;
+  margin-top: 5px;
+  height: 43px;
+}
+
+/* ESTILOS PARA CONFIRMAÇÃO DE TERMOS */
 section.valor-doacao
   .margem-global
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
-  #form-pagamento-credito
-  .alinhar-botoes
-  input {
-  width: 45%; /* Ajustado para caberem lado a lado */
-  margin-top: 20px;
-  outline: none;
-  cursor: pointer;
-}
-
-section.valor-doacao
-  .margem-global
-  .valor-formulario
-  .form-pagamento
-  .pagamento-forma-conteudo
-  form
   #form-pagamento-credito
   .confirmacao {
   display: flex;
-  align-items: flex-start; /* Alinha o checkbox no topo */
+  align-items: flex-start;
   gap: 11px;
 }
 
@@ -451,7 +422,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-credito
   .confirmacao
   input[type="checkbox"] {
@@ -467,23 +437,23 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-credito
   .confirmacao
   label {
   font-family: var(--font-paragrafo);
   color: var(--cor-preta);
   font-size: 14px;
-  line-height: 1.5; /* Melhor legibilidade */
-  margin: 0; /* Remove a margem desnecessária */
+  line-height: 1.5;
+  margin: 0;
 }
+
+/* ESTILOS PARA BOTÃO DE CONFIRMAÇÃO */
 
 section.valor-doacao
   .margem-global
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-credito
   .centralizar-button {
   display: flex;
@@ -496,7 +466,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-credito
   button {
   width: 273px;
@@ -510,26 +479,13 @@ section.valor-doacao
   cursor: pointer;
 }
 
-#form-pagamento-credito .alinhar-botoes {
-    display: flex;
-    gap: 20px; 
-    align-items: flex-start; 
-}
-
-#form-pagamento-credito .alinhar-botoes .alinhar {
-    display: flex;
-    flex-direction: column; 
-}
-
-
-/* CONTEUDO DE PAGAMENTO COM CARTÃO DE PIX */
+/* CONTEUDO DE PAGAMENTO COM PIX */
 
 section.valor-doacao
   .margem-global
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   p {
   text-align: center;
@@ -544,7 +500,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .coluna-centralizar {
   display: flex;
@@ -558,14 +513,13 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .coluna-centralizar
   h4 {
   padding: 10.5px 18px;
   border: 2px solid var(--cor-preta);
   color: #766e6e;
-  font-size: 16px; /* Ajustado */
+  font-size: 16px;
 }
 
 section.valor-doacao
@@ -573,7 +527,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .coluna-centralizar
   button {
@@ -583,7 +536,7 @@ section.valor-doacao
   background: var(--cor-roxo-claro);
   border: none;
   color: var(--cor-branca);
-  font-size: 14px; /* Aumentado */
+  font-size: 14px;
   font-family: var(--font-paragrafo);
   cursor: pointer;
 }
@@ -593,7 +546,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .coluna-centralizar
   .margin {
@@ -611,7 +563,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .confirmacao {
   display: flex;
@@ -625,7 +576,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .confirmacao
   input[type="checkbox"] {
@@ -640,7 +590,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .confirmacao
   label {
@@ -657,7 +606,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .centralizar-button {
   display: flex;
@@ -670,7 +618,6 @@ section.valor-doacao
   .valor-formulario
   .form-pagamento
   .pagamento-forma-conteudo
-  form
   #form-pagamento-pix
   .centralizar-button
   button {
@@ -686,49 +633,43 @@ section.valor-doacao
 }
 
 .metodo-opcao {
-  /* Formato e Tamanho */
   padding: 15px 30px;
   border-radius: 12px;
-  /* Cantos arredondados */
   font-size: 1.1em;
   font-weight: bold;
   cursor: pointer;
-  /* Indica que é clicável */
   border: 1px solid var(--cor-roxo-claro);
-  /* Cores de Texto (Comum, mas será sobrescrito) */
   color: #5d3f8f;
-  /* Roxo escuro, aproximado da cor do texto na imagem */
-
-  /* Layout */
   margin: 0 10px;
   transition: all 0.3s ease;
-  /* Transição suave para mudanças de estado */
 }
 
 .metodo-opcao.ativo {
-  /* Estado Ativo (O que o botão "PIX" está usando) */
   background-color: #7b58b4;
-  /* Roxo sólido, aproximado do PIX */
   border-color: #7b58b4;
-  /* Borda da mesma cor para dar o efeito sólido */
   color: #ffffff;
-  /* Texto branco no fundo roxo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Sombra suave (opcional) */
   border: none;
 }
 
 section.valor-doacao .margem-global .valor-formulario {
   display: flex;
-  gap: 40px; 
-  flex-wrap: wrap; 
+  gap: 40px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 section.valor-doacao .margem-global .valor-formulario .escolha-valor,
 section.valor-doacao .margem-global .valor-formulario .form-pagamento {
-  width: 48%; 
+  width: 48%;
   box-sizing: border-box;
+}
+
+#pagamento-credito {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 /* FOOTER */
@@ -837,6 +778,100 @@ footer .margem-global {
   font-family: var(--font-paragrafo);
   font-size: 14px;
   color: var(--cor-branca);
+}
+
+/* Pop-up */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-confirmacao {
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 800px;
+  min-height: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.popup-icon {
+  font-size: 8rem;
+  color: #4a356d;
+  margin-bottom: 20px;
+}
+
+.popup-titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--cor-roxo-escuro);
+  margin-bottom: 15px;
+  font-family: var(--font-titulo);
+}
+
+.popup-mensagem {
+  color: var(--cor-preta);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.popup-botoes {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.popup-botoes a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.popup-btn {
+  padding: 17px 30px;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-titulo);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup-btn-inicio {
+  border: 1px solid var(--cor-roxo-claro);
+  color: var(--cor-roxo-claro);
+  background-color: #fff;
+}
+
+.popup-btn-inicio a {
+  color: var(--cor-roxo-claro);
+}
+
+.popup-btn-inicio:hover {
+  background-color: var(--cor-roxo-escuro);
+  color: #fff;
+}
+
+.popup-btn-inicio:hover a {
+  color: #fff;
+}
+
+.popup-btn-agenda {
+  background-color: var(--cor-roxo-claro);
+  color: #fff;
+}
+
+.popup-btn-agenda:hover {
+  background-color: #ffa726;
 }
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
@@ -1156,37 +1191,35 @@ footer .margem-global {
     height: 50px;
   }
 
-section.valor-doacao .digite-valor {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 434px;
-  height: 63px;
-  border-radius: 16.75px;
-  background-color: #fdebff;
-  margin: 52px auto 45px auto;
-  padding: 0 20px;
-  gap: 15px; 
-}
+  section.valor-doacao .digite-valor {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 434px;
+    height: 63px;
+    border-radius: 16.75px;
+    background-color: #fdebff;
+    margin: 52px auto 45px auto;
+    padding: 0 20px;
+    gap: 15px;
+  }
 
+  section.valor-doacao .digite-valor span {
+    flex-shrink: 0;
+    font-size: 18px;
+    color: #7b7979;
+  }
 
-section.valor-doacao .digite-valor span {
-  flex-shrink: 0; 
-  font-size: 18px;
-  color: #7b7979;
-}
-
-section.valor-doacao .digite-valor input {
-  flex: 1; 
-  border: none;
-  height: 100%;
-  outline: none;
-  background-color: transparent;
-  font-size: 18px;
-  color: var(--cor-roxo-escuro);
-  text-align: left;
-}
-
+  section.valor-doacao .digite-valor input {
+    flex: 1;
+    border: none;
+    height: 100%;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: var(--cor-roxo-escuro);
+    text-align: left;
+  }
 
   /* Form Pagamento */
   section.valor-doacao .margem-global .valor-formulario .form-pagamento {
@@ -1286,6 +1319,21 @@ section.valor-doacao .digite-valor input {
   .logo-footer img {
     width: 50px;
   }
+}
+
+/* Estilo para o botão de confirmar */
+.btn-confirmar {
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-confirmar:hover {
+  background: #0056b3;
 }
 
 @media (max-width: 1024px) {

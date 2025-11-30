@@ -52,7 +52,7 @@ section #descricao {
 /* ======================================================= */
 /* --- SEÇÃO SOLMIDIA (COLADA NO TOPO/NAV) --- */
 .solmidia {
-  background-image: url(/ProjetoSolarOficial/src/assets/img-sunMidia/img-mae-filha-lendo.png);
+  background-image: url(../../../assets/img-sunMidia/img-mae-filha-lendo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

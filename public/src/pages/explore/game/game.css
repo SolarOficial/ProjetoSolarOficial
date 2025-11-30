@@ -31,7 +31,7 @@
 /* SECTION imagem-fundo */
 
 section.image-fundo {
-  background-image: url(/ProjetoSolarOficial/src/assets/img-game/pexels-tima-miroshnichenko-7048537.png);
+  background-image: url(../../../assets/img-game/pexels-tima-miroshnichenko-7048537.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -59,7 +59,7 @@ section.image-fundo .margem-global p {
 /* SECTION ATENCAO */
 
 section.atencao {
-  background-image: url(/ProjetoSolarOficial/src/assets/img-game/Frame\ 77.png);
+  background-image: url(../../../assets/img-game/Frame\ 77.png);
   height: 304px;
   background-repeat: no-repeat;
   background-size: cover;

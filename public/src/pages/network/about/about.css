@@ -28,7 +28,7 @@
 /* SEÇÃO SOBRE */
 
 .conheca-solar {
-  height: 600px;
+  height: 450px;
   margin-top: 95px;
   display: flex;
   justify-content: center;
@@ -83,6 +83,7 @@
 
 .imagem-quem-somos img {
   border-radius: 20px;
+  width: 600px;
 }
 
 .texto-quem-somos p {
@@ -209,12 +210,38 @@
 .beneficios-wrapper {
   display: flex;
   gap: 2rem;
-  overflow: hidden;
+  overflow-x: auto; 
+  overflow-y: hidden;
   scroll-behavior: smooth;
-  width: calc(400px * 3 + 2rem * 2); /* 3 cards visíveis */
-  max-width: 100%;
-  flex-wrap: nowrap; /* IMPEDIR quebrar linha */
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
+
+.beneficios-solar {
+  flex: 0 0 calc((100% - 4rem) / 3); 
+  box-sizing: border-box;
+  height: 230px;
+  border: 2px solid var(--cor-roxo-escuro);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: start;
+}
+
+.beneficios-wrapper {
+  scrollbar-width: none;       
+  -ms-overflow-style: none;     
+}
+
+.beneficios-wrapper::-webkit-scrollbar {
+  display: none;  
+}
+
 
 
 /* EQUIPE SOLAR */

@@ -1,410 +1,294 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Equipe Solar" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Página de cursos da plataforma Solar" />
-    <meta
-      name="keywords"
-      content="Monoparentalidade, Solar, Pai Solo, Mãe Solo"
-    />
-    <link rel="stylesheet" href="./aromaterapia.css" />
-    <link
-      rel="stylesheet"
-      href="/ProjetoSolarOficial/src/headerResponsivo.css"
-    />
-    <link
-      rel="shortcut icon"
-      href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png"
-      type="image/x-icon"
-    />
-    <title>Aromaterapia - cursos</title>
-  </head>
 
-  <body>
-    <!-- ================================= HEADER ================================= -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Equipe Solar" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Página de cursos da plataforma Solar" />
+  <meta name="keywords" content="Monoparentalidade, Solar, Pai Solo, Mãe Solo" />
+  <link rel="stylesheet" href="aromaterapia.css" />
+  <link rel="stylesheet" href="../../../../headerResponsivo.css" />
+  <link rel="shortcut icon" href="../../../../assets/Logotipo-Solar.png" type="image/x-icon" />
+  <title>Aromaterapia - cursos</title>
+</head>
 
-    <header class="container-pai">
-      <div class="logo">
-        <a
-          href="#"
-          onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
-        >
-          <img
-            height="90"
-            src="/ProjetoSolarOficial/src/assets/logo_nav2.png"
-            alt="Logo branca Solar"
-          />
-        </a>
-      </div>
+<body>
+  <!-- ================================= HEADER ================================= -->
 
-      <button id="btn-mobile">
-        <span id="hamburger"></span>
-      </button>
+  <header class="container-pai">
+    <div class="logo">
+      <a href="#" onclick="redirectUser('../../../home/home.html')">
+        <img height="90" src="../../../../assets/logo_nav2.png" alt="Logo branca Solar" />
+      </a>
+    </div>
 
-      <nav class="nav-pai" id="nav">
-        <ul id="menu">
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/home/home.html')"
-              >HOME</a
-            >
-          </li>
+    <button id="btn-mobile">
+      <span id="hamburger"></span>
+    </button>
 
-          <li>
-            <a href="#">
-              EXPLORAR
-              <img
-                class="seta-header"
-                src="/ProjetoSolarOficial/src/assets/seta.png"
-                alt="seta"
-              />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/eventss/index/index.html')"
-                  >EVENTOS</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/courses/index/index.html')"
-                  >CURSOS</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html')"
-                  >SOLMÍDIA</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/explore/game/game.html')"
-                  >JOGOS</a
-                >
-              </li>
-            </ul>
-          </li>
+    <nav class="nav-pai" id="nav">
+      <ul id="menu">
+        <li>
+          <a href="#" onclick="redirectUser('../../../home/home.html')">HOME</a>
+        </li>
 
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/donation/donation.html')"
-              >DOAÇÃO</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/professionals/professionals.html')"
-              >PROFISSIONAIS</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/plans/plans.html')"
-              >PLANOS</a
-            >
-          </li>
-
-          <li>
-            <a href="#">
-              REDES
-              <img
-                class="seta-header"
-                src="/ProjetoSolarOficial/src/assets/seta.png"
-                alt="seta"
-              />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/about/about.html')"
-                  >SOBRE</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/location/location.html')"
-                  >LOCALIZAR INSTITUIÇÕES</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/contactus/contactus.html')"
-                  >FALE CONOSCO</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('/ProjetoSolarOficial/src/pages/network/community/comunidade.html')"
-                  >COMUNIDADE</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('/ProjetoSolarOficial/src/pages/login/login.html')"
-            >
-              <button class="button-header">ENTRAR</button>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- ================================= MAIN ================================= -->
-    <main class="container-principal">
-      <section class="sessao-pai">
-        <!-- Topo do Card -->
-        <article class="topo-card">
-          <img
-            class="img-topo-card"
-            src="/ProjetoSolarOficial/src/assets/logo-senac.png"
-            width="140"
-            alt="logo-bradesco"
-          />
-          <div class="titulo-subtitulo">
-            <h2 class="subtitulo-topo">Aromaterapia</h2>
-            <p class="paragrafo-topo">
-              Você aprenderá a usar os óleos essenciais e conhecerá seus
-              benefícios e efeitos energéticos para a saúde, o bem-estar e a
-              aplicação do marketing olfativo.
-            </p>
-          </div>
-        </article>
-
-        <!-- Informações do Curso -->
-        <section class="informacoes-curso">
-          <div class="informacoes">
-            <!-- Local -->
-            <div class="bloco">
-              <div class="icone-texto">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/local.png"
-                  alt="ícone de local"
-                />
-                <h3>Local</h3>
-              </div>
-              <div class="campo">
-                <p>Senac</p>
-              </div>
-            </div>
-
-            <!-- Horário -->
-            <div class="bloco">
-              <div class="icone-texto">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/horario.png"
-                  alt="ícone de horário"
-                />
-                <h3>Horário</h3>
-              </div>
-              <div class="campo">
-                <p>Faça no seu ritmo!</p>
-              </div>
-            </div>
-
-            <!-- Período -->
-            <div class="bloco">
-              <div class="icone-texto">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/calendario.png"
-                  alt="ícone de período"
-                />
-                <h3>Período</h3>
-              </div>
-              <div class="campo">
-                <p>03/05 a 04/06</p>
-              </div>
-            </div>
-
-            <!-- Modalidade -->
-            <div class="bloco">
-              <div class="icone-texto">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/Goal.png"
-                  alt="ícone de modalidade"
-                />
-                <h3>Modalidade</h3>
-              </div>
-              <div class="campo">
-                <p>Online</p>
-              </div>
-            </div>
-
-            <!-- Descrição -->
-            <div class="bloco descricao">
-              <div class="icone-texto">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/Task.png"
-                  alt="ícone de descrição"
-                />
-                <h3>Descrição do curso</h3>
-              </div>
-              <div class="campo campo-descricao">
-                <p>
-                  Com aulas práticas e dinâmicas que conectam você às inovações
-                  da área, sempre com espaço para tirar dúvidas e trocar
-                  experiências.
-                </p>
-              </div>
-            </div>
-
-            <div class="bloco">
-              <div class="icone-texto">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/Internet.png"
-                  alt="ícone de internet"
-                />
-                <h3>Inscrição no site</h3>
-              </div>
-              <div class="campo">
-                <p>Senac</p>
-              </div>
-            </div>
-
-            <div class="bloco">
-              <div class="icone-texto">
-                <img
-                  src="/ProjetoSolarOficial/src/assets/mala.png"
-                  alt="ícone de responsavel pelo curso"
-                />
-                <h3>Responsável pelo curso</h3>
-              </div>
-              <div class="campo">
-                <p>Senac</p>
-              </div>
-            </div>
-            <p class="obs-card">
-              OBS: Este curso é de responsabilidade de outra instituição. Todas
-              as informações sobre conteúdo, inscrições, valores e cancelamentos
-              devem ser confirmadas diretamente com eles. Clique em Inscreva-se
-              para ser direcionado ao site responsável pelo curso.
-            </p>
-          </div>
-          <div class="botoes">
-            <button
-              class="botao-1"
-              onclick="externalRedirect('https://www.sp.senac.br/cursos-livres/curso-de-aromaterapia')"
-            >
-              Inscreva-se
-            </button>
-            <button
-              class="botao-2"
-              onclick="redirectUser('../../confirmRegistration/index.html')"
-            >
-              Confirmar Inscrição
-            </button>
-          </div>
-        </section>
-      </section>
-    </main>
-
-    <!-- ================================= FOOTER ================================= -->
-    <footer>
-      <div class="margem-global">
-        <div class="secao-footer">
-          <div class="logo-footer">
-            <a href="/ProjetoSolarOficial/src/pages/home/home.html">
-              <img
-                src="/ProjetoSolarOficial/src/assets/logo_nav.png"
-                alt="Logo Solar"
-              />
-            </a>
-            <span>Solar</span>
-          </div>
-          <p>
-            Um espaço voltado para famílias monoparentais, oferecendo apoio
-            emocional, informações e recursos.
-          </p>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Redes Sociais</h3>
-          <div class="redes-sociais">
-            <a
-              href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
-                />
-              </svg>
-              SOLAR.PLATAFORMA
-            </a>
-            <a
-              href="https://www.linkedin.com/in/solaroficial/"
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
-                />
-              </svg>
-              SOLAR OFICIAL
-            </a>
-          </div>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Páginas</h3>
-          <ul class="lista-paginas">
+        <li>
+          <a href="#">
+            EXPLORAR
+            <img class="seta-header" src="../../../../assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
             <li>
-              <a href="/ProjetoSolarOficial/src/pages/home/home.html">Home</a>
+              <a href="#"
+                onclick="redirectUser('../../eventss/index/index.html')">EVENTOS</a>
             </li>
             <li>
-              <a href="/ProjetoSolarOficial/src/pages/network/about/about.html"
-                >Sobre</a
-              >
+              <a href="#"
+                onclick="redirectUser('../../courses/index/index.html')">CURSOS</a>
             </li>
             <li>
-              <a
-                href="/ProjetoSolarOficial/src/pages/professionals/professionals.html"
-                >Profissionais</a
-              >
+              <a href="#"
+                onclick="redirectUser('../../sunMidia/solmidia.html')">SOLMÍDIA</a>
             </li>
             <li>
-              <a
-                href="/ProjetoSolarOficial/src/pages/explore/sunMidia/solmidia.html"
-                >SolMídia</a
-              >
-            </li>
-            <li>
-              <a href="/ProjetoSolarOficial/src/pages/plans/plans.html"
-                >Planos</a
-              >
+              <a href="#" onclick="redirectUser('../../game/game.html')">JOGOS</a>
             </li>
           </ul>
+        </li>
+
+        <li>
+          <a href="#" onclick="redirectUser('../../../donation/donation.html')">DOAÇÃO</a>
+        </li>
+        <li>
+          <a href="#"
+            onclick="redirectUser('../../../professionals/professionals.html')">PROFISSIONAIS</a>
+        </li>
+        <li>
+          <a href="#" onclick="redirectUser('../../../plans/plans.html')">PLANOS</a>
+        </li>
+
+        <li>
+          <a href="#">
+            REDES
+            <img class="seta-header" src="../../../../assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="#" onclick="redirectUser('../../../network/about/about.html')">SOBRE</a>
+            </li>
+            <li>
+              <a href="#"
+                onclick="redirectUser('../../../network/location/location.html')">LOCALIZAR
+                INSTITUIÇÕES</a>
+            </li>
+            <li>
+              <a href="#" onclick="redirectUser('../../../network/contactus/contactus.html')">FALE
+                CONOSCO</a>
+            </li>
+            <li>
+              <a href="#"
+                onclick="redirectUser('../../../network/community/comunidade.html')">COMUNIDADE</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" onclick="redirectUser('../../../../../login.html')">
+            <button class="button-header">ENTRAR</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================================= MAIN ================================= -->
+  <main class="container-principal">
+    <section class="sessao-pai">
+      <!-- Topo do Card -->
+      <article class="topo-card">
+        <img class="img-topo-card" src="../../../../assets/logo-senac.png" width="140"
+          alt="logo-bradesco" />
+        <div class="titulo-subtitulo">
+          <h2 class="subtitulo-topo">Aromaterapia</h2>
+          <p class="paragrafo-topo">
+            Você aprenderá a usar os óleos essenciais e conhecerá seus
+            benefícios e efeitos energéticos para a saúde, o bem-estar e a
+            aplicação do marketing olfativo.
+          </p>
+        </div>
+      </article>
+
+      <!-- Informações do Curso -->
+      <section class="informacoes-curso">
+        <div class="informacoes">
+          <!-- Local -->
+          <div class="bloco">
+            <div class="icone-texto">
+              <img src="../../../../assets/local.png" alt="ícone de local" />
+              <h3>Local</h3>
+            </div>
+            <div class="campo">
+              <p>Senac</p>
+            </div>
+          </div>
+
+          <!-- Horário -->
+          <div class="bloco">
+            <div class="icone-texto">
+              <img src="../../../../assets/horario.png" alt="ícone de horário" />
+              <h3>Horário</h3>
+            </div>
+            <div class="campo">
+              <p>Faça no seu ritmo!</p>
+            </div>
+          </div>
+
+          <!-- Período -->
+          <div class="bloco">
+            <div class="icone-texto">
+              <img src="../../../../assets/calendario.png" alt="ícone de período" />
+              <h3>Período</h3>
+            </div>
+            <div class="campo">
+              <p>03/05 a 04/06</p>
+            </div>
+          </div>
+
+          <!-- Modalidade -->
+          <div class="bloco">
+            <div class="icone-texto">
+              <img src="../../../../assets/Goal.png" alt="ícone de modalidade" />
+              <h3>Modalidade</h3>
+            </div>
+            <div class="campo">
+              <p>Online</p>
+            </div>
+          </div>
+
+          <!-- Descrição -->
+          <div class="bloco descricao">
+            <div class="icone-texto">
+              <img src="../../../../assets/Task.png" alt="ícone de descrição" />
+              <h3>Descrição do curso</h3>
+            </div>
+            <div class="campo campo-descricao">
+              <p>
+                Com aulas práticas e dinâmicas que conectam você às inovações
+                da área, sempre com espaço para tirar dúvidas e trocar
+                experiências.
+              </p>
+            </div>
+          </div>
+
+          <div class="bloco">
+            <div class="icone-texto">
+              <img src="../../../../assets/Internet.png" alt="ícone de internet" />
+              <h3>Inscrição no site</h3>
+            </div>
+            <div class="campo">
+              <p>Senac</p>
+            </div>
+          </div>
+
+          <div class="bloco">
+            <div class="icone-texto">
+              <img src="../../../../assets/mala.png" alt="ícone de responsavel pelo curso" />
+              <h3>Responsável pelo curso</h3>
+            </div>
+            <div class="campo">
+              <p>Senac</p>
+            </div>
+          </div>
+          <p class="obs-card">
+            OBS: Este curso é de responsabilidade de outra instituição. Todas
+            as informações sobre conteúdo, inscrições, valores e cancelamentos
+            devem ser confirmadas diretamente com eles. Clique em Inscreva-se
+            para ser direcionado ao site responsável pelo curso.
+          </p>
+        </div>
+        <div class="botoes">
+          <button class="botao-1"
+            onclick="externalRedirect('https://www.sp.senac.br/cursos-livres/curso-de-aromaterapia')">
+            Inscreva-se
+          </button>
+          <button class="botao-2" onclick="redirectUser('../confirmRegistration/index.html')">
+            Confirmar Inscrição
+          </button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- ================================= FOOTER ================================= -->
+  <footer>
+    <div class="margem-global">
+      <div class="secao-footer">
+        <div class="logo-footer">
+          <a href="../../../home/home.html">
+            <img src="../../../../assets/logo_nav.png" alt="Logo Solar" />
+          </a>
+          <span>Solar</span>
+        </div>
+        <p>
+          Um espaço voltado para famílias monoparentais, oferecendo apoio
+          emocional, informações e recursos.
+        </p>
+      </div>
+
+      <div class="secao-footer">
+        <h3>Redes Sociais</h3>
+        <div class="redes-sociais">
+          <a href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+            </svg>
+            SOLAR.PLATAFORMA
+          </a>
+          <a href="https://www.linkedin.com/in/solaroficial/" class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            SOLAR OFICIAL
+          </a>
         </div>
       </div>
 
-      <div class="direitos-autorais">
-        <p>
-          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
-          Política de Privacidade
-        </p>
+      <div class="secao-footer">
+        <h3>Páginas</h3>
+        <ul class="lista-paginas">
+          <li>
+            <a href="../../../home/home.html">Home</a>
+          </li>
+          <li>
+            <a href="../../../network/about/about.html">Sobre</a>
+          </li>
+          <li>
+            <a href="../../../professionals/professionals.html">Profissionais</a>
+          </li>
+          <li>
+            <a href="../../sunMidia/solmidia.html">SolMídia</a>
+          </li>
+          <li>
+            <a href="../../../plans/plans.html">Planos</a>
+          </li>
+        </ul>
       </div>
-    </footer>
-  </body>
-  <script src="/ProjetoSolarOficial/src/js/script.js"></script>
-  <script src="/ProjetoSolarOficial/src/js/headerResponsivo.js"></script>
+    </div>
+
+    <div class="direitos-autorais">
+      <p>
+        © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
+        Política de Privacidade
+      </p>
+    </div>
+  </footer>
+</body>
+<script src="../../../../js/script.js"></script>
+<script src="../../../../js/headerResponsivo.js"></script>
+
 </html>

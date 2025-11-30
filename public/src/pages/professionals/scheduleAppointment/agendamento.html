@@ -11,7 +11,7 @@
   <meta name="keywords" content="Solar, Monoparentalidade, Apoiar" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./agendamento.css" />
-  <link rel="shortcut icon" href="/ProjetoSolarOficial/src/assets/Logotipo-Solar.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="../../../assets/Logotipo-Solar.png" type="image/x-icon" />
   <!-- Font Awesome 6 Free -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Profissionais - SOLAR</title>
@@ -144,13 +144,13 @@
       <!-- ETAPA 1 — DADOS PESSOAIS -->
       <form class="form-content etapa etapa-1">
         <label>Nome Completo</label>
-        <input type="text" placeholder="Digite seu nome completo" />
+        <input type="text" id="nome" placeholder="Digite seu nome completo" required />
 
         <label>E-mail</label>
-        <input type="email" placeholder="seu@email.com" />
+        <input type="email" id="email" placeholder="seu@email.com" required />
 
         <label>Telefone</label>
-        <input type="text" placeholder="(11) 99999-9999" />
+        <input type="text" id="telefone" placeholder="(11) 99999-9999" required/>
 
         <label>Motivo da Consulta</label>
         <textarea placeholder="Descreva brevemente (opcional)"></textarea>
@@ -196,13 +196,13 @@
         <p class="confirm-text">Resumo do Atendimento</p>
 
         <div class="confirm-box">
-          <p><strong>Seu Nome:</strong> <span id="conf-nome">Maria Santos</span></p>
-          <p><strong>Seu E-mail:</strong> <span id="conf-email">maria.santos@email.com</span></p>
-          <p><strong>Seu Telefone:</strong> <span id="conf-telefone">(11) 98765-4321</span></p>
-          <p><strong>Profissional:</strong> <span id="conf-profissional">Ana Silva</span></p>
-          <p><strong>Data:</strong> <span id="conf-data">20/out (Segunda)</span></p>
-          <p><strong>Horário:</strong> <span id="conf-hora">15:50</span></p>
-          <p><strong>Modalidade:</strong> <span>Online</span></p>
+          <p><strong>Seu Nome:</strong> <span id="conf-nome"></span></p>
+          <p><strong>Seu E-mail:</strong> <span id="conf-email"></span></p>
+          <p><strong>Seu Telefone:</strong> <span id="conf-telefone"></span></p>
+          <p><strong>Profissional:</strong> <span id="conf-profissional"></span></p>
+          <p><strong>Data:</strong> <span id="conf-data"></span></p>
+          <p><strong>Horário:</strong> <span id="conf-hora"></span></p>
+          <p><strong>Modalidade:</strong> <span id="conf-modalidade">Online</span></p>
         </div>
 
         <div class="botoes-nav">

@@ -46,8 +46,9 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-top: 50px;
+  margin-top: 150px; 
   padding: 0 15px;
+  margin-bottom: 50px;
 }
 
 /* ===================== */
@@ -265,30 +266,36 @@
 /* ===================== */
 
 footer {
-  margin-top: 100px;
   background: var(--cor-roxo-claro);
-  padding-top: 60px;
   color: var(--cor-branca);
+  padding: 60px 20px 30px 20px;
 }
 
 footer .margem-global {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 60px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+footer .secao-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .secao-footer h3 {
   font-family: var(--font-titulo);
   font-size: 28px;
-  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.secao-footer p,
-.lista-paginas a,
-.link-rede-social {
+.secao-footer p {
   font-family: var(--font-paragrafo);
   font-size: 16px;
-  line-height: 1.5;
   color: var(--cor-branca);
 }
 
@@ -296,7 +303,6 @@ footer .margem-global {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
 }
 
 .logo-footer img {
@@ -311,17 +317,20 @@ footer .margem-global {
 
 .redes-sociais {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 15px;
-  margin-top: 20px;
 }
 
 .link-rede-social {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  color: var(--cor-branca);
   text-decoration: none;
-  transition: var(--transition);
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .link-rede-social:hover {
@@ -330,8 +339,8 @@ footer .margem-global {
 }
 
 .link-rede-social svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   fill: var(--cor-branca);
 }
 
@@ -341,11 +350,17 @@ footer .margem-global {
 
 .lista-paginas {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .lista-paginas a {
+  color: var(--cor-branca);
   text-decoration: none;
-  transition: var(--transition);
+  font-family: var(--font-paragrafo);
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .lista-paginas a:hover {
@@ -355,10 +370,11 @@ footer .margem-global {
 
 .direitos-autorais {
   text-align: center;
-  padding: 30px 0;
-  font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 40px;
+  padding-top: 20px;
+  font-family: var(--font-paragrafo);
+  font-size: 14px;
+  color: var(--cor-branca);
 }
 
 /* ============================= */

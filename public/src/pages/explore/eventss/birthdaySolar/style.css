@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px; /* Ajuste de espaçamento */
+  margin-top: 150px; 
   padding: 0 15px;
 }
 
@@ -49,6 +49,8 @@
   height: auto; /* Altura adaptável */
   padding-bottom: 40px;
 }
+
+
 
 /* CORREÇÃO DE SINTAXE E AJUSTE DE ESPAÇAMENTO */
 .topo-card {

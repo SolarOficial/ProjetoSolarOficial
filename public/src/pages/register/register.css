@@ -31,7 +31,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url("/ProjetoSolarOficial/src/assets/img-register/background-cadastro.gif");
+  background-image: url("../../assets/img-register/background-cadastro.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../../global.css" />
     <link rel="stylesheet" href="./donation.css" />
     <link rel="stylesheet" href="../../headerResponsivo.css" />
+      <!-- Font Awesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
       rel="shortcut icon"
       href="../../assets/Logotipo-Solar.png"
@@ -21,7 +23,6 @@
     />
     <title>Doação - SOLAR</title>
   </head>
-
   <body>
    <header class="container-pai">
     <div class="logo">
@@ -233,25 +234,21 @@
                 </div>
               </form>
 
-              <div class="pagamento-forma-conteudo">
-                <h3>Forma de Pagamento</h3>
+<div class="pagamento-forma-conteudo">
+    <h3>Forma de Pagamento</h3>
 
-                <div class="forma">
-                  <button class="metodo-opcao ativo" id="opcao-cartao">
-                    CARTÃO DE CRÉDITO
-                  </button>
+    <div class="forma">
+        <button class="metodo-opcao ativo" id="opcao-cartao">
+            CARTÃO DE CRÉDITO
+        </button>
 
-                  <button class="metodo-opcao" id="opcao-pix">PIX</button>
-                </div>
-                <!--forma-->
+        <button class="metodo-opcao" id="opcao-pix">PIX</button>
+    </div>
+    <div id="form-pagamento-credito"></div>
 
-                <form action="">
-                  <div id="form-pagamento-credito"></div>
-                  <!-- form-pagamento-credito-->
-
-                  <div id="form-pagamento-pix"></div>
-                  <!-- form-pagamento-pix-->
-                </form>
+    <div id="form-pagamento-pix"></div>
+    
+</div>
               </div>
               <!--pagamento-forma-->
             </div>
@@ -262,6 +259,31 @@
         <!--margem-global-->
       </section>
       <!--valor-doacao-->
+
+    <!-- Pop-up de Confirmação -->
+      <div class="popup-overlay" id="popup-confirmacao">
+        <div class="popup-confirmacao">
+          <div class="popup-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+
+          <h2 class="popup-titulo">Doação realizada com sucesso!</h2>
+
+          <p class="popup-mensagem">
+           O comprovante foi enviado para o seu e-mail. Caso não encontre na caixa de entrada, verifique sua caixa de spam ou promoções. Agradecemos imensamente seu apoio!
+          </p>
+
+          <div class="popup-botoes">
+            <button type="button" class="popup-btn popup-btn-inicio" id="btn-voltar-inicio">
+              <a href="../../../index.html">Voltar para o início</a>
+            </button>
+            <button type="button" class="popup-btn popup-btn-agenda" id="btn-minha-agenda">
+              <a href="../network/community/comunidade.html">Conheça a Comunidade Solar</a>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </main>
 
     <footer>

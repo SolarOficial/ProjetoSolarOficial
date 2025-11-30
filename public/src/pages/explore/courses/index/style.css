@@ -33,7 +33,7 @@
 .imagem-container img {
   width: 100%;
   display: block;
-  height: 600px;
+  height: 450px;
   object-fit: cover;
 }
 
@@ -45,7 +45,6 @@
   transform: translate(-50%, -50%);
   color: var(--cor-branca);
   text-align: center;
-  width: 45%;
   font-family: var(--font-titulo);
   font-size: 32px;
   color: var(--cor-branca);

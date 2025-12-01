@@ -1042,6 +1042,11 @@ footer .margem-global {
     max-width: none;
   }
 
+  section.solmidia .margem-global .container-cards .card img{
+    width: 100%;
+    height: 100%;
+  }
+
   .button-veja-mais a {
     width: 250px;
     height: 50px;
@@ -1202,6 +1207,7 @@ footer .margem-global {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
 }
 
 /* ========================================================================= */

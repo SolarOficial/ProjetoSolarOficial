@@ -1,0 +1,250 @@
+/* --- JOGO DA MEMÓRIA DOS SENTIMENTOS - ESTILO DIVERTIDO --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+
+:root {
+    --cor-titulo: #fff;
+    --cor-fundo: #9675CE;
+    --cor-texto-principal: #2c3e50;
+    --cor-frente-carta: #FFB64D;
+    --cor-verso-carta: #ffffff;
+    --cor-sombra: rgba(0, 0, 0, 0.15);
+    --cor-botao-voltar: #f79308;
+    --cor-titulo-botao-voltar: #000;
+    --cor-level-title: rgba(255, 245, 156, 1);
+
+}
+
+/* 3. Estilos Gerais */
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    background: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    text-align: center;
+}
+
+.back-to-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor-botao-voltar);
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cor-titulo-botao-voltar);
+    font-weight: 700;
+    box-shadow: 0 4px 10px var(--cor-sombra);
+    transition: transform 0.2s ease;
+    z-index: 100;
+}
+
+.back-to-menu:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 900;
+    color: var(--cor-titulo);
+    text-shadow: 2px 2px 5px var(--cor-sombra);
+    margin-bottom: 5px;
+}
+
+#level-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--cor-titulo);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* 4. Tabuleiro do Jogo */
+.game-board {
+    display: grid;
+    gap: 12px;
+    perspective: 1200px;
+    /* Layout Padrão (Mobile First) */
+    grid-template-columns: repeat(3, 85px);
+}
+
+.game-board[data-level="3"] {
+    grid-template-columns: repeat(4, 70px);
+}
+
+/* 5. Estilos das Cartas */
+.card {
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Layout Padrão (Mobile First) */
+    width: 85px;
+    height: 85px;
+}
+
+.game-board[data-level="3"] .card {
+    width: 70px;
+    height: 70px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--cor-sombra);
+    backface-visibility: hidden;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* Verso da carta (o que vemos no início) */
+.card-back {
+    background-color: var(--cor-verso-carta);
+    color: var(--cor-titulo);
+    font-size: 50px;
+    transition: opacity 0.3s;
+}
+.card.flipped .card-back {
+    opacity: 0;
+}
+.card-back::before {
+    content: none;
+}
+
+/* Garante que a imagem SolarIA apareça no verso */
+.card-back img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+.card-back {
+    padding: 0;
+}
+.card-back span {
+    display: none;
+}
+
+.card-back span {
+    display: none;
+}
+
+.card-front {
+    background-color: var(--cor-frente-carta);
+    color: var(--cor-texto-principal);
+    transform: rotateY(180deg);
+}
+
+/* 6. Animação de Recompensa para Pares Corretos */
+@keyframes matchAnimation {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.card.matched {
+    animation: matchAnimation 0.5s ease-in-out;
+}
+
+/* 7. Mensagem de Vitória e Botões */
+#victory-message h2 {
+    font-size: 2.5em;
+    color: var(--cor-titulo);
+    text-shadow: 2px 2px 5px var(--cor-sombra);
+}
+
+#victory-message button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: var(--cor-titulo);
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px var(--cor-sombra);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#victory-message button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px var(--cor-sombra);
+}
+
+#next-level-button {
+    background-color: var(--cor-botao-voltar);
+}
+
+#restart-button {
+    background-color: var(--cor-botao-voltar);
+    display: none;
+    /* Começa escondido, JS controla a exibição */
+}
+
+/* 8. Media Queries para Telas Maiores (Responsividade) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    #level-title {
+        font-size: 2em;
+    }
+
+    .game-board {
+        gap: 16px;
+        /* Layout Desktop */
+        grid-template-columns: repeat(4, 120px);
+    }
+
+    .game-board[data-level="3"] {
+        grid-template-columns: repeat(4, 120px);
+    }
+
+    .card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .game-board[data-level="3"] .card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-face {
+        font-size: 28px;
+    }
+
+    .card-back {
+        font-size: 70px;
+    }
+}

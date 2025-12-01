@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+
+:root {
+    --cor-fundo: #9675CE;
+    --cor-texto: #fff;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --red: #e76f51;
+    --yellow: #f4a261;
+    --blue: #2a9d8f;
+    --green: #8ab17d;
+    --cor-botao-voltar: #f79308;
+    --cor-titulo-botao-voltar: #000;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.back-to-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor-botao-voltar);
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cor-titulo-botao-voltar);
+    font-weight: 700;
+    box-shadow: 0 4px 10px var(--cor-sombra);
+    transition: transform 0.2s ease;
+    z-index: 100;
+}
+
+.back-to-menu:hover {
+    transform: scale(1.05);
+}
+
+.game-container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.game-header h1 {
+    font-size: 2em;
+    font-weight: 900;
+    margin: 0;
+}
+
+.game-header p {
+    font-size: 1.2em;
+    color: var(--cor-texto);
+    margin-top: 5px;
+}
+
+.basket-container {
+    margin: 30px auto;
+    width: 200px;
+    height: 150px;
+    border: 5px dashed #ccc;
+    border-radius: 20px 20px 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilo que mostra que a cesta é um alvo válido */
+.basket-container.drag-over {
+    transform: scale(1.1);
+    border-style: solid;
+}
+
+.basket-icon {
+    font-size: 4em;
+    opacity: 0.5;
+}
+
+.items-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-height: 100px;
+    box-shadow: 0 5px 20px var(--cor-sombra);
+}
+
+.item {
+    font-size: 4em;
+    cursor: grab;
+    transition: transform 0.2s ease;
+    user-select: none;
+    /* Impede a seleção de texto do emoji */
+}
+
+.item:active {
+    cursor: grabbing;
+    transform: scale(1.2);
+}
+
+/* Classe para quando um item está sendo arrastado */
+.item.dragging {
+    opacity: 0.5;
+}
+
+/* Classe para esconder o item após ser solto corretamente */
+.item.hidden {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* Tela de finalização (reutilizando estilos anteriores) */
+#completion-screen {
+    text-align: center;
+}
+
+#completion-screen h2 {
+    font-size: 3em;
+}
+
+#restart-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--cor-botao-voltar);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#restart-button:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}

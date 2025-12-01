@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+
+:root {
+    --cor-fundo: #9675CE;
+    --cor-texto: #000;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --zona-terra: #ffe091;
+    --zona-agua: #15c7db;
+    --zona-ar: #f7f8fc;
+    --cor-botao-reiniciar: #F6DE00;
+    --cor-botao-voltar: #f79308;
+    --cor-titulo-botao-voltar: #000;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.back-to-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor-botao-voltar);
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 700;
+    box-shadow: 0 4px 10px var(--cor-sombra);
+    transition: transform 0.2s ease;
+    z-index: 100;
+}
+
+.back-to-menu:hover {
+    transform: scale(1.05);
+}
+
+.game-container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.game-header h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.game-header p {
+    font-size: 1.2em;
+    color: var(--cor-texto);
+    margin-top: 0;
+}
+
+.vehicle-container {
+    margin: 40px 0;
+    min-height: 100px;
+    /* Garante espaço mesmo vazio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vehicle {
+    font-size: 6em;
+    /* Emojis bem grandes */
+    cursor: grab;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    user-select: none;
+}
+
+.vehicle:active {
+    cursor: grabbing;
+    transform: scale(1.2);
+}
+
+.vehicle.dragging {
+    opacity: 0.4;
+}
+
+.vehicle.hidden {
+    transform: scale(0);
+}
+
+.drop-zones-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.drop-zone {
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px dashed rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.drop-zone h2 {
+    margin: 0;
+    color: var(--cor-texto);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos individuais para cada zona */
+.drop-zone[data-zone="land"] {
+    background-color: var(--zona-terra);
+}
+
+.drop-zone[data-zone="water"] {
+    background-color: var(--zona-agua);
+}
+
+.drop-zone[data-zone="air"] {
+    background-color: var(--zona-ar);
+}
+
+/* Feedback visual ao arrastar sobre uma zona */
+.drop-zone.drag-over {
+    transform: scale(1.03);
+    border-style: solid;
+    border-color: white;
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+    .drop-zones-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colunas lado a lado */
+        min-height: 200px;
+    }
+}
+
+/* Tela de finalização */
+#completion-screen {
+    text-align: center;
+}
+
+#completion-screen h2 {
+    font-size: 3em;
+}
+
+#restart-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--cor-botao-voltar);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#restart-button:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}

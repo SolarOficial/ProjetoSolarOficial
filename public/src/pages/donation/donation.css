@@ -32,8 +32,8 @@ section.imagem-fundo-texto {
   background-image: url(../../assets/img-donation/background-doacao.png);
   height: 450px;
   object-fit: cover;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -331,6 +331,10 @@ section.valor-doacao
   color: var(--cor-preta);
   margin-bottom: 58px;
   text-align: center;
+}
+
+.texto-ajuda {
+  margin-top: 10px;
 }
 
 section.valor-doacao

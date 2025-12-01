@@ -32,8 +32,8 @@ section.imagem-fundo-texto {
   background-image: url(../../assets/img-donation/background-doacao.png);
   height: 450px;
   object-fit: cover;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;

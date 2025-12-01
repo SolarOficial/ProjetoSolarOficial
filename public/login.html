@@ -37,7 +37,7 @@
             <li><a href="#" onclick="redirectUser('./src/pages/explore/eventss/index/index.html')">EVENTOS</a></li>
             <li><a href="#" onclick="redirectUser('./src/pages/explore/courses/index/index.html')">CURSOS</a></li>
             <li><a href="#" onclick="redirectUser('./src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a></li>
-            <li><a href="#" onclick="redirectUser('../src/pages/explore/game/game.html')">JOGOS</a></li>
+            <li><a href="#" onclick="redirectUser('./src/pages/explore/game/game.html')">JOGOS</a></li>
           </ul>
         </li>
 
@@ -52,9 +52,9 @@
           </a>
           <ul class="dropdown">
             <li><a href="#" onclick="redirectUser('./src/pages/network/about/about.html')">SOBRE</a></li>
-            <li><a href="#" onclick="redirectUser('./src/pages/network/location/location.html')">LOCALIZAR INSTITUIÇÕES</a></li>
-            <li><a href="#"
-                onclick="redirectUser('./src/pages/network/contactUs/contactus.html')">FALE
+            <li><a href="#" onclick="redirectUser('./src/pages/network/location/location.html')">LOCALIZAR
+                INSTITUIÇÕES</a></li>
+            <li><a href="#" onclick="redirectUser('./src/pages/network/contactUs/contactus.html')">FALE
                 CONOSCO</a></li>
             <li><a href="#" onclick="redirectUser('./src/pages/network/community/comunidade.html')">COMUNIDADE</a></li>
           </ul>
@@ -101,9 +101,8 @@
               <button type="submit" class="submit-btn" id="btn-login">Entrar</button>
             </div>
 
-            <div class="button-google" style="margin-top: 10px; text-align: center;">
-              <button type="button" id="btn-google"
-                style="background-color: #fff; color: #757575; border: 1px solid #ddd; padding: 10px 20px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;">
+            <div class="button-google">
+              <button type="button" id="btn-google">
                 <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" width="18"
                   height="18">
                 Entrar com Google
@@ -123,8 +122,8 @@
   <div class="modal-overlay" id="modalLoginSucesso">
     <div class="modal-card">
       <h2>Bem-vindo(a) de volta!</h2>
-      <p>Login efetuado com sucesso!🌻 <br>Você será redirecionado para a Home.</p>
-      <button class="btn-modal" onclick="window.location.href='index.html'">
+      <p>Login efetuado com sucesso!🌻 <br>Você será redirecionado para o seu perfil.</p>
+      <button class="btn-modal" onclick="window.location.href='src/pages/profile/profile.html'">
         Ir para a Home
       </button>
     </div>
@@ -151,10 +150,6 @@
       <button class="btn-modal" onclick="window.location.reload()">OK</button>
     </div>
   </div>
-
-  <script>
-    console.log("TESTE 1: O HTML foi lido até aqui!");
-  </script>
 
   <script src="src/js/popupRegister.js"></script>
   <script type="module" src="src/js/script.js"></script>

@@ -333,6 +333,10 @@ section.valor-doacao
   text-align: center;
 }
 
+.texto-ajuda {
+  margin-top: 10px;
+}
+
 section.valor-doacao
   .margem-global
   .valor-formulario

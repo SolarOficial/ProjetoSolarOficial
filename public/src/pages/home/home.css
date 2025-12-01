@@ -39,13 +39,11 @@ section.descricao {
 }
 
 section.descricao .container-descricao {
-  background: linear-gradient(
-    to left bottom,
-    #bf9ef5b3 0%,
-    #bf9ef5b3 10%,
-    #4a356db3 40%,
-    #4a356db3 100%
-  );
+  background: linear-gradient(to left bottom,
+      #bf9ef5b3 0%,
+      #bf9ef5b3 10%,
+      #4a356db3 40%,
+      #4a356db3 100%);
   height: 450px;
   width: 784px;
   border-radius: 30px;
@@ -310,11 +308,7 @@ section.localizacoes .margem-global .container-localizacao .informacoes {
   gap: 20px;
 }
 
-section.localizacoes
-  .margem-global
-  .container-localizacao
-  .informacoes
-  .opcoes {
+section.localizacoes .margem-global .container-localizacao .informacoes .opcoes {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -330,6 +324,12 @@ section.localizacoes .margem-global .container-localizacao .informacoes button {
   border-radius: 16.75px;
   border: none;
   cursor: pointer;
+}
+
+section.localizacoes .margem-global aside img {
+  border-radius: 50px;
+  width: 600px;
+  height: 400px;
 }
 
 /*SECTION CONHEÇA NOSSA COMUNIDADE*/
@@ -357,20 +357,11 @@ section.conheca-comunidade .margem-global .container-conteudo .texto-botao {
   font-size: 20px;
 }
 
-section.conheca-comunidade
-  .margem-global
-  .container-conteudo
-  .texto-botao
-  .botao-acessar {
+section.conheca-comunidade .margem-global .container-conteudo .texto-botao .botao-acessar {
   margin-top: 64px;
 }
 
-section.conheca-comunidade
-  .margem-global
-  .container-conteudo
-  .texto-botao
-  .botao-acessar
-  button {
+section.conheca-comunidade .margem-global .container-conteudo .texto-botao .botao-acessar button {
   border-radius: 16.75px;
   width: 268px;
   height: 58.63px;
@@ -591,11 +582,7 @@ section.fale-conosco .margem-global .formulario form textarea:valid {
   background: #9675ce4d;
 }
 
-section.fale-conosco
-  .margem-global
-  .formulario
-  .botao-enviar
-  #botao-enviar:hover {
+section.fale-conosco .margem-global .formulario .botao-enviar #botao-enviar:hover {
   background: #9675ce;
 }
 
@@ -712,6 +699,7 @@ footer .margem-global {
 }
 
 @media screen and (max-width: 1200px) {
+
   /* MARGEM GLOBAL (Reduz a margem lateral em telas médias) */
   .margem-global {
     margin: 0 40px;
@@ -719,7 +707,8 @@ footer .margem-global {
 
   /* SECTION DESCRIÇÃO */
   section.descricao {
-    height: auto; /* Altura flexível */
+    height: auto;
+    /* Altura flexível */
     padding-top: 120px;
   }
 
@@ -729,7 +718,8 @@ footer .margem-global {
     height: auto;
     gap: 25px;
     padding: 30px 10px;
-    margin: 0 auto; /* Centraliza */
+    margin: 0 auto;
+    /* Centraliza */
   }
 
   section.descricao .container-descricao .titulo h1 {
@@ -764,7 +754,8 @@ footer .margem-global {
   }
 
   section.nosso-proposito .container-img-texto {
-    flex-direction: column; /* Empilha imagem e texto */
+    flex-direction: column;
+    /* Empilha imagem e texto */
     padding: 0;
     gap: 30px;
   }
@@ -782,19 +773,22 @@ footer .margem-global {
   }
 
   section.solmidia .margem-global .container-cards {
-    justify-content: center; /* Centraliza os cards */
+    justify-content: center;
+    /* Centraliza os cards */
     gap: 30px;
   }
 
   section.solmidia .margem-global .container-cards .card {
-    width: 45%; /* Mostra dois por linha */
+    width: 45%;
+    /* Mostra dois por linha */
     max-width: 390px;
     height: auto;
     padding-bottom: 20px;
   }
 
   section.solmidia .margem-global .container-cards .card .texto {
-    width: 90%; /* Ajusta a largura do texto interno */
+    width: 90%;
+    /* Ajusta a largura do texto interno */
     height: auto;
     margin-top: 20px;
     gap: 15px;
@@ -837,9 +831,11 @@ footer .margem-global {
   }
 
   section.funcionalidades .margem-global .container-cards .card {
-    width: 45%; /* Dois por linha */
+    width: 45%;
+    /* Dois por linha */
     max-width: 377px;
-    height: 250px; /* Aumenta um pouco a altura para acomodar texto maior */
+    height: 250px;
+    /* Aumenta um pouco a altura para acomodar texto maior */
     padding: 20px;
   }
 
@@ -853,7 +849,8 @@ footer .margem-global {
 
   /* SECTION LOCALIZAÇÕES */
   section.localizacoes {
-    height: auto; /* Altura flexível */
+    height: auto;
+    /* Altura flexível */
   }
 
   section.localizacoes .margem-global {
@@ -867,13 +864,15 @@ footer .margem-global {
   }
 
   section.localizacoes .margem-global .container-localizacao {
-    flex-direction: column; /* Empilha mapa e texto */
+    flex-direction: column;
+    /* Empilha mapa e texto */
     gap: 50px;
     margin-top: 40px;
   }
 
   section.localizacoes .margem-global .container-localizacao .mapa {
-    order: -1; /* Coloca o mapa em cima */
+    order: -1;
+    /* Coloca o mapa em cima */
     width: 100%;
     height: 400px;
   }
@@ -891,7 +890,8 @@ footer .margem-global {
   }
 
   section.conheca-comunidade .margem-global .container-conteudo {
-    flex-direction: column; /* Empilha texto e aside */
+    flex-direction: column;
+    /* Empilha texto e aside */
     gap: 40px;
     margin-top: 60px;
   }
@@ -902,11 +902,7 @@ footer .margem-global {
     padding: 0 20px;
   }
 
-  section.conheca-comunidade
-    .margem-global
-    .container-conteudo
-    .texto-botao
-    .botao-acessar {
+  section.conheca-comunidade .margem-global .container-conteudo .texto-botao .botao-acessar {
     margin-top: 30px;
   }
 
@@ -927,7 +923,8 @@ footer .margem-global {
   }
 
   section.cresca-solar .margem-global .container-card {
-    flex-direction: column; /* Empilha os cards */
+    flex-direction: column;
+    /* Empilha os cards */
     gap: 40px;
     align-items: center;
   }
@@ -974,6 +971,7 @@ footer .margem-global {
     width: 100%;
     font-size: 22px;
   }
+
   /* FOOTER */
   footer .margem-global {
     grid-template-columns: 1fr 1fr;
@@ -985,6 +983,7 @@ footer .margem-global {
 /* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
 /* ========================================================================= */
 @media screen and (max-width: 768px) {
+
   /* MARGEM GLOBAL (Mais apertada no mobile) */
   .margem-global {
     margin: 0 15px;
@@ -1038,11 +1037,12 @@ footer .margem-global {
   }
 
   section.solmidia .margem-global .container-cards .card {
-    width: 100%; /* Empilha um por linha */
+    width: 100%;
+    /* Empilha um por linha */
     max-width: none;
   }
 
-  section.solmidia .margem-global .container-cards .card img{
+  section.solmidia .margem-global .container-cards .card img {
     width: 100%;
     height: 100%;
   }
@@ -1070,7 +1070,8 @@ footer .margem-global {
   }
 
   section.funcionalidades .margem-global .container-cards .card {
-    width: 100%; /* Empilha um por linha */
+    width: 100%;
+    /* Empilha um por linha */
     max-width: none;
     height: auto;
     padding: 20px 15px;
@@ -1087,8 +1088,9 @@ footer .margem-global {
   }
 
   section.localizacoes .margem-global .container-localizacao .mapa {
-    height: 300px;
+    height: 200px;
   }
+
   aside {
     display: flex;
     justify-content: center;
@@ -1103,11 +1105,7 @@ footer .margem-global {
     font-size: 16px;
   }
 
-  section.localizacoes
-    .margem-global
-    .container-localizacao
-    .informacoes
-    button {
+  section.localizacoes .margem-global .container-localizacao .informacoes button {
     width: 200px;
     height: 50px;
     font-size: 16px;
@@ -1127,12 +1125,7 @@ footer .margem-global {
     font-size: 16px;
   }
 
-  section.conheca-comunidade
-    .margem-global
-    .container-conteudo
-    .texto-botao
-    .botao-acessar
-    button {
+  section.conheca-comunidade .margem-global .container-conteudo .texto-botao .botao-acessar button {
     width: 220px;
     height: 50px;
     font-size: 18px;
@@ -1142,6 +1135,7 @@ footer .margem-global {
     width: 310px;
     height: 310px;
   }
+
   section.conheca-comunidade .margem-global .container-conteudo aside p {
     font-size: 16px;
   }
@@ -1197,6 +1191,7 @@ footer .margem-global {
   section.fale-conosco .margem-global .formulario .botao-enviar #botao-enviar {
     font-size: 20px;
   }
+
   /* FOOTER: EMPILHAMENTO TOTAL */
   footer {
     margin-top: 50px;
@@ -1214,6 +1209,7 @@ footer .margem-global {
 /* 3. TELAS ULTRA PEQUENAS (Máximo 580px) */
 /* ========================================================================= */
 @media screen and (max-width: 580px) {
+
   /* MARGEM GLOBAL (Apertando ainda mais) */
   .margem-global {
     margin: 0 10px;
@@ -1320,6 +1316,7 @@ footer .margem-global {
   section.fale-conosco .margem-global .formulario .botao-enviar #botao-enviar {
     font-size: 18px;
   }
+
   /* FOOTER */
   .direitos-autorais {
     font-size: 11px;

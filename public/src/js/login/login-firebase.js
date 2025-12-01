@@ -1,4 +1,4 @@
-import { auth, provider } from './firebase-config.js';
+import { auth, provider } from '../firebase-config.js';
 import { signInWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
 const formLogin = document.getElementById('form-login');

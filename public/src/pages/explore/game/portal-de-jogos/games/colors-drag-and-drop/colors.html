@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Jogo da memoria">
+    <meta name="keywords" content="jogos, aprendizado, inglês, infantil">
+    <meta name="author" content="Solar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Cesta de Cores</title>
+    <link rel="stylesheet" href="colors.css">
+</head>
+<body>
+    <a href="../../menu.html" class="back-to-menu">🏠 Voltar ao Menu</a>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1 id="instruction-text">Coloque as coisas vermelhas na cesta!</h1>
+            <p id="color-name-en">Put the <span id="target-color-text">red</span> things in the basket!</p>
+        </header>
+
+        <div id="basket-container" class="basket-container">
+            </div>
+
+        <div id="items-container" class="items-container">
+            </div>
+    </div>
+
+    <div id="completion-screen" class="hidden">
+        <h2>Uau! 🤩</h2>
+        <p>Você é um mestre das cores!</p>
+        <button id="restart-button">Brincar de Novo</button>
+    </div>
+
+    <script src="colors.js"></script>
+</body>
+</html>

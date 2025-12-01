@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Jogo da memoria">
+    <meta name="keywords" content="jogos, aprendizado, inglês, infantil">
+    <meta name="author" content="Solar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onde Ele Anda?</title>
+    <link rel="stylesheet" href="transport.css">
+</head>
+<body>
+    <a href="../../menu.html" class="back-to-menu">🏠 Voltar ao Menu</a>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Para onde este veículo transita?</h1>
+            <p>Where does this vehicle go?</p>
+        </header>
+
+        <div id="vehicle-container" class="vehicle-container">
+            </div>
+
+        <div class="drop-zones-container">
+            <div class="drop-zone" data-zone="land">
+                <h2>Terra (Land)</h2>
+            </div>
+            <div class="drop-zone" data-zone="water">
+                <h2>Água (Water)</h2>
+            </div>
+            <div class="drop-zone" data-zone="air">
+                <h2>Ar (Air)</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="completion-screen" class="hidden">
+        <h2>Você é um piloto incrível! ✈️</h2>
+        <p>Conhece todos os meios de transporte!</p>
+        <button id="restart-button">Jogar de Novo</button>
+    </div>
+
+    <script src="transport.js"></script>
+</body>
+</html>

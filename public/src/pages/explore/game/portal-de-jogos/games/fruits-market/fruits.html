@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Jogo da memoria">
+    <meta name="keywords" content="jogos, aprendizado, inglês, infantil">
+    <meta name="author" content="Solar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feira de Frutas</title>
+    <link rel="stylesheet" href="fruits.css">
+</head>
+<body>
+    <a href="../../menu.html" class="back-to-menu">🏠 Voltar ao Menu</a>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Vamos às compras!</h1>
+            <p>Clique nas frutas da sua lista.</p>
+        </header>
+
+        <div id="shopping-list" class="shopping-list">
+            <h2>Sua Lista:</h2>
+            <ul id="list-items">
+                </ul>
+        </div>
+
+        <div id="market-stall" class="market-stall">
+            </div>
+
+        <div id="feedback-text" class="feedback-text"></div>
+    </div>
+
+    <div id="completion-screen" class="hidden">
+        <h2>Feira completa! 🍓🍌🍎</h2>
+        <p>Você é ótimo em escolher frutas!</p>
+        <button id="restart-button">Fazer compras de novo</button>
+    </div>
+
+    <script src="fruits.js"></script>
+</body>
+</html>

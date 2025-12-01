@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+
+:root {
+    --cor-fundo: #9675CE;
+    --cor-texto: #AF601A;
+     --cor-titulo: #fff;
+    --cor-caixa-instrucao: #F4D03F;
+    --cor-botao-voltar: #f79308;
+    --cor-titulo-botao-voltar: #000;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.back-to-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor-botao-voltar);
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cor-titulo-botao-voltar);
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    z-index: 100;
+}
+
+.back-to-menu:hover {
+    transform: scale(1.05);
+}
+
+.game-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instruction-box {
+    background-color: var(--cor-caixa-instrucao);
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 0px #7e670b;
+}
+
+.instruction-box p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--cor-titulo-botao-voltar)
+}
+
+.instruction-box h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--cor-titulo-botao-voltar);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.character-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background-image: url('images/character.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+}
+
+.hotspot {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.hotspot[data-part="Head"] {
+    top: 0%;
+    left: 35%;
+    width: 30%;
+    height: 25%;
+}
+
+.hotspot[data-part="Eyes"] {
+    top: 12%;
+    left: 40%;
+    width: 20%;
+    height: 5%;
+}
+
+.hotspot[data-part="Nose"] {
+    top: 15%;
+    left: 46%;
+    width: 8%;
+    height: 4%;
+}
+
+.hotspot[data-part="Mouth"] {
+    top: 18%;
+    left: 42%;
+    width: 16%;
+    height: 5%;
+}
+
+.hotspot[data-part="Ears"] {
+    top: 12%;
+    left: 28%;
+    width: 44%;
+    height: 8%;
+}
+
+/* Pega as duas orelhas */
+.hotspot[data-part="Shoulders"] {
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 10%;
+}
+
+.hotspot[data-part="Hands"] {
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 15%;
+}
+
+/* Pega as duas mãos */
+.hotspot[data-part="Knees"] {
+    top: 68%;
+    left: 30%;
+    width: 40%;
+    height: 10%;
+}
+
+/* Pega os dois joelhos */
+.hotspot[data-part="Feet"] {
+    top: 88%;
+    left: 25%;
+    width: 50%;
+    height: 12%;
+}
+
+/* Pega os dois pés */
+
+/* Feedback visual de acerto/erro */
+.feedback-animation {
+    position: absolute;
+    border-radius: 50%;
+    animation: fadeOut 0.7s forwards;
+}
+
+.feedback-animation.correct {
+    border: 5px solid #2ecc71;
+}
+
+.feedback-animation.incorrect {
+    border: 5px solid #e74c3c;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos da tela de finalização... */
+#completion-screen {
+    text-align: center;
+}
+
+#completion-screen h2 {
+    font-size: 3em;
+    color: var(--cor-titulo-botao-voltar);
+}
+#completion-screen p{
+    color: var(--cor-titulo-botao-voltar);
+}
+
+#restart-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: var(--cor-titulo);
+    background-color: var(--cor-botao-voltar);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#restart-button:hover {
+    transform: scale(1.05);
+}

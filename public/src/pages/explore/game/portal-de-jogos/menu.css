@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+
+:root {
+    --cor-fundo: #9675CE;
+    --cor-card: #fff;
+    --cor-texto: #4A356D;
+    --cor-subtexto: #4A356D;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-em-breve: #95a5a6;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 3em;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-header p {
+    font-size: 1.2em;
+    color:var(--cor-card);
+    margin-top: -15px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.menu-card {
+    background-color: var(--cor-card);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px var(--cor-sombra);
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 4em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.menu-card h2 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 900;
+}
+
+.menu-card p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    color: var(--cor-subtexto);
+}
+
+/* Estilo para os jogos que ainda não estão prontos */
+.menu-card.coming-soon {
+    background-color: #f1f2f6;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.menu-card.coming-soon:hover {
+    transform: none; 
+    box-shadow: 0 10px 20px var(--cor-sombra);
+}
+
+.soon-badge {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background-color: var(--cor-em-breve);
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 0.8em;
+    font-weight: 700;
+}

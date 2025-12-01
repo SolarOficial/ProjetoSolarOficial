@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+:root {
+    --cor-fundo: #9675CE;
+    --cor-texto: #000;
+    --cor-lista: #FFF8E1;
+    --cor-banca: #D2B48C;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-botao-reiniciar: #F6DE00;
+    --cor-botao-voltar: #f79308;
+    --cor-titulo-botao-voltar: #000;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.back-to-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor-botao-voltar);
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 700;
+    box-shadow: 0 4px 10px var(--cor-sombra);
+    transition: transform 0.2s ease;
+    z-index: 100;
+}
+
+.back-to-menu:hover {
+    transform: scale(1.05);
+}
+
+.game-container {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.game-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: var(--cor-texto);
+}
+
+.game-header p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.shopping-list {
+    background-color: var(--cor-lista);
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 5px 5px 15px var(--cor-sombra);
+    border: 1px solid #E0E0E0;
+    font-family: 'Kalam', cursive;
+}
+
+.shopping-list h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+#list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 2.5em;
+}
+
+.list-item {
+    transition: opacity 0.3s ease;
+}
+
+.list-item.collected {
+    opacity: 0.3;
+    text-decoration: line-through;
+}
+
+.market-stall {
+    background-color: var(--cor-banca);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 8px 0px #A0522D;
+}
+
+.fruit-item {
+    font-size: 4em;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.fruit-item:hover {
+    transform: scale(1.15);
+}
+
+.fruit-item.collected {
+    opacity: 0.2;
+    cursor: not-allowed;
+    transform: scale(0.9);
+}
+
+.feedback-text {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: 900;
+    height: 30px;
+    color: #E63946;
+}
+
+#completion-screen {
+    text-align: center;
+}
+
+#completion-screen h2 {
+    font-size: 3em;
+}
+
+#restart-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: var(--cor-lista);
+    background-color: var(--cor-botao-voltar);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#restart-button:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}

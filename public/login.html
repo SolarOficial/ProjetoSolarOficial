@@ -13,9 +13,9 @@
 </head>
 
 <body>
-     <header class="container-pai">
+  <header class="container-pai">
     <div class="logo">
-      <a href="#" onclick="redirectUser('/src/pages/home/home.html')">
+      <a href="#" onclick="redirectUser('index.html')">
         <img height="90" src="./src/assets/logo_nav2.png" alt="Logo branca Solar" />
       </a>
     </div>
@@ -26,7 +26,7 @@
 
     <nav class="nav-pai" id="nav">
       <ul id="menu">
-        <li><a href="" onclick="redirectUser('index.html')">HOME</a></li>
+        <li><a href="#" onclick="redirectUser('index.html')">HOME</a></li>
 
         <li>
           <a href="#">
@@ -34,16 +34,16 @@
             <img class="seta-header" src="./src/assets/seta.png" alt="seta" />
           </a>
           <ul class="dropdown">
-            <li><a href="#" onclick="redirectUser('./src/pages/explore/eventss/index/index.html')">EVENTOS</a></li>
-            <li><a href="#" onclick="redirectUser('./src/pages/explore/courses/index/index.html')">CURSOS</a></li>
-            <li><a href="#" onclick="redirectUser('./src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a></li>
-            <li><a href="#" onclick="redirectUser('./src/pages/explore/game/game.html')">JOGOS</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/eventss/index/index.html')">EVENTOS</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/courses/index/index.html')">CURSOS</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/game/game.html')">JOGOS</a></li>
           </ul>
         </li>
 
-        <li><a href="#" onclick="redirectUser('./src/pages/donation/donation.html')">DOAÇÃO</a></li>
-        <li><a href="#" onclick="redirectUser('./src/pages/professionals/professionals.html')">PROFISSIONAIS</a></li>
-        <li><a href="#" onclick="redirectUser('./src/pages/plans/plans.html')">PLANOS</a></li>
+        <li><a href="#" onclick="redirectUser('src/pages/donation/donation.html')">DOAÇÃO</a></li>
+        <li><a href="#" onclick="redirectUser('src/pages/professionals/professionals.html')">PROFISSIONAIS</a></li>
+        <li><a href="#" onclick="redirectUser('src/pages/plans/plans.html')">PLANOS</a></li>
 
         <li>
           <a href="#">
@@ -51,24 +51,24 @@
             <img class="seta-header" src="./src/assets/seta.png" alt="seta" />
           </a>
           <ul class="dropdown">
-            <li><a href="#" onclick="redirectUser('./src/pages/network/about/about.html')">SOBRE</a></li>
-            <li><a href="#" onclick="redirectUser('./src/pages/network/location/location.html')">LOCALIZAR
+            <li><a href="#" onclick="redirectUser('src/pages/network/about/about.html')">SOBRE</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/network/location/location.html')">LOCALIZAR
                 INSTITUIÇÕES</a></li>
-            <li><a href="#" onclick="redirectUser('./src/pages/network/contactUs/contactus.html')">FALE
+            <li><a href="#" onclick="redirectUser('src/pages/network/contactUs/contactus.html')">FALE
                 CONOSCO</a></li>
-            <li><a href="#" onclick="redirectUser('./src/pages/network/community/comunidade.html')">COMUNIDADE</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/network/community/comunidade.html')">COMUNIDADE</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="#" onclick="redirectUser('login.html')">
-            <button class="button-header">ENTRAR</button>
+          <a href="#" id="auth-link" onclick="redirectUser('login.html')">
+            <button id="auth-btn" class="button-header">ENTRAR</button>
           </a>
         </li>
       </ul>
     </nav>
   </header>
-  
+
   <main>
     <section class="img-login">
       <div class="margem-global">

@@ -1,4 +1,4 @@
-import { auth } from './firebase-config.js';
+import { auth } from '../firebase-config.js';
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
 const formCadastro = document.getElementById('form-cadastro');

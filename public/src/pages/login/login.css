@@ -141,6 +141,16 @@ section.img-login .margem-global {
     border: none;
     outline: none;
     width: 100%;
+
+    /* --- ADICIONE ESTAS LINHAS --- */
+    border-radius: 30px;
+    /* O input precisa ter a mesma curva da div pai */
+    -webkit-appearance: none;
+    /* Remove o estilo 3D/sombreado nativo do iPhone */
+    appearance: none;
+    /* Padrão moderno */
+    height: 100%;
+    /* Garante que o input preencha a altura da div */
   }
 }
 
@@ -163,6 +173,16 @@ section.img-login .margem-global {
     outline: none;
     color: var(--cor-branca);
     width: 100%;
+
+    /* --- ADICIONE ESTAS LINHAS --- */
+    border-radius: 30px;
+    /* O input precisa ter a mesma curva da div pai */
+    -webkit-appearance: none;
+    /* Remove o estilo 3D/sombreado nativo do iPhone */
+    appearance: none;
+    /* Padrão moderno */
+    height: 100%;
+    /* Garante que o input preencha a altura da div */
   }
 }
 

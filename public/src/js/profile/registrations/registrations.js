@@ -1,104 +1,146 @@
 /* src/js/registrations.js */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Verifica se as funções existem antes de chamar (para não dar erro em páginas diferentes)
     if (typeof carregarSidebar === "function") {
         carregarSidebar();
     }
+    configurarAbasInscricoes();
     listarInscricoes();
 });
 
-// --- FUNÇÃO 1: LISTAR (Pode ficar normal, pois é chamada pelo próprio JS) ---
+// LISTAR INSCRIÇÕES SEPARADAS (CURSOS E EVENTOS)
 function listarInscricoes() {
-    const container = document.getElementById('container-cards');
-    
-    // Se não tiver o container na página (ex: estou na página de eventos), para aqui.
-    if (!container) return;
+    const containerCursos = document.getElementById('container-cursos');
+    const containerEventos = document.getElementById('container-eventos');
+
+    if (!containerCursos || !containerEventos) return;
+
+    containerCursos.innerHTML = '';
+    containerEventos.innerHTML = '';
 
     const lista = JSON.parse(localStorage.getItem('minhasInscricoes')) || [];
 
-    if (lista.length === 0) {
-        container.innerHTML = `
+    let temCurso = false;
+    let temEvento = false;
+
+    lista.forEach((item) => {
+        const cardHTML = criarCardHTML(item);
+
+        if (item.categoria === 'curso') {
+            containerCursos.innerHTML += cardHTML;
+            temCurso = true;
+        } else {
+            containerEventos.innerHTML += cardHTML;
+            temEvento = true;
+        }
+    });
+
+    if (!temCurso) {
+        containerCursos.innerHTML = `
             <div class="sem-inscricoes">
-                <p>Você ainda não se inscreveu em nada.</p>
+                <p>Você ainda não se inscreveu em nenhum curso.</p>
+                <button onclick="window.location.href='../../pages/explore/courses/index/index.html'">Explorar Cursos</button>
+            </div>
+        `;
+    }
+
+    if (!temEvento) {
+        containerEventos.innerHTML = `
+            <div class="sem-inscricoes">
+                <p>Você não tem eventos confirmados.</p>
                 <button onclick="window.location.href='../../pages/explore/eventss/index/index.html'">Explorar Eventos</button>
             </div>
         `;
-        return;
     }
+}
 
-    container.innerHTML = '';
-
-    lista.forEach((evento) => {
-        const card = document.createElement('div');
-        card.className = 'card-inscricao';
-        card.innerHTML = `
-            <img src="${evento.imagem}" alt="${evento.titulo}">
+// GERAR HTML DO CARD
+function criarCardHTML(item) {
+    return `
+        <div class="card-inscricao">
+            <img src="${item.imagem}" alt="${item.titulo}">
             <div class="card-info">
-                <span class="tag-tipo">${evento.categoria || 'Evento'}</span>
-                <h3>${evento.titulo}</h3>
-                <p><strong>Data:</strong> ${evento.data || 'A definir'}</p>
-                <p><strong>Local:</strong> ${evento.local || 'Online'}</p>
-                <button class="btn-cancelar" onclick="cancelarInscricao('${evento.id}')">
+                <span class="tag-tipo">${item.categoria || 'Geral'}</span>
+                <h3>${item.titulo}</h3>
+                <p><strong>Data:</strong> ${item.data || 'A definir'}</p>
+                <p><strong>Local:</strong> ${item.local || 'Online'}</p>
+                <button class="btn-cancelar" onclick="cancelarInscricao('${item.id}')">
                     Cancelar Inscrição
                 </button>
             </div>
-        `;
-        container.appendChild(card);
-    });
+        </div>
+    `;
 }
 
-// --- FUNÇÃO 2: INSCREVER (Tornando Global para o HTML ver) ---
-window.inscreverNoEvento = function(idDoEvento) {
+// SALVAR INSCRIÇÃO NO LOCALSTORAGE
+window.inscreverNoEvento = function(idDoItem) {
     
-    // 1. Verifica se o banco de eventos carregou
-    if (typeof listaDeEventos === 'undefined') {
-        console.error("Erro: O arquivo bancoDeEventos.js não foi carregado ou a listaDeEventos não existe.");
-        alert("Erro técnico: Banco de eventos não encontrado.");
+    let itemEncontrado = null;
+
+    if (typeof listaDeEventos !== 'undefined') {
+        itemEncontrado = listaDeEventos.find(e => e.id === idDoItem);
+    }
+
+    if (!itemEncontrado && typeof listaDeCursos !== 'undefined') {
+        itemEncontrado = listaDeCursos.find(c => c.id === idDoItem);
+    }
+
+    if (!itemEncontrado) {
+        console.error("Item não encontrado com ID:", idDoItem);
+        alert("Erro: Curso ou Evento não encontrado no sistema.");
         return;
     }
 
-    // 2. Busca o evento no banco
-    const eventoEncontrado = listaDeEventos.find(evento => evento.id === idDoEvento);
-
-    if (!eventoEncontrado) {
-        console.error("Evento não encontrado com ID:", idDoEvento);
-        alert("Evento não encontrado!");
-        return;
-    }
-
-    // 3. Lógica de salvar
     let minhasInscricoes = JSON.parse(localStorage.getItem("minhasInscricoes")) || [];
-    const jaInscrito = minhasInscricoes.some(item => item.id === idDoEvento);
+    const jaInscrito = minhasInscricoes.some(item => item.id === idDoItem);
 
     if (jaInscrito) {
-        alert("Você já está inscrito neste evento!");
-        // Ajuste o caminho para a sua página de inscrições
-        window.location.href = "/src/pages/profile/registrations.html"; 
+        alert("Você já está inscrito!");
+        window.location.href = "/src/pages/profile/inscricoes.html"; 
         return;
     }
 
-    minhasInscricoes.push(eventoEncontrado);
+    minhasInscricoes.push(itemEncontrado);
     localStorage.setItem("minhasInscricoes", JSON.stringify(minhasInscricoes));
 
-    alert("Inscrição confirmada em: " + eventoEncontrado.titulo);
-    // Redireciona para a página de inscrições
-    window.location.href = "/src/pages/profile/registrations.html";
+    alert("Inscrição confirmada em: " + itemEncontrado.titulo);
+    window.location.href = "/src/pages/profile/inscricoes.html";
 }
 
-// --- FUNÇÃO 3: CANCELAR (Tornando Global) ---
+// CANCELAR INSCRIÇÃO
 window.cancelarInscricao = function(idParaRemover) {
     if (confirm("Tem certeza que deseja cancelar esta inscrição?")) {
         let lista = JSON.parse(localStorage.getItem('minhasInscricoes')) || [];
         const novaLista = lista.filter(item => item.id !== idParaRemover);
+        
         localStorage.setItem('minhasInscricoes', JSON.stringify(novaLista));
         
-        listarInscricoes(); // Atualiza a tela
-        alert("Inscrição cancelada.");
+        listarInscricoes();
     }
 }
 
-// --- FUNÇÃO 4: SIDEBAR ---
+// ALTERNAR ABAS (CURSOS / EVENTOS)
+function configurarAbasInscricoes() {
+    const tabs = document.querySelectorAll('.btn-aba');
+    const contents = document.querySelectorAll('.aba-conteudo');
+
+    if(tabs.length === 0) return;
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('ativo'));
+            contents.forEach(c => c.style.display = 'none');
+
+            tab.classList.add('ativo');
+            
+            const targetId = tab.dataset.tab;
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) targetElement.style.display = 'block';
+        });
+    });
+}
+
+// CARREGAR DADOS DA SIDEBAR
 function carregarSidebar() {
     const nomeEl = document.getElementById('nome-sidebar');
     const avatarEl = document.getElementById('avatar-img');

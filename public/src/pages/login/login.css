@@ -122,68 +122,61 @@ section.img-login .margem-global {
   gap: 30px;
 }
 
-.input-email {
-  display: flex;
-  border: 4px solid var(--cor-branca);
-  border-radius: 30px;
-  gap: 2px;
-  padding: 3px;
-  margin: 10px;
-  width: 450px;
-  height: 60px;
-
-  img {
-    margin-left: 10px;
-  }
-
-  input {
-    background-color: var(--cor-roxo-claro-gradient);
-    border: none;
-    outline: none;
-    width: 100%;
-
-    /* --- ADICIONE ESTAS LINHAS --- */
+.input-email,
+.input-password {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 60px;
+    margin: 10px;
+    
+    /* Borda Branca Arredondada */
+    border: 4px solid var(--cor-branca);
     border-radius: 30px;
-    /* O input precisa ter a mesma curva da div pai */
-    -webkit-appearance: none;
-    /* Remove o estilo 3D/sombreado nativo do iPhone */
-    appearance: none;
-    /* Padrão moderno */
-    height: 100%;
-    /* Garante que o input preencha a altura da div */
-  }
+    
+    /* AQUI É O TRUQUE: A cor de fundo vai na CAIXA (PAI) */
+    background: var(--cor-roxo-claro-gradient);
+    
+    /* Isso corta as pontas quadradas de qualquer coisa dentro */
+    overflow: hidden; 
+    position: relative;
+    
+    padding-left: 15px;
+    gap: 10px;
 }
 
-.input-password {
-  padding: 4px;
-  display: flex;
-  border: 4px solid var(--cor-branca);
-  border-radius: 30px;
-  gap: 2px;
-  width: 450px;
-  height: 60px;
+/* Ajuste para os ícones não ficarem deformados */
+.input-email img,
+.input-password img {
+    width: 24px;
+    height: auto;
+    flex-shrink: 0;
+}
 
-  img {
-    margin-left: 10px;
-  }
-
-  input {
-    background-color: var(--cor-roxo-claro-gradient);
+/* =============================================================
+   2. O INPUT (FUNDO INVISÍVEL)
+   Isso garante que o retângulo branco do iPhone suma.
+   ============================================================= */
+.input-email input,
+.input-password input {
+    /* FORÇA BRUTA: Fundo transparente para ver a cor do pai */
+    background-color: transparent !important;
+    background-image: none !important;
+    
     border: none;
     outline: none;
-    color: var(--cor-branca);
     width: 100%;
-
-    /* --- ADICIONE ESTAS LINHAS --- */
-    border-radius: 30px;
-    /* O input precisa ter a mesma curva da div pai */
-    -webkit-appearance: none;
-    /* Remove o estilo 3D/sombreado nativo do iPhone */
-    appearance: none;
-    /* Padrão moderno */
     height: 100%;
-    /* Garante que o input preencha a altura da div */
-  }
+    
+    /* Texto */
+    color: var(--cor-branca);
+    font-family: var(--font-titulo);
+    font-size: 18px;
+    
+    /* Remove estilo nativo do iOS */
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
 }
 
 ::placeholder {
@@ -205,9 +198,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
-    /* Use uma cor SÓLIDA hexadecimal, não o gradiente */
-    -webkit-box-shadow: 0 0 0 30px #9675ce inset !important; 
+    -webkit-box-shadow: 0 0 0 30px #9675ce inset !important; /* Cor sólida roxa */
     -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 .input-remember {
   font-family: var(--font-paragrafo);

@@ -96,7 +96,7 @@ window.inscreverNoEvento = function(idDoItem) {
 
     if (jaInscrito) {
         alert("Você já está inscrito!");
-        window.location.href = "/src/pages/profile/inscricoes.html"; 
+        window.location.href = "/src/pages/profile/registrations/registrations.html"; 
         return;
     }
 
@@ -104,7 +104,7 @@ window.inscreverNoEvento = function(idDoItem) {
     localStorage.setItem("minhasInscricoes", JSON.stringify(minhasInscricoes));
 
     alert("Inscrição confirmada em: " + itemEncontrado.titulo);
-    window.location.href = "/src/pages/profile/inscricoes.html";
+    window.location.href = "/src/pages/profile/registrations/registrations.html";
 }
 
 // CANCELAR INSCRIÇÃO

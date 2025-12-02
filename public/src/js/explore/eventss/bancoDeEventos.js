@@ -30,7 +30,6 @@ const listaDeEventos = [
         categoria: "Evento"
     },
     {
-        /* --- ESTE É O QUE O BOTÃO 'evt-004' ESTÁ PROCURANDO --- */
         id: "evt-004",
         titulo: "Dia das crianças",
         imagem: "/src/assets/criancasBrincando.png",

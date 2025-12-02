@@ -120,12 +120,30 @@
       </aside>
 
       <section class="card-conteudo">
-        <h2 style="font-family: 'Karla', sans-serif; color: #4a356d; margin-bottom: 20px;">
-          Meus Eventos e Cursos
-        </h2>
 
-        <div id="container-cards" class="grid-inscricoes">
-          <p>Carregando inscrições...</p>
+        <div class="abas-header">
+          <button class="btn-aba ativo" data-tab="aba-cursos">
+            🎓 Cursos
+          </button>
+          <button class="btn-aba" data-tab="aba-eventos">
+            📅 Eventos
+          </button>
+        </div>
+
+        <div id="aba-cursos" class="aba-conteudo">
+          <h3 style="color: #4a356d; margin-bottom: 20px;">Meus Cursos em Andamento</h3>
+
+          <div id="container-cursos" class="grid-inscricoes">
+            <p>Carregando cursos...</p>
+          </div>
+        </div>
+
+        <div id="aba-eventos" class="aba-conteudo" style="display: none;">
+          <h3 style="color: #4a356d; margin-bottom: 20px;">Meus eventos Confirmados</h3>
+
+          <div id="container-eventos" class="grid-inscricoes">
+            <p>Carregando eventos...</p>
+          </div>
         </div>
 
       </section>

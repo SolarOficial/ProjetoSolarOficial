@@ -29,30 +29,59 @@
 /* SECTION LOCALIZAÇÕES */
 
 .secao-localizacoes {
-  padding: 180px 0 100px 0;
+  /* padding: 180px 0 100px 0; */
   background-color: transparent;
   background-color: #f7f3fe;
-  background-image: url("/ProjetoSolarOficial/src/assets/img-location/background-image_section-apoie-a-solar.png");
+  background-image: url("/ProjetoSolarOficial/public/src/assets/img-location/background-image_section-apoie-a-solar.png");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
 
+.fotoHeader {
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  display: block;
+}
 .title-localizacoes {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: var(--font-titulo);
   font-size: 45px;
-  color: var(--cor-roxo-escuro);
-  text-align: center;
-  margin-bottom: 40px;
+  color: var(--cor-branca);
   font-weight: 700;
-}
-
-.busca-cep {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  text-align: center;
   margin-bottom: 50px;
+  width: 100%;
+  padding: 0 20px;
+}
+.paragrafo-sobre-img {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-paragrafo);
+  font-size: 20px;
+  color: var(--cor-branca);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .container-mapa-resultados {
@@ -320,6 +349,16 @@ footer .margem-global {
     font-size: 20px;
     padding: 12px 20px;
   }
+  .title-localizacoes {
+    font-size: 40px; /* Ajuste o tamanho da fonte */
+    top: 18%;
+    transform: translate(-50%, -50%);
+  }
+  .paragrafo-sobre-img {
+    font-size: 20px;
+    top: 24%;
+    transform: translate(-50%, -50%);
+  }
 
   /* SEÇÃO LOCALIZAÇÕES */
   .container-mapa-resultados {
@@ -359,6 +398,9 @@ footer .margem-global {
   .secao-localizacoes {
     padding: 80px 0; /* Reduz o padding superior */
   }
+  .title-localizacoes {
+    font-size: 32px;
+  }
 
   .busca-cep {
     flex-direction: column; /* Empilha os elementos de busca */
@@ -367,7 +409,9 @@ footer .margem-global {
   }
 
   .title-localizacoes {
-    font-size: 36px;
+    font-size: 40px;
+    top: 25%;
+    transform: translate(-50%, -50%);
   }
 
   .container-mapa-resultados {
@@ -395,8 +439,14 @@ footer .margem-global {
   }
 
   .title-localizacoes {
-    font-size: 36px;
-    margin-top: 30px;
+    font-size: 30px;
+    top: 15%;
+    transform: translate(-50%, -50%);
+  }
+  .paragrafo-sobre-img {
+    font-size: 20px;
+    top: 20%;
+    transform: translate(-50%, -50%);
   }
 
   .busca-cep {
@@ -442,8 +492,13 @@ footer .margem-global {
 
   /* SEÇÃO LOCALIZAÇÕES */
   .title-localizacoes {
-    font-size: 30px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+  }
+  .paragrafo-sobre-img {
+    font-size: 10px;
+    top: 18%;
+    transform: translate(-50%, -50%);
   }
 
   .tutorial-card {

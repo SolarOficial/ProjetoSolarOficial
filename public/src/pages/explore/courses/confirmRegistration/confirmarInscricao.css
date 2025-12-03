@@ -29,7 +29,7 @@
 }
 
 /* ------------------------------------------------------------------------- */
-/* HEADER - CORREÇÕES DE RESPONSIVIDADE */
+/* HEADER - 
 /* ------------------------------------------------------------------------- */
 
 .container-pai {
@@ -43,15 +43,15 @@
 
 /* deixando a logo com margem */
 .logo {
-  margin-left: 0; /* CORREÇÃO: Remove margem fixa, usa o padding do .container-pai */
+  margin-left: 0;
 }
 
 /* Menu principal */
 .nav-pai ul {
   display: flex;
   align-items: center;
-  gap: 40px; /* Ajustado um pouco para caber melhor */
-  margin-top: 0; /* CORREÇÃO: Remove margem vertical fixa */
+  gap: 40px;
+  margin-top: 0;
   list-style: none;
   font-size: 20px;
 }
@@ -77,7 +77,7 @@
 .nav-pai li a:hover {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  padding: 10px 15px; /* Manter o padding original no hover para não mover muito o layout */
+  padding: 10px 15px;
 }
 
 /* Seta do lado do texto */
@@ -98,12 +98,12 @@ ul.dropdown {
   background: var(--cor-roxo-claro);
   border-radius: 5px;
   list-style: none;
-  padding: 0; /* CORREÇÃO: Remove padding vertical do UL, usa no LI A */
+  padding: 0;
   margin: 0;
   display: none;
-  min-width: 180px; /* Aumentado para melhor toque */
+  min-width: 180px;
   z-index: 999;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Adicionado para clareza */
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Mostrar dropdown ao passar o mouse */
@@ -118,7 +118,7 @@ ul.dropdown li a {
   color: var(--cor-branca);
   font-family: "Karla", sans-serif;
   text-decoration: none;
-  border-bottom: none; /* CORREÇÃO: Removido border-bottom fixa, usar apenas para separação se necessário */
+  border-bottom: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -138,7 +138,7 @@ ul.dropdown li a:hover {
   color: #fafafa;
   border-radius: 30px;
   padding: 15px 24px;
-  margin-right: 0; /* CORREÇÃO: Remove margem fixa, usa o padding do .container-pai */
+  margin-right: 0;
   font-size: 20px;
   cursor: pointer;
   font-family: "Karla", sans-serif;
@@ -148,27 +148,25 @@ ul.dropdown li a:hover {
 
 .button-header:hover {
   background-color: var(--cor-amarelo);
-  color: var(
-    --cor-roxo-escuro
-  ); /* CORREÇÃO: Ajuste a cor para o roxo escuro para contraste */
+  color: var(--cor-roxo-escuro);
 }
 
 /* ------------------------------------------------------------------------- */
-/* MAIN - CORREÇÕES DE RESPONSIVIDADE */
+/* MAIN -
 /* ------------------------------------------------------------------------- */
 
 .container-principal {
   display: flex;
-  margin-top: 100px; /* Ajuste a margem superior para acomodar o header */
+  margin-top: 100px;
   justify-content: center;
   align-items: center;
   padding: 0 15px;
 }
 
 .confirm-inscricao {
-  width: 100%; /* CORREÇÃO: Largura fluida */
+  width: 100%;
   max-width: 883px; /* Limite máximo */
-  height: auto; /* CORREÇÃO: Altura adaptável */
+  height: auto;
   border: 1px solid var(--cor-roxo-escuro);
   border-radius: 10px;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
@@ -204,8 +202,8 @@ ul.dropdown li a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 36px;
-  gap: 30px; /* CORREÇÃO: Ajuste o gap para ser menor */
-  flex-wrap: wrap; /* Adiciona quebra de linha para telas muito pequenas */
+  gap: 30px;
+  flex-wrap: wrap;
 
   .botao-1,
   .botao-2 {
@@ -216,7 +214,7 @@ ul.dropdown li a:hover {
     padding: 12px 24px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 200px; /* Define uma largura padrão para botões */
+    width: 200px;
   }
 
   .botao-1 {
@@ -247,14 +245,14 @@ ul.dropdown li a:hover {
 }
 
 /* ------------------------------------------------------------------------- */
-/* FOOTER - CORREÇÕES DE RESPONSIVIDADE */
+/* FOOTER 
 /* ------------------------------------------------------------------------- */
 
 /* FOOTER */
 footer {
   margin-top: 100px;
   background: var(--cor-roxo-claro);
-  padding: 60px 0 0 0; /* CORREÇÃO: Ajuste o padding para o .direitos-autorais controlar o espaço inferior */
+  padding: 60px 0 0 0;
   color: var(--cor-branca);
 }
 
@@ -263,7 +261,7 @@ footer .margem-global {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr; /* 3 colunas, com a primeira maior */
   gap: 60px;
-  margin-bottom: 0; /* CORREÇÃO: Remove margem fixa */
+  margin-bottom: 0;
 }
 
 /* Colunas (seção) do rodapé */
@@ -364,7 +362,7 @@ footer .margem-global {
 /* Direitos Autorais (Barra Inferior) */
 .direitos-autorais {
   text-align: center;
-  padding: 30px 0; /* CORREÇÃO: Garante padding superior e inferior */
+  padding: 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-family: var(--font-paragrafo);
   font-size: 14px;
@@ -373,7 +371,7 @@ footer .margem-global {
 }
 
 /* ========================================================================= */
-/* MEDIA QUERIES PARA RESPONSIVIDADE TOTAL */
+/* MEDIA QUERIES 
 /* ========================================================================= */
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 992px) */
@@ -473,7 +471,7 @@ footer .margem-global {
   }
 
   .button-header {
-    display: none; /* Oculta o botão principal em mobile para economizar espaço no header */
+    display: none; /* Oculta o botão principal em mobile */
   }
 
   /* --- MAIN --- */

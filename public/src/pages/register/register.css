@@ -54,8 +54,8 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Adicionado para permitir que os elementos quebrem a linha */
-  padding: 0 10px; /* Adicionado padding para evitar quebras de layout */
+  flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .circulo-com-gradiente-e-imagem {
@@ -230,7 +230,7 @@ body::before {
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Garante que fique na frente de tudo */
+  z-index: 9999;
 }
 
 .modal-overlay.ativo {
@@ -303,7 +303,7 @@ body::before {
 }
 
 /* ======================================================= */
-/* --- MEDIA QUERIES (RESPONSIVIDADE ADICIONAL) --- */
+/* --- MEDIA QUERIES --- */
 /* ======================================================= */
 
 /* Tablets e Telas Menores (max-width: 1024px) */

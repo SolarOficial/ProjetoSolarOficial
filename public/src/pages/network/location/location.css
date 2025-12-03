@@ -487,7 +487,7 @@ footer .margem-global {
 @media screen and (max-width: 576px) {
   /* CONTAINER GLOBAL */
   .margem-global {
-    margin: 0 15px; /* Margem bem pequena para telas estreitas */
+    margin: 0 15px;
   }
 
   /* SEÇÃO LOCALIZAÇÕES */

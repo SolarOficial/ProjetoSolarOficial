@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-/* CONTAINER GLOBAL DE CONTEÚDO (Para controle de margens externas) */
+/* CONTAINER GLOBAL DE CONTEÚDO  */
 .margem-global {
   margin: 0 auto;
   max-width: 1200px;
@@ -30,7 +30,7 @@
 
 /* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
 
-/* MAIN - CORREÇÕES DE RESPONSIVIDADE */
+/* MAIN */
 
 /* card sobre a descrição do curso */
 .container-principal {
@@ -45,9 +45,9 @@
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
-  width: 100%; /* CORREÇÃO: Deixa a largura fluida */
+  width: 100%;
   max-width: 844px; /* Limite máximo */
-  height: auto; /* CORREÇÃO: Altura adapta-se ao conteúdo */
+  height: auto;
   flex-wrap: wrap;
   padding-bottom: 40px;
 }
@@ -57,7 +57,7 @@
   align-items: flex-start; /* Alinha o texto no topo da imagem */
   justify-content: center;
   gap: 30px;
-  margin: 50px 42px; /* Margem limpa */
+  margin: 50px 42px;
 }
 
 /* estilizando imagem */
@@ -96,7 +96,7 @@
 
 .informacoes-curso {
   border-radius: 12px;
-  padding: 0 50px; /* Removido padding vertical, usa padding horizontal */
+  padding: 0 50px;
 }
 
 .informacoes {
@@ -155,12 +155,12 @@
 
 .botoes {
   display: flex;
-  justify-content: flex-end; /* Alinha à direita para desktop */
-  gap: 30px; /* Ajustado para um valor limpo */
+  justify-content: flex-end;
+  gap: 30px;
   margin-top: 40px;
-  width: auto; /* CORREÇÃO: Tira a largura fixa */
-  margin-left: auto; /* CORREÇÃO: Remove margem fixa */
-  margin-right: 50px; /* Alinha com o padding do .informacoes-curso */
+  width: auto;
+  margin-left: auto;
+  margin-right: 50px;
 
   .botao-1 {
     background-color: var(--cor-laranja);
@@ -207,7 +207,7 @@
 footer {
   margin-top: 100px;
   background: var(--cor-roxo-claro);
-  padding: 60px 0 0 0; /* CORREÇÃO: Ajuste o padding para o .direitos-autorais controlar o espaço inferior */
+  padding: 60px 0 0 0;
   color: var(--cor-branca);
 }
 
@@ -216,7 +216,7 @@ footer .margem-global {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr; /* 3 colunas, com a primeira maior */
   gap: 60px;
-  margin-bottom: 0; /* CORREÇÃO: Remove margem fixa */
+  margin-bottom: 0;
 }
 
 /* Colunas (seção) do rodapé */
@@ -317,7 +317,7 @@ footer .margem-global {
 /* Direitos Autorais (Barra Inferior) */
 .direitos-autorais {
   text-align: center;
-  padding: 30px 0; /* CORREÇÃO: Garante padding superior e inferior */
+  padding: 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-family: var(--font-paragrafo);
   font-size: 14px;
@@ -326,7 +326,7 @@ footer .margem-global {
 }
 
 /* ========================================================================= */
-/* MEDIA QUERIES PARA RESPONSIVIDADE TOTAL */
+/* MEDIA QUERIES  */
 /* ========================================================================= */
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 992px) */
@@ -371,7 +371,7 @@ footer .margem-global {
     gap: 20px;
   }
 
-  /* --- FOOTER CORREÇÕES DE RESPONSIVIDADE --- */
+  /* --- FOOTER  --- */
   footer .margem-global {
     display: flex;
     flex-wrap: wrap;

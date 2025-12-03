@@ -1,10 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-import { getFirestore, doc, setDoc, onSnapshot, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-// Configuração do Firebase
-// Certifique-se de que essas variáveis globais (__app_id, etc) estão sendo fornecidas pelo seu ambiente ou substitua pelos valores reais aqui.
-const appId = "solar-8b8eb"
+// SUAS CHAVES DO FIREBASE
 const firebaseConfig = {
   apiKey: "AIzaSyCa0Tik1SCuLJTb8pi7WjEynlvvbxVjOW0",
   authDomain: "solar-8b8eb.firebaseapp.com",
@@ -30,59 +28,90 @@ const INITIAL_CATEGORIES = [
 
 const formatCurrency = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
+// Carrega foto e nome do LocalStorage para parecer instantâneo
+function carregarPerfilLocal() {
+    const avatarSalvo = localStorage.getItem('solar_avatar');
+    if (avatarSalvo) {
+        const imgElement = document.getElementById('avatar-img');
+        if (imgElement) imgElement.src = avatarSalvo;
+    }
+
+    const nomeSalvo = localStorage.getItem('solar_nome');
+    if (nomeSalvo) {
+        const nomeElement = document.getElementById('nome-sidebar');
+        if (nomeElement) nomeElement.textContent = nomeSalvo;
+    }
+}
+
 async function initApp() {
+    carregarPerfilLocal();
+
     try {
         const app = initializeApp(firebaseConfig);
         db = getFirestore(app);
         auth = getAuth(app);
 
-        if (initialAuthToken) await signInWithCustomToken(auth, initialAuthToken);
-        else await signInAnonymously(auth);
+        await signInAnonymously(auth);
 
         onAuthStateChanged(auth, (user) => {
-            userId = user ? user.uid : 'anonimo';
-            if(user) {
-                const nomeSidebar = document.getElementById('nome-sidebar');
-                if (nomeSidebar) nomeSidebar.textContent = `Usuário ${user.uid.substring(0,4)}...`;
+            if (user) {
+                userId = user.uid;
+                
+                // Se não tem nome salvo localmente, define padrão
+                if (!localStorage.getItem('solar_nome')) {
+                    const nomeSidebar = document.getElementById('nome-sidebar');
+                    if (nomeSidebar) nomeSidebar.textContent = "Usuário";
+                }
+                
+                isAuthReady = true;
+                setupListeners();
             }
-            isAuthReady = true;
-            setupListeners();
         });
     } catch (error) {
-        console.error("Erro Firebase:", error);
+        // Erros silenciosos no console para não atrapalhar o usuário, a menos que seja crítico
+        console.error("Erro de conexão.");
     }
 }
 
 function setupListeners() {
-    const docRef = doc(db, `artifacts/${appId}/users/${userId}/planejamento`, 'dados');
+    const docRef = doc(db, 'planejamentos', userId);
+    
     onSnapshot(docRef, (docSnap) => {
-        const data = docSnap.data() || { renda: 0, gastos: [] };
+        const data = docSnap.exists() ? docSnap.data() : { renda: 0, gastos: [] };
         renderInterface(data);
     });
 }
 
 function renderInterface(data) {
-    // Atualizar Resumo
-    const totalGastos = data.gastos.reduce((acc, g) => acc + g.valor, 0);
-    const saldo = data.renda - totalGastos;
+    const gastos = data.gastos || [];
+    const renda = data.renda || 0;
 
+    // Cálculos
+    const totalGastos = gastos.reduce((acc, g) => acc + g.valor, 0);
+    const saldo = renda - totalGastos;
+
+    // Atualiza Inputs (apenas se não estiver em foco para não atrapalhar digitação)
     const inputRenda = document.getElementById('input-renda');
-    if (inputRenda) inputRenda.value = data.renda || '';
+    if (inputRenda && document.activeElement !== inputRenda) {
+        inputRenda.value = renda > 0 ? renda : '';
+    }
     
-    document.getElementById('display-renda').textContent = formatCurrency(data.renda);
+    // Atualiza Resumo
+    document.getElementById('display-renda').textContent = formatCurrency(renda);
     document.getElementById('display-gastos').textContent = formatCurrency(totalGastos);
     
     const saldoEl = document.getElementById('display-saldo');
-    saldoEl.textContent = formatCurrency(saldo);
-    saldoEl.className = saldo >= 0 ? 'saldo-positivo' : 'saldo-negativo';
+    if (saldoEl) {
+        saldoEl.textContent = formatCurrency(saldo);
+        saldoEl.className = saldo >= 0 ? 'saldo-positivo' : 'saldo-negativo';
+    }
 
-    // Atualizar Inputs de Gastos
+    // Renderiza Inputs de Categoria
     const containerInputs = document.getElementById('lista-inputs-gastos');
-    if (containerInputs) {
+    if (containerInputs && containerInputs.children.length === 0) {
         containerInputs.innerHTML = '';
-        
         INITIAL_CATEGORIES.forEach(cat => {
-            const gastoAtual = data.gastos.find(g => g.nome === cat.nome)?.valor || 0;
+            const gastoAtual = gastos.find(g => g.nome === cat.nome)?.valor || 0;
             
             const div = document.createElement('div');
             div.className = 'campo-input';
@@ -91,16 +120,14 @@ function renderInterface(data) {
                     <span class="cor-indicador" style="background:${cat.cor}"></span> ${cat.nome} (R$)
                 </label>
                 <input type="number" class="input-valor-gasto" 
-                       data-nome="${cat.nome}" 
-                       data-cor="${cat.cor}" 
-                       value="${gastoAtual > 0 ? gastoAtual : ''}" 
-                       placeholder="0,00">
+                       data-nome="${cat.nome}" data-cor="${cat.cor}" 
+                       value="${gastoAtual > 0 ? gastoAtual : ''}" placeholder="0,00">
             `;
             containerInputs.appendChild(div);
         });
     }
 
-    updateChart(data.gastos);
+    updateChart(gastos);
 }
 
 function updateChart(gastos) {
@@ -111,13 +138,17 @@ function updateChart(gastos) {
 
     if (myChart) myChart.destroy();
 
+    const dataValues = gastosFiltrados.length ? gastosFiltrados.map(g => g.valor) : [1];
+    const bgColors = gastosFiltrados.length ? gastosFiltrados.map(g => g.cor) : ['#e0e0e0'];
+    const labels = gastosFiltrados.length ? gastosFiltrados.map(g => g.nome) : ['Sem dados'];
+
     myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: gastosFiltrados.map(g => g.nome),
+            labels: labels,
             datasets: [{
-                data: gastosFiltrados.map(g => g.valor),
-                backgroundColor: gastosFiltrados.map(g => g.cor),
+                data: dataValues,
+                backgroundColor: bgColors,
                 borderWidth: 0
             }]
         },
@@ -125,15 +156,20 @@ function updateChart(gastos) {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: { position: 'bottom' }
+                legend: { position: 'bottom', display: gastosFiltrados.length > 0 },
+                tooltip: { enabled: gastosFiltrados.length > 0 }
             }
         }
     });
 }
 
-// Tornando a função global para ser acessada pelo botão HTML
+// Função Global de Salvar
 window.salvarPlanejamento = async () => {
-    if (!isAuthReady) return alert('Aguarde o sistema carregar...');
+    if (!isAuthReady) return alert('Aguarde a conexão...');
+
+    const btn = document.querySelector('.btn-salvar');
+    const textoOriginal = btn.innerText;
+    if(btn) { btn.innerText = "Salvando..."; btn.disabled = true; }
 
     const rendaEl = document.getElementById('input-renda');
     const renda = parseFloat(rendaEl ? rendaEl.value : 0) || 0;
@@ -151,14 +187,14 @@ window.salvarPlanejamento = async () => {
     });
 
     try {
-        await setDoc(doc(db, `artifacts/${appId}/users/${userId}/planejamento`, 'dados'), {
-            renda,
-            gastos
+        await setDoc(doc(db, 'planejamentos', userId), {
+            renda, gastos, updatedAt: new Date().toISOString()
         });
-        alert('Planejamento Salvo com Sucesso!');
+        alert('Planejamento salvo com sucesso!');
     } catch (e) {
-        console.error("Erro ao salvar:", e);
-        alert('Erro ao salvar os dados.');
+        alert('Erro ao salvar os dados. Verifique sua conexão.');
+    } finally {
+        if(btn) { btn.innerText = textoOriginal; btn.disabled = false; }
     }
 };
 
@@ -166,5 +202,4 @@ window.redirectUser = (path) => {
     window.location.href = path;
 }
 
-// Iniciar
 initApp();

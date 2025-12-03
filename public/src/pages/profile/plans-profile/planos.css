@@ -1,0 +1,188 @@
+/* --- Container da Direita (A caixa grande) --- */
+
+.margem-global{
+    margin-top: 150px;
+}
+
+.painel-direita {
+    background-color: #fceef2; /* Rosa bem clarinho de fundo */
+    border: 1px solid #4a356d; /* Borda roxa escura */
+    border-radius: 15px;
+    padding: 30px;
+    /* Garante que ocupe a altura necessária */
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Abas do Topo --- */
+.header-abas {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.aba-titulo {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #4a356d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.aba-titulo i {
+    font-size: 18px;
+}
+
+/* Linha grossa embaixo da aba ativa */
+.aba-titulo.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%; /* Não ocupa tudo, igual na imagem */
+    height: 4px;
+    background-color: #4a356d;
+    border-radius: 2px;
+}
+
+.aba-titulo:not(.ativo) {
+    opacity: 0.6;
+}
+
+.card-lateral{
+    margin: 0;
+}
+
+/* --- Cartão Interno (Plano Amparo) --- */
+.card-plano-interno {
+    border: 1px solid #8c7ae6; /* Roxo médio */
+    border-radius: 12px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.4); /* Levemente transparente */
+    max-width: 90%; /* Não encosta nas bordas */
+}
+
+/* Topo do Cartão Interno */
+.plano-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.plano-cabecalho h3 {
+    font-family: 'Karla', sans-serif;
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+.badge-status {
+    background-color: #d1c4e9; /* Lilás */
+    color: #333;
+    font-family: 'Figtree', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 30px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Descrição */
+.plano-texto {
+    font-family: 'Figtree', sans-serif;
+    font-size: 15px;
+    color: #222;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Lista de Vantagens */
+.lista-vantagens {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.lista-vantagens li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 15px;
+    color: #111;
+}
+
+.lista-vantagens li i {
+    color: #4cd137; /* Verde vibrante */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Rodapé do Cartão (Botões) */
+.plano-footer {
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+    gap: 15px;
+}
+
+.btn-roxo {
+    background-color: #9c88ff; /* Roxo botão */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-roxo:hover {
+    background-color: #8c7ae6;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #9c88ff; /* Texto Roxo */
+    border: 1px solid #9c88ff; /* Borda Roxa */
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #f5f3ff;
+}
+
+/* Ajustes para Mobile */
+@media (max-width: 768px) {
+    .plano-footer {
+        flex-direction: column;
+    }
+    .btn-roxo, .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+    .plano-cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .card-plano-interno {
+        max-width: 100%;
+    }
+}

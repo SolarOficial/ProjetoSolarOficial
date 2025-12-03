@@ -15,10 +15,10 @@
 
 <body>
 
-  <header class="container-pai">
+   <header class="container-pai">
     <div class="logo">
-      <a href="#" onclick="redirectUser('src/pages/home/home.html')">
-        <img height="90" src="src/assets/logo_nav2.png" alt="Logo branca Solar" />
+      <a href="#" onclick="redirectUser('index.html')">
+        <img height="90" src="./src/assets/logo_nav2.png" alt="Logo branca Solar" />
       </a>
     </div>
 
@@ -28,37 +28,43 @@
 
     <nav class="nav-pai" id="nav">
       <ul id="menu">
-        <li><a href="#" onclick="redirectUser('src/pages/home/home.html')">HOME</a></li>
+        <li><a href="#" onclick="redirectUser('index.html')">HOME</a></li>
+
         <li>
           <a href="#">
             EXPLORAR
-            <img class="seta-header" src="src/assets/seta.png" alt="seta" />
+            <img class="seta-header" src="./src/assets/seta.png" alt="seta" />
           </a>
           <ul class="dropdown">
-            <li><a href="#">EVENTOS</a></li>
-            <li><a href="#">CURSOS</a></li>
-            <li><a href="#">SOLMÍDIA</a></li>
-            <li><a href="#">JOGOS</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/eventss/index/index.html')">EVENTOS</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/courses/index/index.html')">CURSOS</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/explore/game/game.html')">JOGOS</a></li>
           </ul>
         </li>
-        <li><a href="#">DOAÇÃO</a></li>
-        <li><a href="#">PROFISSIONAIS</a></li>
-        <li><a href="#">PLANOS</a></li>
+
+        <li><a href="#" onclick="redirectUser('src/pages/donation/donation.html')">DOAÇÃO</a></li>
+        <li><a href="#" onclick="redirectUser('src/pages/professionals/professionals.html')">PROFISSIONAIS</a></li>
+        <li><a href="#" onclick="redirectUser('src/pages/plans/plans.html')">PLANOS</a></li>
+
         <li>
           <a href="#">
             REDES
-            <img class="seta-header" src="src/assets/seta.png" alt="seta" />
+            <img class="seta-header" src="./src/assets/seta.png" alt="seta" />
           </a>
-           <ul class="dropdown">
-            <li><a href="#">SOBRE</a></li>
-            <li><a href="#">LOCALIZAR</a></li>
-            <li><a href="#">FALE CONOSCO</a></li>
-            <li><a href="#">COMUNIDADE</a></li>
+          <ul class="dropdown">
+            <li><a href="#" onclick="redirectUser('src/pages/network/about/about.html')">SOBRE</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/network/location/location.html')">LOCALIZAR
+                INSTITUIÇÕES</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/network/contactUs/contactus.html')">FALE
+                CONOSCO</a></li>
+            <li><a href="#" onclick="redirectUser('src/pages/network/community/comunidade.html')">COMUNIDADE</a></li>
           </ul>
         </li>
+
         <li>
-          <a href="#" id="auth-link" onclick="redirectUser('src/pages/register/register.html')">
-            <button id="auth-btn" class="button-header">CADASTRAR-SE</button>
+          <a href="#" id="auth-link" onclick="redirectUser('login.html')">
+            <button id="auth-btn" class="button-header">ENTRAR</button>
           </a>
         </li>
       </ul>
@@ -134,7 +140,7 @@
   </div>
 
   <script src="src/js/register/popupRegister.js"></script>
-  <script src="src/js/script.js"></script>
+  <script type="module" src="src/js/script.js"></script>
   <script src="src/js/headerResponsivo.js"></script>
   <script src="src/js/register/sons.js"></script>
   <script type="module" src="src/js/firebase-config.js"></script>

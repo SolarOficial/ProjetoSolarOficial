@@ -1,63 +1,62 @@
 import { auth } from './firebase-config.js';
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
-window.redirectUser = function (path) {
+window.redirectUser = function(path) {
   window.location.href = path;
 }
 
-window.externalRedirect = function (url) {
+window.externalRedirect = function(url) {
   window.location.href = url;
 }
 
-// 2. FUNÇÃO DE LOGOUT (Global)
-window.fazerLogout = function () {
-  if (confirm("Tem certeza que deseja sair?")) {
-    signOut(auth).then(() => {
-      console.log("Usuário deslogado.");
-      window.location.href = "/login.html";
-    }).catch((error) => {
-      console.error("Erro ao sair:", error);
-    });
-  }
+window.fazerLogout = function() {
+    if(confirm("Tem certeza que deseja sair?")) {
+        signOut(auth).then(() => {
+            window.location.href = "/login.html";
+        }).catch((error) => {
+            console.error(error);
+        });
+    }
 }
 
 onAuthStateChanged(auth, (user) => {
-  const authBtn = document.getElementById('auth-btn');
-  const authLink = document.getElementById('auth-link');
+    const authBtn = document.getElementById('auth-btn');
+    const authLink = document.getElementById('auth-link');
 
-  if (authBtn && authLink) {
-    if (user) {
-      authBtn.innerText = "MEU PERFIL";
-      authLink.setAttribute('onclick', "redirectUser('/src/pages/profile/profile/profile.html')");
-    } else {
-      authBtn.innerText = "ENTRAR";
-      authLink.setAttribute('onclick', "redirectUser('/login.html')");
+    if (authBtn && authLink) {
+        if (user) {
+            // --- USUÁRIO LOGADO ---
+            authBtn.innerText = "MEU PERFIL";
+            // Ajuste o caminho do perfil se necessário
+            authLink.setAttribute('onclick', "redirectUser('/src/pages/profile/profile.html')");
+        } else {
+            // --- NÃO LOGADO ---
+            const urlAtual = window.location.href;
+
+            // Se estou na página de LOGIN, o botão vira "CADASTRAR-SE"
+            if (urlAtual.includes('login.html')) {
+                authBtn.innerText = "CADASTRAR-SE";
+                // Aponta para a página de cadastro na raiz
+                authLink.setAttribute('onclick', "redirectUser('/register.html')");
+            } 
+            // Em qualquer outra página (Home, Cadastro, Sobre), o botão é "ENTRAR"
+            else {
+                authBtn.innerText = "ENTRAR";
+                // Aponta para a página de login na raiz
+                authLink.setAttribute('onclick', "redirectUser('/login.html')");
+            }
+        }
     }
-  }
-
-  if (window.location.href.includes('login.html')) {
-    authBtn.innerText = "CADASTRAR-SE";
-    authLink.setAttribute('onclick', "redirectUser('register.html')");
-  } else {
-    authBtn.innerText = "ENTRAR";
-    authLink.setAttribute('onclick', "redirectUser('login.html')");
-  }
 });
 
-// API Sienna
 if (!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"]')) {
   const s = document.createElement("script");
   s.src = "https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js";
   s.defer = true;
-  s.onload = () => console.log("Sienna widget carregado");
-  s.onerror = () => console.error("Erro ao carregar widget");
   document.body.appendChild(s);
 }
 
-// API Vlibras
-
 if (!document.querySelector('script[src="https://vlibras.gov.br/app/vlibras-plugin.js"]')) {
-
   const container = document.createElement("div");
   container.setAttribute("vw", "");
   container.classList.add("enabled");
@@ -76,18 +75,12 @@ if (!document.querySelector('script[src="https://vlibras.gov.br/app/vlibras-plug
   script.defer = true;
 
   script.onload = () => {
-    console.log("VLibras carregado com sucesso!");
     new window.VLibras.Widget("https://vlibras.gov.br/app");
-  };
-
-  script.onerror = () => {
-    console.error("Erro ao carregar VLibras");
   };
 
   document.body.appendChild(script);
 }
 
-//animação scroll
 window.addEventListener('DOMContentLoaded', () => {
   const elementos = document.querySelectorAll('.animar-scroll');
 
@@ -102,15 +95,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
   elementos.forEach(el => observer.observe(el));
 });
-
-/* Solaria */
-
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-  var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-  s1.async = true;
-  s1.src = 'https://embed.tawk.to/6924426cb8106b195f6e74fa/1jaqq6uav';
-  s1.charset = 'UTF-8';
-  s1.setAttribute('crossorigin', '*');
-  s0.parentNode.insertBefore(s1, s0);
-})();

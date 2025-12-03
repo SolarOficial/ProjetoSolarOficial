@@ -1,0 +1,350 @@
+/* --- VARIAVEIS GLOBAIS --- */
+:root {
+    --cor-roxo-claro: #9675ce;
+    --cor-roxo-escuro: #4a356d;
+    --cor-laranja: #ffb64d;
+    --cor-branca: #fafafa;
+    --cor-preta: #000000;
+    --cor-amarelo: #fff59c;
+    --font-titulo: "Karla", sans-serif;
+    --font-paragrafo: "Figtree", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-paragrafo);
+    background-color: var(--cor-branca);
+    color: var(--cor-roxo-escuro);
+}
+
+.margem-global {
+    margin: 0 60px;
+}
+
+/* --- LAYOUT DE PERFIL (SIDEBAR + CONTEÚDO) --- */
+
+main.margem-global{
+    margin-top: 150px;
+}
+
+.container-perfil {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    min-height: 600px;
+}
+
+/* Sidebar */
+.card-lateral {
+    border: 1px solid var(--cor-roxo-escuro);
+    border-radius: 20px;
+    padding: 30px 20px;
+    height: fit-content;
+    background-color: var(--cor-branca);
+}
+
+.perfil-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.avatar-wrapper img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-roxo-claro);
+    display: block;
+}
+
+.perfil-avatar h2 {
+    font-family: var(--font-titulo);
+    color: var(--cor-roxo-escuro);
+    font-size: 22px;
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-lateral-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-lateral-lista button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 12px 15px;
+    font-family: var(--font-paragrafo);
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.menu-lateral-lista button.ativo {
+    background-color: #dcd3f0;
+    color: var(--cor-roxo-escuro);
+    font-weight: 700;
+}
+
+.menu-lateral-lista button:hover:not(.ativo) {
+    background-color: #f0f0f0;
+}
+
+/* Área Principal */
+.card-conteudo {
+    border: 1px solid var(--cor-roxo-escuro);
+    border-radius: 20px;
+    padding: 40px;
+    background-color: var(--cor-branca);
+}
+
+/* --- FERRAMENTA FINANCEIRA --- */
+.financeiro-titulo {
+    font-family: var(--font-titulo);
+    color: var(--cor-roxo-escuro);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.financeiro-desc {
+    font-family: var(--font-paragrafo);
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.financeiro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.subtitulo-gastos {
+    font-family: var(--font-titulo);
+    color: var(--cor-roxo-escuro);
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+}
+
+/* Formulário */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-full, .campo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid var(--cor-roxo-escuro);
+    border-radius: 8px;
+    font-family: var(--font-paragrafo);
+    font-size: 16px;
+    outline: none;
+    color: #333;
+}
+
+input:focus {
+    border-color: var(--cor-laranja);
+}
+
+.cor-indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btn-salvar {
+    background-color: var(--cor-roxo-claro);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-salvar:hover {
+    background-color: var(--cor-roxo-escuro);
+    transform: scale(1.02);
+}
+
+/* Resultados */
+.resumo-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card-resumo {
+    flex: 1;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-resumo span {
+    font-family: var(--font-paragrafo);
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-resumo strong {
+    font-family: var(--font-titulo);
+    font-size: 20px;
+    color: var(--cor-roxo-escuro);
+}
+
+.texto-vermelho { color: #F43F5E !important; }
+.saldo-positivo { color: #10B981 !important; }
+.saldo-negativo { color: #F43F5E !important; }
+
+.grafico-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Footer (Baseado no seu CSS original) */
+footer {
+    margin-top: 100px;
+    background: var(--cor-roxo-claro);
+    padding: 60px 0 30px 0;
+    color: var(--cor-branca);
+}
+
+footer .margem-global {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.secao-footer h3 {
+    font-family: var(--font-titulo);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.secao-footer p, .link-rede-social, .lista-paginas a {
+    font-family: var(--font-paragrafo);
+    font-size: 16px;
+    color: var(--cor-branca);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo-footer span {
+    font-family: var(--font-titulo);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-rede-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.link-rede-social svg {
+    fill: var(--cor-branca);
+    width: 24px;
+    height: 24px;
+}
+
+.link-rede-social:hover, .lista-paginas a:hover {
+    color: var(--cor-laranja);
+}
+
+.link-rede-social:hover svg {
+    fill: var(--cor-laranja);
+}
+
+.lista-paginas { list-style: none; }
+.lista-paginas li { margin-bottom: 12px; }
+
+.direitos-autorais {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: var(--font-paragrafo);
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .container-perfil {
+        grid-template-columns: 1fr;
+    }
+    .financeiro-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .resumo-container {
+        flex-direction: column;
+    }
+    footer .margem-global {
+        grid-template-columns: 1fr;
+    }
+}

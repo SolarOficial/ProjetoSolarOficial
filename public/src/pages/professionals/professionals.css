@@ -539,7 +539,7 @@ section.junte-se .margem-global form .escolha-profissionais {
 
 section.junte-se .margem-global form .escolha-profissionais .opcao {
   display: flex;
-  gap: 60px;
+  gap: 30px;
 }
 
 section.junte-se .margem-global form .status-profissional p#espaco-status {
@@ -548,7 +548,7 @@ section.junte-se .margem-global form .status-profissional p#espaco-status {
 
 section.junte-se .margem-global form .status-profissional .texto-opcao {
   display: flex;
-  gap: 14px;
+  gap: 10px;
 }
 
 section.junte-se .margem-global form .status-profissional .espaco {

@@ -1,27 +1,47 @@
 import { auth } from './firebase-config.js';
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
-window.redirectUser = function(path) {
+window.redirectUser = function (path) {
   window.location.href = path;
 }
 
-window.externalRedirect = function(url) {
+window.externalRedirect = function (url) {
   window.location.href = url;
 }
 
-onAuthStateChanged(auth, (user) => {
-    const authBtn = document.getElementById('auth-btn');
-    const authLink = document.getElementById('auth-link');
+// 2. FUNÇÃO DE LOGOUT (Global)
+window.fazerLogout = function () {
+  if (confirm("Tem certeza que deseja sair?")) {
+    signOut(auth).then(() => {
+      console.log("Usuário deslogado.");
+      window.location.href = "/login.html";
+    }).catch((error) => {
+      console.error("Erro ao sair:", error);
+    });
+  }
+}
 
-    if (authBtn && authLink) {
-        if (user) {
-            authBtn.innerText = "MEU PERFIL";
-            authLink.setAttribute('onclick', "redirectUser('/src/pages/profile/profile/profile.html')");
-        } else {
-            authBtn.innerText = "ENTRAR";
-            authLink.setAttribute('onclick', "redirectUser('/login.html')");
-        }
+onAuthStateChanged(auth, (user) => {
+  const authBtn = document.getElementById('auth-btn');
+  const authLink = document.getElementById('auth-link');
+
+  if (authBtn && authLink) {
+    if (user) {
+      authBtn.innerText = "MEU PERFIL";
+      authLink.setAttribute('onclick', "redirectUser('/src/pages/profile/profile/profile.html')");
+    } else {
+      authBtn.innerText = "ENTRAR";
+      authLink.setAttribute('onclick', "redirectUser('/login.html')");
     }
+  }
+
+  if (window.location.href.includes('login.html')) {
+    authBtn.innerText = "CADASTRAR-SE";
+    authLink.setAttribute('onclick', "redirectUser('register.html')");
+  } else {
+    authBtn.innerText = "ENTRAR";
+    authLink.setAttribute('onclick', "redirectUser('login.html')");
+  }
 });
 
 // API Sienna

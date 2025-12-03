@@ -16,7 +16,7 @@ onAuthStateChanged(auth, (user) => {
     if (authBtn && authLink) {
         if (user) {
             authBtn.innerText = "MEU PERFIL";
-            authLink.setAttribute('onclick', "redirectUser('/src/pages/profile/profile.html')");
+            authLink.setAttribute('onclick', "redirectUser('/src/pages/profile/profile/profile.html')");
         } else {
             authBtn.innerText = "ENTRAR";
             authLink.setAttribute('onclick', "redirectUser('/login.html')");

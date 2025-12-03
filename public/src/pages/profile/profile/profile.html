@@ -1,410 +1,309 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Instituto Solar: Perfil do Usuário." />
-    <meta name="author" content="Solar" />
-    <meta name="keywords" content="Solar, Monoparentalidade, Perfil" />
 
-    <link rel="stylesheet" href="../../../global.css" />
-    <link rel="stylesheet" href="profile.css" />
-    <link rel="stylesheet" href="../../../headerResponsivo.css" />
-    <link
-      rel="shortcut icon"
-      href="../../../assets/Logotipo-Solar.png"
-      type="image/x-icon"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Instituto Solar: Perfil do Usuário." />
+  <meta name="author" content="Solar" />
+  <meta name="keywords" content="Solar, Monoparentalidade, Perfil" />
 
-    <title>Meu Perfil - SOLAR</title>
-  </head>
+  <link rel="stylesheet" href="../../../global.css" />
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="stylesheet" href="../../../headerResponsivo.css" />
+  <link rel="shortcut icon" href="../../assets/Logotipo-Solar.png" type="image/x-icon" />
 
-  <body>
-    <header class="container-pai">
-      <div class="logo">
-        <a href="#" onclick="redirectUser('../../../../index.html')">
-          <img
-            height="90"
-            src="../../../assets/logo_nav2.png"
-            alt="Logo branca Solar"
-          />
-        </a>
-      </div>
+  <title>Meu Perfil - SOLAR</title>
+</head>
 
-      <button id="btn-mobile">
-        <span id="hamburger"></span>
-      </button>
+<body>
+  <header class="container-pai">
+    <div class="logo">
+      <a href="#" onclick="redirectUser('../../../../index.html')">
+        <img height="90" src="../../../assets/logo_nav2.png" alt="Logo branca Solar" />
+      </a>
+    </div>
 
-      <nav class="nav-pai" id="nav">
-        <ul id="menu">
-          <li>
-            <a href="#" onclick="redirectUser('../../../../index.html')">HOME</a>
-          </li>
+    <button id="btn-mobile">
+      <span id="hamburger"></span>
+    </button>
 
-          <li>
-            <a href="#">
-              EXPLORAR
-              <img class="seta-header" src="../../../assets/seta.png" alt="seta" />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../../pages/explore/eventss/index/index.html')"
-                  >EVENTOS</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../../pages/explore/courses/index/index.html')"
-                  >CURSOS</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../../pages/explore/sunMidia/solmidia.html')"
-                  >SOLMÍDIA</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../../pages/explore/game/game.html')"
-                  >JOGOS</a
-                >
-              </li>
-            </ul>
-          </li>
+    <nav class="nav-pai" id="nav">
+      <ul id="menu">
+        <li>
+          <a href="#" onclick="redirectUser('../../../../index.html')">HOME</a>
+        </li>
 
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('../../../pages/donation/donation.html')"
-              >DOAÇÃO</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="redirectUser('../../../pages/professionals/professionals.html')"
-              >PROFISSIONAIS</a
-            >
-          </li>
-          <li>
-            <a href="#" onclick="redirectUser('../../../pages/plans/plans.html')"
-              >PLANOS</a
-            >
-          </li>
-
-          <li>
-            <a href="#">
-              REDES
-              <img class="seta-header" src="../../../assets/seta.png" alt="seta" />
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../../pages/network/about/about.html')"
-                  >SOBRE</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../../pages/network/location/location.html')"
-                  >LOCALIZAR INSTITUIÇÕES</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../network/contactUs/contactus.html')"
-                  >FALE CONOSCO</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="redirectUser('../../../pages/network/community/comunidade.html')"
-                  >COMUNIDADE</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="#" id="auth-link" onclick="redirectUser('../../../login.html')">
-              <button id="auth-btn" class="button-header">ENTRAR</button>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="margem-global">
-
-        <div class="container-perfil">
-
-            <aside class="card-lateral">
-                <div class="perfil-avatar">
-
-                    <div class="avatar-wrapper">
-                        <img id="avatar-img" src="../../assets/img-profile/solaria-silhueta.png">
-
-              <input
-                type="file"
-                id="upload-foto"
-                accept="image/*"
-                style="display: none"
-              />
-
-              <label for="upload-foto" class="btn-camera"> 📷 </label>
-            </div>
-
-            <h2 id="nome-sidebar">Usuário</h2>
-          </div>
-
-          <nav class="menu-lateral-lista">
-            <button
-              class="ativo"
-              onclick="window.location.href='../profile/profile.html'"
-            >
-              👤 Meu Perfil
-            </button>
-            <button
-              onclick="window.location.href='../registrations/registrations.html'"
-            >
-              📄 Inscrições
-            </button>
-            <button
-              onclick="window.location.href='../plans-profile/planos.html'"
-            >
-              📋 Plano
-            </button>
-            <button
-              onclick="window.location.href='../profile/posts.html'"
-            >
-              📝 Postagens
-            </button>
-            <button
-              onclick="window.location.href='../profile/appointments.html'"
-            >
-              📅 Agendamentos
-            </button>
-            <button
-              onclick="window.location.href='../planejamentoFinanceiro/financeiro.html'"
-            >
-              💰 Planejamento Financeiro
-            </button>
-            <button
-              onclick="window.location.href='../profile/settings.html'"
-            >
-              ⚙️ Configurações
-            </button>
-            <button
-              onclick="window.location.href='../login/login.html'"
-            >
-              🚪 Sair
-            </button>
-          </nav>
-        </aside>
-
-        <section class="card-conteudo">
-          <div class="abas-header">
-            <button class="btn-aba ativo" data-tab="info-pessoais">
-              ℹ️ Informações Pessoais
-            </button>
-            <button class="btn-aba" data-tab="endereco">📍 Endereço</button>
-          </div>
-
-          <form id="info-pessoais" class="aba-conteudo">
-            <div class="campo-full">
-              <label>E-mail</label>
-              <input type="email" placeholder="seuemail@gmail.com" />
-            </div>
-
-            <div class="form-grid">
-              <div class="campo-input">
-                <label>Nome</label>
-                <input
-                  type="text"
-                  id="input-nome"
-                  placeholder="Seu Nome"
-                  maxlength="15"
-                />
-              </div>
-              <div class="campo-input">
-                <label>Sobrenome</label>
-                <input
-                  type="text"
-                  id="input-sobrenome"
-                  placeholder="Seu Sobrenome"
-                  maxlength="20"
-                />
-              </div>
-            </div>
-
-            <div class="campo-full" style="margin-top: 20px">
-              <label>Descrição</label>
-              <textarea rows="4"></textarea>
-            </div>
-
-            <div class="form-grid" style="margin-top: 20px">
-              <div class="campo-input">
-                <label>Telefone</label>
-                <input type="text" placeholder="(11) 98765-4321" />
-              </div>
-              <div class="campo-input">
-                <label>Data de Nascimento</label>
-                <input type="date" placeholder="2005-10-16" />
-              </div>
-            </div>
-
-            <div class="campo-full" style="margin-top: 20px">
-              <label>Tipo de Responsável</label>
-              <div class="radio-group">
-                <label
-                  ><input type="radio" name="tipo_resp" checked /> Mãe
-                  solo</label
-                >
-                <label><input type="radio" name="tipo_resp" /> Pai solo</label>
-                <label><input type="radio" name="tipo_resp" /> Outro</label>
-              </div>
-            </div>
-
-            <button type="button" class="btn-salvar" onclick="salvarPerfil()">
-              Salvar Informações
-            </button>
-          </form>
-
-          <form id="endereco" class="aba-conteudo" style="display: none">
-            <div class="form-grid">
-              <div class="campo-input">
-                <label>CEP</label>
-                <input type="text" placeholder="05051-000" />
-              </div>
-              <div class="campo-input">
-                <label>Rua</label>
-                <input type="text" placeholder="Rua Tito" />
-              </div>
-
-              <div class="campo-input">
-                <label>Número</label>
-                <input type="text" placeholder="54" />
-              </div>
-              <div class="campo-input">
-                <label>Complemento</label>
-                <input type="text" placeholder="Prédio 2" />
-              </div>
-
-              <div class="campo-input">
-                <label>Cidade</label>
-                <input type="text" placeholder="São Paulo" />
-              </div>
-              <div class="campo-input">
-                <label>Bairro</label>
-                <input type="text" placeholder="Lapa Tito" />
-              </div>
-            </div>
-
-            <button type="submit" class="btn-salvar">Salvar Endereço</button>
-          </form>
-        </section>
-      </div>
-    </main>
-
-    <footer>
-      <div class="margem-global">
-        <div class="secao-footer">
-          <div class="logo-footer">
-            <a href="../../../../index.html">
-              <img
-                src="../../../assets/logo_nav.png"
-                alt="Logo Solar"
-              />
-            </a>
-            <span>Solar</span>
-          </div>
-          <p>
-            Um espaço voltado para famílias monoparentais, oferecendo apoio
-            emocional, informações e recursos.
-          </p>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Redes Sociais</h3>
-          <div class="redes-sociais">
-            <a
-              href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
-                />
-              </svg>
-              SOLAR.PLATAFORMA
-            </a>
-            <a
-              href="https://www.linkedin.com/in/solaroficial/"
-              class="link-rede-social"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
-                />
-              </svg>
-              SOLAR OFICIAL
-            </a>
-          </div>
-        </div>
-
-        <div class="secao-footer">
-          <h3>Páginas</h3>
-          <ul class="lista-paginas">
+        <li>
+          <a href="#">
+            EXPLORAR
+            <img class="seta-header" src="../../../assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
             <li>
-              <a href="../../../../index.html">Home</a>
+              <a href="#" onclick="redirectUser('../../../pages/explore/eventss/index/index.html')">EVENTOS</a>
             </li>
             <li>
-              <a href="../../network/about/about.html"
-                >Sobre</a
-              >
+              <a href="#" onclick="redirectUser('../../../pages/explore/courses/index/index.html')">CURSOS</a>
             </li>
             <li>
-              <a
-                href="../../professionals/professionals.html"
-                >Profissionais</a
-              >
+              <a href="#" onclick="redirectUser('../../../pages/explore/sunMidia/solmidia.html')">SOLMÍDIA</a>
             </li>
             <li>
-              <a
-                href="../../explore/sunMidia/solmidia.html"
-                >SolMídia</a
-              >
-            </li>
-            <li>
-              <a href="../../plans/plans.html"
-                >Planos</a
-              >
+              <a href="#" onclick="redirectUser('../../../pages/explore/game/game.html')">JOGOS</a>
             </li>
           </ul>
+        </li>
+
+        <li>
+          <a href="#" onclick="redirectUser('../../../pages/donation/donation.html')">DOAÇÃO</a>
+        </li>
+        <li>
+          <a href="#" onclick="redirectUser('../../../pages/professionals/professionals.html')">PROFISSIONAIS</a>
+        </li>
+        <li>
+          <a href="#" onclick="redirectUser('../../../pages/plans/plans.html')">PLANOS</a>
+        </li>
+
+        <li>
+          <a href="#">
+            REDES
+            <img class="seta-header" src="../../../assets/seta.png" alt="seta" />
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="#" onclick="redirectUser('../../../pages/network/about/about.html')">SOBRE</a>
+            </li>
+            <li>
+              <a href="#" onclick="redirectUser('../../../pages/network/location/location.html')">LOCALIZAR
+                INSTITUIÇÕES</a>
+            </li>
+            <li>
+              <a href="#" onclick="redirectUser('../../network/contactUs/contactus.html')">FALE CONOSCO</a>
+            </li>
+            <li>
+              <a href="#" onclick="redirectUser('../../../pages/network/community/comunidade.html')">COMUNIDADE</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" id="auth-link" onclick="redirectUser('../../../login.html')">
+            <button id="auth-btn" class="button-header">ENTRAR</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="margem-global">
+
+    <div class="container-perfil">
+
+      <aside class="card-lateral">
+        <div class="perfil-avatar">
+
+          <div class="avatar-wrapper">
+            <img id="avatar-img" src="../../assets/img-profile/solaria-silhueta.png">
+
+            <input type="file" id="upload-foto" accept="image/*" style="display: none" />
+
+            <label for="upload-foto" class="btn-camera"> 📷 </label>
+          </div>
+
+          <h2 id="nome-sidebar">Usuário</h2>
+        </div>
+
+        <nav class="menu-lateral-lista">
+          <button class="ativo" onclick="window.location.href='../profile/profile.html'">
+            👤 Meu Perfil
+          </button>
+          <button onclick="window.location.href='../registrations/registrations.html'">
+            📄 Inscrições
+          </button>
+          <button onclick="window.location.href='../plans-profile/planos.html'">
+            📋 Plano
+          </button>
+          <button onclick="window.location.href='../profile/posts.html'">
+            📝 Postagens
+          </button>
+          <button onclick="window.location.href='../profile/appointments.html'">
+            📅 Agendamentos
+          </button>
+          <button onclick="window.location.href='../profile/financialPlanning.html'">
+            💰 Planejamento Financeiro
+          </button>
+          <button onclick="window.location.href='../profile/settings.html'">
+            ⚙️ Configurações
+          </button>
+          <button onclick="fazerLogout()">
+            🚪 Sair
+          </button>
+        </nav>
+      </aside>
+
+      <section class="card-conteudo">
+        <div class="abas-header">
+          <button class="btn-aba ativo" data-tab="info-pessoais">
+            ℹ️ Informações Pessoais
+          </button>
+          <button class="btn-aba" data-tab="endereco">📍 Endereço</button>
+        </div>
+
+        <form id="info-pessoais" class="aba-conteudo">
+          <div class="campo-full">
+            <label>E-mail</label>
+            <input type="email" placeholder="seuemail@gmail.com" />
+          </div>
+
+          <div class="form-grid">
+            <div class="campo-input">
+              <label>Nome</label>
+              <input type="text" id="input-nome" placeholder="Seu Nome" maxlength="15" />
+            </div>
+            <div class="campo-input">
+              <label>Sobrenome</label>
+              <input type="text" id="input-sobrenome" placeholder="Seu Sobrenome" maxlength="20" />
+            </div>
+          </div>
+
+          <div class="campo-full" style="margin-top: 20px">
+            <label>Descrição</label>
+            <textarea rows="4"></textarea>
+          </div>
+
+          <div class="form-grid" style="margin-top: 20px">
+            <div class="campo-input">
+              <label>Telefone</label>
+              <input type="text" placeholder="(11) 98765-4321" />
+            </div>
+            <div class="campo-input">
+              <label>Data de Nascimento</label>
+              <input type="date" placeholder="2005-10-16" />
+            </div>
+          </div>
+
+          <div class="campo-full" style="margin-top: 20px">
+            <label>Tipo de Responsável</label>
+            <div class="radio-group">
+              <label><input type="radio" name="tipo_resp" checked /> Mãe
+                solo</label>
+              <label><input type="radio" name="tipo_resp" /> Pai solo</label>
+              <label><input type="radio" name="tipo_resp" /> Outro</label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-salvar" onclick="salvarPerfil()">
+            Salvar Informações
+          </button>
+        </form>
+
+        <form id="endereco" class="aba-conteudo" style="display: none">
+          <div class="form-grid">
+            <div class="campo-input">
+              <label>CEP</label>
+              <input type="text" placeholder="05051-000" />
+            </div>
+            <div class="campo-input">
+              <label>Rua</label>
+              <input type="text" placeholder="Rua Tito" />
+            </div>
+
+            <div class="campo-input">
+              <label>Número</label>
+              <input type="text" placeholder="54" />
+            </div>
+            <div class="campo-input">
+              <label>Complemento</label>
+              <input type="text" placeholder="Prédio 2" />
+            </div>
+
+            <div class="campo-input">
+              <label>Cidade</label>
+              <input type="text" placeholder="São Paulo" />
+            </div>
+            <div class="campo-input">
+              <label>Bairro</label>
+              <input type="text" placeholder="Lapa Tito" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-salvar">Salvar Endereço</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="margem-global">
+      <div class="secao-footer">
+        <div class="logo-footer">
+          <a href="../../../../index.html">
+            <img src="../../../assets/logo_nav.png" alt="Logo Solar" />
+          </a>
+          <span>Solar</span>
+        </div>
+        <p>
+          Um espaço voltado para famílias monoparentais, oferecendo apoio
+          emocional, informações e recursos.
+        </p>
+      </div>
+
+      <div class="secao-footer">
+        <h3>Redes Sociais</h3>
+        <div class="redes-sociais">
+          <a href="https://www.instagram.com/solar.plataforma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+            </svg>
+            SOLAR.PLATAFORMA
+          </a>
+          <a href="https://www.linkedin.com/in/solaroficial/" class="link-rede-social">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            SOLAR OFICIAL
+          </a>
         </div>
       </div>
 
-      <div class="direitos-autorais">
-        <p>
-          © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
-          Política de Privacidade
-        </p>
+      <div class="secao-footer">
+        <h3>Páginas</h3>
+        <ul class="lista-paginas">
+          <li>
+            <a href="../../../../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../../network/about/about.html">Sobre</a>
+          </li>
+          <li>
+            <a href="../../professionals/professionals.html">Profissionais</a>
+          </li>
+          <li>
+            <a href="../../explore/sunMidia/solmidia.html">SolMídia</a>
+          </li>
+          <li>
+            <a href="../../plans/plans.html">Planos</a>
+          </li>
+        </ul>
       </div>
-    </footer>
+    </div>
 
-    <script type="module" src="../../../js/script.js"></script>
-    <script src="../../../js/headerResponsivo.js"></script>
-    <script src="../../../js/profile/profile/menuProfile.js"></script>
-  </body>
+    <div class="direitos-autorais">
+      <p>
+        © 2025 Solar - Todos os Direitos Reservados | Termos e Condições |
+        Política de Privacidade
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="../../../js/script.js"></script>
+  <script src="../../../js/headerResponsivo.js"></script>
+  <script src="../../../js/profile/profile/menuProfile.js"></script>
+</body>
+
 </html>

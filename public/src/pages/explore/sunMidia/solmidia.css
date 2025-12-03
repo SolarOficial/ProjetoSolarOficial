@@ -26,17 +26,26 @@
   margin: 0 60px;
 }
 
-/* Removida a margem superior de 150px para todas as sections */
-/* A margem será aplicada individualmente, exceto em .solmidia */
+h1 {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: clamp(100px, 4vw, 45px);
+  /* background: linear-gradient(to right, #9675ce, #4c3b68); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: clamp(20px, 4vw, 62px);
+  color: var(--cor-laranja);
+}
 
 section h2 {
   font-family: var(--font-titulo);
-  font-weight: 700;
+  font-weight: 600;
   font-size: clamp(26px, 4vw, 45px);
   background: linear-gradient(to right, #9675ce, #4c3b68);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: var(--cor-roxo-claro);
   text-align: center;
   margin-bottom: clamp(20px, 4vw, 62px);
 }

@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-/* CONTAINER GLOBAL DE CONTEÚDO (Ajuda na responsividade) */
+/* CONTAINER GLOBAL DE CONTEÚDO */
 .margem-global {
   margin: 0 auto;
   max-width: 1200px;
@@ -30,7 +30,7 @@
 
 /* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
 
-/* MAIN - CORREÇÕES DE RESPONSIVIDADE */
+/* MAIN  */
 
 /* card sobre a descrição do curso */
 .container-principal {
@@ -45,9 +45,9 @@
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
-  width: 100%; /* CORREÇÃO: Deixa a largura fluida */
-  max-width: 844px; /* Limite máximo */
-  height: auto; /* CORREÇÃO: Altura adapta-se ao conteúdo */
+  width: 100%;
+  max-width: 844px;
+  height: auto;
   flex-wrap: wrap;
   padding-bottom: 40px;
 }
@@ -96,7 +96,7 @@
 
 .informacoes-curso {
   border-radius: 12px;
-  padding: 0 50px; /* Removido padding vertical, usa padding horizontal */
+  padding: 0 50px;
 }
 
 .informacoes {
@@ -158,8 +158,8 @@
   justify-content: flex-end; /* Alinha à direita para desktop */
   gap: 30px; /* Ajustado para um valor limpo */
   margin-top: 40px;
-  width: auto; /* CORREÇÃO: Tira a largura fixa */
-  margin-left: auto; /* CORREÇÃO: Remove margem fixa */
+  width: auto;
+  margin-left: auto;
   margin-right: 50px; /* Alinha com o padding do .informacoes-curso */
 
   .botao-1 {
@@ -186,7 +186,7 @@
     border: none;
     font-size: 20px;
     transition: all 0.3s ease;
-    padding: 10px 15px; /* Padding unificado e limpo */
+    padding: 10px 15px;
     width: 170px;
     font-family: "Figtree";
     border-radius: 8px;
@@ -207,7 +207,7 @@
 footer {
   margin-top: 100px;
   background: var(--cor-roxo-claro);
-  padding: 60px 0 0 0; /* CORREÇÃO: Ajuste o padding para o .direitos-autorais controlar o espaço inferior */
+  padding: 60px 0 0 0;
   color: var(--cor-branca);
 }
 
@@ -216,7 +216,7 @@ footer .margem-global {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr; /* 3 colunas, com a primeira maior */
   gap: 60px;
-  margin-bottom: 0; /* CORREÇÃO: Remove margem fixa */
+  margin-bottom: 0;
 }
 
 /* Colunas (seção) do rodapé */
@@ -317,7 +317,7 @@ footer .margem-global {
 /* Direitos Autorais (Barra Inferior) */
 .direitos-autorais {
   text-align: center;
-  padding: 30px 0; /* CORREÇÃO: Garante padding superior e inferior */
+  padding: 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-family: var(--font-paragrafo);
   font-size: 14px;
@@ -326,7 +326,7 @@ footer .margem-global {
 }
 
 /* ========================================================================= */
-/* MEDIA QUERIES PARA RESPONSIVIDADE TOTAL */
+/* MEDIA QUERIES */
 /* ========================================================================= */
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 992px) */
@@ -371,7 +371,7 @@ footer .margem-global {
     gap: 20px;
   }
 
-  /* --- FOOTER CORREÇÕES DE RESPONSIVIDADE --- */
+  /* --- FOOTER --- */
   footer .margem-global {
     display: flex;
     flex-wrap: wrap;
@@ -447,7 +447,7 @@ footer .margem-global {
     padding: 12px;
   }
 
-  /* --- FOOTER CORREÇÕES DE RESPONSIVIDADE --- */
+  /* --- FOOTER  --- */
   footer .margem-global {
     flex-direction: column;
     align-items: center;

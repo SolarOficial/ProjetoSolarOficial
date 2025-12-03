@@ -45,10 +45,10 @@
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
-  width: 100%; /* Corrigido: Usa 100% da largura do container */
-  max-width: 844px; /* Corrigido: Mantém o limite máximo */
-  height: auto; /* Corrigido: Altura adapta-se ao conteúdo */
-  flex-wrap: wrap; /* Não é estritamente necessário aqui, mas mantido */
+  width: 100%;
+  max-width: 844px;
+  height: auto;
+  flex-wrap: wrap;
   padding-bottom: 40px; /* Adicionado para espaçamento interno */
 }
 
@@ -65,8 +65,8 @@
   width: 250px;
   height: 220px;
   border-radius: 20px;
-  object-fit: cover; /* Adicionado para garantir o corte adequado */
-  flex-shrink: 0; /* Impede que a imagem encolha desnecessariamente */
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* estilizando titulo e texto no topo do card */
@@ -94,7 +94,7 @@
 
 .informacoes-curso {
   border-radius: 12px;
-  padding: 0 50px; /* Corrigido: Removido padding superior, usa margin/gap */
+  padding: 0 50px;
 }
 
 .informacoes {
@@ -153,12 +153,12 @@
 
 .botoes {
   display: flex;
-  justify-content: flex-end; /* Corrigido: Alinha à direita para manter o layout desktop */
-  gap: 30px; /* Ajustado para um valor limpo */
-  margin-top: 40px; /* Ajustado para um valor limpo */
-  width: auto; /* Corrigido: Permite que o container se ajuste */
-  margin-left: auto; /* Corrigido: Remove margem fixa */
-  margin-right: 50px; /* Ajusta a margem para alinhar com o padding do card */
+  justify-content: flex-end;
+  gap: 30px;
+  margin-top: 40px;
+  width: auto;
+  margin-left: auto;
+  margin-right: 50px;
 
   .botao-1 {
     border: 1px solid var(--cor-laranja);
@@ -183,7 +183,7 @@
     border: none;
     font-size: 20px;
     transition: all 0.3s ease;
-    padding: 10px 15px; /* Padding unificado e limpo */
+    padding: 10px 15px;
     width: 170px;
     font-family: "Figtree";
     border-radius: 8px;
@@ -323,7 +323,7 @@ footer .margem-global {
 }
 
 /* ========================================================================= */
-/* MEDIA QUERIES PARA RESPONSIVIDADE TOTAL */
+/* MEDIA QUERIES  */
 /* ========================================================================= */
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 992px) */

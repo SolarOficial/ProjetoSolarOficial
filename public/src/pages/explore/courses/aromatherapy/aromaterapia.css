@@ -38,7 +38,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 105px;
-  padding: 0 15px; /* Adicionado padding para telas muito pequenas */
+  padding: 0 15px;
 }
 
 /* definindo configurações do card */
@@ -479,7 +479,7 @@ footer .margem-global {
 
   footer .margem-global .redes-sociais,
   footer .margem-global .lista-paginas {
-    align-items: center; /* Centraliza as listas em mobile */
+    align-items: center;
     padding-left: 0;
   }
 

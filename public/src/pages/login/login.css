@@ -12,9 +12,11 @@
   --cor-amarelo: #fff59c;
   --font-titulo: "Karla", sans-serif;
   --font-paragrafo: "Figtree";
-  --cor-roxo-claro-gradient: linear-gradient(140deg,
-      rgba(191, 158, 245, 0.8) 0%,
-      rgba(111, 92, 143, 0.8) 100%);
+  --cor-roxo-claro-gradient: linear-gradient(
+    140deg,
+    rgba(191, 158, 245, 0.8) 0%,
+    rgba(111, 92, 143, 0.8) 100%
+  );
 }
 
 /* config zeradas */
@@ -36,7 +38,6 @@ body {
   position: relative;
   min-height: 100vh;
 }
-
 
 body::before {
   content: "";
@@ -88,12 +89,14 @@ section.img-login .margem-global {
   /* Centraliza horizontalmente */
   align-items: center;
   /* Centraliza verticalmente */
-  background-image: linear-gradient(to top,
-      #eed06c,
-      #ffe07bb9,
-      #ffe98483,
-      #ffed4f1e,
-      #ffffff00);
+  background-image: linear-gradient(
+    to top,
+    #eed06c,
+    #ffe07bb9,
+    #ffe98483,
+    #ffed4f1e,
+    #ffffff00
+  );
   box-shadow: 2px 2px rgba(0, 0, 0, 0.144);
 }
 
@@ -134,10 +137,8 @@ section.img-login .margem-global {
   border: 4px solid var(--cor-branca);
   border-radius: 30px;
 
-  /* AQUI É O TRUQUE: A cor de fundo vai na CAIXA (PAI) */
   background: var(--cor-roxo-claro-gradient);
 
-  /* Isso corta as pontas quadradas de qualquer coisa dentro */
   overflow: hidden;
   position: relative;
 
@@ -153,13 +154,8 @@ section.img-login .margem-global {
   flex-shrink: 0;
 }
 
-/* =============================================================
-   2. O INPUT (FUNDO INVISÍVEL)
-   Isso garante que o retângulo branco do iPhone suma.
-   ============================================================= */
 .input-email input,
 .input-password input {
-  /* FORÇA BRUTA: Fundo transparente para ver a cor do pai */
   background-color: transparent !important;
   background-image: none !important;
 
@@ -178,7 +174,6 @@ section.img-login .margem-global {
   appearance: none;
   border-radius: 0;
 }
-
 
 ::placeholder {
   color: var(--cor-branca);
@@ -279,7 +274,7 @@ input:-webkit-autofill:active {
 
 .button-google button:hover {
   background-color: var(--cor-roxo-claro);
-  transition: all 0.3S ease;
+  transition: all 0.3s ease;
 }
 
 /* CRIAR CONTA */
@@ -412,7 +407,6 @@ input:-webkit-autofill:active {
   padding: 12px 30px;
 }
 
-
 /* Animação de entrada */
 @keyframes slideUp {
   from {
@@ -489,7 +483,6 @@ input:-webkit-autofill:active {
 
 /* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
 @media screen and (max-width: 768px) {
-
   /* CONTAINER DO LAYOUT */
   section.img-login .margem-global {
     gap: 30px;
@@ -568,7 +561,6 @@ input:-webkit-autofill:active {
     gap: 10px;
     width: 100%;
   }
-
 
   /* Criar Conta */
   .create-account {

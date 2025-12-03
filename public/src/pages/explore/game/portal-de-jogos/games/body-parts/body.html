@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Jogo da memoria">
-    <meta name="keywords" content="jogos, aprendizado, inglês, infantil">
-    <meta name="author" content="Solar">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toque na Parte Certa!</title>
-    <link rel="stylesheet" href="body.css">
-</head>
-<body>
-     <a href="../../menu.html" class="back-to-menu">🏠 Voltar ao Menu</a>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Jogo da memoria" />
+    <meta name="keywords" content="jogos, aprendizado, inglês, infantil" />
+    <meta name="author" content="Solar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <link
+      rel="shortcut icon"
+      href="../../../../../../assets/Logotipo-Solar.png"
+      type="image/x-icon"
+    />
+    <title>Toque na parte certa!</title>
+    <link rel="stylesheet" href="body.css" />
+  </head>
+  <body>
+    <a href="../../menu.html" class="back-to-menu">🏠 Voltar ao Menu</a>
 
     <div class="game-container">
-        <header id="instruction-box" class="instruction-box">
-            <p>Toque na...</p>
-            <h1 id="part-name">...</h1>
-        </header>
+      <header id="instruction-box" class="instruction-box">
+        <p>Toque na...</p>
+        <h1 id="part-name">...</h1>
+      </header>
 
-        <div id="character-container" class="character-container">
-            <div class="hotspot" data-part="Head"></div>
-            <div class="hotspot" data-part="Eyes"></div>
-            <div class="hotspot" data-part="Nose"></div>
-            <div class="hotspot" data-part="Mouth"></div>
-            <div class="hotspot" data-part="Ears"></div>
-            <div class="hotspot" data-part="Shoulders"></div>
-            <div class="hotspot" data-part="Hands"></div>
-            <div class="hotspot" data-part="Knees"></div>
-            <div class="hotspot" data-part="Feet"></div>
-        </div>
+      <div id="character-container" class="character-container">
+        <div class="hotspot" data-part="Head"></div>
+        <div class="hotspot" data-part="Eyes"></div>
+        <div class="hotspot" data-part="Nose"></div>
+        <div class="hotspot" data-part="Mouth"></div>
+        <div class="hotspot" data-part="Ears"></div>
+        <div class="hotspot" data-part="Shoulders"></div>
+        <div class="hotspot" data-part="Hands"></div>
+        <div class="hotspot" data-part="Knees"></div>
+        <div class="hotspot" data-part="Feet"></div>
+      </div>
     </div>
 
     <div id="completion-screen" class="hidden">
-        <h2>Incrível! 💪</h2>
-        <p>Você conhece todo o corpo humano!</p>
-        <button id="restart-button">Jogar de Novo</button>
+      <h2>Incrível! 💪</h2>
+      <p>Você conhece todo o corpo humano!</p>
+      <button id="restart-button">Jogar de Novo</button>
     </div>
 
     <script src="body.js"></script>
-</body>
+  </body>
 </html>

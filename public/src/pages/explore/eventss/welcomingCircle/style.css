@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 150px; 
+  margin-top: 150px;
   padding: 0 15px; /* Adiciona padding lateral */
   margin-bottom: 50px;
 }
@@ -46,9 +46,9 @@
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
-  width: 100%; /* CORREÇÃO: Largura fluida */
+  width: 100%;
   max-width: 880px; /* Limite máximo */
-  height: auto; /* CORREÇÃO: Altura adaptável */
+  height: auto;
   flex-wrap: wrap;
 
   .topo-card {
@@ -56,7 +56,7 @@
     flex-wrap: wrap; /* Adiciona quebra de linha para mobile */
     justify-content: center;
     gap: 30px;
-    margin: 30px; /* CORREÇÃO: Margem unificada para todos os lados */
+    margin: 30px;
   }
 
   /* estilizando imagem */
@@ -103,10 +103,7 @@
 
 .informacoes {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* CORREÇÃO: Grid responsivo, de 2 colunas para 1 em telas pequenas */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 35px 70px;
   font-family: "Figtree";
 }
@@ -146,7 +143,7 @@
 
 /* descrição ocupa as duas colunas */
 .descricao {
-  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
+  grid-column: 1 / -1;
 }
 
 .campo-descricao {
@@ -155,18 +152,18 @@
 }
 
 .obs-card {
-  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
+  grid-column: 1 / -1;
 }
 
 .botoes {
   display: flex;
-  justify-content: flex-end; /* Alinha à direita de forma fluida */
-  gap: 20px; /* Ajuste o gap */
+  justify-content: flex-end;
+  gap: 20px;
   margin-top: 40px; /* Ajuste a margem */
   width: 100%; /* Ocupa a largura total */
-  margin-left: 0; /* CORREÇÃO: Remove margem fixa */
+  margin-left: 0;
   padding: 0 50px; /* Adiciona padding lateral */
-  flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+  flex-wrap: wrap;
 
   .botao-1,
   .botao-2 {

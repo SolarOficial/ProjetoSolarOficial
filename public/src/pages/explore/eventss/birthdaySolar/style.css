@@ -28,7 +28,7 @@
 }
 
 /* ======================================= */
-/* --- MAIN CONTENT (CARD) --- */
+/* --- MAIN --- */
 /* ======================================= */
 
 /* card sobre a descrição do curso */
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 150px; 
+  margin-top: 150px;
   padding: 0 15px;
 }
 
@@ -49,8 +49,6 @@
   height: auto; /* Altura adaptável */
   padding-bottom: 40px;
 }
-
-
 
 /* CORREÇÃO DE SINTAXE E AJUSTE DE ESPAÇAMENTO */
 .topo-card {
@@ -100,10 +98,7 @@
 
 .informacoes {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* CORREÇÃO: Grid responsivo */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px 20px; /* Espaçamento ajustado */
   font-family: var(--font-paragrafo);
 }
@@ -143,17 +138,16 @@
 
 /* descrição ocupa as duas colunas */
 .descricao {
-  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
+  grid-column: 1 / -1;
 }
 .campo-descricao {
   min-height: 100px;
   line-height: 1.5;
 }
 .obs-card {
-  grid-column: 1 / -1; /* CORREÇÃO: Ocupa a largura total */
+  grid-column: 1 / -1;
 }
 
-/* CORREÇÃO DE SINTAXE E AJUSTE DE ESPAÇAMENTO */
 .botoes {
   display: flex;
   justify-content: flex-end;
@@ -327,7 +321,7 @@ footer .margem-global {
 }
 
 /* ========================================================================= */
-/* MEDIA QUERIES PARA RESPONSIVIDADE TOTAL */
+/* MEDIA QUERIES */
 /* ========================================================================= */
 
 /* 1. TELAS MÉDIAS/TABLETS (Máximo 992px) */

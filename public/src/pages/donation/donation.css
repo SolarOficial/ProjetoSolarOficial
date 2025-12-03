@@ -1162,7 +1162,7 @@ footer .margem-global {
   /* Inputs de valor - Mantido 2 por linha */
   section.valor-doacao .margem-global .valor-formulario .escolha-valor .valor {
     gap: 10px;
-    flex-wrap: wrap; /* Garante quebras se necessário */
+    flex-wrap: wrap;
   }
 
   section.valor-doacao

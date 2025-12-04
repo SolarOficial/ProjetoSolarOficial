@@ -88,7 +88,7 @@
                 </li>
                 <li>
                     <a href="#" id="auth-link" onclick="redirectUser('../../../login.html')">
-                        <button id="auth-btn" class="button-header">SAIR</button>
+                        <button id="auth-btn" class="button-header">ENTRAR</button>
                     </a>
                 </li>
             </ul>
@@ -125,8 +125,6 @@
                     <button onclick="redirectUser('../profile/appointments.html')">
                         📅 Agendamentos
                     </button>
-
-                    <!-- BOTÃO ATIVO -->
                     <button class="ativo">
                         💰 Planejamento Financeiro
                     </button>
@@ -134,7 +132,7 @@
                     <button onclick="redirectUser('../profile/settings.html')">
                         ⚙️ Configurações
                     </button>
-                    <button onclick="redirectUser('../login/login.html')">
+                    <button onclick="abrirModalLogout()">
                         🚪 Sair
                     </button>
                 </nav>
@@ -152,7 +150,7 @@
                     <div class="coluna-form">
                         <div class="campo-full">
                             <label>Renda Mensal (R$)</label>
-                            <input type="number" id="input-renda" placeholder="Ex: 2500.00">
+                            <input type="number" id="input-renda" placeholder="Ex: 2500.00" min="1">
                         </div>
 
                         <h3 class="subtitulo-gastos">Seus Gastos</h3>
@@ -194,6 +192,24 @@
         </div>
     </main>
 
+    <div class="modal-overlay" id="modalLogout">
+        <div class="modal-card" style="max-width: 500px;">
+
+            <h2>Tem certeza que deseja sair?</h2>
+            <p>Você precisará fazer login novamente para acessar sua conta.</p>
+
+            <div class="btns-row" style="gap: 20px;">
+                <button class="btn-modal btn-cancelar" onclick="fecharModalLogout()">
+                    Cancelar
+                </button>
+
+                <button class="btn-modal" onclick="fazerLogout()">
+                    Sair
+                </button>
+            </div>
+
+        </div>
+    </div>
     <!-- FOOTER -->
     <footer>
         <div class="margem-global">
@@ -254,6 +270,7 @@
     <script src="../../../js/headerResponsivo.js"></script>
     <script type="module" src="../../../js/profile/financeiro/financeiro.js"></script>
     <script type="module" src="../../../js/script.js"></script>
+    <script src="../../../js/profile/profile/modalSair.js"></script>
 </body>
 
 </html>

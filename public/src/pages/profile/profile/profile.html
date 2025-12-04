@@ -137,7 +137,7 @@
           <button onclick="window.location.href='../profile/settings.html'">
             ⚙️ Configurações
           </button>
-          <button onclick="fazerLogout()">
+          <button onclick="abrirModalLogout()">
             🚪 Sair
           </button>
         </nav>
@@ -235,6 +235,25 @@
     </div>
   </main>
 
+  <div class="modal-overlay" id="modalLogout">
+    <div class="modal-card" style="max-width: 500px;">
+
+      <h2>Tem certeza que deseja sair?</h2>
+      <p>Você precisará fazer login novamente para acessar sua conta.</p>
+
+      <div class="btns-row" style="gap: 20px;">
+        <button class="btn-modal btn-cancelar" onclick="fecharModalLogout()">
+          Cancelar
+        </button>
+
+        <button class="btn-modal" onclick="fazerLogout()">
+          Sair
+        </button>
+      </div>
+
+    </div>
+  </div>
+
   <footer>
     <div class="margem-global">
       <div class="secao-footer">
@@ -304,6 +323,7 @@
   <script type="module" src="../../../js/script.js"></script>
   <script src="../../../js/headerResponsivo.js"></script>
   <script src="../../../js/profile/profile/menuProfile.js"></script>
+  <script src="../../../js/profile/profile/modalSair.js"></script>
 </body>
 
 </html>

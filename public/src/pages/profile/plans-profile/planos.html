@@ -36,7 +36,8 @@
             <ul id="menu">
                 <li><a href="#" onclick="redirectUser('../../../../index.html')">HOME</a></li>
                 <!-- ... Menu de navegação ... -->
-                <li><a href="#" id="auth-link" onclick="redirectUser('../../../login.html')"><button id="auth-btn" class="button-header">SAIR</button></a></li>
+                <li><a href="#" id="auth-link" onclick="redirectUser('../../../login.html')"><button id="auth-btn"
+                            class="button-header">SAIR</button></a></li>
             </ul>
         </nav>
     </header>
@@ -56,12 +57,14 @@
                 <nav class="menu-lateral-lista">
                     <button onclick="window.location.href='../profile/profile.html'">👤 Meu Perfil</button>
                     <button onclick="window.location.href='../registrations/registrations.html'">📄 Inscrições</button>
-                    <button class="ativo" onclick="window.location.href='../plans-profile/planos.html'">📋 Plano</button>
+                    <button class="ativo" onclick="window.location.href='../plans-profile/planos.html'">📋
+                        Plano</button>
                     <button onclick="window.location.href='../profile/posts.html'">📝 Postagens</button>
                     <button onclick="window.location.href='../profile/appointments.html'">📅 Agendamentos</button>
-                    <!-- Botão com verificação de acesso -->
-                    <button id="btn-financeiro" onclick="verificarAcessoFinanceiro()">💰 Planejamento Financeiro</button>
-                    
+
+                    <button id="btn-financeiro" onclick="verificarAcessoFinanceiro()">💰 Planejamento
+                        Financeiro</button>
+
                     <button onclick="window.location.href='../profile/settings.html'">⚙️ Configurações</button>
                     <button onclick="abrirModalLogout()">🚪 Sair</button>
                 </nav>
@@ -95,11 +98,11 @@
                         </ul>
 
                         <div class="plano-footer">
-                            <!-- Botão Atualizar -->
                             <button class="btn-roxo" onclick="irParaPlanos()">Atualizar Assinatura</button>
-                            
-                            <!-- Botão Cancelar (Oculto via JS se for plano gratuito) -->
-                            <button id="btn-cancelar-assinatura" class="btn-outline" onclick="cancelarAssinatura()">Cancelar Assinatura</button>
+
+                            <!-- Botão Cancelar -->
+                            <button id="btn-cancelar-assinatura" class="btn-outline"
+                                onclick="abrirModalCancelamento()">Cancelar Assinatura</button>
                         </div>
                     </div>
                 </div>
@@ -109,7 +112,7 @@
         </div>
     </main>
 
-    <!-- Modal Logout (Já Existente) -->
+    <!-- Modal Logout -->
     <div class="modal-overlay" id="modalLogout">
         <div class="modal-card" style="max-width: 500px;">
             <h2>Tem certeza que deseja sair?</h2>
@@ -121,18 +124,17 @@
         </div>
     </div>
 
-    <!-- NOVO: Modal de Bloqueio (Upgrade Necessário) -->
+    <!-- Modal Upgrade (Bloqueio) -->
     <div class="modal-overlay" id="modalUpgrade">
         <div class="modal-card" style="max-width: 550px;">
-            <!-- Ícone de Cadeado (FontAwesome) -->
             <div class="icon-container" style="font-size: 40px; color: #ffcd4f; margin-bottom: 10px;">
                 <i class="fas fa-lock"></i>
             </div>
-            
             <h2>Acesso Exclusivo</h2>
-            <p>O <strong>Planejamento Financeiro</strong> é uma ferramenta exclusiva do <strong>Plano Alicerce</strong>.</p>
-            <p style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Faça um upgrade agora para desbloquear esta funcionalidade!</p>
-
+            <p>O <strong>Planejamento Financeiro</strong> é uma ferramenta exclusiva do <strong>Plano Alicerce</strong>.
+            </p>
+            <p style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Faça um upgrade agora para desbloquear esta
+                funcionalidade!</p>
             <div class="btns-row" style="gap: 20px;">
                 <button class="btn-modal btn-cancelar" onclick="fecharModalUpgrade()">Voltar</button>
                 <button class="btn-modal" onclick="irParaPlanos()">Ver Planos</button>
@@ -140,10 +142,29 @@
         </div>
     </div>
 
+    <!-- NOVO: Modal Cancelamento -->
+    <div class="modal-overlay" id="modalCancel">
+        <div class="modal-card" style="max-width: 500px;">
+            <div class="icon-container" style="font-size: 40px; color: #e84118; margin-bottom: 10px;">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2>Cancelar Assinatura?</h2>
+            <p>Ao cancelar, você voltará para o plano gratuito <strong>Apoio</strong> e perderá acesso aos recursos
+                exclusivos.</p>
+
+            <div class="btns-row" style="gap: 20px;">
+                <button class="btn-modal btn-cancelar" onclick="fecharModalCancel()">Manter Plano</button>
+                <button class="btn-modal" style="background: #e84118; color: white;"
+                    onclick="confirmarCancelamento()">Sim, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="../../../js/script.js"></script>
     <script src="../../../js/headerResponsivo.js"></script>
-    <script src="../../../js/profile/plans-profile/plans-profile.js"></script> 
+    <script src="../../../js/profile/plans-profile/plans-profile.js"></script>
     <script src="../../../js/profile/profile/modalSair.js"></script>
 
 </body>
+
 </html>

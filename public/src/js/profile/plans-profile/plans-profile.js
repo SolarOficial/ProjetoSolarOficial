@@ -41,8 +41,6 @@ const PLANOS_INFO = {
     }
 };
 
-// --- FUNÇÕES PRINCIPAIS ---
-
 document.addEventListener("DOMContentLoaded", () => {
     carregarUsuario();
     inicializarPlano();
@@ -61,21 +59,17 @@ function carregarUsuario() {
 }
 
 function inicializarPlano() {
-    // Pega o plano do localStorage (ou define 'apoio' se não existir)
     let planoAtual = localStorage.getItem('solar_user_plan');
-    
     if (!planoAtual) {
         planoAtual = 'apoio';
         localStorage.setItem('solar_user_plan', 'apoio');
     }
-
-    console.log("Plano Atual:", planoAtual);
     renderizarCartaoPlano(planoAtual);
 }
 
 function renderizarCartaoPlano(chavePlano) {
     const dados = PLANOS_INFO[chavePlano];
-    if (!dados) return; // Segurança caso venha chave inválida
+    if (!dados) return;
 
     // Atualiza Textos
     document.getElementById('titulo-plano').textContent = dados.nome;
@@ -85,14 +79,12 @@ function renderizarCartaoPlano(chavePlano) {
     const lista = document.getElementById('lista-vantagens');
     lista.innerHTML = '';
 
-    // Itens Inclusos (Verde)
     dados.vantagens.forEach(item => {
         const li = document.createElement('li');
         li.innerHTML = `<i class="fas fa-check" style="color: #4cd137;"></i> ${item}`;
         lista.appendChild(li);
     });
 
-    // Itens Bloqueados (Visualmente desativados)
     dados.bloqueado.forEach(item => {
         const li = document.createElement('li');
         li.style.opacity = "0.5";
@@ -100,83 +92,69 @@ function renderizarCartaoPlano(chavePlano) {
         lista.appendChild(li);
     });
 
-    // --- LÓGICA DO BOTÃO CANCELAR ---
+    // Controla visibilidade do botão Cancelar
     const btnCancelar = document.getElementById('btn-cancelar-assinatura');
-    
     if (chavePlano === 'apoio') {
-        // Se já é gratuito, esconde o botão de cancelar
         btnCancelar.style.display = 'none';
     } else {
-        // Se é pago (Amparo/Alicerce), mostra o botão
         btnCancelar.style.display = 'inline-block';
     }
 }
 
 // --- AÇÕES ---
 
-// 1. Botão "Atualizar Assinatura" ou "Ver Planos"
 window.irParaPlanos = function() {
     window.location.href = '../../../pages/plans/plans.html'; 
 };
 
-// 2. Botão "Cancelar Assinatura"
-window.cancelarAssinatura = function() {
-    // Só executa se NÃO for apoio (proteção extra além do display:none)
-    const planoAtual = localStorage.getItem('solar_user_plan');
-    
-    if (planoAtual === 'apoio') {
-        alert("Você já está no plano gratuito.");
-        return;
-    }
+// Abre o Modal de Cancelamento
+window.abrirModalCancelamento = function() {
+    document.getElementById('modalCancel').classList.add('ativo');
+}
 
-    if(confirm("Tem certeza que deseja cancelar sua assinatura Premium? Você voltará para os recursos limitados do plano Apoio.")) {
-        localStorage.setItem('solar_user_plan', 'apoio');
-        renderizarCartaoPlano('apoio');
-        // Opcional: Feedback visual melhor que alert
-        alert("Assinatura cancelada com sucesso.");
-    }
+window.fecharModalCancel = function() {
+    document.getElementById('modalCancel').classList.remove('ativo');
+}
+
+// Executa o cancelamento real (chamado pelo botão do modal)
+window.confirmarCancelamento = function() {
+    // 1. Atualiza o estado
+    localStorage.setItem('solar_user_plan', 'apoio');
+    
+    // 2. Atualiza a tela (O usuário vê o cartão mudar instantaneamente para "Apoio")
+    renderizarCartaoPlano('apoio');
+    
+    // 3. Fecha o modal
+    fecharModalCancel();
 };
 
-// 3. Verificação de Acesso (Botão Financeiro)
 window.verificarAcessoFinanceiro = function() {
     const planoAtual = localStorage.getItem('solar_user_plan') || 'apoio';
 
-    // Apenas 'alicerce' tem acesso
     if (planoAtual === 'alicerce') {
         window.location.href = '../financeTool/ferramentafinanceira/financialPlanning.html';
     } else {
-        // Se for 'apoio' ou 'amparo', abre o Modal de Bloqueio
         abrirModalUpgrade();
     }
 };
 
-// --- CONTROLE DOS MODAIS ---
+// --- CONTROLE GERAL DE MODAIS ---
 
 function abrirModalUpgrade() {
-    const modal = document.getElementById('modalUpgrade');
-    modal.classList.add('ativo'); // Usa a classe .ativo do seu CSS global/modal
+    document.getElementById('modalUpgrade').classList.add('ativo');
 }
 
 window.fecharModalUpgrade = function() {
-    const modal = document.getElementById('modalUpgrade');
-    modal.classList.remove('ativo');
+    document.getElementById('modalUpgrade').classList.remove('ativo');
 }
 
-// Fecha o modal se clicar fora dele
+// Fecha modais ao clicar fora
 window.onclick = function(event) {
-    const modal = document.getElementById('modalUpgrade');
-    if (event.target == modal) {
-        modal.classList.remove('ativo');
-    }
-    
-    // Mantém a funcionalidade do modal de logout também
-    const modalLogout = document.getElementById('modalLogout');
-    if (event.target == modalLogout) {
-        modalLogout.classList.remove('ativo'); // Assumindo que você usa .ativo lá também
+    if (event.target.classList.contains('modal-overlay')) {
+        event.target.classList.remove('ativo');
     }
 }
 
-// Navegação global
 window.redirectUser = (path) => {
     window.location.href = path;
 }

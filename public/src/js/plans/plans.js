@@ -28,7 +28,7 @@ function assinarPlano(chavePlano) {
     
     // 2. Redireciona imediatamente para o perfil do usuário
     // O usuário verá o novo plano ativo lá
-    window.location.href = '../profile/plan.html';
+    window.location.href = '../profile/plans-profile/planos.html';
 }
 
 // Atualiza o visual dos botões para indicar qual é o atual

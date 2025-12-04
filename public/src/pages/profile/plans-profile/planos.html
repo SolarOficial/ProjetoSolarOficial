@@ -2,26 +2,26 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Plano - SOLAR</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Plano - SOLAR</title>
 
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="../../../global.css" />
-    <link rel="stylesheet" href="../../../headerResponsivo.css" />
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="../../../global.css" />
+  <link rel="stylesheet" href="../../../headerResponsivo.css" />
 
-    <!-- Reutiliza o CSS do Perfil para o Grid e Sidebar -->
-    <link rel="stylesheet" href="../profile/profile.css">
+  <!-- Reutiliza o CSS do Perfil para o Grid e Sidebar -->
+  <link rel="stylesheet" href="../profile/profile.css">
+  <link rel="stylesheet" href="../../../profile-global.css" />
+  <!-- CSS Específico do Plano -->
+  <link rel="stylesheet" href="planos.css">
 
-    <!-- CSS Específico do Plano -->
-    <link rel="stylesheet" href="planos.css">
-
-    <link rel="shortcut icon" href="../../../assets/Logotipo-Solar.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="shortcut icon" href="../../../assets/Logotipo-Solar.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header class="container-pai">
+  <header class="container-pai">
     <div class="logo">
       <a href="#" onclick="redirectUser('../../../../index.html')">
         <img height="90" src="../../../assets/logo_nav2.png" alt="Logo branca Solar" />
@@ -100,128 +100,128 @@
     </nav>
   </header>
 
-    <main class="margem-global">
-        <div class="container-perfil">
+  <main class="margem-global">
+    <div class="container-perfil">
 
-            <!-- Sidebar -->
-            <aside class="card-lateral">
-                <div class="perfil-avatar">
-                    <div class="avatar-wrapper">
-                        <img id="avatar-img" src="" alt="Avatar">
-                    </div>
-                    <h2 id="nome-sidebar">Usuário</h2>
-                </div>
-
-                <nav class="menu-lateral-lista">
-                    <button onclick="window.location.href='../profile/profile.html'">👤 Meu Perfil</button>
-                    <button onclick="window.location.href='../registrations/registrations.html'">📄 Inscrições</button>
-                    <button class="ativo" onclick="window.location.href='../plans-profile/planos.html'">📋
-                        Plano</button>
-                    <button onclick="window.location.href='../profile/posts.html'">📝 Postagens</button>
-                    <button onclick="window.location.href='../profile/appointments.html'">📅 Agendamentos</button>
-
-                    <button id="btn-financeiro" onclick="verificarAcessoFinanceiro()">💰 Planejamento
-                        Financeiro</button>
-
-                    <button onclick="window.location.href='../profile/settings.html'">⚙️ Configurações</button>
-                    <button onclick="abrirModalLogout()">🚪 Sair</button>
-                </nav>
-            </aside>
-
-            <!-- Área do Plano -->
-            <section class="painel-direita">
-
-                <div class="header-abas">
-                    <div class="aba-titulo ativo">
-                        <i class="fas fa-hand-holding-heart"></i> Plano Atual
-                    </div>
-                    <div class="aba-titulo">
-                        <i class="fas fa-wallet"></i> Forma de Pagamento
-                    </div>
-                </div>
-
-                <div class="conteudo-aba">
-                    <div class="card-plano-interno" id="card-plano">
-                        <div class="plano-cabecalho">
-                            <h3 id="titulo-plano">Carregando...</h3>
-                            <span class="badge-status">ATIVO</span>
-                        </div>
-
-                        <p class="plano-texto" id="desc-plano">
-                            Carregando informações do seu plano...
-                        </p>
-
-                        <ul class="lista-vantagens" id="lista-vantagens">
-                            <!-- JS preenche aqui -->
-                        </ul>
-
-                        <div class="plano-footer">
-                            <button class="btn-roxo" onclick="irParaPlanos()">Atualizar Assinatura</button>
-
-                            <!-- Botão Cancelar -->
-                            <button id="btn-cancelar-assinatura" class="btn-outline"
-                                onclick="abrirModalCancelamento()">Cancelar Assinatura</button>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
+      <!-- Sidebar -->
+      <aside class="card-lateral">
+        <div class="perfil-avatar">
+          <div class="avatar-wrapper">
+            <img id="avatar-img" src="" alt="Avatar">
+          </div>
+          <h2 id="nome-sidebar">Usuário</h2>
         </div>
-    </main>
 
-    <!-- Modal Logout -->
-    <div class="modal-overlay" id="modalLogout">
-        <div class="modal-card" style="max-width: 500px;">
-            <h2>Tem certeza que deseja sair?</h2>
-            <p>Você precisará fazer login novamente para acessar sua conta.</p>
-            <div class="btns-row" style="gap: 20px;">
-                <button class="btn-modal btn-cancelar" onclick="fecharModalLogout()">Cancelar</button>
-                <button class="btn-modal" onclick="fazerLogout()">Sair</button>
-            </div>
+        <nav class="menu-lateral-lista">
+          <button onclick="window.location.href='../profile/profile.html'">👤 Meu Perfil</button>
+          <button onclick="window.location.href='../registrations/registrations.html'">📄 Inscrições</button>
+          <button class="ativo" onclick="window.location.href='../plans-profile/planos.html'">📋
+            Plano</button>
+          <button onclick="window.location.href='../profile/posts.html'">📝 Postagens</button>
+          <button onclick="window.location.href='../profile/appointments.html'">📅 Agendamentos</button>
+
+          <button id="btn-financeiro" onclick="verificarAcessoFinanceiro()">💰 Planejamento
+            Financeiro</button>
+
+          <button onclick="window.location.href='../profile/settings.html'">⚙️ Configurações</button>
+          <button onclick="abrirModalLogout()">🚪 Sair</button>
+        </nav>
+      </aside>
+
+      <!-- Área do Plano -->
+      <section class="painel-direita">
+
+        <div class="header-abas">
+          <div class="aba-titulo ativo">
+            <i class="fas fa-hand-holding-heart"></i> Plano Atual
+          </div>
+          <div class="aba-titulo">
+            <i class="fas fa-wallet"></i> Forma de Pagamento
+          </div>
         </div>
-    </div>
 
-    <!-- Modal Upgrade (Bloqueio) -->
-    <div class="modal-overlay" id="modalUpgrade">
-        <div class="modal-card" style="max-width: 550px;">
-            <div class="icon-container" style="font-size: 40px; color: #ffcd4f; margin-bottom: 10px;">
-                <i class="fas fa-lock"></i>
+        <div class="conteudo-aba">
+          <div class="card-plano-interno" id="card-plano">
+            <div class="plano-cabecalho">
+              <h3 id="titulo-plano">Carregando...</h3>
+              <span class="badge-status">ATIVO</span>
             </div>
-            <h2>Acesso Exclusivo</h2>
-            <p>O <strong>Planejamento Financeiro</strong> é uma ferramenta exclusiva do <strong>Plano Alicerce</strong>.
+
+            <p class="plano-texto" id="desc-plano">
+              Carregando informações do seu plano...
             </p>
-            <p style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Faça um upgrade agora para desbloquear esta
-                funcionalidade!</p>
-            <div class="btns-row" style="gap: 20px;">
-                <button class="btn-modal btn-cancelar" onclick="fecharModalUpgrade()">Voltar</button>
-                <button class="btn-modal" onclick="irParaPlanos()">Ver Planos</button>
+
+            <ul class="lista-vantagens" id="lista-vantagens">
+              <!-- JS preenche aqui -->
+            </ul>
+
+            <div class="plano-footer">
+              <button class="btn-roxo" onclick="irParaPlanos()">Atualizar Assinatura</button>
+
+              <!-- Botão Cancelar -->
+              <button id="btn-cancelar-assinatura" class="btn-outline" onclick="abrirModalCancelamento()">Cancelar
+                Assinatura</button>
             </div>
+          </div>
         </div>
+
+      </section>
+
     </div>
+  </main>
 
-    <!-- NOVO: Modal Cancelamento -->
-    <div class="modal-overlay" id="modalCancel">
-        <div class="modal-card" style="max-width: 500px;">
-            <div class="icon-container" style="font-size: 40px; color: #e84118; margin-bottom: 10px;">
-                <i class="fas fa-exclamation-triangle"></i>
-            </div>
-            <h2>Cancelar Assinatura?</h2>
-            <p>Ao cancelar, você voltará para o plano gratuito <strong>Apoio</strong> e perderá acesso aos recursos
-                exclusivos.</p>
-
-            <div class="btns-row" style="gap: 20px;">
-                <button class="btn-modal btn-cancelar" onclick="fecharModalCancel()">Manter Plano</button>
-                <button class="btn-modal" style="background: #e84118; color: white;"
-                    onclick="confirmarCancelamento()">Sim, Cancelar</button>
-            </div>
-        </div>
+  <!-- Modal Logout -->
+  <div class="modal-overlay" id="modalLogout">
+    <div class="modal-card" style="max-width: 500px;">
+      <h2>Tem certeza que deseja sair?</h2>
+      <p>Você precisará fazer login novamente para acessar sua conta.</p>
+      <div class="btns-row" style="gap: 20px;">
+        <button class="btn-modal btn-cancelar" onclick="fecharModalLogout()">Cancelar</button>
+        <button class="btn-modal" onclick="fazerLogout()">Sair</button>
+      </div>
     </div>
+  </div>
 
-    <script type="module" src="../../../js/script.js"></script>
-    <script src="../../../js/headerResponsivo.js"></script>
-    <script src="../../../js/profile/plans-profile/plans-profile.js"></script>
-    <script src="../../../js/profile/profile/modalSair.js"></script>
+  <!-- Modal Upgrade (Bloqueio) -->
+  <div class="modal-overlay" id="modalUpgrade">
+    <div class="modal-card" style="max-width: 550px;">
+      <div class="icon-container" style="font-size: 40px; color: #ffcd4f; margin-bottom: 10px;">
+        <i class="fas fa-lock"></i>
+      </div>
+      <h2>Acesso Exclusivo</h2>
+      <p>O <strong>Planejamento Financeiro</strong> é uma ferramenta exclusiva do <strong>Plano Alicerce</strong>.
+      </p>
+      <p style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Faça um upgrade agora para desbloquear esta
+        funcionalidade!</p>
+      <div class="btns-row" style="gap: 20px;">
+        <button class="btn-modal btn-cancelar" onclick="fecharModalUpgrade()">Voltar</button>
+        <button class="btn-modal" onclick="irParaPlanos()">Ver Planos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOVO: Modal Cancelamento -->
+  <div class="modal-overlay" id="modalCancel">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="icon-container" style="font-size: 40px; color: #e84118; margin-bottom: 10px;">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <h2>Cancelar Assinatura?</h2>
+      <p>Ao cancelar, você voltará para o plano gratuito <strong>Apoio</strong> e perderá acesso aos recursos
+        exclusivos.</p>
+
+      <div class="btns-row" style="gap: 20px;">
+        <button class="btn-modal btn-cancelar" onclick="fecharModalCancel()">Manter Plano</button>
+        <button class="btn-modal" style="background: #e84118; color: white;" onclick="confirmarCancelamento()">Sim,
+          Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../../../js/script.js"></script>
+  <script src="../../../js/headerResponsivo.js"></script>
+  <script src="../../../js/profile/plans-profile/plans-profile.js"></script>
+  <script src="../../../js/profile/profile/modalSair.js"></script>
 
 </body>
 

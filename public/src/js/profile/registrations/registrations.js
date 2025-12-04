@@ -39,7 +39,7 @@ function listarInscricoes() {
         containerCursos.innerHTML = `
             <div class="sem-inscricoes">
                 <p>Você ainda não se inscreveu em nenhum curso.</p>
-                <button onclick="window.location.href='../../pages/explore/courses/index/index.html'">Explorar Cursos</button>
+                <button onclick="window.location.href='../../explore/courses/index/index.html'">Explorar Cursos</button>
             </div>
         `;
     }
@@ -48,7 +48,7 @@ function listarInscricoes() {
         containerEventos.innerHTML = `
             <div class="sem-inscricoes">
                 <p>Você não tem eventos confirmados.</p>
-                <button onclick="window.location.href='../../pages/explore/eventss/index/index.html'">Explorar Eventos</button>
+                <button onclick="window.location.href='../../explore/eventss/index/index.html'">Explorar Eventos</button>
             </div>
         `;
     }

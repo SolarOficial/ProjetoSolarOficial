@@ -216,6 +216,42 @@
     </div>
   </footer>
 
+  <!-- Modal Upgrade (Bloqueio) -->
+    <div class="modal-overlay" id="modalUpgrade">
+        <div class="modal-card" style="max-width: 550px;">
+            <div class="icon-container" style="font-size: 40px; color: #ffcd4f; margin-bottom: 10px;">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2>Acesso Exclusivo</h2>
+            <p>O <strong>Planejamento Financeiro</strong> é uma ferramenta exclusiva do <strong>Plano Alicerce</strong>.
+            </p>
+            <p style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Faça um upgrade agora para desbloquear esta
+                funcionalidade!</p>
+            <div class="btns-row" style="gap: 20px;">
+                <button class="btn-modal btn-cancelar" onclick="fecharModalUpgrade()">Voltar</button>
+                <button class="btn-modal" onclick="irParaPlanos()">Ver Planos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOVO: Modal Cancelamento -->
+    <div class="modal-overlay" id="modalCancel">
+        <div class="modal-card" style="max-width: 500px;">
+            <div class="icon-container" style="font-size: 40px; color: #e84118; margin-bottom: 10px;">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2>Cancelar Assinatura?</h2>
+            <p>Ao cancelar, você voltará para o plano gratuito <strong>Apoio</strong> e perderá acesso aos recursos
+                exclusivos.</p>
+
+            <div class="btns-row" style="gap: 20px;">
+                <button class="btn-modal btn-cancelar" onclick="fecharModalCancel()">Manter Plano</button>
+                <button class="btn-modal" style="background: #e84118; color: white;"
+                    onclick="confirmarCancelamento()">Sim, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
   <script type="module" src="../../../js/script.js"></script>
   <script src="../../../js/headerResponsivo.js"></script>
   <script type="module" src="../../../js/profile/registrations/registrations.js"></script>

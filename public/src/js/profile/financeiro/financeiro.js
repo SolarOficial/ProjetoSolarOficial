@@ -68,7 +68,6 @@ async function initApp() {
             }
         });
     } catch (error) {
-        // Erros silenciosos no console para não atrapalhar o usuário, a menos que seja crítico
         console.error("Erro de conexão.");
     }
 }

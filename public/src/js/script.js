@@ -10,13 +10,11 @@ window.externalRedirect = function (url) {
 }
 
 window.fazerLogout = function () {
-  if (confirm("Tem certeza que deseja sair?")) {
-    signOut(auth).then(() => {
-      window.location.href = "/login.html";
-    }).catch((error) => {
-      console.error(error);
-    });
-  }
+  signOut(auth).then(() => {
+    window.location.href = "/login.html";
+  }).catch((error) => {
+    console.error("Erro ao fazer logout:", error);
+  });
 }
 
 onAuthStateChanged(auth, (user) => {
@@ -45,12 +43,16 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+/* SIENNA */
+
 if (!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"]')) {
   const s = document.createElement("script");
   s.src = "https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js";
   s.defer = true;
   document.body.appendChild(s);
 }
+
+/* VLIBRAS */
 
 if (!document.querySelector('script[src="https://vlibras.gov.br/app/vlibras-plugin.js"]')) {
   const container = document.createElement("div");
@@ -77,6 +79,8 @@ if (!document.querySelector('script[src="https://vlibras.gov.br/app/vlibras-plug
   document.body.appendChild(script);
 }
 
+/* ANIMAÇÂO SCROLL */
+
 window.addEventListener('DOMContentLoaded', () => {
   const elementos = document.querySelectorAll('.animar-scroll');
 
@@ -91,3 +95,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   elementos.forEach(el => observer.observe(el));
 });
+
+/* SOLARIA */
+
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+  var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+  s1.async = true;
+  s1.src = 'https://embed.tawk.to/6924426cb8106b195f6e74fa/1jaqq6uav';
+  s1.charset = 'UTF-8';
+  s1.setAttribute('crossorigin', '*');
+  s0.parentNode.insertBefore(s1, s0);
+})();

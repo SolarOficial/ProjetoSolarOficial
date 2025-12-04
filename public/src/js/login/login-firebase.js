@@ -1,6 +1,7 @@
 import { auth, provider } from '../firebase-config.js';
 import { signInWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
+// --- LOGIN COM E-MAIL E SENHA ---
 const formLogin = document.getElementById('form-login');
 
 if (formLogin) {
@@ -22,7 +23,7 @@ if (formLogin) {
                     modalSucesso.style.display = 'flex';
                     modalSucesso.classList.add('active');
                 } else {
-                    // Ajuste o caminho da home se precisar
+                    // Redireciona para a home
                     window.location.href = 'public/index.html';
                 }
             })
@@ -41,23 +42,21 @@ if (formLogin) {
     });
 }
 
+// --- LOGIN COM GOOGLE ---
 const btnGoogle = document.getElementById('btn-google');
 
 if (btnGoogle) {
     btnGoogle.addEventListener('click', () => {
-        //signInWithPopup abre a janelinha do Google
         signInWithPopup(auth, provider)
             .then((result) => {
-                // SUCESSO! O usuário logou.
                 const user = result.user;
                 console.log("Logado com Google:", user);
 
-                // Mostra o modal de sucesso (Reaproveitando o que já existe)
                 const modalSucesso = document.getElementById('modalLoginSucesso');
                 if (modalSucesso) {
                     modalSucesso.style.display = 'flex';
                 } else {
-                    window.location.href = 'src/pages/home/home.html';
+                    window.location.href = '/src/pages/home/home.html';
                 }
             })
             .catch((error) => {
@@ -67,8 +66,10 @@ if (btnGoogle) {
     });
 }
 
+// --- LÓGICA DE RECUPERAÇÃO DE SENHA (NOVO) ---
+
 window.prosseguirRecuperacao = function () {
-    const emailInput = document.querySelector('#modalRecuperacao input[type="email"]');
+    const emailInput = document.getElementById('email-recuperacao');
     const emailRecuperacao = emailInput ? emailInput.value : '';
 
     if (!emailRecuperacao) {
@@ -85,6 +86,19 @@ window.prosseguirRecuperacao = function () {
             if (modalSucesso) modalSucesso.style.display = 'flex';
         })
         .catch((error) => {
-            alert("Erro ao enviar email: " + error.message);
+            console.error("Erro recuperação:", error);
+            
+            let mensagem = "Erro ao enviar e-mail.";
+            if (error.code === 'auth/user-not-found') mensagem = "Este e-mail não está cadastrado.";
+            if (error.code === 'auth/invalid-email') mensagem = "E-mail inválido.";
+            
+            alert(mensagem);
         });
+}
+
+window.fecharPopupRecuperacao = function() {
+    const modal = document.getElementById('modalRecuperacao');
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }

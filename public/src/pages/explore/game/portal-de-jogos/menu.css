@@ -7,6 +7,8 @@
     --cor-subtexto: #4A356D;
     --cor-sombra: rgba(0, 0, 0, 0.1);
     --cor-em-breve: #95a5a6;
+    --cor-botao-voltar: #fff;
+    --cor-titulo-botao-voltar: #000;
 }
 
 body {
@@ -18,16 +20,45 @@ body {
     text-align: center;
 }
 
+/*--Adicionado estilização no botão voltar*/
+.back-to-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor-botao-voltar);
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cor-titulo-botao-voltar);
+    font-weight: 700;
+    box-shadow: 0 4px 10px var(--cor-sombra);
+    transition: transform 0.2s ease;
+    z-index: 100;
+}
+
+/*--Adicionado estilização da imagem do voltar*/
+.back-to-menu img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
+
+.back-to-menu:hover {
+    transform: scale(1.05);
+}
+
 .main-header h1 {
     font-size: 3em;
     font-weight: 900;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-header p {
     font-size: 1.2em;
-    color:var(--cor-card);
+    color: var(--cor-card);
     margin-top: -15px;
 }
 
@@ -82,7 +113,7 @@ body {
 }
 
 .menu-card.coming-soon:hover {
-    transform: none; 
+    transform: none;
     box-shadow: 0 10px 20px var(--cor-sombra);
 }
 

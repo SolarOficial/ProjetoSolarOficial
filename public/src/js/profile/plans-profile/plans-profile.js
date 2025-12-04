@@ -132,7 +132,7 @@ window.verificarAcessoFinanceiro = function() {
     const planoAtual = localStorage.getItem('solar_user_plan') || 'apoio';
 
     if (planoAtual === 'alicerce') {
-        window.location.href = '../financeTool/ferramentafinanceira/financialPlanning.html';
+        window.location.href = '../planejamentoFinanceiro/financeiro.html';
     } else {
         abrirModalUpgrade();
     }

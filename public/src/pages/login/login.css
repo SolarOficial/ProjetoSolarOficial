@@ -12,11 +12,9 @@
   --cor-amarelo: #fff59c;
   --font-titulo: "Karla", sans-serif;
   --font-paragrafo: "Figtree";
-  --cor-roxo-claro-gradient: linear-gradient(
-    140deg,
-    rgba(191, 158, 245, 0.8) 0%,
-    rgba(111, 92, 143, 0.8) 100%
-  );
+  --cor-roxo-claro-gradient: linear-gradient(140deg,
+      rgba(191, 158, 245, 0.8) 0%,
+      rgba(111, 92, 143, 0.8) 100%);
 }
 
 /* config zeradas */
@@ -89,14 +87,12 @@ section.img-login .margem-global {
   /* Centraliza horizontalmente */
   align-items: center;
   /* Centraliza verticalmente */
-  background-image: linear-gradient(
-    to top,
-    #eed06c,
-    #ffe07bb9,
-    #ffe98483,
-    #ffed4f1e,
-    #ffffff00
-  );
+  background-image: linear-gradient(to top,
+      #eed06c,
+      #ffe07bb9,
+      #ffe98483,
+      #ffed4f1e,
+      #ffffff00);
   box-shadow: 2px 2px rgba(0, 0, 0, 0.144);
 }
 
@@ -370,7 +366,7 @@ input:-webkit-autofill:active {
   margin: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 400px;
+  width: 100%;
   max-width: 380px;
 }
 
@@ -483,6 +479,7 @@ input:-webkit-autofill:active {
 
 /* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
 @media screen and (max-width: 768px) {
+
   /* CONTAINER DO LAYOUT */
   section.img-login .margem-global {
     gap: 30px;
@@ -574,9 +571,37 @@ input:-webkit-autofill:active {
     width: 100%;
   }
 
+  /* MODAIS LOGIN, RECUPERAÇÃO E SUCESSO */
+
+  .modal-card {
+    padding: 25px 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .modal-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .btn-modal {
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
   .btns-row {
+    width: 100%;
+    margin-top: 20px;
+    gap: 10px;
     flex-direction: column-reverse;
-    align-items: center;
-    gap: 15px;
+  }
+
+  .btns-row .btn-modal {
+    width: 100%;
+    min-width: unset;
+    margin: 0;
   }
 }

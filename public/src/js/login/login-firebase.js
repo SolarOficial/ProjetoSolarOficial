@@ -23,8 +23,8 @@ if (formLogin) {
                     modalSucesso.style.display = 'flex';
                     modalSucesso.classList.add('active');
                 } else {
-                    // Redireciona para a home
-                    window.location.href = 'public/index.html';
+                    // CORREÇÃO AQUI: Removemos o 'public/'
+                    window.location.href = '/index.html';
                 }
             })
             .catch((error) => {
@@ -66,8 +66,18 @@ if (btnGoogle) {
     });
 }
 
-// --- LÓGICA DE RECUPERAÇÃO DE SENHA (NOVO) ---
+// --- LÓGICA DE RECUPERAÇÃO DE SENHA ---
 
+// 1. Função para ABRIR o modal (Faltava essa!)
+window.abrirPopupRecuperacao = function(event) {
+    if(event) event.preventDefault();
+    const modal = document.getElementById('modalRecuperacao');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+// 2. Função para ENVIAR o email
 window.prosseguirRecuperacao = function () {
     const emailInput = document.getElementById('email-recuperacao');
     const emailRecuperacao = emailInput ? emailInput.value : '';
@@ -96,6 +106,7 @@ window.prosseguirRecuperacao = function () {
         });
 }
 
+// 3. Função para FECHAR o modal
 window.fecharPopupRecuperacao = function() {
     const modal = document.getElementById('modalRecuperacao');
     if (modal) {

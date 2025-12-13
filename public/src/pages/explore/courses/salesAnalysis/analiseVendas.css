@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 105px;
   padding: 0 15px;
 }
 /* definindo configurações do card */
@@ -80,6 +80,11 @@
     gap: 11px;
     flex: 1 1 300px;
     text-align: left;
+  }
+
+  .titulo-subtitulo .subtitulo-topo{
+    font-size: 30px;
+    color: var(--cor-roxo-escuro);
   }
 }
 /* Força alinhamento do texto superior em mobile para ser centralizado */
@@ -195,16 +200,13 @@
 }
 
 .botao-2 {
-  background-color: var(--cor-roxo-escuro);
-  color: var(--cor-branca);
+  background-color: var(--cor-laranja);
   border: none;
-  font-size: 18px;
+  color: var(--cor-branca);
 }
 
 .botao-2:hover {
-  background-color: transparent;
-  color: var(--cor-roxo-escuro);
-  border: 2px solid var(--cor-roxo-escuro);
+ background-color: #ffb347;
   transform: scale(1.05);
 }
 

@@ -46,10 +46,10 @@
   border: 2px solid var(--cor-roxo-escuro);
   border-radius: 10px;
   width: 100%;
-  max-width: 844px; /* Limite máximo */
+  max-width: 844px;
   height: auto;
   flex-wrap: wrap;
-  padding-bottom: 40px; /* Adicionado para espaçamento interno */
+  padding-bottom: 40px;
 }
 
 .sessao-pai .topo-card {

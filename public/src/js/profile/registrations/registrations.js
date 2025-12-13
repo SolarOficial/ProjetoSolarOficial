@@ -1,5 +1,3 @@
-/* src/js/registrations.js */
-
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof carregarSidebar === "function") {
         carregarSidebar();
@@ -8,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     listarInscricoes();
 });
 
-// LISTAR INSCRIÇÕES SEPARADAS (CURSOS E EVENTOS)
+/* LISTAR INSCRIÇÕES SEPARADAS (CURSOS E EVENTOS) */
 function listarInscricoes() {
     const containerCursos = document.getElementById('container-cursos');
     const containerEventos = document.getElementById('container-eventos');

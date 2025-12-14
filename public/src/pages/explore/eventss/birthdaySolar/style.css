@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700;1,300..800&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* ===================== */
+/* IMPORTAÇÃO DE FONTES  */
+/* ===================== */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Karla:wght@200..800&family=Open+Sans:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:wght@100..900&display=swap");
 
-/* VARIAVEIS CORES e FONTES */
+/* ===================== */
+/* VARIÁVEIS GERAIS      */
+/* ===================== */
 :root {
   --cor-roxo-claro: #9675ce;
   --cor-roxo-escuro: #4a356d;
@@ -9,107 +14,110 @@
   --cor-branca: #fafafa;
   --cor-preta: #000000;
   --cor-amarelo: #fff59c;
+
   --font-titulo: "Karla", sans-serif;
-  --font-paragrafo: "Figtree";
+  --font-paragrafo: "Figtree", sans-serif;
+
+  --radius: 10px;
+  --transition: 0.3s ease;
 }
 
-/* config zeradas */
+/* ===================== */
+/* RESET                 */
+/* ===================== */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* CONTAINER GLOBAL DE CONTEÚDO */
+/* ===================== */
+/* CONTAINERS            */
+/* ===================== */
+
 .margem-global {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 20px;
 }
 
-/* ======================================= */
-/* --- MAIN --- */
-/* ======================================= */
-
-/* card sobre a descrição do curso */
 .container-principal {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 150px;
+  gap: 40px;
+  margin-top: 150px; 
   padding: 0 15px;
+  margin-bottom: 50px;
 }
 
-/* definindo configurações do card */
+/* ===================== */
+/* CARD PRINCIPAL        */
+/* ===================== */
+
 .sessao-pai {
   border: 2px solid var(--cor-roxo-escuro);
-  border-radius: 10px;
+  border-radius: var(--radius);
   width: 100%;
-  max-width: 880px; /* Limite máximo */
-  height: auto; /* Altura adaptável */
-  padding-bottom: 40px;
+  max-width: 880px;
+  padding: 40px 20px;
 }
 
-/* CORREÇÃO DE SINTAXE E AJUSTE DE ESPAÇAMENTO */
 .topo-card {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Espaçamento reduzido */
-  margin: 25px 20px; /* Espaçamento reduzido */
-  align-items: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
   flex-wrap: wrap;
 }
 
-/* estilizando imagem */
 .img-topo-card {
   width: 250px;
   height: 220px;
-  border-radius: 20px;
   object-fit: cover;
-  flex-shrink: 0;
-  max-width: 100%;
+  border-radius: 20px;
 }
 
-/* estilizando titulo e texto no topo do card */
 .titulo-subtitulo {
   font-family: var(--font-titulo);
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Espaçamento reduzido */
+  gap: 8px;
   flex: 1 1 300px;
 }
-.titulo-topo {
-  font-size: 32px;
-  color: var(--cor-roxo-escuro);
-}
+
 .subtitulo-topo {
   font-size: 20px;
 }
+
 .paragrafo-topo {
   font-family: var(--font-paragrafo);
   font-size: 16px;
-  line-height: 1.5;
 }
 
+/* ===================== */
+/* INFORMAÇÕES DO CURSO  */
+/* ===================== */
+
 .informacoes-curso {
+  padding: 40px 50px;
   border-radius: 12px;
-  padding: 0 50px; /* Padding padrão desktop */
 }
 
 .informacoes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px 20px; /* Espaçamento ajustado */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px 20px;
   font-family: var(--font-paragrafo);
 }
 
 .bloco {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-/* ícone + texto do título */
 .icone-texto {
   display: flex;
   align-items: center;
@@ -123,123 +131,178 @@
 
 .icone-texto h3 {
   font-family: var(--font-titulo);
-  font-size: 20px;
+  font-size: 18px;
   color: var(--cor-roxo-escuro);
 }
 
-/* caixa com texto */
 .campo {
   border: 1.5px solid var(--cor-roxo-escuro);
-  border-radius: 10px;
+  border-radius: var(--radius);
   padding: 12px 18px;
   font-size: 16px;
   color: var(--cor-roxo-escuro);
 }
 
-/* descrição ocupa as duas colunas */
-.descricao {
-  grid-column: 1 / -1;
-}
-.campo-descricao {
-  min-height: 100px;
-  line-height: 1.5;
-}
+.descricao,
 .obs-card {
   grid-column: 1 / -1;
 }
 
+.campo-descricao {
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* ===================== */
+/* BOTÕES                */
+/* ===================== */
+
 .botoes {
   display: flex;
   justify-content: flex-end;
-  gap: 20px; /* Espaçamento reduzido */
-  margin-top: 30px; /* Espaçamento reduzido */
-  padding: 0 50px; /* Padding para alinhar com o .informacoes */
   flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 50px;
+  margin-top: 30px;
 }
 
-.botoes .botao-1 {
-  border: 1px solid var(--cor-laranja);
-  background-color: transparent;
-  padding: 10px 15px;
+.botao-1,
+.botao-2 {
   font-family: var(--font-paragrafo);
-  color: var(--cor-laranja);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  font-size: 16px;
   width: 170px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  transition: var(--transition);
 }
 
-.botoes .botao-1:hover {
-  transform: scale(1.05);
-  background-color: var(--cor-laranja);
+/* Botão 1 */
+.botao-1 {
+  border: 1px solid var(--cor-laranja);
+  background: transparent;
+  color: var(--cor-laranja);
+}
+
+.botao-1:hover {
+  background: var(--cor-laranja);
   color: var(--cor-branca);
+  transform: scale(1.05);
 }
 
-.botoes .botao-2 {
-  background-color: var(--cor-roxo-escuro);
+/* Botão 2 */
+.botao-2 {
+  background: var(--cor-roxo-escuro);
   color: var(--cor-branca);
   border: none;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  padding: 10px 15px;
-  width: 170px;
-  font-family: var(--font-paragrafo);
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 .botao-2:hover {
-  background-color: transparent;
+  background: transparent;
   color: var(--cor-roxo-escuro);
   border: 2px solid var(--cor-roxo-escuro);
   transform: scale(1.05);
 }
 
-/* //////////////////////////////////////////// FOOTER ////////////////////////////////////////////// */
+/* ===================== */
+/* MEDIA QUERIES MAIN    */
+/* ===================== */
 
-/* FOOTER */
-footer {
-  margin-top: 100px;
-  background: var(--cor-roxo-claro);
-  padding: 60px 0 0 0;
-  color: var(--cor-branca);
+@media (max-width: 992px) {
+  .informacoes-curso {
+    padding: 30px;
+  }
+  .botoes {
+    justify-content: center;
+    padding: 0 30px;
+  }
 }
 
-/* Container que usa Grid para as colunas */
+@media (max-width: 650px) {
+  .sessao-pai {
+    padding: 20px 10px;
+  }
+
+  .topo-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .titulo-subtitulo {
+    text-align: center;
+    gap: 5px;
+  }
+
+  .img-topo-card {
+    width: 200px;
+    height: auto;
+    max-width: 90%;
+  }
+
+  .informacoes-curso {
+    padding: 15px;
+  }
+
+  .informacoes {
+    gap: 20px;
+  }
+
+  .botoes {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .botao-1,
+  .botao-2 {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* ===================== */
+/* FOOTER                */
+/* ===================== */
+
+footer {
+  background: var(--cor-roxo-claro);
+  color: var(--cor-branca);
+  padding: 60px 20px 30px 20px;
+}
+
 footer .margem-global {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 60px;
-  margin-bottom: 0;
+  padding: 0 20px;
+  margin-bottom: 40px;
 }
 
-/* Colunas (seção) do rodapé */
-.secao-footer {
+footer .secao-footer {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .secao-footer h3 {
   font-family: var(--font-titulo);
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 .secao-footer p {
   font-family: var(--font-paragrafo);
   font-size: 16px;
   color: var(--cor-branca);
-  line-height: 1.5;
 }
 
-/* Logo e Nome da Marca (Primeira Seção) */
 .logo-footer {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
 }
 
 .logo-footer img {
@@ -252,18 +315,17 @@ footer .margem-global {
   font-weight: 700;
 }
 
-/* Redes Sociais */
 .redes-sociais {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 15px;
-  margin-top: 20px;
 }
 
 .link-rede-social {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   color: var(--cor-branca);
   text-decoration: none;
   font-family: var(--font-paragrafo);
@@ -277,8 +339,8 @@ footer .margem-global {
 }
 
 .link-rede-social svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   fill: var(--cor-branca);
 }
 
@@ -286,14 +348,11 @@ footer .margem-global {
   fill: var(--cor-laranja);
 }
 
-/* Páginas */
 .lista-paginas {
   list-style: none;
-  padding: 0;
-}
-
-.lista-paginas li {
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .lista-paginas a {
@@ -309,123 +368,47 @@ footer .margem-global {
   padding-left: 5px;
 }
 
-/* Direitos Autorais (Barra Inferior) */
 .direitos-autorais {
   text-align: center;
-  padding: 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
   font-family: var(--font-paragrafo);
   font-size: 14px;
   color: var(--cor-branca);
-  margin-top: 40px;
 }
 
-/* ========================================================================= */
-/* MEDIA QUERIES */
-/* ========================================================================= */
+/* ============================= */
+/* FOOTER RESPONSIVO            */
+/* ============================= */
 
-/* 1. TELAS MÉDIAS/TABLETS (Máximo 992px) */
-@media screen and (max-width: 992px) {
-  /* --- MAIN --- */
-  .sessao-pai {
-    max-width: 90%;
-  }
-  .informacoes-curso {
-    padding: 0 30px;
-  }
-  .botoes {
-    justify-content: center;
-    margin: 30px auto 0 auto;
-    padding: 0 30px;
-    gap: 20px;
-  }
-
-  /* --- FOOTER --- */
+@media (max-width: 992px) {
   footer .margem-global {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 30px 20px;
+    justify-content: space-around;
   }
 
-  footer .margem-global > .secao-footer:first-child {
+  footer .secao-footer:first-child {
     flex: 1 1 100%;
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
   }
 
-  footer .margem-global .logo-footer {
-    justify-content: center;
-  }
-
-  footer .margem-global > .secao-footer:nth-child(2),
-  footer .margem-global > .secao-footer:nth-child(3) {
+  footer .secao-footer:nth-child(2),
+  footer .secao-footer:nth-child(3) {
     flex: 1 1 45%;
-    text-align: left;
-    align-items: flex-start;
   }
 }
 
-/* 2. TELAS PEQUENAS/MOBILE (Máximo 650px) */
-@media screen and (max-width: 650px) {
-  /* --- MAIN --- */
-  .topo-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-    margin: 20px 0;
-  }
-
-  .titulo-subtitulo {
-    gap: 5px;
-    text-align: center;
-  }
-
-  .informacoes-curso {
-    padding: 0 15px;
-  }
-
-  .informacoes {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .botoes {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    padding: 0 15px;
-    gap: 10px;
-  }
-
-  .botoes .botao-1,
-  .botoes .botao-2 {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  /* --- FOOTER --- */
+@media (max-width: 768px) {
   footer .margem-global {
     flex-direction: column;
-    align-items: start;
     gap: 30px;
+    align-items: flex-start;
   }
 
-  footer .margem-global > .secao-footer {
-    flex: none;
-    width: 90%;
-    text-align: start;
-    align-items: start;
-  }
-
-  footer .margem-global .logo-footer {
-    justify-content: start;
-  }
-
-  footer .margem-global .redes-sociais,
-  footer .margem-global .lista-paginas {
-    align-items: start;
+  .lista-paginas,
+  .redes-sociais {
+    padding-left: 0;
+    align-items: flex-start;
   }
 }

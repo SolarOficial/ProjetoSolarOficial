@@ -129,6 +129,17 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="modalLoginErro">
+    <div class="modal-card">
+      <h2>Ops! Algo deu errado</h2>
+      <!-- O texto do erro será inserido aqui pelo JS -->
+      <p id="msg-erro-login">Ocorreu um erro ao tentar fazer login.</p>
+      <button class="btn-modal" onclick="fecharModalErro()">
+        Tentar Novamente
+      </button>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modalRecuperacao">
     <div class="modal-card">
       <h2>Recuperação de conta!</h2>
@@ -151,7 +162,7 @@
     </div>
   </div>
 
-  <script src="src/js/popupRegister.js"></script>
+  <script src="src/js/register/popupRegister.js"></script>
   <script type="module" src="src/js/script.js"></script>
   <script src="src/js/headerResponsivo.js"></script>
   <script type="module" src="src/js/firebase-config.js"></script>

@@ -1,3 +1,28 @@
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { app } from "../../firebase-config.js"; 
+
+const auth = getAuth(app);
+
+// 1. LÓGICA DO FIREBASE
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        let campoEmail = document.getElementById('input-email-perfil');
+        if (!campoEmail) {
+            campoEmail = document.querySelector('input[type="email"]');
+        }
+
+        if (campoEmail) {
+            campoEmail.value = user.email;
+        }
+
+        const campoNome = document.getElementById('input-nome');
+        if (campoNome && !campoNome.value && user.displayName) {
+            campoNome.value = user.displayName.split(' ')[0];
+        }
+    }
+});
+
+// 2. FUNÇÕES DA PÁGINA
 document.addEventListener("DOMContentLoaded", () => {
     carregarDadosPerfil();
     configurarAbas();
@@ -5,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ativarDigitacaoEmTempoReal();
 });
 
-function salvarPerfil() {
+window.salvarPerfil = function() {
     const inputNome = document.getElementById('input-nome');
     const inputSobrenome = document.getElementById('input-sobrenome');
 
@@ -20,8 +45,9 @@ function salvarPerfil() {
         localStorage.setItem('solar_nome', nome);
         localStorage.setItem('solar_sobrenome', sobrenome);
         localStorage.setItem('solar_nome_completo', nomeCompleto);
-
-        alert("Informações salvas com sucesso!");
+        
+        // Substituído: Alert -> Modal
+        abrirModalSalvar();
     }
 }
 
@@ -101,6 +127,24 @@ function configurarAbas() {
     });
 }
 
-function redirectUser(url) {
+// Funções do Modal de Salvar
+window.abrirModalSalvar = function() {
+    const modal = document.getElementById('modalSalvar');
+    if (modal) modal.classList.add('ativo');
+}
+
+window.fecharModalSalvar = function() {
+    const modal = document.getElementById('modalSalvar');
+    if (modal) modal.classList.remove('ativo');
+}
+
+// Fechar ao clicar fora (Genérico para qualquer modal)
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal-overlay')) {
+        event.target.classList.remove('ativo');
+    }
+}
+
+window.redirectUser = function(url) {
     window.location.href = url;
 }

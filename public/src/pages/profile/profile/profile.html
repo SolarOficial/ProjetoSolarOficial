@@ -152,9 +152,9 @@
         </div>
 
         <form id="info-pessoais" class="aba-conteudo">
-          <div class="campo-full">
+          <div class="campo-full" >
             <label>E-mail</label>
-            <input type="email" placeholder="seuemail@gmail.com" />
+            <input type="email" id="input-email-perfil" placeholder="Carregando..." readonly />
           </div>
 
           <div class="form-grid">
@@ -251,6 +251,22 @@
         </button>
       </div>
 
+    </div>
+  </div>
+
+   <div class="modal-overlay" id="modalSalvar">
+    <div class="modal-card" style="max-width: 400px;">
+        <div class="icon-container" style="font-size: 50px; color: #10B981; margin-bottom: 15px;">
+            <!-- Ícone de Check SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+        </div>
+        <h2>Sucesso!</h2>
+        <p>Suas informações foram salvas corretamente.</p>
+        <div class="btns-row" style="justify-content: center; margin-top: 20px;">
+            <button class="btn-modal" onclick="fecharModalSalvar()">OK</button>
+        </div>
     </div>
   </div>
 
@@ -358,7 +374,7 @@
 
   <script type="module" src="../../../js/script.js"></script>
   <script src="../../../js/headerResponsivo.js"></script>
-  <script src="../../../js/profile/profile/menuProfile.js"></script>
+  <script type="module" src="../../../js/profile/profile/menuProfile.js"></script>
   <script src="../../../js/profile/plans-profile/plans-profile.js"></script>
   <script src="../../../js/profile/profile/modalSair.js"></script>
 </body>

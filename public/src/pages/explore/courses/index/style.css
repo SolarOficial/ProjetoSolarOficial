@@ -21,8 +21,6 @@
   box-sizing: border-box;
 }
 
-/* <><><><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><><><><><><><><><><><><><>< */
-
 /* MAIN */
 
 /* foto-topo */
@@ -181,8 +179,6 @@
   }
 }
 
-/* <><><>><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><>*/
-
 /* seçao senac */
 
 .subtituloh2-cards-senac {
@@ -215,8 +211,6 @@
   gap: 35px;
   font-family: "Figtree";
 }
-
-/* //////////////////////////////////////////// FOOTER ////////////////////////////////////////////// */
 
 /* FOOTER */
 footer {
@@ -327,7 +321,7 @@ footer .margem-global {
   color: var(--cor-branca);
 }
 
-/* 1. TELAS MÉDIAS/TABLETS (Máximo 1200px) */
+/* TABLETS */
 @media screen and (max-width: 1200px) {
   /* CONTAINER GLOBAL */
   .margem-global {
@@ -343,7 +337,7 @@ footer .margem-global {
 
   /* BANNER SUPERIOR */
   .texto-sobre-imagem {
-    width: 65%; /* Mais largura para o texto */
+    width: 65%; 
     font-size: 26px;
   }
 
@@ -355,7 +349,7 @@ footer .margem-global {
   .subtituloh2-cards-bradesco,
   .subtituloh2-cards-senac {
     font-size: 38px;
-    margin-top: 70px; /* Espaçamento vertical*/
+    margin-top: 70px; 
     margin-bottom: 30px;
   }
 
@@ -389,9 +383,7 @@ footer .margem-global {
   }
 }
 
-/* --- */
-
-/* 2. TELAS PEQUENAS/MOBILE (Máximo 768px) */
+/* MOBILE*/
 @media screen and (max-width: 730px) {
   /* CONTAINER GLOBAL */
   .margem-global {

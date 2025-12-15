@@ -99,6 +99,13 @@ section.descricao .container-descricao button p {
   font-weight: 600;
 }
 
+section.descricao .container-descricao button:hover {
+  background-color: var(--cor-roxo-claro);
+  color: var(--cor-laranja);
+  transition: 0.3s ease;
+}
+
+
 /*SECTION NOSSO PROPOSITO */
 
 section.nosso-proposito .margem-global {
@@ -159,7 +166,6 @@ section.solmidia .margem-global .container-cards {
 
 section.solmidia .margem-global .container-cards .card {
   width: 390px;
-  height: 610px;
   border: 3px solid var(--cor-laranja);
   border-radius: 20px;
   display: flex;
@@ -195,6 +201,7 @@ section.solmidia .margem-global .container-cards .card .texto p {
 section.solmidia .margem-global .container-cards .card .texto #saiba-mais {
   color: var(--cor-roxo-claro);
   margin: 29px 0 44px 0;
+  overflow: hidden;
 }
 
 .button-veja-mais {
@@ -218,6 +225,12 @@ section.solmidia .margem-global .container-cards .card .texto #saiba-mais {
   border-radius: 20px;
   border: none;
   margin-top: 48px;
+}
+
+.button-veja-mais a:hover {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxo-escuro);
+  transition: 0.3s ease;
 }
 
 /* SECTION FUNCIONALIDADES */
@@ -326,6 +339,12 @@ section.localizacoes .margem-global .container-localizacao .informacoes button {
   cursor: pointer;
 }
 
+section.localizacoes .margem-global .container-localizacao .informacoes button:hover {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxo-escuro);
+  transition: 0.3s ease;
+}
+
 section.localizacoes .margem-global aside img {
   border-radius: 50px;
   width: 600px;
@@ -369,7 +388,15 @@ section.conheca-comunidade .margem-global .container-conteudo .texto-botao .bota
   border: none;
   font-family: var(--font-paragrafo);
   font-size: 20px;
+  cursor: pointer;
 }
+
+section.conheca-comunidade .margem-global .container-conteudo .texto-botao .botao-acessar button:hover {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-roxo-escuro);
+  transition: 0.3s ease;
+}
+
 
 section.conheca-comunidade .margem-global .container-conteudo aside {
   height: 622.82px;

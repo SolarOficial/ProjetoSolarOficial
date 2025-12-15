@@ -318,10 +318,29 @@
 
 .equipe-solar {
   display: flex;
+  
+  /* --- MUDANÇA 1: ISSO ARRUMA O BURACO --- */
+  /* justify-content: space-between;  <-- APAGUE ISSO */
+  justify-content: flex-start; /* <-- COLOQUE ISSO: Cola tudo no começo */
+  
+  /* --- MUDANÇA 2: ISSO GARANTE A LINHA RETA --- */
+  /* flex-wrap: wrap; <-- APAGUE ISSO */
+  flex-wrap: nowrap; /* <-- COLOQUE ISSO: Proíbe quebrar linha */
+  
+  gap: 1rem; /* Mantém o espacinho elegante entre eles */
+  padding-bottom: 10px;
+  
+  /* Mantém a animação e a largura que já estavam certas */
+  animation: moverEquipe 25s linear infinite;
+  width: max-content; 
+}
+
+/* .equipe-solar {
+  display: flex;
   gap: 1rem;
   animation: moverEquipe 25s linear infinite;
-  width: max-content; /* permite rolagem contínua */
-}
+  width: max-content;
+} */
 
 @keyframes moverEquipe {
   0% {
